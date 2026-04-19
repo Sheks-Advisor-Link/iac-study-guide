@@ -1,11 +1,11 @@
 # IAC Study Guide — T. Van Heerden (2026)
 
 A single-file, interactive HTML study guide for the **SAICA IAC / ITC** professional exams.
-Exam dates: **23, 24 & 25 July 2026**.
+Exam dates: **23, 24 & 25 June 2026**.
 
 ## Features
 
-- **📅 Interactive study calendar** (19 April → 25 July) — click any day for a 2-hour breakdown (Mon–Fri) or a two-topic weekend plan. Progress tracked in localStorage.
+- **📅 Interactive study calendar** (19 April → 25 June) — click any day for a 2-hour breakdown (Mon–Fri) or a two-topic weekend plan. Progress tracked in localStorage.
 - **📘 ACC / 🔍 AUD / 💰 TAX / 📊 MAF summaries** — every high-yield IFRS, ISA, Act section and MAF concept, each with a plain-English "layman" explainer.
 - **📊 Consolidations worked example** — full P Ltd / S Ltd walkthrough with pro-forma journals.
 - **🔍 Substantive procedures by cycle** — assertion-linked procedure tables for 10 transaction cycles.

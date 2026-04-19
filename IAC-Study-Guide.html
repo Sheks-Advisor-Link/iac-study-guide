@@ -204,12 +204,12 @@ details > :not(summary){padding:14px 20px}
 <!-- HOME -->
 <section id="home" class="active">
   <h2>Your IAC 2026 Command Centre
-    <small>Exam dates: <strong>Thursday 23, Friday 24, Saturday 25 July 2026</strong> · Prep window: 19 April → 15 July · Dedicated revision: 16–22 July</small>
+    <small>Exam dates: <strong>Tuesday 23, Wednesday 24, Thursday 25 June 2026</strong> · Prep window: 19 April → 15 June · Dedicated revision: 16–22 June</small>
   </h2>
 
   <div class="countdown" id="countdown">
     <div><div class="num" id="cdDays">--</div><div class="lbl">Days to first paper</div></div>
-    <div><div class="num" id="cdStudy">--</div><div class="lbl">Study days left (to 15 July)</div></div>
+    <div><div class="num" id="cdStudy">--</div><div class="lbl">Study days left (to 15 June)</div></div>
     <div><div class="num" id="cdHours">--</div><div class="lbl">Planned study hours (~22/wk)</div></div>
     <div style="margin-left:auto"><button class="btn-sec" onclick="resetProgress()">Reset progress</button></div>
   </div>
@@ -217,7 +217,7 @@ details > :not(summary){padding:14px 20px}
   <div class="card accent">
     <h3 style="margin-top:0">How to use this guide</h3>
     <ol style="margin:6px 0 0 18px;padding:0;line-height:1.9">
-      <li><strong>Start with the Calendar tab</strong> — it tells you exactly what to study each day from now until 15 July. Click a day box to tick it off.</li>
+      <li><strong>Start with the Calendar tab</strong> — it tells you exactly what to study each day from now until 15 June. Click a day box to tick it off.</li>
       <li><strong>Subject tabs (ACC, AUD, TAX, MAF)</strong> are your condensed summaries with every major IFRS / Act / section you need, each followed by a "plain English" explainer.</li>
       <li><strong>Weak Areas tab</strong> targets everything you lost marks on in the June 2025 IAC — drill this <em>weekly</em>.</li>
       <li><strong>Flashcards</strong> — click to flip. Use for spaced repetition (15 mins/day minimum).</li>
@@ -236,9 +236,9 @@ details > :not(summary){padding:14px 20px}
     </div>
     <div class="card">
       <h3 style="margin-top:0">Paper structure (SAICA ITC/IAC)</h3>
-      <p><strong>Paper 1 (Thu 23 July)</strong> — Financial Accounting + Auditing<br>
-      <strong>Paper 2 (Fri 24 July)</strong> — Tax + IFRS 3 + Business insight<br>
-      <strong>Paper 3 (Sat 25 July)</strong> — Governance, Strategy & Finance (MAF)</p>
+      <p><strong>Paper 1 (Tue 23 June)</strong> — Financial Accounting + Auditing<br>
+      <strong>Paper 2 (Wed 24 June)</strong> — Tax + IFRS 3 + Business insight<br>
+      <strong>Paper 3 (Thu 25 June)</strong> — Governance, Strategy & Finance (MAF)</p>
       <p style="color:var(--muted);font-size:12px">Professional-level: integrated case studies, open-ended discussion, pervasive skills matter.</p>
     </div>
   </div>
@@ -287,7 +287,7 @@ details > :not(summary){padding:14px 20px}
 
 <!-- CALENDAR -->
 <section id="calendar">
-  <h2>📅 Study Calendar — 19 April to 25 July 2026
+  <h2>📅 Study Calendar — 19 April to 25 June 2026
     <small>👆 Click any day to see your 2-hour plan · Mon–Fri: one main topic · Sat–Sun: two topics (morning + afternoon)</small>
   </h2>
   <div class="cal-legend">
@@ -313,7 +313,7 @@ details > :not(summary){padding:14px 20px}
     <p><strong>Weekdays (2 hrs):</strong> Block 1 (60 min core content) · Block 2 (45 min practice) · Block 3 (15 min flashcards/quiz).</p>
     <p><strong>Saturdays (6–8 hrs):</strong> TWO topics — morning deep-dive + afternoon second subject. Rotating pairs so every subject gets a full weekend session.</p>
     <p><strong>Sundays (6 hrs):</strong> Full mock paper (morning) + self-mark + flashcards (afternoon).</p>
-    <p><strong>Phase 1 (19 Apr – 17 May):</strong> Foundations · <strong>Phase 2 (18 May – 14 Jun):</strong> Application + consolidations · <strong>Phase 3 (15 Jun – 15 Jul):</strong> Integration + past papers · <strong>Phase 4 (16 – 22 Jul):</strong> Revision week — no new content.</p>
+    <p><strong>Phase 1 (19 Apr – 10 May):</strong> Foundations · <strong>Phase 2 (11 May – 31 May):</strong> Application + consolidations · <strong>Phase 3 (1 – 15 Jun):</strong> Integration + past papers · <strong>Phase 4 (16 – 22 Jun):</strong> Revision week — no new content.</p>
   </div>
 </section>
 
@@ -2185,14 +2185,14 @@ Step 5: Disclosure note
 
 <script>
 // ================== DATA ==================
-const EXAM_DATE = new Date('2026-07-23T08:00:00');
-const STUDY_END = new Date('2026-07-15T23:59:59');
+const EXAM_DATE = new Date('2026-06-23T08:00:00');
+const STUDY_END = new Date('2026-06-15T23:59:59');
 const TODAY = new Date();
 
 // Build study calendar
 function buildCalendar(){
   const start = new Date('2026-04-19');
-  const end = new Date('2026-07-25');
+  const end = new Date('2026-06-25');
   const weeks = [];
   let current = new Date(start);
   // Find Monday on/before start
@@ -2328,22 +2328,22 @@ const sunPlans = [
   {title:'Full Paper 3 mock (Gov+Strat+MAF) + self-mark', blocks:[{time:'180 min',activity:'✏️ Full Paper 3 mock — TIMED'},{time:'90 min',activity:'📝 Self-mark'},{time:'90 min',activity:'🃏 Flashcards'}]}
 ];
 
-// Revision week July 16-22
+// Revision week June 16-22
 const revisionPlans = {
-  '2026-07-16':{subj:'REV',title:'ACC speed revision',hours:6,blocks:[{time:'90 min',activity:'📖 Re-read full ACC tab'},{time:'90 min',activity:'✏️ Redo prior-period error + IFRS 16 + IFRS 3 drills'},{time:'60 min',activity:'🧮 Formula cheat — ACC section'},{time:'30 min',activity:'🃏 ACC Leitner flashcards (all due)'}]},
-  '2026-07-17':{subj:'REV',title:'AUD speed revision — CPC, PIS, NOCLAR',hours:6,blocks:[{time:'90 min',activity:'📖 Re-read AUD + Sub.Proc tabs'},{time:'90 min',activity:'✏️ PIS + independence + NOCLAR drills'},{time:'60 min',activity:'📖 Re-read Companies Act s75/76/77 + audit opinion matrix'},{time:'30 min',activity:'🃏 AUD Leitner flashcards'}]},
-  '2026-07-18':{subj:'REV',title:'Full Paper 1 MOCK (timed) + self-mark',hours:8,blocks:[{time:'180 min',activity:'✏️ Full Paper 1 mock — closed book'},{time:'120 min',activity:'📝 Self-mark + write 1-line lesson per lost mark'},{time:'120 min',activity:'🎯 Drill any weak spot surfaced by the mock'}]},
-  '2026-07-19':{subj:'REV',title:'TAX revision — skeleton + s24C + capital vs revenue',hours:6,blocks:[{time:'90 min',activity:'📖 Draft the TAX skeleton (GI − exempt − deductions + TCG) from memory'},{time:'90 min',activity:'✏️ s24C + s11(a) + capital-vs-revenue + dividends drill'},{time:'60 min',activity:'🧮 Formula cheat — TAX section'},{time:'30 min',activity:'🃏 TAX Leitner flashcards'}]},
-  '2026-07-20':{subj:'REV',title:'MAF — WACC, NPV, valuations (lighter day)',hours:5,blocks:[{time:'90 min',activity:'📖 Re-read WACC critique + NPV rules + FCFF formula'},{time:'90 min',activity:'✏️ NPV + WACC + DCF drill (short)'},{time:'60 min',activity:'🧮 Formula cheat — MAF section'},{time:'30 min',activity:'🃏 MAF Leitner flashcards'}]},
-  '2026-07-21':{subj:'REV',title:'Weak Areas tab — cold reproduction',hours:5,blocks:[{time:'60 min',activity:'📖 Re-read Weak Areas tab'},{time:'180 min',activity:'✏️ Reproduce each weak-area template on paper, cold'},{time:'60 min',activity:'🃏 ALL weak-area flashcards (WEAK filter)'}]},
-  '2026-07-22':{subj:'REV',title:'😴 Light day — flashcards + early sleep',hours:3,blocks:[{time:'60 min',activity:'🃏 Run ALL due Leitner flashcards'},{time:'60 min',activity:'🧮 Skim every formula section'},{time:'60 min',activity:'😴 Pack bag, set alarm, EARLY sleep'}]}
+  '2026-06-16':{subj:'REV',title:'ACC speed revision',hours:6,blocks:[{time:'90 min',activity:'📖 Re-read full ACC tab'},{time:'90 min',activity:'✏️ Redo prior-period error + IFRS 16 + IFRS 3 drills'},{time:'60 min',activity:'🧮 Formula cheat — ACC section'},{time:'30 min',activity:'🃏 ACC Leitner flashcards (all due)'}]},
+  '2026-06-17':{subj:'REV',title:'AUD speed revision — CPC, PIS, NOCLAR',hours:6,blocks:[{time:'90 min',activity:'📖 Re-read AUD + Sub.Proc tabs'},{time:'90 min',activity:'✏️ PIS + independence + NOCLAR drills'},{time:'60 min',activity:'📖 Re-read Companies Act s75/76/77 + audit opinion matrix'},{time:'30 min',activity:'🃏 AUD Leitner flashcards'}]},
+  '2026-06-18':{subj:'REV',title:'Full Paper 1 MOCK (timed) + self-mark',hours:8,blocks:[{time:'180 min',activity:'✏️ Full Paper 1 mock — closed book'},{time:'120 min',activity:'📝 Self-mark + write 1-line lesson per lost mark'},{time:'120 min',activity:'🎯 Drill any weak spot surfaced by the mock'}]},
+  '2026-06-19':{subj:'REV',title:'TAX revision — skeleton + s24C + capital vs revenue',hours:6,blocks:[{time:'90 min',activity:'📖 Draft the TAX skeleton (GI − exempt − deductions + TCG) from memory'},{time:'90 min',activity:'✏️ s24C + s11(a) + capital-vs-revenue + dividends drill'},{time:'60 min',activity:'🧮 Formula cheat — TAX section'},{time:'30 min',activity:'🃏 TAX Leitner flashcards'}]},
+  '2026-06-20':{subj:'REV',title:'MAF — WACC, NPV, valuations (lighter day)',hours:5,blocks:[{time:'90 min',activity:'📖 Re-read WACC critique + NPV rules + FCFF formula'},{time:'90 min',activity:'✏️ NPV + WACC + DCF drill (short)'},{time:'60 min',activity:'🧮 Formula cheat — MAF section'},{time:'30 min',activity:'🃏 MAF Leitner flashcards'}]},
+  '2026-06-21':{subj:'REV',title:'Weak Areas tab — cold reproduction',hours:5,blocks:[{time:'60 min',activity:'📖 Re-read Weak Areas tab'},{time:'180 min',activity:'✏️ Reproduce each weak-area template on paper, cold'},{time:'60 min',activity:'🃏 ALL weak-area flashcards (WEAK filter)'}]},
+  '2026-06-22':{subj:'REV',title:'😴 Light day — flashcards + early sleep',hours:3,blocks:[{time:'60 min',activity:'🃏 Run ALL due Leitner flashcards'},{time:'60 min',activity:'🧮 Skim every formula section'},{time:'60 min',activity:'😴 Pack bag, set alarm, EARLY sleep'}]}
 };
 
 // Exam days
 const examPlans = {
-  '2026-07-23':{subj:'EXAM',title:'📝 PAPER 1 — ACC + AUD (Thu)',hours:8,blocks:[{time:'06:00-07:00',activity:'☕ Wake, breakfast, 10-min skim of ACC weak-area page ONLY'},{time:'07:00-08:00',activity:'🚗 Travel to venue — arrive 60 min early'},{time:'08:30-12:30',activity:'✏️ PAPER 1 — 4 hours — read entire paper first (10 min), budget time per mark'},{time:'12:30-14:00',activity:'🥪 Lunch + OFF study. Walk. No rehashing the paper.'},{time:'14:00-17:00',activity:'📖 Skim TAX skeleton + s24C + dividends + capital/revenue for tomorrow'},{time:'17:00-22:00',activity:'🍽️ Dinner + relax + EARLY SLEEP (by 22:00)'}]},
-  '2026-07-24':{subj:'EXAM',title:'📝 PAPER 2 — TAX + IFRS 3 + Business (Fri)',hours:8,blocks:[{time:'06:00-07:00',activity:'☕ Breakfast + skim of TAX weak-area page ONLY'},{time:'07:00-08:00',activity:'🚗 Travel'},{time:'08:30-12:30',activity:'✏️ PAPER 2 — 4 hours — skeleton first, plan answers, follow formula'},{time:'12:30-14:00',activity:'🥪 Lunch + OFF study'},{time:'14:00-17:00',activity:'📖 Skim MAF formula cheat + 6 capitals + WACC critique for tomorrow'},{time:'17:00-22:00',activity:'🍽️ Dinner + relax + EARLY SLEEP'}]},
-  '2026-07-25':{subj:'EXAM',title:'📝 PAPER 3 — Gov + Strategy + MAF (Sat)',hours:8,blocks:[{time:'06:00-07:00',activity:'☕ Breakfast + skim MAF formula cheat ONLY'},{time:'07:00-08:00',activity:'🚗 Travel'},{time:'08:30-12:30',activity:'✏️ PAPER 3 — 4 hours — plan each discussion answer before writing'},{time:'12:30',activity:'🎉 DONE. Exam complete. Go celebrate.'}]}
+  '2026-06-23':{subj:'EXAM',title:'📝 PAPER 1 — ACC + AUD (Tue)',hours:8,blocks:[{time:'06:00-07:00',activity:'☕ Wake, breakfast, 10-min skim of ACC weak-area page ONLY'},{time:'07:00-08:00',activity:'🚗 Travel to venue — arrive 60 min early'},{time:'08:30-12:30',activity:'✏️ PAPER 1 — 4 hours — read entire paper first (10 min), budget time per mark'},{time:'12:30-14:00',activity:'🥪 Lunch + OFF study. Walk. No rehashing the paper.'},{time:'14:00-17:00',activity:'📖 Skim TAX skeleton + s24C + dividends + capital/revenue for tomorrow'},{time:'17:00-22:00',activity:'🍽️ Dinner + relax + EARLY SLEEP (by 22:00)'}]},
+  '2026-06-24':{subj:'EXAM',title:'📝 PAPER 2 — TAX + IFRS 3 + Business (Wed)',hours:8,blocks:[{time:'06:00-07:00',activity:'☕ Breakfast + skim of TAX weak-area page ONLY'},{time:'07:00-08:00',activity:'🚗 Travel'},{time:'08:30-12:30',activity:'✏️ PAPER 2 — 4 hours — skeleton first, plan answers, follow formula'},{time:'12:30-14:00',activity:'🥪 Lunch + OFF study'},{time:'14:00-17:00',activity:'📖 Skim MAF formula cheat + 6 capitals + WACC critique for tomorrow'},{time:'17:00-22:00',activity:'🍽️ Dinner + relax + EARLY SLEEP'}]},
+  '2026-06-25':{subj:'EXAM',title:'📝 PAPER 3 — Gov + Strategy + MAF (Thu)',hours:8,blocks:[{time:'06:00-07:00',activity:'☕ Breakfast + skim MAF formula cheat ONLY'},{time:'07:00-08:00',activity:'🚗 Travel'},{time:'08:30-12:30',activity:'✏️ PAPER 3 — 4 hours — plan each discussion answer before writing'},{time:'12:30',activity:'🎉 DONE. Exam complete. Go celebrate.'}]}
 };
 
 function getDailyPlan(date){
