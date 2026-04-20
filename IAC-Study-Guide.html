@@ -103,6 +103,10 @@ details summary:hover{background:var(--panel2)}
 details[open] summary{border-bottom:1px solid var(--border)}
 details > :not(summary){padding:14px 20px}
 .formula{background:#1a1e25;border:1px dashed var(--accent);border-radius:8px;padding:10px 14px;margin:8px 0;font-family:"SF Mono",Menlo,monospace;font-size:13px;color:#c8b890;overflow-x:auto}
+.why{background:linear-gradient(90deg,#1d2430 0%,#1a2128 100%);border-left:3px solid var(--accent2);border-radius:0 6px 6px 0;padding:10px 14px;margin:6px 0 14px;font-size:12.5px;color:#b8c0cc;line-height:1.55}
+.why::before{content:"💡 Why this works: ";color:var(--accent2);font-weight:700;font-size:11.5px;letter-spacing:.2px}
+.why strong{color:#d5dbe3}
+.why-intuition::before{content:"🧠 Intuition: ";color:#9b8fb8;font-weight:700;font-size:11.5px;letter-spacing:.2px}
 .searchbox{background:var(--panel);border:1px solid var(--border);color:var(--ink);padding:10px 14px;border-radius:8px;width:100%;font-size:14px;margin-bottom:16px}
 .btn{background:var(--accent);border:none;color:#14171c;padding:9px 16px;border-radius:8px;cursor:pointer;font-weight:600;font-size:13px}
 .btn:hover{opacity:.9}
@@ -383,6 +387,7 @@ details > :not(summary){padding:14px 20px}
     <p><strong>Taxable TD</strong> (CA &gt; TB for asset, or CA &lt; TB for liability) → <strong>DT Liability</strong><br>
     <strong>Deductible TD</strong> (CA &lt; TB for asset, or CA &gt; TB for liability) → <strong>DT Asset</strong></p>
     <div class="formula">DT = Temporary difference × future applicable tax rate<br>Exchange: DT liability = (CA − TB) × tax rate (for an asset)</div>
+    <div class="why">Accounting uses one set of rules (IFRS) to measure profit; SARS uses another (Income Tax Act). The <strong>same asset ends up with two values</strong> — the book value (CA) and the tax value (TB). The gap will unwind over time into <em>real</em> tax payments. DT records that inevitable future cash flow today, so users see the <strong>true future tax burden</strong>, not just a misleading current-year number. We use the <em>future</em> rate because that's what will actually apply when the temporary difference reverses.</div>
     <p><strong>Exception:</strong> no DT on initial recognition of goodwill.</p>
     <p><strong>DT Asset</strong> — only recognise to extent probable taxable profits will be available.</p>
     <div class="callout layman">Deferred tax smooths out tax timing differences. If the taxman lets you deduct something faster than accounting does, you'll pay more tax later — that's a deferred tax liability now. Vice versa for an asset.</div>
@@ -511,6 +516,7 @@ details > :not(summary){padding:14px 20px}
     <h4>Step 4 — Subsequent measurement (Amortised cost — worked)</h4>
     <div class="formula">CA<sub>t+1</sub> = CA<sub>t</sub> + Interest (EIR × CA<sub>t</sub>) − Cash received/paid</div>
     <p>The EIR is the rate that exactly discounts estimated future cash flows to the initial net carrying amount (so if there are transaction costs, the EIR ≠ coupon rate).</p>
+    <div class="why">Coupon rates can be misleading — a bond bought at a discount has a <strong>higher true yield</strong> than its coupon suggests, because you'll also earn back the discount at maturity. EIR captures the <em>real</em> economic return by spreading that discount/premium over the life of the instrument. Amortised cost mechanics just say: "each year your asset grows by the true interest earned, then drops by the cash received" — that's how the CA gradually walks from issue price back to face value.</div>
 
     <h4>Step 5 — Expected Credit Loss (ECL) — the 3-stage model</h4>
     <table>
@@ -522,6 +528,7 @@ details > :not(summary){padding:14px 20px}
     <p><strong>Simplified approach (mandatory)</strong> for trade receivables, contract assets and lease receivables (policy choice for lease) → always lifetime ECL. No staging. Use a <strong>provision matrix</strong>: historic default rates by age bucket × forward-looking adjustment.</p>
 
     <div class="formula">ECL = PD × LGD × EAD<br>PD = probability of default<br>LGD = loss given default (1 − recovery %)<br>EAD = exposure at default (usually gross CA)</div>
+    <div class="why">IAS 39 only recognised losses <em>after</em> a bad thing happened — which caused the 2008 banking crisis (banks hid deteriorating loans till it was too late). IFRS 9 fixes this with <strong>forward-looking ECL</strong>: every loan book some probability of default × typical loss × size of exposure. The three stages escalate as credit worsens, forcing lenders to <strong>recognise losses earlier</strong>, giving users a truer view of loan portfolio health.</div>
 
     <h4>Step 6 — Derecognition</h4>
     <p><strong>FA derecognised</strong> when: (a) contractual rights expire OR (b) rights transferred AND substantially all risks/rewards transferred OR (c) control transferred even if risks/rewards don't.</p>
@@ -581,6 +588,7 @@ details > :not(summary){padding:14px 20px}
 
     <h4>Equity-settled — period cost formula</h4>
     <div class="formula">Cumulative expense = FV at grant date × Estimated number expected to vest × (Vested period elapsed / Total vesting period)<br><br>Period expense = Cumulative expense this year − Cumulative expense last year<br><br>Dr Employment expense (P/L)<br>  Cr Share-based payment reserve (Equity)</div>
+<div class="why">Share options are <strong>real compensation</strong> — employees work for them. IFRS 2 forces the expense onto P/L so it doesn't get hidden. We freeze FV at grant date (for equity-settled) because that's when both parties agreed the value; later share-price moves are equity holders' problem, not an expense issue. We straight-line over the vesting period because that's when the service is rendered. Revising <em>number expected to vest</em> each year adjusts for leavers so the final total equals FV × actual vested options.</div>
 
     <h4>Cash-settled — period cost formula</h4>
     <div class="formula">Liability at reporting date = FV of SAR at reporting date × Estimated number to vest × (Vested period elapsed / Total vesting period)<br><br>Dr Employment expense (P/L)<br>  Cr SAR Liability<br><br>Remeasure to FV each year — difference through P/L</div>
@@ -696,6 +704,7 @@ details > :not(summary){padding:14px 20px}
     <h4>Lessee accounting — single model</h4>
     <p>Recognise a <strong>Right-of-Use Asset (ROU)</strong> and a <strong>Lease Liability</strong> for almost every lease.</p>
     <div class="formula">Lease Liability (initial) = PV of lease payments, discounted at rate implicit in lease (or IBR if not determinable)<br><br>ROU Asset (initial) = Lease Liability + prepayments + initial direct costs + dismantling provision − lease incentives received</div>
+    <div class="why">Pre-IFRS 16, operating leases were <strong>off-balance-sheet</strong> — companies had massive rental commitments invisible to users (biggest example: airlines leasing entire fleets). IFRS 16 treats every significant lease as economically equivalent to <em>buying the right-to-use on credit</em>. The liability is the "loan"; the ROU is the "asset". Users now see the <strong>true leverage and asset base</strong>. The ROU formula follows IAS 16 cost logic: everything you had to commit to get the asset ready for use.</div>
     <h4>Subsequent measurement</h4>
     <p><strong>Lease liability:</strong> amortised cost — interest accrued, lease payments reduce balance.<br>
     <strong>ROU asset:</strong> cost less accumulated depreciation &amp; impairment. Depreciate over shorter of useful life / lease term (unless ownership transfers or purchase option expected to exercise — then useful life).</p>
@@ -1013,6 +1022,7 @@ details > :not(summary){padding:14px 20px}
   <div class="card">
     <h4>Audit risk model</h4>
     <div class="formula">Audit Risk = Inherent Risk × Control Risk × Detection Risk<br>(ROMM = IR × CR)</div>
+    <div class="why">Audit risk is the chance the auditor issues a <strong>clean opinion on materially wrong financials</strong>. IR and CR are properties of the <em>client</em> — how risky their business is (IR) and how good their controls are (CR). The auditor can't change those. <strong>Only DR (Detection Risk)</strong> is in the auditor's control — by doing more/better substantive work. So the model reads as: <em>"given how risky this client is (ROMM), how hard must I work (DR) to bring total audit risk to an acceptably low level?"</em></div>
     <p>Auditor <em>assesses</em> IR and CR (they exist in the client). Auditor <em>controls</em> DR by the nature, timing and extent of procedures.</p>
     <h4>Materiality</h4>
     <p><strong>Overall:</strong> benchmark × %. Typical benchmarks:<br>
@@ -1416,6 +1426,7 @@ details > :not(summary){padding:14px 20px}
     </ol>
     <h4>Calculation</h4>
     <div class="formula">s24C allowance = (Future expenditure under contract) × (Income received in advance ÷ Total contract income)<br><br>= Proportion of advance receipt that matches future cost</div>
+    <div class="why">Under normal tax rules, receiving R1.2m upfront for a 3-year job means you're <strong>taxed on the full R1.2m this year</strong> — but you'll only spend R800k of costs delivering it <em>next</em> year. That cash-flow mismatch could bankrupt honest businesses. s24C aligns the tax with the commercial reality: <strong>defer the portion of income that matches future costs</strong>. The formula is simply a proportional split — the part of advance money "earmarked" for future work is pushed out to the year that work happens.</div>
     <h4>Treatment</h4>
     <ul>
       <li>Allowed as deduction in <em>current</em> year (reverses in the next year)</li>
@@ -1562,10 +1573,12 @@ details > :not(summary){padding:14px 20px}
   <h3>Cost of Capital — WACC</h3>
   <div class="card">
     <div class="formula">WACC = (E/V) × Ke + (D/V) × Kd × (1 − t)<br><br>Where:<br>E = Market value of equity<br>D = Market value of debt<br>V = E + D<br>Ke = Cost of equity (from CAPM)<br>Kd = Pre-tax cost of debt (YTM of bonds)<br>t = Tax rate (27% for companies)</div>
+    <div class="why">A company is funded by equity and debt in some mix. <strong>Each provider demands a different return</strong> — shareholders want Ke, lenders want Kd. WACC weights those returns by <em>how much of each</em> the company uses, giving the <strong>blended minimum return</strong> the firm must earn to satisfy everyone. The (1−t) on debt reflects the "tax shield": interest is tax-deductible, so SARS effectively pays part of it, making debt cheaper in reality than the headline rate.</div>
     <h4>Use <em>market</em> values, not book values</h4>
     <p>Market values reflect what investors currently demand; book values are historical.</p>
     <h4>Cost of equity — CAPM</h4>
     <div class="formula">Ke = Rf + β × (Rm − Rf)<br><br>Rf = risk-free rate (long-dated government bond, e.g. R186)<br>β = beta of the share (systematic risk)<br>(Rm − Rf) = equity risk premium (typically 5–7% SA)</div>
+    <div class="why">Every investor has two choices: earn a <strong>guaranteed return</strong> (Rf) or take risk in exchange for higher expected return. CAPM says the extra return you demand for risk = general market premium × <em>your</em> sensitivity to the market (β). Only <strong>systematic risk</strong> is compensated because unsystematic risk can be diversified away — the market won't pay you to bear risk you could've avoided for free.</div>
     <h4>Cost of debt</h4>
     <p>Use <strong>yield to maturity</strong> on existing debt, NOT the coupon rate. Use current market rate for new debt.</p>
     <div class="callout layman">WACC is the minimum return a company must earn to satisfy ALL investors. Debt is cheaper than equity (tax-deductible, less risky), so more debt lowers WACC — until financial distress kicks in.</div>
@@ -1595,6 +1608,7 @@ details > :not(summary){padding:14px 20px}
   <h3>NPV — Net Present Value <span class="priority-pill HOT">HOT</span></h3>
   <div class="card danger">
     <div class="formula">NPV = Σ [CFt / (1+r)^t] − Initial Investment<br><br>Decision rule:<br>NPV &gt; 0 → ACCEPT (creates shareholder value)<br>NPV &lt; 0 → REJECT<br>NPV = 0 → Indifferent</div>
+    <div class="why">A rand today ≠ a rand in 3 years. <strong>Money has time value</strong> because you could invest it, inflation erodes it, and future cash is risky. NPV discounts each future CF at WACC, asking: <em>"is this project worth more than what investors expect from alternative investments of similar risk?"</em> NPV &gt; 0 means yes — you've earned more than your cost of capital, so shareholder wealth rises by exactly the NPV amount. That's why <strong>NPV is the gold-standard investment criterion</strong>.</div>
     <h4>Cash flow identification rules</h4>
     <table>
       <tr><th>Include (Y/N)</th><th>Why</th></tr>
@@ -1642,6 +1656,7 @@ details > :not(summary){padding:14px 20px}
   <div class="card">
     <h4>1. DCF (FCFF)</h4>
     <div class="formula">Value of operations = Σ [FCFF / (1+WACC)^t] + Terminal Value<br><br>FCFF = EBIT × (1−t) + Dep − Capex − ΔWC<br><br>Terminal Value (Gordon) = FCFF<sub>t+1</sub> / (WACC − g)<br><br>Equity value = Value of operations − Net debt</div>
+    <div class="why">A business is worth <strong>the present value of all future cash it will generate</strong>. We forecast FCFF (cash available to ALL capital providers) for a visible window (5–10 yrs), then use Gordon to collapse "everything after that" into one perpetuity value (TV). Discounting at WACC gives <em>enterprise value</em>. To get <em>equity value</em>, we subtract net debt because creditors have first claim on company cash — shareholders get what's left. This is the most theoretically sound valuation method because it's grounded in actual cash flows, not accounting noise.</div>
     <h4>2. DCF (FCFE)</h4>
     <div class="formula">FCFE = Net income + Dep − Capex − ΔWC + Net borrowing<br>Value of equity = Σ [FCFE / (1+Ke)^t] + TV</div>
     <h4>3. Relative valuation (multiples)</h4>
@@ -1675,9 +1690,11 @@ details > :not(summary){padding:14px 20px}
   <h3>Working capital management</h3>
   <div class="card">
     <div class="formula">Cash Conversion Cycle = Inventory Days + Debtor Days − Creditor Days<br><br>Inventory days = Inventory / COGS × 365<br>Debtor days = Debtors / Revenue × 365<br>Creditor days = Creditors / Purchases × 365</div>
+    <div class="why">CCC tells you <strong>how many days your cash is locked up before customers pay you back</strong>. Imagine: you buy stock (day 0), hold it (Inventory days), sell it (Debtor days until paid) — but you don't pay suppliers until day X (Creditor days). That <strong>gap must be funded</strong>, usually via overdraft = interest expense. Shrink CCC (faster stock turn, tighter collections, longer payables) → free cash for growth without external finance. Negative CCC (Amazon, Woolworths food) = suppliers effectively fund your operations.</div>
     <p>Lower CCC = more efficient = less financing required.</p>
     <h4>EOQ — Economic Order Quantity</h4>
     <div class="formula">EOQ = √(2 × D × O / H)<br>D = annual demand, O = order cost, H = holding cost per unit/year</div>
+    <div class="why">Two costs <strong>trade off</strong>: ordering cost (fewer orders = cheaper, push to big batches) vs holding cost (fewer on hand = cheaper, push to small batches). Order too much → warehouse & insurance costs balloon. Order too little → constant reorder admin & rush freight. EOQ mathematically finds the sweet spot where <strong>total cost is minimised</strong>. The square root arises because the costs balance when their marginal values equal; the algebra reduces to this classic formula.</div>
   </div>
 
   <h3>Business Strategy & Integrated Thinking</h3>
@@ -1743,6 +1760,7 @@ details > :not(summary){padding:14px 20px}
     </ul>
     <h4>CVP analysis</h4>
     <div class="formula">Contribution = Sales − Variable costs<br>Break-even units = Fixed costs / Contribution per unit<br>Margin of safety = (Actual − BE) / Actual</div>
+    <div class="why">Every unit sold adds <strong>contribution</strong> (price − variable cost) which <em>first</em> covers fixed costs; once fixed costs are recovered, every additional unit of contribution is <strong>pure profit</strong>. Break-even tells you the <em>minimum sales</em> before you start making money. Margin of safety is critical for risk — a 50% margin means sales can halve before you hit a loss. A tiny margin of safety is a warning sign: small sales shocks = instant losses. Watch for linearity assumptions (step costs, volume discounts) breaking down outside the relevant range.</div>
     <h4>Variance analysis — basic</h4>
     <p>Price/rate vs quantity/efficiency. Material usage, labour efficiency, variable OH. Sales price vs sales volume (vs mix vs quantity for multi-product).</p>
     <h4>Transfer pricing</h4>
@@ -2037,108 +2055,140 @@ Step 5: Disclosure note
   <div class="card">
     <h4>Deferred tax</h4>
     <div class="formula">DT = (Carrying Amount − Tax Base) × tax rate<br>Asset with CA &gt; TB → taxable TD → DT liability<br>Liability with CA &gt; TB → deductible TD → DT asset</div>
+    <div class="why">Accounting profit and taxable profit are calculated differently, so an asset's <strong>book value</strong> (CA) doesn't match its <strong>tax value</strong> (TB). If CA &gt; TB on an asset, we'll eventually report more accounting profit than tax profit — so SARS will charge us tax on that gap <em>later</em>. DT <strong>records that future tax bill today</strong> so the financials show the true economic position, not just this year's snapshot.</div>
 
     <h4>IFRS 16 Lease Liability</h4>
     <div class="formula">Lease Liability = Σ [Lease payment / (1 + r)^t]<br>where r = rate implicit in lease (or IBR)</div>
+    <div class="why">A lease is economically a <strong>loan to buy use of an asset</strong>. Future rent payments aren't worth their face value today — money has a time cost. We discount each payment back so the liability reflects <strong>what we'd have to pay today</strong> to settle the lease. The IBR is used when the implicit rate isn't visible because you can always observe your own borrowing rate.</div>
 
     <h4>IFRS 16 ROU Asset (initial)</h4>
     <div class="formula">ROU = Lease liability + prepayments + initial direct costs + PV(dismantling) − lease incentives received</div>
+    <div class="why">IFRS 16 treats a lease like buying an asset on credit. The ROU must capture <strong>every cost of getting the asset into use</strong> — the "loan" (liability), cash already paid, setup costs, and the obligation to restore the site at the end — minus any rebates the landlord gave. This mirrors how IAS 16 builds PPE cost, so depreciation and impairment work the same way.</div>
 
     <h4>Impairment loss</h4>
     <div class="formula">Impairment = CA − Recoverable amount<br>Recoverable amount = max (FV less costs of disposal, Value in use)<br>VIU = Σ [future CF / (1+r)^t]</div>
+    <div class="why">An asset shouldn't sit on the balance sheet above what it's actually worth to the business. The business will always choose the better of two options: <strong>sell it (FVLCD) or keep using it (VIU)</strong> — so recoverable amount is the <em>higher</em> of those. If even that amount is below CA, we've lost value that accounting must recognise now — IAS 36 forbids hiding the loss until disposal.</div>
 
     <h4>Goodwill (IFRS 3)</h4>
     <div class="formula">Goodwill = [Consideration + NCI + FV(previously held interest)] − FV(identifiable net assets)</div>
+    <div class="why">When you buy a company, you pay for <strong>more than the sum of its identifiable parts</strong> — brand, staff, customer relationships, synergies. Goodwill is simply the <em>premium</em> you paid over fair value of the net assets you can point to. The left side of the equation is what was effectively paid for 100% of the business; the right side is what's measurable — the difference is the "unexplained" value you paid for.</div>
 
     <h4>Basic EPS</h4>
     <div class="formula">EPS = (Profit attributable to ordinary shareholders − Preference dividends) / Weighted average number of ordinary shares</div>
+    <div class="why">EPS answers: <strong>"how much profit did each ordinary share earn this year?"</strong> We strip out preference dividends because those belong to pref holders, not ordinaries. We use a <em>weighted average</em> share count because if shares were issued mid-year, the new shares only contributed to profit for part of the year — treating them as if they were there all year would understate per-share performance.</div>
 
     <h4>Revaluation surplus</h4>
     <div class="formula">Reval surplus (gross) = New FV − CA at date of revaluation<br>Net of tax in OCI: × (1 − t)<br>DT Liability on reval: × t<br>Annual transfer to RE: (New deprecn − Old deprecn)</div>
+    <div class="why">An unrealised gain isn't P/L because you haven't sold the asset — so it goes to <strong>OCI</strong>. But SARS will tax that gain one day if you ever sell (CGT), so a DT liability is raised now. The annual transfer to RE reflects that part of the revalued amount gets "used up" each year through higher depreciation — this keeps the reserve aligned with the portion of uplift not yet consumed.</div>
 
     <h4>Borrowing cost capitalisation</h4>
     <div class="formula">Capitalisation rate = Weighted avg borrowing cost on general borrowings<br>Specific borrowings: actual borrowing cost − income earned on temporary investment</div>
+    <div class="why">IAS 23 says interest incurred <em>to build</em> a qualifying asset is part of its cost — same logic as any other cost to get it ready for use. For specific borrowings, we net off temporary investment income because that income only exists <strong>because</strong> the loan was drawn early. For general borrowings, we use a weighted-average rate because the money wasn't earmarked — it came from the company's overall pool of debt.</div>
   </div>
 
   <h3 id="f-tax">💰 Tax calculations</h3>
   <div class="card">
     <h4>Taxable income</h4>
     <div class="formula">Gross income (s1)<br>− Exempt income (s10)<br>= Income<br>− Deductions (s11, s23)<br>+ Taxable capital gain<br>= Taxable income</div>
+    <div class="why">This is the <strong>skeleton of every tax calculation</strong>. The Act works by addition and subtraction in a fixed order: start with everything received (GI), strip out what Parliament has said is tax-free (s10), subtract the costs Parliament allows (s11/23), then <em>add</em> the taxable part of capital gains. Missing a step or doing them out of order is the #1 way candidates lose marks.</div>
 
     <h4>Wear & tear (s11(e))</h4>
     <div class="formula">W&amp;T = Cost × (1 / BGR 7 period) × (months in use / 12) × trade use %</div>
+    <div class="why">SARS lets you deduct an asset's cost <strong>over its useful life</strong>, not all at once — this matches deduction to the years the asset produces income. BGR 7 prescribes the life (so taxpayers can't pick short lives to grab deductions). The time apportionment and trade-use % stop abuse: you can't claim a full year if you only used it 3 months, or claim 100% if it's partly private.</div>
 
     <h4>s24C allowance</h4>
     <div class="formula">s24C = (Future allowable expenditure under contract / Total contract income) × Income received in advance<br>Max = future expenditure under contract<br>Reverses in next year</div>
+    <div class="why">Without s24C, receiving R1.2m upfront for a 3-year contract would tax you this year on money you'll only spend delivering next year — unfair cash-flow mismatch. s24C lets you <strong>shift the part of income that matches future costs</strong> into a future year. The formula just splits the advance receipt in the same ratio as future costs to total income — taxing you only on the "already earned" portion now.</div>
 
     <h4>CGT — taxable capital gain</h4>
     <div class="formula">Capital gain/loss = Proceeds − Base cost<br>Net capital gain = Σ gains − Σ losses (− R40k for individuals)<br>Taxable capital gain = Net cap gain × inclusion rate<br>Inclusion: Individual 40% · Company &amp; trust 80%</div>
+    <div class="why">Capital gains aren't fully taxed because SA taxes capital gains <em>lightly</em> to encourage investment. Only the <strong>inclusion rate</strong> portion is added to income — giving effective CGT rates around ~18% for individuals and ~22% for companies, well below normal tax rates. The R40k exclusion is a small-investor relief so ordinary taxpayers don't file CGT on minor disposals.</div>
 
     <h4>Foreign dividend exemption (s10B)</h4>
     <div class="formula">Exempt portion:<br>Natural person: × 25/45<br>Company: × 8/27<br>Effective rate ~20%</div>
+    <div class="why">Dividends from SA companies are taxed at 20% Dividends Tax (not normal tax). Foreign dividends are taxed at normal rates — which would be <em>higher</em> than 20% and therefore discourage offshore investment. The s10B fraction exempts just enough to <strong>bring the effective rate back down to ~20%</strong>, putting foreign dividends on the same footing as local ones. (25/45 = 45% top rate × 20/45 taxed ≈ 20%.)</div>
 
     <h4>s12C Manufacturing plant</h4>
     <div class="formula">New plant: 40% Year 1 / 20% × 3 years<br>Used plant: 20% straight-line × 5 years<br>Small Business Corp (s12E): 50/30/20</div>
+    <div class="why">These are <strong>accelerated allowances</strong> — Treasury front-loads deductions to encourage manufacturing investment. A new machine gives 40% back in Year 1 (versus ~20% under normal W&T), creating an upfront cash-flow benefit. SBC gets even faster write-offs (50/30/20) to favour small business. No apportionment needed — 40% applies regardless of when in the year you bought it.</div>
 
     <h4>Restraint of trade (s11(cA))</h4>
     <div class="formula">Annual deduction = Amount paid / longer of (restraint period in years, 3 years)</div>
+    <div class="why">Restraint payments are often lump-sums covering several years of future benefit. Deducting the full amount in Year 1 would distort tax — so the Act <strong>forces straight-line spread</strong> over the restraint period. The 3-year floor stops taxpayers from structuring a "1-year restraint" to accelerate deductions artificially.</div>
 
     <h4>Dividends Tax</h4>
     <div class="formula">DT = Dividend × 20%<br>Unless exempt shareholder (resident company, PBO, pension fund)</div>
+    <div class="why">Dividends are paid from <em>already-taxed</em> company profits. DT is a <strong>second layer of tax</strong> on the <em>shareholder's</em> benefit, withheld at source by the paying company. Resident companies, PBOs and pension funds are exempt because taxing company-to-company dividends would cascade tax endlessly through group structures.</div>
 
     <h4>VAT output on a Rand-inclusive amount</h4>
     <div class="formula">Output VAT = Amount × 15/115 (tax fraction)<br>Output VAT on zero-rated = 0<br>Input denied on entertainment, motor cars, club subs</div>
+    <div class="why">If a price is <em>VAT-inclusive</em>, the VAT is already inside it — you can't just multiply by 15% (that gives 15% of total, not 15% of the pre-VAT base). The <strong>15/115 tax fraction</strong> extracts exactly the VAT portion. Input denials (cars, entertainment) exist because those items are mostly consumed personally — SARS refuses to subsidise private consumption via input claims.</div>
   </div>
 
   <h3 id="f-aud">🔍 AUD calculations</h3>
   <div class="card">
     <h4>Public Interest Score</h4>
     <div class="formula">PIS = Employees (avg) + Third-party liabilities (R'm) + Turnover (R'm) + Individual beneficial holders</div>
+    <div class="why">PIS is a <strong>proxy for how many people are affected</strong> if the company's financials are wrong — big workforce, lots of creditors, big turnover, many shareholders = high public interest. Reg 26 uses PIS to decide who audits you: above 350 → mandatory audit; 100–349 → independent review allowed. It's a simple, objective measure so regulators don't have to argue about "importance" case-by-case.</div>
 
     <h4>Audit materiality</h4>
     <div class="formula">Overall materiality:<br>· 5% × profit before tax (profitable entity)<br>· 1% × revenue (volatile profit)<br>· 1–2% × total assets (asset-intensive)<br>· 1% × equity (investment entities)<br><br>Performance materiality = 50–75% × overall<br>Clearly trivial = ≤5% × overall</div>
+    <div class="why">Users care about the <strong>metric most relevant to their decisions</strong> — profit for trading companies, revenue when profit is unstable, assets for property companies. Performance materiality is set <em>lower</em> than overall to create a buffer: many small undetected errors can aggregate to something material, so we plan to catch them below the final threshold. Clearly trivial is the cut-off for not even bothering to document a misstatement.</div>
 
     <h4>Audit risk</h4>
     <div class="formula">Audit risk = Inherent × Control × Detection<br>ROMM = IR × CR<br>Auditor controls only DR (nature, timing, extent of procedures)</div>
+    <div class="why">Audit risk is the chance we issue a clean opinion when the AFS are actually wrong. The entity's risk (IR × CR = ROMM) is <strong>outside our control</strong> — it's determined by the client's business and systems. We can only adjust <strong>Detection Risk</strong> — by doing more/better procedures. So the model is really: "the client's risk is X; how hard do we need to work to keep total audit risk acceptably low?"</div>
   </div>
 
   <h3 id="f-maf">📊 MAF calculations</h3>
   <div class="card">
     <h4>WACC</h4>
     <div class="formula">WACC = (E/V) × Ke + (D/V) × Kd × (1 − t)</div>
+    <div class="why">A company is funded by a <strong>mix of equity and debt</strong>, each with its own required return. WACC is just the <em>weighted average</em> of those — what investors collectively demand to supply the firm with capital. We multiply Kd by (1−t) because <strong>interest is tax-deductible</strong> — SARS effectively pays part of it — so the real cost to shareholders is lower. WACC is the discount rate for any project of <em>average</em> company risk.</div>
 
     <h4>CAPM</h4>
     <div class="formula">Ke = Rf + β × (Rm − Rf)</div>
+    <div class="why">An equity investor requires a <strong>risk-free baseline</strong> (Rf) plus <strong>compensation for taking risk</strong>. The risk premium is the general market premium (Rm − Rf) scaled by β — how much <em>this</em> share moves with the market. β = 1 means moves with the market; β &gt; 1 means more volatile = requires higher return; β &lt; 1 means defensive = lower required return. Only <em>systematic</em> (undiversifiable) risk earns a premium.</div>
 
     <h4>Beta levering (Hamada)</h4>
     <div class="formula">Unlever:  β<sub>U</sub> = β<sub>L</sub> / [1 + (1 − t)(D/E)]<br>Relever:  β<sub>L</sub> = β<sub>U</sub> × [1 + (1 − t)(D/E)]</div>
+    <div class="why">Observed betas come from listed companies with their own D/E mix — which makes their shares artificially more/less volatile than the underlying business. <strong>Unlevering strips out their financial risk</strong> to isolate pure <em>business risk</em> (β<sub>U</sub>). Relevering then bolts on <em>your</em> target D/E so you get the β that reflects your capital structure. Without this, you'd be using a peer's leverage to price your own equity — wrong answer.</div>
 
     <h4>NPV / IRR</h4>
     <div class="formula">NPV = Σ [CFt / (1+r)^t] − Initial<br>Decision: NPV &gt; 0 → accept<br>IRR: rate where NPV = 0; accept if IRR &gt; WACC</div>
+    <div class="why">A rand today is worth more than a rand in 5 years — discount future cash flows to <strong>compare them on equal terms</strong>. NPV &gt; 0 means the project earns <em>more</em> than the cost of capital and therefore <strong>creates shareholder value</strong>. NPV is preferred over IRR because IRR can mislead (multiple IRRs with sign changes, scale blindness) — but IRR is intuitive because it's expressed as a return %, easy to compare to WACC.</div>
 
     <h4>Gordon growth / Terminal Value</h4>
     <div class="formula">TV = FCFF<sub>t+1</sub> / (WACC − g)<br>Also: P0 = D1 / (Ke − g)  (Dividend Discount)</div>
+    <div class="why">You can't forecast cash flows to infinity. So after a 5–10 year explicit forecast, we collapse "everything after that" into a <strong>single lump-sum terminal value</strong> — the PV of a constant-growth perpetuity. g must be &lt; WACC (else the formula blows up) AND &lt; long-run GDP growth (no company grows faster than the economy forever). TV often makes up 60–80% of total enterprise value — small changes in g massively swing valuations.</div>
 
     <h4>Free cash flow</h4>
     <div class="formula">FCFF = EBIT × (1 − t) + Depreciation − Capex − ΔWC<br>FCFE = FCFF − Interest × (1 − t) + Net new borrowing<br>    = NI + Depreciation − Capex − ΔWC + Net borrowing</div>
+    <div class="why">Profit ≠ cash. FCFF asks: <strong>"what cash is genuinely available to all capital providers?"</strong> Start with EBIT × (1−t) (profit <em>before</em> financing so we don't double-count interest in the discount rate), add back depreciation (non-cash), subtract real cash outflows for growth (Capex + working capital). FCFE goes a step further — subtracts the creditors' slice to show what's left <em>for equity alone</em>.</div>
 
     <h4>Equity value from Value of Operations</h4>
     <div class="formula">Equity value = Value of operations − Net debt + Non-operating assets</div>
+    <div class="why">DCF on FCFF values the <strong>operating business as a whole</strong> (enterprise value). To get what <em>shareholders</em> own, you subtract debt (creditors have first claim) and add back non-operating assets (spare cash, investments) — these were excluded from FCFF because they don't generate operating cash flow, but shareholders still own them.</div>
 
     <h4>Multiples</h4>
     <div class="formula">EV = Equity value + Debt − Cash<br>EV / EBITDA multiple<br>P/E = Price per share / EPS<br>Price/Book = Market cap / Equity book value</div>
+    <div class="why">Multiples are a <strong>sanity-check against DCF</strong>. If the market is paying 10× EBITDA for comparable companies and your DCF gives 20×, either your assumptions are aggressive or the market is missing something. EV/EBITDA is capital-structure neutral (good for cross-company compares). P/E is fast but distorted by different tax/leverage profiles. Always use <em>comparable</em> peers — multiples from different industries are meaningless.</div>
 
     <h4>Working capital ratios</h4>
     <div class="formula">Cash conversion cycle = Inventory days + Debtor days − Creditor days<br>Inventory days = Inventory / COGS × 365<br>Debtor days = Debtors / Sales × 365<br>Creditor days = Creditors / Purchases × 365</div>
+    <div class="why">CCC is the <strong>number of days between paying suppliers and collecting from customers</strong> — that gap must be funded, usually via overdraft. Shorter CCC = less financing cost = more cash for growth. A negative CCC (Dell, Amazon) means <em>suppliers fund your growth</em> — operating magic. Improving CCC (faster debtor collection, lower inventory, longer supplier terms) is often the cheapest source of liquidity a business has.</div>
 
     <h4>EOQ</h4>
     <div class="formula">EOQ = √(2 × D × O / H)</div>
+    <div class="why">Two costs trade off: <strong>ordering cost</strong> (fewer orders = better, push to big batches) vs <strong>holding cost</strong> (fewer on hand = better, push to small batches). EOQ is the batch size where the total of the two is <em>minimised</em>. The square root arises because both costs are balanced when their marginal values equal — the maths simplifies to this classic formula.</div>
 
     <h4>CVP</h4>
     <div class="formula">Break-even (units) = Fixed costs / Contribution per unit<br>Break-even (revenue) = Fixed costs / Contribution margin ratio<br>Margin of safety = (Actual − BE) / Actual<br>Target profit units = (Fixed costs + Target) / Contribution per unit</div>
+    <div class="why">Every unit sold contributes a <strong>contribution</strong> (Price − Variable cost) toward covering fixed costs. Break-even = how many units does it take to cover all fixed costs with contribution alone? Margin of safety tells you <strong>how much sales could fall before you start losing money</strong> — a critical risk metric. CVP assumes linearity (fixed and variable behave as expected within the relevant range); beware of step-costs.</div>
 
     <h4>Interest cover</h4>
     <div class="formula">Interest cover = EBIT / Interest<br>Debt service coverage = Operating CF / (Interest + Principal)</div>
+    <div class="why">Lenders and rating agencies use these to judge <strong>financial distress risk</strong>. Interest cover of 4× means EBIT could drop 75% before you can't even pay interest. DSCR is stricter — it also checks whether you can make <em>principal</em> repayments from operating cash. Banks typically require DSCR &gt; 1.25×. Falling ratios are an early-warning of covenant breach or refinancing trouble.</div>
   </div>
 
   <h3 id="f-quick">⚡ Quick-reference table — the 25 formulas you MUST know cold</h3>
