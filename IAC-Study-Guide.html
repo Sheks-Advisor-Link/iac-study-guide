@@ -151,6 +151,55 @@ details > :not(summary){padding:14px 20px}
 .leitner-meta{text-align:center;color:var(--muted);font-size:12px;margin-top:14px}
 .leitner-empty{text-align:center;padding:40px;color:var(--muted)}
 
+/* Study notes — highlighter, flag, Ask Claude, panel */
+.sel-toolbar{position:fixed;display:none;background:#1c2026;border:1px solid var(--border);border-radius:10px;padding:6px 8px;box-shadow:0 8px 22px rgba(0,0,0,.55);z-index:1000;gap:6px;align-items:center}
+.sel-toolbar.active{display:flex}
+.sel-toolbar .hl-swatch{width:26px;height:26px;border-radius:50%;border:2px solid transparent;cursor:pointer;transition:.15s;flex-shrink:0}
+.sel-toolbar .hl-swatch:hover{transform:scale(1.18);border-color:#fff}
+.sel-toolbar .hl-swatch.yellow{background:#d4c27a}
+.sel-toolbar .hl-swatch.green{background:#8fb596}
+.sel-toolbar .hl-swatch.pink{background:#c287a5}
+.sel-toolbar .hl-swatch.blue{background:#7a9dc1}
+.sel-toolbar .sel-sep{width:1px;height:22px;background:var(--border);margin:0 2px}
+.sel-toolbar .sel-btn{background:var(--panel2);border:1px solid var(--border);color:var(--ink);padding:5px 11px;border-radius:6px;cursor:pointer;font-size:12px;white-space:nowrap;font-weight:600}
+.sel-toolbar .sel-btn:hover{background:var(--accent);color:#14171c;border-color:var(--accent)}
+mark.hl{padding:1px 2px;border-radius:3px;cursor:pointer;transition:.15s;color:inherit}
+mark.hl.hl-yellow{background:rgba(212,194,122,.38)}
+mark.hl.hl-green{background:rgba(143,181,150,.38)}
+mark.hl.hl-pink{background:rgba(194,135,165,.40)}
+mark.hl.hl-blue{background:rgba(122,157,193,.38)}
+mark.hl.flag{background:rgba(184,118,118,.15);border-left:3px solid var(--bad);padding-left:5px;padding-right:3px}
+mark.hl:hover{filter:brightness(1.25)}
+.notes-fab{position:fixed;bottom:24px;right:24px;width:58px;height:58px;background:var(--accent);border:none;border-radius:50%;color:#14171c;font-size:24px;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.5);z-index:900;display:flex;align-items:center;justify-content:center;transition:.15s}
+.notes-fab:hover{transform:scale(1.08)}
+.notes-fab .badge{position:absolute;top:-4px;right:-4px;background:var(--bad);color:#fff;border-radius:99px;padding:2px 7px;font-size:11px;font-weight:700;min-width:22px;box-shadow:0 2px 6px rgba(0,0,0,.4)}
+.notes-fab .badge:empty{display:none}
+.notes-panel{position:fixed;top:0;right:0;width:440px;max-width:100vw;height:100vh;background:var(--panel);border-left:1px solid var(--border);z-index:1001;display:none;flex-direction:column;box-shadow:-4px 0 22px rgba(0,0,0,.55)}
+.notes-panel.open{display:flex}
+.notes-panel .np-head{padding:16px 18px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;background:var(--panel2)}
+.notes-panel .np-head h3{margin:0;padding:0;border:none;color:#dbe3f7;font-size:17px}
+.notes-panel .np-close{background:transparent;border:none;color:var(--muted);font-size:22px;cursor:pointer;padding:0 6px;line-height:1}
+.notes-panel .np-close:hover{color:var(--ink)}
+.notes-panel .np-toolbar{padding:10px 18px;border-bottom:1px solid var(--border);display:flex;gap:8px;flex-wrap:wrap}
+.notes-panel .np-toolbar button{background:var(--panel2);border:1px solid var(--border);color:var(--ink);padding:6px 12px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600}
+.notes-panel .np-toolbar button:hover{background:var(--accent);color:#14171c;border-color:var(--accent)}
+.notes-panel .np-list{overflow-y:auto;padding:6px 18px 24px;flex:1}
+.notes-panel .np-group{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.4px;margin:16px 0 6px;font-weight:700}
+.notes-panel .np-item{background:var(--panel2);border:1px solid var(--border);border-radius:8px;padding:10px 12px;margin:8px 0;cursor:pointer;transition:.15s;border-left-width:4px}
+.notes-panel .np-item.flag{border-left-color:var(--bad)}
+.notes-panel .np-item.yellow{border-left-color:#d4c27a}
+.notes-panel .np-item.green{border-left-color:#8fb596}
+.notes-panel .np-item.pink{border-left-color:#c287a5}
+.notes-panel .np-item.blue{border-left-color:#7a9dc1}
+.notes-panel .np-item:hover{background:#2a2f38}
+.notes-panel .np-item .np-meta{font-size:11px;color:var(--muted);margin-bottom:5px}
+.notes-panel .np-item .np-text{font-size:13px;color:#dbe3f7;line-height:1.45}
+.notes-panel .np-item .np-actions{display:flex;gap:6px;margin-top:8px}
+.notes-panel .np-item .np-actions button{background:transparent;border:1px solid var(--border);color:var(--muted);padding:3px 9px;border-radius:4px;cursor:pointer;font-size:11px}
+.notes-panel .np-item .np-actions button:hover{border-color:var(--accent);color:var(--accent)}
+.notes-panel .np-empty{text-align:center;color:var(--muted);padding:40px 20px;font-size:13px;line-height:1.6}
+@media print{.sel-toolbar,.notes-fab,.notes-panel{display:none !important}mark.hl{background:transparent !important;border:none !important;padding:0 !important}}
+
 /* Print / PDF */
 @media print{
   :root{--bg:#fff;--panel:#fff;--ink:#111;--muted:#555;--border:#bbb;--accent:#1e40af;--accent2:#7c3aed}
@@ -2233,6 +2282,37 @@ Step 5: Disclosure note
 
 </main>
 
+<!-- Selection toolbar -->
+<div class="sel-toolbar" id="selToolbar">
+  <div class="hl-swatch yellow" onclick="highlightSelection('yellow')" title="Highlight yellow"></div>
+  <div class="hl-swatch green" onclick="highlightSelection('green')" title="Highlight green"></div>
+  <div class="hl-swatch pink" onclick="highlightSelection('pink')" title="Highlight pink"></div>
+  <div class="hl-swatch blue" onclick="highlightSelection('blue')" title="Highlight blue"></div>
+  <div class="sel-sep"></div>
+  <button class="sel-btn" onclick="flagSelection()">🚩 Flag</button>
+  <button class="sel-btn" onclick="askClaudeSelection()">💬 Ask Claude</button>
+</div>
+
+<!-- Floating notes button -->
+<button class="notes-fab" onclick="toggleNotesPanel()" title="My Study Notes" aria-label="Open study notes">
+  📝<span class="badge" id="notesBadge"></span>
+</button>
+
+<!-- Notes panel -->
+<div class="notes-panel" id="notesPanel">
+  <div class="np-head">
+    <h3>📝 My Study Notes</h3>
+    <button class="np-close" onclick="toggleNotesPanel()" title="Close">✕</button>
+  </div>
+  <div class="np-toolbar">
+    <button onclick="exportNotes()">⬇️ Export</button>
+    <button onclick="document.getElementById('importFile').click()">⬆️ Import</button>
+    <input type="file" id="importFile" accept=".json" style="display:none" onchange="importNotes(event)">
+    <button onclick="clearAllNotes()">🗑️ Clear All</button>
+  </div>
+  <div class="np-list" id="notesList"></div>
+</div>
+
 <script>
 // ================== DATA ==================
 const EXAM_DATE = new Date('2026-06-23T08:00:00');
@@ -2890,11 +2970,377 @@ function filterSection(sec, val){
   });
 }
 
+// ================== STUDY NOTES (highlights + flags + Ask Claude) ==================
+const NOTES_KEY = 'iacStudyNotes_v1';
+let notes = [];
+try { notes = JSON.parse(localStorage.getItem(NOTES_KEY) || '[]'); } catch(e){ notes = []; }
+let lastSelection = null;
+
+function saveNotes(){
+  localStorage.setItem(NOTES_KEY, JSON.stringify(notes));
+  renderNotesBadge();
+}
+
+function renderNotesBadge(){
+  const b = document.getElementById('notesBadge');
+  if(b) b.textContent = notes.length || '';
+}
+
+function buildClaudePrompt(text, secTitle){
+  return "I'm studying for the SAICA IAC professional exam (23–25 June 2026). Below is a passage from my IAC Study Guide. Please explain it clearly in plain English, include a short worked example where relevant, and flag any common exam traps related to this concept.\n\nSection: " + secTitle + "\n\nPassage:\n\"" + text + "\"";
+}
+
+function copyAndOpenClaude(prompt){
+  const openClaude = () => window.open('https://claude.ai/new', '_blank');
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(prompt).then(()=>{
+      alert('✓ Study prompt copied to clipboard.\n\nClaude will open in a new tab — paste (⌘V / Ctrl+V) and hit send.');
+      openClaude();
+    }).catch(()=>{
+      prompt && window.prompt('Copy this prompt then paste it in Claude:', prompt);
+      openClaude();
+    });
+  } else {
+    window.prompt('Copy this prompt then paste it in Claude:', prompt);
+    openClaude();
+  }
+}
+
+function getSectionOfNode(node){
+  let el = node && node.nodeType === 1 ? node : (node ? node.parentElement : null);
+  while(el && el.tagName !== 'SECTION') el = el.parentElement;
+  return el;
+}
+
+function getSectionTitle(sec){
+  if(!sec) return '';
+  const h2 = sec.querySelector('h2');
+  if(!h2) return sec.id;
+  // get first text content of h2 (strip small/span)
+  const clone = h2.cloneNode(true);
+  clone.querySelectorAll('small,span').forEach(x=>x.remove());
+  return clone.textContent.trim().replace(/\s+/g,' ');
+}
+
+// Show floating toolbar when user makes a text selection
+document.addEventListener('mouseup', ()=>{
+  setTimeout(()=>{
+    const sel = window.getSelection();
+    const toolbar = document.getElementById('selToolbar');
+    if(!toolbar) return;
+    if(!sel || sel.isCollapsed || sel.toString().trim().length < 2){
+      toolbar.classList.remove('active');
+      return;
+    }
+    const anchor = sel.anchorNode;
+    const anchorEl = anchor ? (anchor.nodeType === 1 ? anchor : anchor.parentElement) : null;
+    if(!anchorEl || anchorEl.closest('.notes-panel, .sel-toolbar, header, nav, button, input, textarea, .quiz .opt')){
+      toolbar.classList.remove('active');
+      return;
+    }
+    // Must be inside an active section
+    const sec = getSectionOfNode(anchor);
+    if(!sec || !sec.classList.contains('active')){
+      toolbar.classList.remove('active');
+      return;
+    }
+    const range = sel.getRangeAt(0);
+    lastSelection = {range: range.cloneRange(), text: sel.toString()};
+    const rect = range.getBoundingClientRect();
+    toolbar.classList.add('active');
+    const tbRect = toolbar.getBoundingClientRect();
+    let top = rect.top - tbRect.height - 10;
+    let left = rect.left + (rect.width/2) - (tbRect.width/2);
+    if(top < 10) top = rect.bottom + 10;
+    if(left < 10) left = 10;
+    if(left + tbRect.width > window.innerWidth - 10) left = window.innerWidth - tbRect.width - 10;
+    toolbar.style.top = top + 'px';
+    toolbar.style.left = left + 'px';
+  }, 10);
+});
+
+document.addEventListener('mousedown', (e)=>{
+  if(!e.target.closest('.sel-toolbar')){
+    const tb = document.getElementById('selToolbar');
+    if(tb) tb.classList.remove('active');
+  }
+});
+
+function buildNoteRecord(type, colour){
+  if(!lastSelection) return null;
+  const text = lastSelection.text.replace(/\s+/g,' ').trim();
+  if(!text) return null;
+  const range = lastSelection.range;
+  const sec = getSectionOfNode(range.commonAncestorContainer);
+  if(!sec) return null;
+  const secId = sec.id;
+  const secTitle = getSectionTitle(sec);
+  const fullText = sec.textContent.replace(/\s+/g,' ');
+  const idx = fullText.indexOf(text);
+  const before = idx > 0 ? fullText.slice(Math.max(0, idx-24), idx) : '';
+  const after = idx >= 0 ? fullText.slice(idx + text.length, idx + text.length + 24) : '';
+  return {
+    id: 'n_' + Date.now() + '_' + Math.random().toString(36).slice(2,7),
+    type: type,
+    colour: colour,
+    text: text,
+    before: before,
+    after: after,
+    sectionId: secId,
+    sectionTitle: secTitle,
+    createdAt: new Date().toISOString()
+  };
+}
+
+function wrapLiveRange(range, id, colour, isFlag){
+  const mark = document.createElement('mark');
+  mark.className = 'hl' + (colour ? ' hl-'+colour : '') + (isFlag ? ' flag' : '');
+  mark.dataset.noteId = id;
+  try {
+    range.surroundContents(mark);
+  } catch(e) {
+    const contents = range.extractContents();
+    mark.appendChild(contents);
+    range.insertNode(mark);
+  }
+}
+
+function highlightSelection(colour){
+  const rec = buildNoteRecord('highlight', colour);
+  if(!rec) return;
+  wrapLiveRange(lastSelection.range, rec.id, colour, false);
+  notes.push(rec);
+  saveNotes();
+  renderNotesList();
+  clearSelectionUI();
+}
+
+function flagSelection(){
+  const rec = buildNoteRecord('flag', null);
+  if(!rec) return;
+  wrapLiveRange(lastSelection.range, rec.id, null, true);
+  notes.push(rec);
+  saveNotes();
+  renderNotesList();
+  clearSelectionUI();
+}
+
+function askClaudeSelection(){
+  if(!lastSelection) return;
+  const text = lastSelection.text.trim();
+  const sec = getSectionOfNode(lastSelection.range.commonAncestorContainer);
+  const title = getSectionTitle(sec);
+  copyAndOpenClaude(buildClaudePrompt(text, title));
+  clearSelectionUI();
+}
+
+function askClaudeAboutNote(id){
+  const n = notes.find(x=>x.id===id);
+  if(!n) return;
+  copyAndOpenClaude(buildClaudePrompt(n.text, n.sectionTitle));
+}
+
+function clearSelectionUI(){
+  try { window.getSelection().removeAllRanges(); } catch(e){}
+  const tb = document.getElementById('selToolbar');
+  if(tb) tb.classList.remove('active');
+  lastSelection = null;
+}
+
+// Re-apply saved highlights/flags into the DOM on load
+function reapplyNotes(){
+  notes.forEach(n=>{
+    if(document.querySelector('mark[data-note-id="'+n.id+'"]')) return;
+    const sec = document.getElementById(n.sectionId);
+    if(!sec) return;
+    applyStoredNote(sec, n);
+  });
+}
+
+function applyStoredNote(sec, n){
+  const walker = document.createTreeWalker(sec, NodeFilter.SHOW_TEXT, {
+    acceptNode: function(node){
+      if(!node.nodeValue || !node.nodeValue.trim()) return NodeFilter.FILTER_REJECT;
+      if(node.parentElement && node.parentElement.closest('mark.hl, script, style, .sel-toolbar, .notes-panel, .notes-fab')) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  const textNodes = [];
+  let full = '';
+  let node;
+  while(node = walker.nextNode()){
+    textNodes.push({n: node, s: full.length, e: full.length + node.nodeValue.length});
+    full += node.nodeValue;
+  }
+  if(!textNodes.length) return;
+  // Try match with context first, then fall back to raw text
+  let idx = -1, startInFull = -1;
+  if(n.before || n.after){
+    const anchor = n.before + n.text + n.after;
+    idx = full.indexOf(anchor);
+    if(idx >= 0) startInFull = idx + n.before.length;
+  }
+  if(startInFull < 0){
+    idx = full.indexOf(n.text);
+    if(idx >= 0) startInFull = idx;
+  }
+  if(startInFull < 0) return;
+  const endInFull = startInFull + n.text.length;
+  let sN, sO, eN, eO;
+  for(const t of textNodes){
+    if(sN === undefined && startInFull >= t.s && startInFull < t.e){ sN = t.n; sO = startInFull - t.s; }
+    if(endInFull > t.s && endInFull <= t.e){ eN = t.n; eO = endInFull - t.s; break; }
+  }
+  if(!sN || !eN) return;
+  const range = document.createRange();
+  try {
+    range.setStart(sN, sO);
+    range.setEnd(eN, eO);
+    wrapLiveRange(range, n.id, n.colour, n.type === 'flag');
+  } catch(e){}
+}
+
+// Panel rendering
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; });
+}
+
+function renderNotesList(){
+  const list = document.getElementById('notesList');
+  if(!list) return;
+  if(notes.length === 0){
+    list.innerHTML = '<div class="np-empty">No highlights or flags yet.<br><br>👆 Select any text in the guide and use the toolbar to highlight, flag, or Ask Claude.</div>';
+    return;
+  }
+  const bySec = {};
+  const order = [];
+  notes.forEach(n=>{
+    if(!bySec[n.sectionTitle]){ bySec[n.sectionTitle] = []; order.push(n.sectionTitle); }
+    bySec[n.sectionTitle].push(n);
+  });
+  let html = '';
+  order.forEach(sec=>{
+    html += '<div class="np-group">'+escapeHtml(sec)+'</div>';
+    bySec[sec].forEach(n=>{
+      const cls = n.type === 'flag' ? 'flag' : (n.colour || '');
+      const icon = n.type === 'flag' ? '🚩' : '✏️';
+      const dateStr = new Date(n.createdAt).toLocaleDateString();
+      html += '<div class="np-item '+cls+'" onclick="jumpToNote(\''+n.id+'\')">'+
+        '<div class="np-meta">'+icon+' '+dateStr+'</div>'+
+        '<div class="np-text">'+escapeHtml(n.text)+'</div>'+
+        '<div class="np-actions" onclick="event.stopPropagation()">'+
+          '<button onclick="askClaudeAboutNote(\''+n.id+'\')">💬 Ask Claude</button>'+
+          '<button onclick="deleteNote(\''+n.id+'\')">✕ Delete</button>'+
+        '</div>'+
+      '</div>';
+    });
+  });
+  list.innerHTML = html;
+}
+
+function jumpToNote(id){
+  const mark = document.querySelector('mark[data-note-id="'+id+'"]');
+  const n = notes.find(x=>x.id===id);
+  if(!n) return;
+  // Activate the correct tab
+  const navBtn = document.querySelector('#nav button[data-tab="'+n.sectionId+'"]');
+  if(navBtn && !document.getElementById(n.sectionId).classList.contains('active')){
+    navBtn.click();
+  }
+  setTimeout(()=>{
+    const m = document.querySelector('mark[data-note-id="'+id+'"]');
+    if(m){
+      m.scrollIntoView({behavior:'smooth', block:'center'});
+      m.style.outline = '2px solid var(--accent)';
+      m.style.outlineOffset = '2px';
+      setTimeout(()=>{ m.style.outline=''; m.style.outlineOffset=''; }, 2200);
+    }
+  }, 200);
+}
+
+function deleteNote(id){
+  const m = document.querySelector('mark[data-note-id="'+id+'"]');
+  if(m){
+    const parent = m.parentNode;
+    while(m.firstChild) parent.insertBefore(m.firstChild, m);
+    parent.removeChild(m);
+  }
+  notes = notes.filter(n=>n.id !== id);
+  saveNotes();
+  renderNotesList();
+}
+
+function toggleNotesPanel(){
+  const p = document.getElementById('notesPanel');
+  p.classList.toggle('open');
+  if(p.classList.contains('open')) renderNotesList();
+}
+
+function exportNotes(){
+  if(notes.length === 0){ alert('Nothing to export yet.'); return; }
+  const blob = new Blob([JSON.stringify(notes, null, 2)], {type: 'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'iac-notes-' + new Date().toISOString().slice(0,10) + '.json';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+function importNotes(event){
+  const file = event.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = function(e){
+    try {
+      const imported = JSON.parse(e.target.result);
+      if(!Array.isArray(imported)) throw new Error('Invalid file format');
+      const existing = new Set(notes.map(n=>n.id));
+      let added = 0;
+      imported.forEach(n=>{
+        if(n && n.id && n.text && !existing.has(n.id)){ notes.push(n); added++; }
+      });
+      saveNotes();
+      reapplyNotes();
+      renderNotesList();
+      alert('✓ Imported '+added+' notes.');
+    } catch(err){
+      alert('⚠️ Import failed: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+  event.target.value = '';
+}
+
+function clearAllNotes(){
+  if(notes.length === 0) return;
+  if(!confirm('Delete ALL highlights and flags? This cannot be undone.')) return;
+  document.querySelectorAll('mark.hl').forEach(m=>{
+    const parent = m.parentNode;
+    while(m.firstChild) parent.insertBefore(m.firstChild, m);
+    parent.removeChild(m);
+  });
+  notes = [];
+  saveNotes();
+  renderNotesList();
+}
+
+// Re-apply notes whenever a section becomes active (since sections render on tab switch)
+document.querySelectorAll('#nav button').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    setTimeout(reapplyNotes, 150);
+  });
+});
+
 // ================== INIT ==================
 updateCountdown();
 renderCalendar();
 renderFlash();
 showQuiz('ACC');
+renderNotesBadge();
+setTimeout(reapplyNotes, 300);
 </script>
 </body>
 </html>
