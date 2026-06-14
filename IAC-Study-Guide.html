@@ -1209,20 +1209,106 @@ mark.hl:hover{filter:brightness(1.25)}
 <!-- SUBSTANTIVE PROCEDURES -->
 <section id="sub">
   <h2>🔍 Substantive Procedures by Cycle
-    <small>Assertion-linked procedures for every transaction cycle — copy this structure into your exam answer</small>
+    <small>What they are · how to formulate them (mark-by-mark) · per-account trigger map · 21 assertion-linked procedure sets — copy this structure into your exam answer</small>
   </h2>
 
+  <!-- ============ THEORY: WHAT & WHY ============ -->
   <div class="card accent">
-    <h3 style="margin-top:0">How to write a substantive procedure (mark-by-mark)</h3>
-    <p>Every procedure must contain <strong>4 elements</strong>. Miss any one = lose the mark:</p>
-    <ol>
-      <li><strong>Assertion</strong> being addressed (existence, completeness, etc.)</li>
-      <li><strong>Verb</strong> — a concrete audit action (inspect, recalculate, confirm, observe, agree, trace, enquire)</li>
-      <li><strong>Source of evidence</strong> — specific document or record</li>
-      <li><strong>Compare to</strong> — what you're agreeing/checking against</li>
-    </ol>
-    <p><strong>Template:</strong> "[Verb] the [source] and [compare/agree/trace] to the [target] to verify [assertion]."</p>
-    <p><strong>Example:</strong> "Inspect the signed sales invoice and agree the quantity and price to the underlying GRN and approved price list, to verify the <em>accuracy</em> of revenue."</p>
+    <h3 style="margin-top:0">①&nbsp; What <em>is</em> a substantive procedure? (ISA 330)</h3>
+    <p>A <strong>substantive procedure</strong> is an audit procedure designed to <strong>detect material misstatements at the assertion level</strong>. It is your <em>response</em> to a <strong>Risk of Material Misstatement (RoMM)</strong> in a specific account/assertion. There are exactly <strong>two kinds</strong>:</p>
+    <div class="grid c2">
+      <div class="card" style="margin:0">
+        <h4 style="margin-top:0">🔬 Tests of detail (ToD)</h4>
+        <p>Examine the <strong>individual items / transactions</strong> making up a balance — inspect, recalculate, confirm, agree to source documents. High assurance, slower. This is the <em>bulk</em> of most IAC answers.</p>
+      </div>
+      <div class="card" style="margin:0">
+        <h4 style="margin-top:0">📈 Substantive analytical procedures (SAP)</h4>
+        <p>Evaluate the balance by studying <strong>plausible relationships</strong> — compare to prior year, budget, ratios, or an <strong>independent expectation</strong> you build; investigate variances. Fast, good for large, predictable populations (e.g. wages, interest, depreciation).</p>
+      </div>
+    </div>
+    <div class="callout exam"><strong>The Golden Rule (every COA/Endunamoo memo repeats it):</strong> <em>"Substantive procedures are performed to respond to the risks of material misstatement (RoMM) at the assertion level."</em> So before you write a single procedure, ask: <strong>which account, which assertion, what could go wrong?</strong> Then write the procedure that would catch it. If the question limits you to certain assertions (e.g. "accuracy, valuation &amp; presentation only") — <strong>stay in that lane</strong> or you waste time for zero marks.</p></div>
+    <div class="callout layman">Think of yourself as a detective. The <strong>RoMM is the crime you suspect</strong> ("debtors might not be recoverable"). The <strong>assertion is the specific allegation</strong> ("valuation is overstated"). The <strong>substantive procedure is the evidence you go and collect</strong> to prove or disprove it ("re-perform the ECL matrix and agree default rates to history").</p></div>
+  </div>
+
+  <!-- ============ HOW TO FORMULATE — MARK BY MARK ============ -->
+  <div class="card accent">
+    <h3 style="margin-top:0">②&nbsp; How to formulate one — mark-by-mark</h3>
+    <p>A procedure that earns the mark has <strong>4 ingredients</strong>. Miss any one and the marker can't award it:</p>
+    <table>
+      <tr><th>#</th><th>Ingredient</th><th>Get it from…</th></tr>
+      <tr><td>1</td><td><strong>Action verb</strong> — a concrete, auditable action</td><td>The verb bank below (NOT vague words like "check", "look at", "ensure")</td></tr>
+      <tr><td>2</td><td><strong>Source of evidence</strong> — the specific document / record</td><td>Invoice, GRN, contract, title deed, bank confirmation, age analysis…</td></tr>
+      <tr><td>3</td><td><strong>Compare-to / target</strong> — what you agree or trace it against</td><td>GL, TB, AFS, price list, prior-year WP, supplier statement…</td></tr>
+      <tr><td>4</td><td><strong>Purpose</strong> — "…to verify the [assertion] of [account]"</td><td>Naming the assertion shows the marker you understood the risk</td></tr>
+    </table>
+    <div class="formula">TEMPLATE:&nbsp; [Verb] the [source document] and [agree / trace / recalculate] to the [target] &nbsp;<strong>to verify the [assertion] of [account].</strong></div>
+    <p style="margin-bottom:4px"><strong>Verb bank — "I CAR ROC"</strong> (the only verbs that earn marks):</p>
+    <p><span class="chip">Inspect</span><span class="chip">Confirm / Circularise</span><span class="chip">Agree / Trace</span><span class="chip">Recalculate / Re-perform</span><span class="chip">Recompute</span><span class="chip">Observe</span><span class="chip">Compare</span><span class="chip">Enquire (+ corroborate)</span><span class="chip">Reconcile</span><span class="chip">CAATs / extract</span></p>
+    <div class="callout watch"><strong>"Enquire" alone is the weakest evidence</strong> (oral, internal). It almost never earns the mark on its own — always pair it: <em>"Enquire from management… <strong>and corroborate</strong> the response by inspecting [document]."</em></div>
+    <div class="why"><strong>Worked example.</strong> Risk: revenue overstated → assertion <em>accuracy</em>. Procedure: <em>"<strong>Inspect</strong> the signed sales invoice and <strong>agree</strong> the quantity to the delivery note and the price to the approved price list, recalculating qty × price less discount, <strong>to verify the accuracy</strong> of revenue."</em> — all 4 ingredients present.</div>
+  </div>
+
+  <!-- ============ THE UNIVERSAL SKELETON — MIND MAP ============ -->
+  <div class="card good">
+    <h3 style="margin-top:0">③&nbsp; The universal answer skeleton 🧠 — apply to ANY account</h3>
+    <p>Every model answer in the COA / ITC packs follows the <strong>same shape</strong>. Memorise this skeleton and you will never stare at a blank page. Open with the easy "bank" marks, do the assertion-driven tests of detail in the middle, close with analytics &amp; disclosure.</p>
+    <div class="formula" style="white-space:pre-wrap;line-height:1.9">
+                       ┌──────────────────────────────────────┐
+                       │   ACCOUNT / BALANCE BEING TESTED       │
+                       └───────────────────┬──────────────────┘
+        ┌──────────────────────────┬───────┴────────┬───────────────────────────┐
+   ① GENERAL ("CARDS")        ② TESTS OF DETAIL    ③ ANALYTICAL (SAP)      ④ WRAP-UP
+   • <b>C</b>ast / re-perform sched   per ASSERTION:        • vs prior year         • Disclosure per IFRS
+   • <b>A</b>gree to GL / TB / AFS    E R A V C / O C A C   • vs budget/forecast    • Inspect minutes
+   • <b>R</b>ep letter (MRL)          (pick the ones        • ratios &amp; trends       • Material journals
+   • <b>D</b>isclosure note check      AT RISK in the        • build an expectation  • Subsequent events
+   • opening bal → <b>S</b>=PY WP      scenario)            • investigate variance  • CAATs throughout
+    </div>
+    <div class="grid c2">
+      <div class="card" style="margin:0">
+        <h4 style="margin-top:0">"CARDS" — the easy-mark opener (works for every account)</h4>
+        <ul style="margin:0">
+          <li><strong>C</strong>ast / re-perform the schedule obtained from management for arithmetical accuracy.</li>
+          <li><strong>A</strong>gree the total to the general ledger, trial balance &amp; annual financial statements.</li>
+          <li><strong>R</strong>ep letter — obtain a signed written management representation specifically covering the relevant assertions (ISA 580).</li>
+          <li><strong>D</strong>isclosure — inspect the notes to confirm disclosure complies with the relevant IFRS / IAS.</li>
+          <li><strong>S</strong>tart-of-year — agree the opening balance to the prior-year audited AFS / working papers.</li>
+        </ul>
+      </div>
+      <div class="card" style="margin:0">
+        <h4 style="margin-top:0">Assertion triggers — pick the ones AT RISK</h4>
+        <p style="margin:.2em 0"><strong>Balances (B/S) → "E-RAV-CP"</strong></p>
+        <p style="margin:.2em 0"><span class="chip">Existence</span><span class="chip">Rights &amp; obligations</span><span class="chip">Accuracy/Valuation &amp; allocation</span><span class="chip">Completeness</span><span class="chip">Presentation</span></p>
+        <p style="margin:.6em 0 .2em"><strong>Transactions (P/L) → "O-CACC-P"</strong></p>
+        <p style="margin:.2em 0"><span class="chip">Occurrence</span><span class="chip">Completeness</span><span class="chip">Accuracy</span><span class="chip">Cut-off</span><span class="chip">Classification</span><span class="chip">Presentation</span></p>
+        <div class="callout layman" style="margin-bottom:0">Existence/Occurrence = <em>is it real &amp; did it happen?</em> · Completeness = <em>is anything missing?</em> · Rights = <em>do we own it?</em> · Valuation = <em>is the amount right?</em> · Cut-off = <em>right period?</em> · Classification/Presentation = <em>right place &amp; disclosed?</em></div>
+      </div>
+    </div>
+    <div class="callout watch">Don't write all assertions for every account — <strong>marks are awarded for the assertions actually at risk</strong> in the scenario. Receivables → Valuation (recoverability). PPE → Existence + Valuation (depreciation/impairment). Payables → Completeness (unrecorded liabilities). Estimates → Valuation. Always tie it back to the risk in the facts.</div>
+  </div>
+
+  <!-- ============ PER-ACCOUNT TRIGGER MIND-MAP ============ -->
+  <div class="card">
+    <h3 style="margin-top:0">④&nbsp; Per-account trigger map 🗺️ — "what do I write?"</h3>
+    <p><small>One-line memory hooks. When you see the account, fire off these triggers, then formulate each into a full 4-ingredient procedure. (B)=balance, (T)=transaction, (E)=estimate.</small></p>
+    <div class="grid c2">
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Trade receivables (B) — <span class="chip high">Valuation</span></h4><p style="margin:0">Age analysis (CAATs re-age) · circularise (positive) · subsequent receipts for non-replies · ECL matrix re-perform + default rates vs history · credit limits exceeded · credit (Cr) balances reclassify to payables · pledged/ceded? · vs PY &amp; budget.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Payables &amp; accruals (B) — <span class="chip high">Completeness</span></h4><p style="margin:0"><strong>Search for unrecorded liabilities</strong> (post year-end payments → was it accrued?) · supplier statement recons (top suppliers) · unmatched GRNs · cut-off · re-value FX payables at closing rate.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Inventory (B) — <span class="chip high">Existence + Valuation</span></h4><p style="margin:0">Attend count (sheet↔floor) · cut-off (last GRN/dispatch) · cost vs NRV (lower of) · obsolete/slow-moving write-down · consignment (rights) · CAATs negative/old lines.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">PPE (B) — <span class="chip high">Existence + Valuation</span></h4><p style="margin:0">Physically inspect (register→floor &amp; floor→register) · title deeds (rights) · additions to invoices + capitalised costs (IAS 16) · re-perform depreciation · impairment indicators · disposals gain/loss + recoupment.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Bank &amp; cash (B) — <span class="chip high">Existence</span></h4><p style="margin:0">Bank confirmation (direct) — balances, loans, guarantees, collateral, signatories · re-perform bank rec → trace reconciling items to next statement · restricted/pledged cash · overdraft = current liability.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Going concern / cash-flow forecast (E)</h4><p style="margin:0">Obtain forecast · re-perform casts · competence of preparer · assumptions reasonable (industry/economy) · agree inputs to audited data · forecast vs actuals (track record) · confirm loan/OD facilities · adjust for known events (claims, errors) · MRL on plans (ISA 570.16(e)) · subsequent events.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Impairment / value-in-use (E) — <span class="chip high">Valuation</span></h4><p style="margin:0">Obtain &amp; re-perform calc · discount rate reasonable (vs listed peers/WACC) · cash flows to strategic plan/signed contracts · terminal/growth rate · recoverable amount = <strong>higher</strong> of VIU &amp; FVLCD · exclude items not allowed (e.g. termination benefits, IAS 36) · trace correcting JE to GL/TB/notes (IAS 36).</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Reliance on expert (ISA 500 mgmt / ISA 620 auditor's)</h4><p style="margin:0"><strong>C-O-S</strong>: <strong>C</strong>ompetence (quals, membership), <strong>O</strong>bjectivity/independence (interests/relationships), <strong>S</strong>cope &amp; work (engagement letter, methods, assumptions, source data) · conclusions vs source &amp; auditor expectation · if disagreement → appoint auditor's expert.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Capital expenditure / forex purchase (B/T)</h4><p style="margin:0">Schedule of capitalised costs → re-cast · invoice/import docs (price, trade discount) · capital vs repairs (IAS 16) · directly attributable costs (freight, install, duties) · FOB date = recognition date · spot rate from credible source → recalc ZAR · approval (CAPEX) · trace to FAR.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Deferred tax asset (B) — <span class="chip high">Valuation / recoverability</span></h4><p style="margin:0">Schedule → re-perform at tax rate · agree tax loss to SARS assessment / specialists' computation · <strong>probable future taxable profit</strong>: inspect budgets, assumptions, budget vs actual track record · disclosure of uncertainty (IAS 12) · MRL on ability to generate profits.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Assets held for sale (B, IFRS 5) — <span class="chip high">Valuation</span></h4><p style="margin:0">Lower of CA &amp; FV less costs to sell · obtain valuer's reports → re-perform · property details (erf no.) to title deeds · own valuation expert · valuer competence/objectivity · IFRS 5 held-for-sale criteria met · MRL.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Net investment in leases — LESSOR (B, IFRS 16)</h4><p style="margin:0">Report from system per contract → re-cast · CAATs recalc unearned finance income &amp; gross investment · net investment = gross − unearned · inspect contracts (terms, options) · payments to bank · residual value guarantees (expert) · impairment (IFRS 9 ECL on overdue) · circularise lessees.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Payroll / wages (T) — SAP-heavy</h4><p style="margin:0">Build expectation (headcount × avg wage) · month-to-month / vs PY / budget / cost centre · wages as % of sales/production · investigate fluctuations · recalc PAYE/UIF/SDL · EMP201 to SARS.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Cash bonus / incentive scheme (T/E)</h4><p style="margin:0">Obtain scheme calc → re-perform · board minutes (declared? terms — target sales, %, eligibility) · agree audited revenue to target trigger · eligibility (employed at qual date) · occurrence (still employed) &amp; completeness · recalc each employee's %/cash portion · agree pay-out to bank · MRL.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Estimates &amp; provisions (E, ISA 540) — <span class="chip high">Valuation</span></h4><p style="margin:0">Understand mgmt process · test data (accuracy/completeness) · assumptions vs history/industry · build independent estimate/range · subsequent events · evaluate management bias.</p></div>
+      <div class="card" style="margin:0"><h4 style="margin-top:0">Group / consolidation (B) — see Cycle 19</h4><p style="margin:0">Re-cast consol schedule · @acquisition (purchase contract, %, goodwill/NCI) · since-acq reserves &amp; NCI · current year NCI/dividends/FCTR · intercompany eliminations · disposal (P/L, derecognition) · component auditors (ISA 600R) · related parties.</p></div>
+    </div>
   </div>
 
   <h3>Cycle 1 — Revenue &amp; Receivables</h3>
@@ -1354,6 +1440,219 @@ mark.hl:hover{filter:brightness(1.25)}
       <tr><td><strong>Occurrence &amp; terms</strong></td><td>Inspect related-party transactions; verify whether at arm's length; inspect board approvals.</td></tr>
       <tr><td><strong>Directors' emoluments</strong></td><td>Agree to signed directors' resolutions and service contracts; recalculate per Companies Act s30 required disclosures.</td></tr>
     </table>
+  </div>
+
+  <div class="callout exam" style="margin-top:26px"><strong>Cycles 11–21 below</strong> are the higher-order accounts that COA / ITC papers love to test as standalone "describe the substantive procedures" questions. Each is drawn from worked model answers — learn the <em>structure</em>, not the exact words.</div>
+
+  <h3>Cycle 11 — Trade Receivables (deep dive) <span class="priority-pill HOT">HOT</span></h3>
+  <div class="card">
+    <h4>Key assertions at risk</h4>
+    <p>Accuracy · Valuation (recoverability / ECL) · Presentation. <em>(In a recession or "fees must fall"-type scenario, Valuation is king.)</em></p>
+    <table>
+      <tr><th>Assertion / step</th><th>Procedure</th></tr>
+      <tr><td><strong>General (CARDS)</strong></td><td>Obtain a schedule of receivables &amp; credit losses; test castings/calculations; agree opening balances to PY WP and closing to AFS; inspect material adjusting journals; reference receivables in the MRL; inspect disclosure per IFRS 7 &amp; IFRS 15.</td></tr>
+      <tr><td><strong>Accuracy (CAATs)</strong></td><td>Using CAATs/GAS, extract the debtors age analysis; re-perform the ageing (per invoice date, IFRS 7); agree the total to the debtors control account in the GL &amp; TB; identify accounts exceeding their credit limit and follow up with management.</td></tr>
+      <tr><td><strong>Accuracy</strong></td><td>Using CAATs, recalculate the total value of invoices &amp; interest charged; reconcile/match credit notes to customer accounts; re-perform a sample's opening balance + movements = closing balance, agreeing to the age analysis.</td></tr>
+      <tr><td><strong>Existence</strong></td><td>Perform a positive external debtors confirmation (circularisation) at year-end; for non-replies perform alternative procedures — inspect the bank statement for receipts after year-end.</td></tr>
+      <tr><td><strong>Valuation — allowance for credit losses</strong></td><td>Discuss the method of calculating the allowance with the CFO/TCWG; assess reasonableness given the history of bad debts &amp; the economic environment; compare the basis to other entities in the sector / prior years; inspect supporting documents (minutes, policy) corroborating the % applied.</td></tr>
+      <tr><td><strong>Valuation — re-perform</strong></td><td>Obtain management's workings for the allowance and re-perform all calculations for clerical accuracy; using CAATs compute amounts outstanding beyond the policy period and compare to management's figure; stratify debtors by "debtor type" and compare totals to the workings; verify integrity of the "debtor type" field by inspecting supporting documents (external funding, payment terms, default history).</td></tr>
+      <tr><td><strong>Valuation — judgement</strong></td><td>Enquire whether policy is likely to change/relax (e.g. releasing results when fees unpaid); consider the competence of the preparer by comparing the prior-year allowance to bad debts actually written off after year-end (back-testing).</td></tr>
+      <tr><td><strong>Presentation</strong></td><td>Using CAATs, extract debtor accounts with <strong>credit balances</strong>; investigate and request reclassification to payables; inspect the receivables &amp; revenue disclosure for compliance with IFRS 7 &amp; IFRS 15.</td></tr>
+      <tr><td><strong>Analytical review</strong></td><td>Compare balances to prior years &amp; budget; consider trends &amp; ratios (debtors days) vs comparable entities; investigate unexpected findings by enquiry and corroborate with documents.</td></tr>
+      <tr><td><strong>Going concern link</strong></td><td>Compare the cash-flow forecast used in the going-concern assessment to expected cash flows from debtors.</td></tr>
+    </table>
+  </div>
+
+  <h3>Cycle 12 — Going Concern &amp; Cash-Flow Forecasts <span class="priority-pill HOT">HOT</span></h3>
+  <div class="card">
+    <h4>What's at risk</h4>
+    <p>The <strong>reasonableness</strong> of the forecast supporting the going-concern assumption (ISA 570). Forecasts are estimates → audit the <strong>inputs</strong> (assumptions) and the <strong>arithmetic</strong>.</p>
+    <table>
+      <tr><th>Area</th><th>Procedure</th></tr>
+      <tr><td><strong>Obtain &amp; understand</strong></td><td>Obtain the cash-flow forecast from management; by enquiry, ascertain the process followed to compile it and the identity/competence of the preparers (qualifications &amp; experience).</td></tr>
+      <tr><td><strong>Competence (track record)</strong></td><td>Compare forecasts prepared by these individuals in prior years to the actual results that materialised — to assess reliability.</td></tr>
+      <tr><td><strong>Arithmetic</strong></td><td>Re-perform calculations (castings) to confirm the mathematical accuracy of the forecast.</td></tr>
+      <tr><td><strong>Data integrity</strong></td><td>Agree, by inspection, the data used in the forecast to supporting documents (e.g. audited prior-year figures, signed contracts).</td></tr>
+      <tr><td><strong>Assumptions</strong></td><td>Evaluate the reasonableness of assumptions by discussion with management and corroborate against supporting documents — industry norms, approved policy, economic indicators.</td></tr>
+      <tr><td><strong>Analytical</strong></td><td>Perform analytical procedures comparing forecast figures to comparable prior-period actuals; build an independent expectation (e.g. expected students × average fee) and assess reasonableness.</td></tr>
+      <tr><td><strong>Approval</strong></td><td>Inspect the minutes of the board / audit committee where the forecast was evaluated for reasonableness and approved.</td></tr>
+      <tr><td><strong>Specific adjustments</strong></td><td>Inspect the forecast to confirm known items are included — e.g. correction of an overstatement error, cash outflows for legal claims, restructuring/non-recurring costs are NOT recurring.</td></tr>
+      <tr><td><strong>Funding</strong></td><td>Confirm the availability of loan &amp; overdraft facilities with bankers/credit providers; inspect terms &amp; repayment conditions.</td></tr>
+      <tr><td><strong>Management's plans</strong></td><td>For each planned action (e.g. no salary increases, cost cuts, asset sales, new contracts) — discuss feasibility, inspect supporting documents (union agreements, signed contracts, board resolutions), and corroborate amounts to the forecast.</td></tr>
+      <tr><td><strong>Shareholder/parent support</strong></td><td>Obtain written confirmation of intention to provide financial support; inspect any guarantee; assess the supporter's ability to provide it.</td></tr>
+      <tr><td><strong>Wrap-up</strong></td><td>Contact the entity's legal counsel (with permission) re litigation/claims to include; consider subsequent events affecting forecast cash flows; obtain a written representation on the feasibility of future plans (ISA 570.16(e)).</td></tr>
+    </table>
+    <div class="callout watch">Examiner note from the memo: <em>completeness is the key</em> — irrelevant points that don't engage the scenario can score <strong>negative</strong> marks. Only write what the facts support.</div>
+  </div>
+
+  <h3>Cycle 13 — Impairment &amp; Value-in-Use (IAS 36) <span class="priority-pill HOT">HOT</span></h3>
+  <div class="card">
+    <h4>What's at risk</h4>
+    <p>Valuation of the CGU/asset. Recoverable amount = <strong>higher of</strong> value-in-use (VIU) and fair value less costs of disposal (FVLCD). Audit the calculation AND the assumptions.</p>
+    <table>
+      <tr><th>Area</th><th>Procedure</th></tr>
+      <tr><td><strong>Obtain &amp; re-perform</strong></td><td>Obtain management's recoverable-amount calculation; re-perform the VIU using the stated discount rate; agree the cash flows to the approved strategic/5-year plan.</td></tr>
+      <tr><td><strong>Cash inflows</strong></td><td>Discuss assumptions and assess whether viable; agree future inflows to signed contracts for new customers, price lists / proof of future sales for existing customers; confirm cash flows from non-operational/unsigned sources are excluded.</td></tr>
+      <tr><td><strong>Cash outflows</strong></td><td>Evaluate reasonableness vs your knowledge of the business (fixed &amp; variable cost of production); agree input costs (e.g. raw materials) to price lists/invoices at active market prices (not internal transfer prices); confirm servicing &amp; maintenance costs are included.</td></tr>
+      <tr><td><strong>Discount rate</strong></td><td>Audit the reasonableness of the discount rate by comparing it to similar listed companies / a WACC computation.</td></tr>
+      <tr><td><strong>Growth / terminal value</strong></td><td>Discuss why a terminal value was/wasn't included; evaluate the reasonableness of the growth rate vs business knowledge &amp; external market research.</td></tr>
+      <tr><td><strong>Bias</strong></td><td>Consider potential manipulation/misstatement of the calculation (e.g. management/personal motivation, bonus-linked).</td></tr>
+      <tr><td><strong>Recoverable amount</strong></td><td>Inspect that the correct recoverable amount was used — the <strong>higher</strong> of VIU and FVLCD.</td></tr>
+      <tr><td><strong>Accounting &amp; disclosure</strong></td><td>Inspect the correcting journal posted to the GL and that the TB/AFS were adjusted; obtain a signed MRL on the impairment; inspect the notes for IAS 36 disclosure; inspect minutes for approval &amp; identification of impairment indicators.</td></tr>
+    </table>
+    <div class="callout exam">If you struggle: think of the <strong>accounting principle</strong> first (how is the item recognised/measured under IAS 36?). The RoMM follows — a calculation can have <strong>arithmetic errors</strong>, and the <strong>subjective inputs</strong> (assumptions, growth, discount rate) may be unreasonable. Your procedures respond to both.</div>
+  </div>
+
+  <h3>Cycle 14 — Reliance on Experts (ISA 500 / ISA 620)</h3>
+  <div class="card">
+    <h4>Which standard?</h4>
+    <p><strong>ISA 500(8)</strong> — when <em>management</em> used an expert (you audit that expert's work). <strong>ISA 620</strong> — when the <em>auditor</em> engages their own expert. The procedures rhyme: <strong>Competence · Objectivity · Scope &amp; Work (C-O-S)</strong>.</p>
+    <table>
+      <tr><th>Area</th><th>Procedure</th></tr>
+      <tr><td><strong>Scope</strong></td><td>Inspect the engagement letter/agreement setting out the nature, scope &amp; objectives of the work and the respective roles &amp; responsibilities of the expert and management.</td></tr>
+      <tr><td><strong>Competence &amp; capability</strong></td><td>Obtain evidence of membership of an accredited professional body and qualifications; assess experience in doing fair-value/valuation work of a similar nature (read prior reports, discuss).</td></tr>
+      <tr><td><strong>Objectivity / independence</strong></td><td>Discuss with management &amp; the expert any interests or relationships that may threaten objectivity; obtain a declaration of independence.</td></tr>
+      <tr><td><strong>Work &amp; assumptions</strong></td><td>Obtain an understanding of the work done and assumptions used; assess appropriateness &amp; relevance as audit evidence — alignment with the financial-reporting framework; assess methods &amp; conclusions vs auditor's professional judgement; assess relevance, completeness &amp; accuracy of source data used.</td></tr>
+      <tr><td><strong>Conclusions</strong></td><td>Read the report and consider whether conclusions are in line with the underlying source documents and the auditor's expectations.</td></tr>
+      <tr><td><strong>Errors / treatment</strong></td><td>Where the expert applied incorrect treatment (e.g. including termination benefits in costs of disposal — not allowed by IAS 36), discuss and request the calculation be adjusted; re-perform the calculation.</td></tr>
+      <tr><td><strong>Disagreement</strong></td><td>If a significant disagreement remains between auditor and management's expert, appoint an <strong>independent / auditor's expert</strong> (ISA 620).</td></tr>
+    </table>
+  </div>
+
+  <h3>Cycle 15 — Capital Expenditure &amp; Foreign-Currency Asset Purchases (IAS 16 / IAS 21)</h3>
+  <div class="card">
+    <table>
+      <tr><th>Assertion</th><th>Procedure</th></tr>
+      <tr><td><strong>General</strong></td><td>Obtain a signed MRL on the correct treatment of capital expenditure vs repairs &amp; maintenance; request a schedule of amounts capitalised and re-perform the casting; agree the list of expenditures to the asset account; inspect evidence that CAPEX approval was obtained.</td></tr>
+      <tr><td><strong>Occurrence</strong></td><td>Inspect the supplier invoice and confirm it is made out to the entity; agree invoice detail (price, costs) to the signed purchase/import agreement.</td></tr>
+      <tr><td><strong>Occurrence / delivery</strong></td><td>Agree invoice detail to the delivery documentation; inspect proof of receipt of delivery (signature of receiving personnel); physically inspect the asset and agree the asset number to the fixed asset register.</td></tr>
+      <tr><td><strong>Classification (capital vs repairs)</strong></td><td>Inspect all costs capitalised to the asset and confirm they qualify as capital (directly attributable per IAS 16) and are not of a maintenance nature; identify other qualifying costs (shipping/freight, installation, testing, insurance in transit, import duties).</td></tr>
+      <tr><td><strong>Accuracy</strong></td><td>Inspect the invoice/import contract; verify the purchase price; verify the trade-discount %; recalculate the net purchase price.</td></tr>
+      <tr><td><strong>Cut-off / recognition date</strong></td><td>Inspect the shipping documents (bill of lading) &amp; contract to confirm the <strong>FOB date</strong> and that the asset was recognised on that date; where management used the wrong date/spot rate, inspect the correcting journal.</td></tr>
+      <tr><td><strong>Accuracy — forex (IAS 21)</strong></td><td>Obtain the spot exchange rate at the transaction (FOB) date from a credible source; recalculate the conversion from the foreign currency to ZAR.</td></tr>
+      <tr><td><strong>Completeness</strong></td><td>Inspect the fixed asset register and confirm the new asset was recognised at the correct amount (total of the schedule); follow it through to the GL &amp; AFS.</td></tr>
+    </table>
+  </div>
+
+  <h3>Cycle 16 — Deferred Tax Asset (IAS 12)</h3>
+  <div class="card">
+    <h4>What's at risk</h4>
+    <p>Accuracy, valuation &amp; recoverability — a DTA is only raised to the extent <strong>future taxable profit is probable</strong>. That probability is a judgement → audit the budgets.</p>
+    <table>
+      <tr><th>Area</th><th>Procedure</th></tr>
+      <tr><td><strong>Accuracy / valuation / allocation</strong></td><td>Request a schedule of the DTA computation; re-perform the calculation and agree the total to the GL, TB &amp; AFS; inspect that the DTA was computed at the correct tax rate (e.g. 28%) on the estimated tax loss.</td></tr>
+      <tr><td><strong>Tax loss accuracy</strong></td><td>Agree the work of the firm's tax specialists on the current-year tax computation; agree amounts to those used in the DTA computation; inspect their findings for errors; agree the assessed loss brought forward to the latest SARS assessment.</td></tr>
+      <tr><td><strong>Recoverability (the key risk)</strong></td><td>Inspect the budget for future years to determine the estimated taxable income against which the loss can be utilised; by enquiry &amp; inspection, understand the budgeting process to ensure it is robust &amp; realistic.</td></tr>
+      <tr><td><strong>Budget — analytical &amp; assumptions</strong></td><td>Perform analytical procedures (year-on-year budget comparison; obtain explanations for unusual changes &amp; corroborate); evaluate management's assumptions by enquiry &amp; inspection; re-perform budget calculations; compare prior budgets to actual historical performance (track record / back-test).</td></tr>
+      <tr><td><strong>Approval &amp; disclosure</strong></td><td>Inspect the minutes where the budget was approved as reasonable; inspect the notes for disclosure of the uncertainty regarding recoverability; request the MRL reference the entity's ability to generate future taxable income.</td></tr>
+    </table>
+  </div>
+
+  <h3>Cycle 17 — Non-current Assets Held for Sale (IFRS 5)</h3>
+  <div class="card">
+    <table>
+      <tr><th>Area</th><th>Procedure</th></tr>
+      <tr><td><strong>Process &amp; framework</strong></td><td>Obtain an understanding of the process followed by the valuer (e.g. for investment property/buildings) to confirm compliance with IAS 40/IAS 16/IFRS 13; inspect the engagement letter (nature, scope, objectives, responsibilities).</td></tr>
+      <tr><td><strong>Re-perform</strong></td><td>Request the valuation reports and re-perform all calculations (and supporting workings) in the reports.</td></tr>
+      <tr><td><strong>Agree to records</strong></td><td>By inspection, agree the figures used in the valuation reports to the relevant account balances in the GL, TB &amp; AFS.</td></tr>
+      <tr><td><strong>Rights (correct property)</strong></td><td>Compare property details (erf numbers, locations) in the valuation reports to the title deeds to ensure the correct properties were valued.</td></tr>
+      <tr><td><strong>Auditor's expert</strong></td><td>Consult the firm's own property-valuation experts to re-perform some procedures — compare FV to recent market disposals; assess reasonableness of discounted cash flows &amp; discount rates; agree DCF inputs to budgets, contracts &amp; market rates.</td></tr>
+      <tr><td><strong>Reliance on mgmt's expert</strong></td><td>Assess the expert's independence/objectivity (enquiry of staff) and level of experience &amp; skill in property valuations (enquiry of the expert &amp; the CFO).</td></tr>
+      <tr><td><strong>Wrap-up</strong></td><td>Request the MRL reference the appropriateness of the fair values attributed to the properties; confirm IFRS 5 held-for-sale criteria (available for immediate sale, highly probable) are met.</td></tr>
+    </table>
+  </div>
+
+  <h3>Cycle 18 — Net Investment in Leases — LESSOR (IFRS 16) <span class="priority-pill HIGH">HIGH</span></h3>
+  <div class="card">
+    <h4>What's at risk</h4>
+    <p>Valuation of the net investment (finance lease receivable). Net investment = gross investment − unearned finance income. Heavy CAATs question.</p>
+    <table>
+      <tr><th>Area</th><th>Procedure</th></tr>
+      <tr><td><strong>General</strong></td><td>Obtain a signed MRL covering completeness, accuracy, valuation &amp; allocation of the net investment; obtain a system report per contract (asset value, gross investment, unearned finance income, opening/closing net investment, interest, payments); re-perform the casting and agree the closing total to the GL &amp; AFS; agree the opening balance to PY audited AFS.</td></tr>
+      <tr><td><strong>Valuation (CAATs)</strong></td><td>Using CAATs on the data, recalculate the unearned finance income per contract and extract a report of differences; recalculate the gross investment (undiscounted future lease payments receivable); recalculate the net investment = gross investment − unearned finance income, and extract differences.</td></tr>
+      <tr><td><strong>Terms</strong></td><td>Verify, by enquiry &amp; inspection of contracts, whether there have been addendums/changes (extension/early-termination options) and consider the reasonableness of estimates re the likelihood of options being exercised.</td></tr>
+      <tr><td><strong>Sample of contracts</strong></td><td>Inspect the contract and verify fixed (in-substance fixed) payments and any variable payments linked to a rate/index; inspect the report to verify no other variable payments were included; agree payments received to the bank statement and to the ledger allocation.</td></tr>
+      <tr><td><strong>Residual values</strong></td><td>Inspect the sample of contracts for any residual value guarantees; use an expert to assist with expected residual values of similar assets; inspect industry publications/trade values for similar assets.</td></tr>
+      <tr><td><strong>Impairment (IFRS 9)</strong></td><td>Consider whether impairment of the net investment is required per IFRS 9; review the overdue-payment report for the extent of impairment; discuss triggers increasing credit risk; corroborate via inspection of default evidence; enquire which accounts were handed over for collection and inspect they are appropriately impaired.</td></tr>
+      <tr><td><strong>Confirmation</strong></td><td>With the lessor's permission, contact the lessees and request confirmation of the amounts owing.</td></tr>
+    </table>
+  </div>
+
+  <h3>Cycle 19 — Cash Bonus / Incentive Schemes (IAS 19 / IFRS 2)</h3>
+  <div class="card">
+    <table>
+      <tr><th>Area</th><th>Procedure</th></tr>
+      <tr><td><strong>General</strong></td><td>Obtain the scheme calculation/schedule from the client and re-perform it; obtain a signed MRL covering all relevant assertions; agree the amount to the GL/TB/AFS; inspect the notes for disclosure (IFRS 2/IAS 19/IAS 24/IAS 37).</td></tr>
+      <tr><td><strong>Existence / terms</strong></td><td>Inspect board minutes (and the announcement) to confirm the bonus was declared and to verify the terms &amp; conditions (target sales, %, health-&amp;-safety standards, eligible employees) and approval.</td></tr>
+      <tr><td><strong>Trigger met</strong></td><td>Inspect the actual audited revenue in your working papers to confirm the target (e.g. R550m) was achieved; inspect health-&amp;-safety audit reports during the year (number, content — "clean"?).</td></tr>
+      <tr><td><strong>Eligibility / occurrence / completeness</strong></td><td>Obtain a list of employees who received the bonus; select a sample &amp; trace to payroll/employment contracts to confirm eligibility &amp; employment at the qualifying date; trace to later payrolls to confirm still employed (occurrence); trace from payroll to the list to confirm all included (completeness).</td></tr>
+      <tr><td><strong>Accuracy</strong></td><td>For a sample, agree the salary used to payroll; agree total salary expense to the SoP/L; recalculate each employee's % (ratio); recalculate the cash portion (individual salary ÷ total salary × bonus pool); agree the amount paid to bank statements; follow up discrepancies and corroborate.</td></tr>
+    </table>
+  </div>
+
+  <h3>Cycle 20 — Group Statements / Consolidations (AUDT671 SU 20) <span class="priority-pill HOT">HOT</span></h3>
+  <div class="card warn">
+    <p><strong>Read the required carefully:</strong> acquisition <em>or</em> disposal? Separate AFS <em>or</em> consolidated? If separates — check the accounting policy (cost vs fair value). This area needs your ACC consolidation knowledge.</p>
+    <h4>General / standard procedures (add to any consol question)</h4>
+    <ul>
+      <li>Obtain management's consolidation working schedules (incl. supporting calcs) &amp; re-perform for mathematical accuracy (esp. NCI).</li>
+      <li>Inspect the schedule &amp; records for unusual entries; follow up with corroborative evidence.</li>
+      <li>Agree the totals per the consol schedule to the audited AFS; agree posting of consolidation journals to the GL.</li>
+      <li>Obtain a signed MRL on the completeness &amp; accuracy of the consolidation process.</li>
+      <li>Inspect accounting policies to confirm functional currency (IAS 21), consolidation policy, and whether subs/associates are at cost or fair value in the separates.</li>
+    </ul>
+    <h4>@ Acquisition (consolidated AFS)</h4>
+    <table>
+      <tr><th>Area</th><th>Procedure</th></tr>
+      <tr><td><strong>Shareholding</strong></td><td>Inspect the purchase contract: acquisition date, consideration paid (agree to bank statement), number of shares; recalculate % shareholding (shares held ÷ total issued); confirm control / significant influence / joint arrangement per IFRS 10/11/IAS 28.</td></tr>
+      <tr><td><strong>Authorisation</strong></td><td>Inspect the acquirer's MOI for restrictions on acquisitions; inspect the acquiree's MOI/share register (share value, shares issued); inspect minutes for the special resolution approving the acquisition (s115 Companies Act).</td></tr>
+      <tr><td><strong>Reserves at acq.</strong></td><td>Inspect the audited AFS of the acquiree to confirm retained earnings/other reserves at acquisition date; inspect group policy to confirm NCI is at fair value or proportionate share.</td></tr>
+      <tr><td><strong>Fair values / experts</strong></td><td>Engage an expert to re-perform the FV of NCI and of identifiable assets/liabilities (plant, contingent liabilities, intangibles) at acquisition; evaluate the expert (objectivity, competence, methods, assumptions, conclusions vs source); recalculate the under/over-valuation.</td></tr>
+      <tr><td><strong>Goodwill</strong></td><td>Recalculate goodwill / gain on bargain purchase and agree to the consolidated AFS; inspect consolidation journals to confirm the at-acquisition investment was eliminated and goodwill &amp; NCI raised.</td></tr>
+      <tr><td><strong>Foreign acquiree</strong></td><td>Recalculate all amounts to rand using the applicable exchange rate; agree component-auditor information to the consolidation schedule.</td></tr>
+    </table>
+    <h4>Since-acquisition &amp; current year</h4>
+    <table>
+      <tr><th>Area</th><th>Procedure</th></tr>
+      <tr><td><strong>Since reserves</strong></td><td>Inspect audited AFS for opening retained earnings/reserves; re-perform additional/less depreciation &amp; profit/loss on intercompany asset sales; recalculate the "since" reserves; confirm NCI received its share (re-perform).</td></tr>
+      <tr><td><strong>NCI (current)</strong></td><td>Agree the subsidiary's profit to its audited AFS; recalculate the NCI portion of profit and agree to the consolidated SoP/L &amp; OCI; recalculate NCI's share of additional depreciation/profit on sale.</td></tr>
+      <tr><td><strong>Dividends</strong></td><td>Inspect minutes for authorisation &amp; date of distribution and the solvency &amp; liquidity test (s4/s46); inspect the TB shortly after distribution to confirm S&amp;L; inspect consol journals for elimination of intercompany dividend (paid, received, NCI).</td></tr>
+      <tr><td><strong>FCTR (foreign op)</strong></td><td>Obtain exchange rates (acquisition, since, current, year-end) from a financial institution; recalculate FCTR on &amp; excluding goodwill; recalculate the current-year movement; agree to the SoCiE &amp; OCI; cast the FCTR column.</td></tr>
+      <tr><td><strong>Intercompany</strong></td><td>Inspect consolidation workings to confirm elimination of: unrealised profits, intercompany loans &amp; interest, intergroup debtors/creditors, and intercompany dividends.</td></tr>
+    </table>
+    <h4>Disposal of subsidiary/associate (separate AFS)</h4>
+    <table>
+      <tr><th>Area</th><th>Procedure</th></tr>
+      <tr><td><strong>General</strong></td><td>Obtain a signed MRL re all assertions on the disposal; obtain a schedule of proceeds, carrying amount &amp; P/L on sale.</td></tr>
+      <tr><td><strong>Agreement</strong></td><td>Inspect the sales agreement: parties &amp; signatures, amount, effective date, payment terms, % disposed.</td></tr>
+      <tr><td><strong>Arm's length</strong></td><td>If to a related party (ISA 550), enquire re assumptions used for the selling price; compare to market-related indicators given the risk profile; assess for fraud indicators.</td></tr>
+      <tr><td><strong>Carrying amount &amp; P/L</strong></td><td>Agree CA to PY WP and re-perform; recalculate the profit/loss on disposal (if at cost); if at fair value, inspect that the mark-to-market reserve was reclassified to retained earnings.</td></tr>
+      <tr><td><strong>Loan &amp; interest</strong></td><td>If proceeds received over time, recalculate the PV/fair value of the loan (discount at market rate) and the interest per IFRS 9; compare to management's calc.</td></tr>
+      <tr><td><strong>Accounting &amp; Act</strong></td><td>Inspect GL/journals: investment derecognised, P/L &amp; loan/interest correctly recognised; inspect the MOI for restrictions on loans to related parties / disposals; inspect IAS 24 disclosure (in BOTH separate &amp; consolidated AFS).</td></tr>
+    </table>
+  </div>
+
+  <h3>Cycle 21 — Reliance on Component Auditors (ISA 600R) &amp; Related-Party Search</h3>
+  <div class="card">
+    <h4>Reliance on component auditors (ISA 600R.23–29)</h4>
+    <table>
+      <tr><th>Ref</th><th>Procedure</th></tr>
+      <tr><td><strong>.23 / A57–A58</strong></td><td>Enquire whether the group auditor can be sufficiently &amp; appropriately involved in the component auditor's work; specifically enquire whether the component auditor is subject to restrictions limiting communication / sharing of documentation, and whether they will cooperate &amp; perform the work requested.</td></tr>
+      <tr><td><strong>.25</strong></td><td>Enquire whether the component auditor understands &amp; will comply with relevant ethical requirements, including independence.</td></tr>
+      <tr><td><strong>.26</strong></td><td>Inspect documents / enquire of third parties indicating the component auditor's professional competence &amp; capabilities.</td></tr>
+      <tr><td><strong>.29</strong></td><td>Enquire whether the component auditor commits to meeting the group auditor's expectations, including communication at appropriate times throughout the audit.</td></tr>
+      <tr><td><strong>.28</strong></td><td>Inspect &amp; evaluate the component auditor's working papers (adequacy, sufficiency &amp; appropriateness of evidence obtained).</td></tr>
+    </table>
+    <div class="callout watch">ISA 600 was revised (ISA 600R). For any "rely on the component auditor" question use these points — and remember to <strong>formulate them as procedures</strong>, not just quote the standard.</div>
+    <h4>Completeness of related parties (ISA 550) — the "search"</h4>
+    <ul>
+      <li>Obtain an MRL on completeness of related parties, transactions &amp; balances; enquire the process used to identify them.</li>
+      <li>Compare the list to PY WP; inspect the share register/minutes of shareholders for principal shareholders; inspect minutes of board / register of directors' interests in contracts (s75).</li>
+      <li>Enquire of other engagement-team members; perform background searches (internet, CIPC/IP commissioner).</li>
+      <li>Using CAATs / inspection of records, identify transactions with identified related parties and agree to the disclosure.</li>
+      <li>Inspect: bank &amp; legal confirmations, significant contracts outside the ordinary course, professional-advisor correspondence, regulator/JSE/CIPC filings, tax returns, whistle-blower reports — and compare to the list (ISA 550.15 &amp; A22).</li>
+      <li>Agree the identified list to the related-party disclosure to confirm completeness of disclosure (IAS 24).</li>
+    </ul>
   </div>
 
   <div class="card accent">

@@ -8,7 +8,7 @@ Exam dates: **23, 24 & 25 June 2026**.
 - **📅 Interactive study calendar** (19 April → 25 June) — click any day for a 2-hour breakdown (Mon–Fri) or a two-topic weekend plan. Progress tracked in localStorage.
 - **📘 ACC / 🔍 AUD / 💰 TAX / 📊 MAF summaries** — every high-yield IFRS, ISA, Act section and MAF concept, each with a plain-English "layman" explainer.
 - **📊 Consolidations worked example** — full P Ltd / S Ltd walkthrough with pro-forma journals.
-- **🔍 Substantive procedures by cycle** — assertion-linked procedure tables for 10 transaction cycles.
+- **🔍 Substantive procedures by cycle** — what they are + how to formulate them mark-by-mark, a universal answer skeleton ("CARDS"), a per-account trigger mind-map, and assertion-linked procedure tables for **21** accounts/cycles (incl. going concern, impairment/value-in-use, reliance on experts, deferred tax, IFRS 5 held-for-sale, lessor net investment in leases, cash bonus schemes, group statements/consolidations & component-auditor reliance). Sourced from College of Accounting / ITC model answers, Endunamoo CTA packs and AUDT671 notes.
 - **🎯 Weak-areas tab** — targeted drills for prior-period errors, IAS 38, IFRS 16, PIS, independence, s11(a), s24C, IFRS 3 goodwill, NOCLAR, NPV/WACC.
 - **🃏 Leitner-box flashcards** — proper spaced-repetition (5 boxes, Again/Hard/Good/Easy ratings, auto-scheduled review).
 - **📝 Self-marking quizzes** — 10 MCQs per subject + mixed paper.
