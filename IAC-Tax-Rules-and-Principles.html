@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <title>IAC Tax — Rules in Simple Terms + a Principle from Every Example</title>
 <style>
-  :root{ --ink:#161a1f; --muted:#5b626d; --line:#bcc3cc; --accent:#6d4d12; --accent2:#8a5a00; --blue:#234d7a;
-         --soft:#faf7f1; --soft2:#f1ece2; --pbg:#eef4fb; }
+  :root{ --ink:#161a1f; --muted:#5b626d; --line:#bcc3cc; --accent:#6d4d12; --accent2:#8a5a00; --blue:#234d7a; --green:#1f6b3a;
+         --soft:#faf7f1; --soft2:#f1ece2; --pbg:#eef4fb; --gbg:#eef8f0; }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:9px;line-height:1.42}
   .wrap{max-width:900px;margin:0 auto;padding:20px}
@@ -14,6 +14,7 @@
   .banner{background:#fff7e6;border:1px solid #e7c97a;color:#7a5300;border-radius:4px;padding:4px 8px;font-size:8.2px;margin-bottom:8px}
   h2{font-size:12px;margin:14px 0 5px;color:#fff;background:var(--accent);padding:4px 8px;border-radius:3px}
   h2.b{background:var(--blue)}
+  h2.g{background:var(--green)}
   h3{font-size:10px;margin:8px 0 2px;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:1px}
   p{margin:3px 0}
   ul{margin:2px 0 4px 13px;padding:0}
@@ -27,6 +28,12 @@
   .pr .tag{font-weight:700;color:var(--accent2)}
   .num{background:#1c2230;color:#e9edf3;border-radius:3px;padding:1px 5px;font-family:"Consolas",monospace;font-size:8.4px}
   .cols2{column-count:2;column-gap:14px}
+  table{width:100%;border-collapse:collapse;margin:6px 0;font-size:8.6px}
+  th,td{border:1px solid var(--line);padding:3px 5px;text-align:left;vertical-align:top}
+  th{background:var(--soft2);color:var(--accent);font-weight:700;font-size:8px;text-transform:uppercase}
+  tr{break-inside:avoid}
+  td.c{white-space:nowrap;font-weight:700;color:var(--blue);width:120px}
+  .kw{color:var(--green);font-weight:600}
   @page{size:A4;margin:11mm 10mm;@bottom-right{content:"p. " counter(page);font-size:8px;color:#999}}
   h2,h3{break-after:avoid}
 </style>
@@ -36,28 +43,28 @@
 
 <h1>IAC Tax — Rules in Simple Terms <span style="font-weight:400;font-size:12px">+ a principle from every example</span></h1>
 <div class="sub">SAICA IAC 2026 · the fastest pass through everything · T. Van Heerden · from the IAC Tax Notes + Milpark/PGDA worked examples</div>
-<div class="banner"><b>How to use:</b> Part 1 = every rule with its key numbers &amp; mechanism. Part 2 = the principle each worked example teaches, with the trick that earns the mark. ⚠ Confirm rand thresholds/brackets on the exam rate card.</div>
+<div class="banner"><b>How to use:</b> Part 1 = every rule with its key numbers &amp; mechanism. Part 2 = the principle each worked example teaches. Part 3 = the case-law principles + the exact key words that earn marks in discussion answers. ⚠ Confirm rand thresholds on the exam rate card.</div>
 
 <!-- ============ PART 1 ============ -->
 <h2>Part 1 · Every tax rule, in simple terms (with the detail)</h2>
 <div class="cols2">
 
 <div class="rule"><h3>Gross income (s1) &amp; residence</h3><ul>
-<li><b>Resident</b> = ordinarily resident (Cohen/Kuttel — your "real home") <i>or</i> the physical-presence day test (91 days this yr + 91 avg over 5 yrs + 915 total) → taxed <b>worldwide</b>. Non-resident → only <b>SA-source</b>.</li>
-<li><b>"Total amount, in cash or otherwise"</b> = money or anything with a money value (Lategan; Brummeria); valued at the date you become entitled.</li>
-<li><b>"Received by"</b> = for your <b>own benefit</b> (Geldenhuys; Pyott — deposits count); <b>"accrued to"</b> = <b>unconditionally entitled</b> (Mooi); taxed at the <b>earlier</b> of the two (Delfos). Amounts are not discounted (Peoples Stores).</li>
-<li><b>Capital receipts excluded</b> — judged on intention/scheme of profit (Visser tree-vs-fruit, Pick 'n Pay, Natal Estates change of intention, Stott). Onus that it's capital is on the <b>taxpayer</b> (s102).</li>
+<li><b>Resident</b> = ordinarily resident (your "real home" — the place you'd naturally return to) <i>or</i> the physical-presence day test (91 days this yr + 91 avg over 5 yrs + 915 total) → taxed <b>worldwide</b>. Non-resident → only <b>SA-source</b>.</li>
+<li><b>"Total amount, in cash or otherwise"</b> = money or anything with an ascertainable money value; valued at the date you become entitled.</li>
+<li><b>"Received by"</b> = for your <b>own benefit</b> (deposits still count); <b>"accrued to"</b> = <b>unconditionally entitled</b>; taxed at the <b>earlier</b> of the two. Amounts are not discounted to present value.</li>
+<li><b>Capital receipts excluded</b> — judged on intention / scheme of profit-making (the income-producing "tree" vs its "fruit"; a change of intention). Onus that it's capital is on the <b>taxpayer</b> (s102).</li>
 <li><b>Special inclusions (par a–n)</b> pull amounts in even if capital: annuities, alimony, services/restraint (cA/cB), retirement lump sums (e), recoupments (n), lease premiums (g), leasehold improvements (h).</li>
 </ul></div>
 
 <div class="rule"><h3>Exempt income (s10) &amp; s24C</h3><ul>
 <li>Local dividends exempt for normal tax (s10(1)(k)) — but 20% dividends tax. Interest exemption <span class="num">R23 800</span> (&lt;65) / <span class="num">R34 500</span> (65+).</li>
 <li>Foreign employment s10(1)(o)(ii): exempt up to <span class="num">R1.25m</span> if &gt;183 days (incl. 60 continuous) abroad. Foreign dividends partly exempt (s10B; full if ≥10% holding).</li>
-<li><b>s24C allowance:</b> income received in advance under a contract that funds future deductible costs under the <b>same</b> contract (Big G) → defer the matching portion; reverses next year.</li>
+<li><b>s24C allowance:</b> income received in advance under a contract that funds future deductible costs under the <b>same</b> contract → defer the matching portion; reverses next year.</li>
 </ul></div>
 
 <div class="rule"><h3>Deductions — s11(a) + s23</h3><ul>
-<li><b>Positive test (s11(a)):</b> ① a trade; ② expenditure/loss; ③ <b>actually incurred</b> = unconditional liability (Edgars; Nasionale Pers); ④ in <b>production of income</b> = closely connected to income operations (PE Tramways; Joffe); ⑤ in the year; ⑥ <b>not capital</b> (fixed vs floating capital — New State Areas; BP SA).</li>
+<li><b>Positive test (s11(a)):</b> ① a trade; ② expenditure/loss; ③ <b>actually incurred</b> = unconditional legal liability; ④ in <b>production of income</b> = closely connected to income-earning operations; ⑤ in the year; ⑥ <b>not capital</b> (fixed vs floating capital — income-producing <i>structure</i> vs <i>operations</i>).</li>
 <li><b>Negative test (s23):</b> private/domestic &amp; home office (a),(b); not-for-trade (g); the tax itself (d); reserves/provisions; bribes/fines (o).</li>
 <li><b>s23H</b> prepaid: only the portion enjoyed this year — unless total prepaid ≤<span class="num">R100k</span> or goods/services delivered within 6 months of year-end.</li>
 <li><b>s11A</b> pre-trade (ring-fenced); <b>s11(c)</b> legal (non-capital, trade); <b>s11(d)</b> repairs; <b>s11(i)/(j)</b> bad/doubtful debts; <b>s11(l)/(m)</b> fund contributions / annuities.</li>
@@ -151,12 +158,12 @@
 <h2 class="b">Part 2 · One principle from every worked example (with the detail)</h2>
 
 <div class="pr"><h3>Gross income — illustrative examples</h3><ul>
-<li><span class="tag">Free use of money (Brummeria):</span> an interest-free loan is GI = interest saved (prime × loan × period). <span class="num">10% × R10m × 7/12 = R583 333</span>; a 5% loan → only the 5% shortfall.</li>
+<li><span class="tag">Free use of money:</span> an interest-free loan is GI = interest saved (prime × loan × period). <span class="num">10% × R10m × 7/12 = R583 333</span>; a 5% loan → only the 5% shortfall.</li>
 <li><span class="tag">Payment in kind:</span> shares/goods received as payment are valued at <b>market value on the date of entitlement</b>, not the (lower) contract value.</li>
-<li><span class="tag">Notional income:</span> what you <i>could</i> have earned (cash hidden under a floor) is never taxed — no receipt/accrual (Lategan/Mooi).</li>
-<li><span class="tag">Agent money (Geldenhuys):</span> a R60k rent collection where you keep 10% → only <b>R6 000</b> is GI; the R54k passed on isn't yours. Never include R60k then deduct R54k.</li>
+<li><span class="tag">Notional income:</span> what you <i>could</i> have earned (cash hidden under a floor) is never taxed — no receipt/accrual.</li>
+<li><span class="tag">Agent money:</span> a R60k rent collection where you keep 10% → only <b>R6 000</b> is GI; the R54k passed on isn't yours. Never include R60k then deduct R54k.</li>
 <li><span class="tag">Overpayment:</span> a duplicate receipt isn't GI until you're unconditionally entitled (repayable for 5 yrs); may be recouped if never repaid.</li>
-<li><span class="tag">Illegal income</span> (e.g. drug sales) is still fully taxable. <span class="tag">No discounting (Peoples Stores):</span> R15m receivable in 11 months is GI at the <b>full R15m</b>, not its PV.</li>
+<li><span class="tag">Illegal income</span> (e.g. drug sales) is still fully taxable. <span class="tag">No discounting:</span> R15m receivable in 11 months is GI at the <b>full R15m</b>, not its PV.</li>
 </ul></div>
 
 <div class="pr"><h3>Deductions</h3><ul>
@@ -174,7 +181,7 @@
 <li><span class="tag">s22(8):</span> stock taken for private use or given as a dividend in specie triggers a deemed recovery at cost/MV.</li>
 <li><span class="tag">s25D:</span> a foreign-currency transaction is translated to rand at the spot rate on transaction date.</li>
 <li><span class="tag">s24I:</span> forex debtors/creditors/loans are retranslated at year-end — recognise both <b>realised and unrealised</b> gains/losses (transaction date → year-end → realisation date).</li>
-<li><span class="tag">s24I(7):</span> exchange differences on a capital asset bought before it's brought into use are <b>deferred</b> until the asset is in use (added to/below its cost).</li>
+<li><span class="tag">s24I(7):</span> exchange differences on a capital asset bought before it's brought into use are <b>deferred</b> until the asset is in use.</li>
 </ul></div>
 
 <div class="pr"><h3>Capital allowances (Corporate Tax)</h3><ul>
@@ -190,15 +197,15 @@
 <li><span class="tag">CGT-1 residence:</span> residents = worldwide gains; non-residents only on SA immovable property &amp; permanent-establishment assets.</li>
 <li><span class="tag">CGT-2 intention:</span> a private car sold without a profit-scheme is capital — and a personal-use asset, so the gain is disregarded.</li>
 <li><span class="tag">CGT-3/4 mechanics:</span> sum gains &amp; losses, the annual exclusion reduces <b>both</b>, then apply the inclusion rate.</li>
-<li><span class="tag">CGT-5 emigration (s9H):</span> ceasing residence = deemed disposal at MV of all assets <b>except</b> SA immovable property &amp; cash (which stay in the SA net).</li>
-<li><span class="tag">CGT-6 immigration:</span> on becoming resident, base cost of foreign assets is reset to market value (you don't tax pre-arrival growth).</li>
+<li><span class="tag">CGT-5 emigration (s9H):</span> ceasing residence = deemed disposal at MV of all assets <b>except</b> SA immovable property &amp; cash.</li>
+<li><span class="tag">CGT-6 immigration:</span> on becoming resident, base cost of foreign assets is reset to market value.</li>
 <li><span class="tag">CGT-7 base cost:</span> cost R1m + transfer duty 50k + jacuzzi (improvement) 15k + advertising 30k + 5% agent commission — <b>repairs excluded</b>.</li>
 <li><span class="tag">CGT-8 allowance asset:</span> remove the recoupment from proceeds and reduce base cost by allowances; the recoupment can never exceed past allowances.</li>
 <li><span class="tag">CGT-9:</span> donations tax paid is added (proportionally) to the donee's base cost.</li>
 <li><span class="tag">CGT-10 proceeds:</span> reduce proceeds by any portion already taxed in gross income — no double tax.</li>
 <li><span class="tag">CGT-12/13 primary residence:</span> first <b>R2m of the gain</b> excluded; apportion for land &gt;2ha or business/letting use.</li>
 <li><span class="tag">CGT-14 to personal use:</span> deemed disposal at MV; a loss on a personal-use asset is disregarded (par 53).</li>
-<li><span class="tag">CGT-15 par 65:</span> insurance/involuntary proceeds qualify for roll-over; insurance is limited to original cost and the recoupment/gain can be spread over the replacement asset.</li>
+<li><span class="tag">CGT-15 par 65:</span> insurance/involuntary proceeds qualify for roll-over; insurance is limited to original cost and the gain can be spread over the replacement asset.</li>
 <li><span class="tag">CGT-16 connected persons:</span> a non-arm's-length deal is treated as happening at market value.</li>
 <li><span class="tag">CGT-17 death (s9HA):</span> deemed disposal at MV at death — except assets left to a spouse, which roll over at base cost (s9HB).</li>
 <li><span class="tag">CGT-18 s9C:</span> equity shares held ≥3 years are deemed capital — even a share dealer's; a change to capital intention is at MV.</li>
@@ -213,8 +220,8 @@
 <li><span class="tag">Import services:</span> self-account VAT only on the exempt-use portion (<span class="num">60 000 × 80% × 15% = 7 200</span>).</li>
 <li><span class="tag">Exports:</span> zero-rated only with export proof within 90 days — otherwise standard-rated at 15%.</li>
 <li><span class="tag">Going concern:</span> zero-rated when the criteria are met and both parties are vendors.</li>
-<li><span class="tag">Fixed property (Pine Jel):</span> output/input on a <b>payment basis</b> (s9(3)(d) / s16(4)) — only as the purchase price is settled.</li>
-<li><span class="tag">Credit waiver (Pine Jel):</span> a loan is an exempt financial service → no VAT reverses; s22 only applies if the creditor who waived also charged the original VAT.</li>
+<li><span class="tag">Fixed property:</span> output/input on a <b>payment basis</b> (s9(3)(d) / s16(4)) — only as the purchase price is settled.</li>
+<li><span class="tag">Credit waiver:</span> a loan is an exempt financial service → no VAT reverses; s22 only applies if the creditor who waived also charged the original VAT.</li>
 </ul></div>
 
 <div class="pr"><h3>Individuals &amp; fringe benefits (Worked Examples 2024)</h3><ul>
@@ -222,7 +229,7 @@
 <li><span class="tag">Travel allowance:</span> reduce by business km using the deemed-cost tables or actual costs — a logbook is essential; 80% is subject to PAYE.</li>
 <li><span class="tag">Subsistence:</span> deemed daily amounts apply only when away from home ≥1 night.</li>
 <li><span class="tag">Car FB:</span> 3.5% (3.25% with a maintenance plan) of determined value per month, reduced for business use and employee-borne running costs.</li>
-<li><span class="tag">Loan FB:</span> benefit = (official rate − rate charged) × loan × period; if the employee's rate exceeds the official rate any subsidy is instead taxed.</li>
+<li><span class="tag">Loan FB:</span> benefit = (official rate − rate charged) × loan × period.</li>
 <li><span class="tag">VAT on FB:</span> the employer accounts output VAT (tax fraction) on the cash equivalent of the benefit.</li>
 <li><span class="tag">s8C shares:</span> the gain (MV − consideration) on a restricted equity instrument is taxed as <b>remuneration on vesting</b>, not on grant.</li>
 </ul></div>
@@ -255,7 +262,7 @@
 
 <div class="pr"><h3>Donations, estate duty &amp; attribution</h3><ul>
 <li><span class="tag">Donations tax (Sam):</span> 20% on market value after the R100k exemption (<span class="num">185 000 − 100 000 = 85 000 × 20% = 17 000</span>); payable by end of the next month.</li>
-<li><span class="tag">Exemptions (Peter Pan):</span> spouse (unlimited), bona-fide maintenance, PBO, and assets returned within 6 months are all exempt — the R100k general exemption is used only once.</li>
+<li><span class="tag">Exemptions:</span> spouse (unlimited), bona-fide maintenance, PBO, and assets returned within 6 months are all exempt — the R100k general exemption is used only once.</li>
 <li><span class="tag">s7 attribution (Sam):</span> donating rental properties to a minor (s7(3)) and a non-resident (s7(8)) child still taxes that income in the donor — and donations tax applies too.</li>
 <li><span class="tag">Estate duty (Mr A):</span> (property + deemed 7 352 000 − debts/admin 172 000 − R3.5m) × 20% = <span class="num">736 000</span>.</li>
 <li><span class="tag">Estate valuation:</span> use death-date MV (or the actual arm's-length sale price); ignore later damage or a below-value "sweetheart" sale in the will.</li>
@@ -275,7 +282,55 @@
 <li><span class="tag">s9D / s10B:</span> CFC net income is imputed to &gt;50% resident shareholders; foreign dividends enjoy the participation (≥10%) or ratio exemption.</li>
 </ul></div>
 
-<div class="banner" style="margin-top:8px"><b>Fastest revision loop:</b> read a Part 1 rule (with its numbers) → read its Part 2 principles → attempt the matching ITC tutorial closed-book → log any principle you missed. Repeat per topic until none are missed.</div>
+<!-- ============ PART 3: CASE LAW ============ -->
+<h2 class="g">Part 3 · Case-law summary — the principle + the key words that earn marks</h2>
+<p class="sub" style="margin-bottom:4px">In a discussion answer, naming the case is a bonus; <b>stating the principle and using the highlighted key words</b> earns the mark. Write: "the principle in <i>[case]</i> is that … <span class="kw">[key words]</span> … applied to the facts, therefore …".</p>
+
+<h3>Gross income — "amount", received &amp; accrued</h3>
+<table>
+<tr><th>Case</th><th>Principle</th><th>Key words to write</th></tr>
+<tr><td class="c">Lategan / Brummeria</td><td>"Amount" is not only cash — anything with a money value is included; free use of money has a value.</td><td><span class="kw">"every form of property with an ascertainable money value"</span></td></tr>
+<tr><td class="c">Geldenhuys</td><td>"Received by" means received <b>for the taxpayer's own benefit</b>.</td><td><span class="kw">"received by … for his own benefit and on his own behalf"</span></td></tr>
+<tr><td class="c">Pyott</td><td>Deposits received are gross income even if there's an obligation to repay.</td><td><span class="kw">"received for own benefit despite an obligation to repay"</span></td></tr>
+<tr><td class="c">Mooi</td><td>An amount accrues when the taxpayer is <b>unconditionally entitled</b> to it.</td><td><span class="kw">"unconditionally entitled"</span></td></tr>
+<tr><td class="c">Delfos</td><td>Tax at the <b>earlier</b> of receipt or accrual.</td><td><span class="kw">"the earlier of received or accrued"</span></td></tr>
+<tr><td class="c">People's Stores</td><td>An accrued amount is included at face value, <b>not discounted</b>, even if payable later.</td><td><span class="kw">"not discounted to present value"; "entitled even if payable in future"</span></td></tr>
+<tr><td class="c">Butcher Bros</td><td>The onus that an amount (with a value) exists rests on <b>SARS</b>.</td><td><span class="kw">"onus on SARS that an amount accrued"</span></td></tr>
+<tr><td class="c">Cohen / Kuttel</td><td>Ordinarily resident = the country to which one would naturally return — one's real home.</td><td><span class="kw">"the country to which he would naturally return"; "real home"</span></td></tr>
+</table>
+
+<h3>Capital vs revenue</h3>
+<table>
+<tr><th>Case</th><th>Principle</th><th>Key words to write</th></tr>
+<tr><td class="c">Visser</td><td>Income is the <b>fruit</b> of the capital-producing <b>tree</b>.</td><td><span class="kw">"fruit vs the tree"; "produce of capital employed"</span></td></tr>
+<tr><td class="c">Pick 'n Pay / Stott</td><td>Receipt is revenue if part of a <b>scheme of profit-making</b>; intention at acquisition is decisive; a taxpayer may realise an asset to best advantage.</td><td><span class="kw">"scheme of profit-making"; "intention at acquisition"; "realise to best advantage"</span></td></tr>
+<tr><td class="c">Natal Estates / John Bell</td><td>A <b>change of intention</b> (capital→stock) needs a decisive step, not just a decision to sell ("crossing the Rubicon").</td><td><span class="kw">"crossed the Rubicon"; "embarked on a scheme of profit-making"</span></td></tr>
+<tr><td class="c">Founders Hill / Elandsheuwel</td><td>Even a realisation company can be trading; look at the intention of the company &amp; its shareholders.</td><td><span class="kw">"mere realisation vs trading"; "intention of the company"</span></td></tr>
+</table>
+
+<h3>Deductions &amp; trade</h3>
+<table>
+<tr><th>Case</th><th>Principle</th><th>Key words to write</th></tr>
+<tr><td class="c">Port Elizabeth Electric Tramway</td><td>"In production of income" = act/expense <b>closely connected</b> to the income-earning operations; risk inherent in the trade.</td><td><span class="kw">"closely connected to income-earning operations"; "necessarily attached to the performance of business operations"</span></td></tr>
+<tr><td class="c">Joffe &amp; Co</td><td>Damages/loss deductible only if a <b>necessary concomitant</b> of the trade (not negligence-based capital loss).</td><td><span class="kw">"necessary concomitant of the trade"</span></td></tr>
+<tr><td class="c">Sub-Nigel</td><td>Expense in production of income is deductible even if <b>no income</b> arose that year.</td><td><span class="kw">"need not produce income in the same year"</span></td></tr>
+<tr><td class="c">New State Areas</td><td>Capital vs revenue expenditure = <b>income-producing structure</b> (capital) vs <b>income-earning operations</b> (revenue).</td><td><span class="kw">"creating an income-producing structure"; "fixed vs floating capital"</span></td></tr>
+<tr><td class="c">BP Southern Africa</td><td>The <b>purpose</b> of the expenditure determines whether it is capital or revenue.</td><td><span class="kw">"true nature / purpose of the expenditure"</span></td></tr>
+<tr><td class="c">Edgars Stores / Golden Dumps</td><td>"Actually incurred" = an <b>unconditional legal liability</b> in the year; a contingent liability is not yet incurred.</td><td><span class="kw">"unconditional legal liability"; "not contingent"</span></td></tr>
+<tr><td class="c">Nasionale Pers</td><td>A bonus conditional on still being employed is <b>not actually incurred</b> until the condition is met.</td><td><span class="kw">"liability conditional → not yet incurred"</span></td></tr>
+<tr><td class="c">Burgess / Solaglass</td><td>"Trade" has the <b>widest possible meaning</b>; borrowing &amp; on-lending at a higher rate is a trade.</td><td><span class="kw">"trade given the widest possible meaning"; "venture"</span></td></tr>
+</table>
+
+<h3>Repairs (s11(d))</h3>
+<table>
+<tr><th>Case</th><th>Principle</th><th>Key words to write</th></tr>
+<tr><td class="c">Flemming</td><td>A repair <b>restores a part</b> using broadly similar materials — it does not create a better/different asset.</td><td><span class="kw">"restoration of a part, not a reconstruction"; "same function, not an improvement"</span></td></tr>
+<tr><td class="c">African Products</td><td>Renewal of a <b>subsidiary part</b> of the whole asset is a repair (revenue), not an improvement.</td><td><span class="kw">"renewal of a subsidiary part = repair"</span></td></tr>
+</table>
+
+<div class="banner" style="margin-top:6px"><b>Discussion-answer formula (per issue):</b> ① name the section → ② state the requirement / the case principle in <span class="kw">key words</span> → ③ apply to the facts &amp; figures → ④ conclude (included / deductible / taxable). One crisp applied point = one mark.</div>
+
+<div class="banner" style="margin-top:4px"><b>Fastest revision loop:</b> read a Part 1 rule → its Part 2 principles → the Part 3 key words → attempt the matching ITC tutorial closed-book → log any principle/keyword you missed. Repeat per topic.</div>
 
 </div>
 </body>
