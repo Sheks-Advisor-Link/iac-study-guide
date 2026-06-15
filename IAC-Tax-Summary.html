@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IAC Tax — Study Summary, Calculations, Section Triggers &amp; Exam Technique</title>
+<style>
+  :root{ --ink:#1a1d22; --muted:#5b626d; --line:#c9ced6; --accent:#6d4d12; --accent2:#8a5a00; --accent3:#234d7a;
+         --soft:#faf7f1; --soft2:#f1ece2; --warn:#8a5a00; --warnbg:#fff7e6; --good:#1f6b3a; --goodbg:#eef8f0;
+         --t:#7a3d12; --tbg:#fbf1e8; --calc:#0d3b66; --calcbg:#eef4fb; }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:11px;line-height:1.5}
+  .wrap{max-width:900px;margin:0 auto;padding:24px}
+  h1{font-size:25px;margin:0 0 2px;color:var(--accent);letter-spacing:-.3px}
+  h1 + .sub{color:var(--muted);font-size:12px;margin:0 0 16px}
+  h2{font-size:17px;margin:24px 0 8px;color:#fff;background:var(--accent);padding:7px 12px;border-radius:5px}
+  h2 .n{opacity:.7;font-weight:400}
+  h3{font-size:14px;margin:18px 0 5px;color:var(--accent);border-bottom:2px solid var(--line);padding-bottom:3px}
+  h4{font-size:12px;margin:11px 0 4px;color:var(--accent2)}
+  p{margin:5px 0}
+  ul,ol{margin:5px 0 5px 17px;padding:0}
+  li{margin:2.5px 0}
+  b,strong{color:#222}
+  table{width:100%;border-collapse:collapse;margin:7px 0;font-size:10.3px}
+  th,td{border:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
+  th{background:var(--soft2);color:var(--accent);font-weight:700;font-size:9.6px;text-transform:uppercase;letter-spacing:.3px}
+  tr{break-inside:avoid}
+  td.s{white-space:nowrap;font-weight:700;color:var(--accent3);width:118px}
+  .card{background:var(--soft);border:1px solid var(--line);border-radius:6px;padding:11px 13px;margin:9px 0}
+  .calc{background:var(--calcbg);border:1px solid #bcd3ec;border-radius:6px;padding:10px 13px;margin:9px 0}
+  .calc h4{color:var(--calc);margin-top:0}
+  .calc table{font-size:10px}
+  .calc td:last-child{text-align:right;white-space:nowrap}
+  .trig{background:var(--tbg);border-left:4px solid var(--t);padding:7px 11px;margin:7px 0;border-radius:0 5px 5px 0}
+  .trig b.lbl{color:var(--t);display:block;font-size:9.6px;text-transform:uppercase;letter-spacing:.4px;margin-bottom:1px}
+  .tech{background:var(--goodbg);border-left:4px solid var(--good);padding:7px 11px;margin:7px 0;border-radius:0 5px 5px 0}
+  .tech b.lbl{color:var(--good);display:block;font-size:9.6px;text-transform:uppercase;letter-spacing:.4px;margin-bottom:1px}
+  .warn{background:var(--warnbg);border-left:4px solid var(--warn);padding:7px 11px;margin:7px 0;border-radius:0 5px 5px 0}
+  .warn b.lbl{color:var(--warn);display:block;font-size:9.6px;text-transform:uppercase;letter-spacing:.4px;margin-bottom:1px}
+  .formula{background:#1c2230;color:#e9edf3;border-radius:6px;padding:9px 12px;margin:7px 0;font-family:"Consolas",monospace;font-size:9.6px;white-space:pre-wrap;line-height:1.6}
+  .chip{display:inline-block;background:var(--soft2);border:1px solid var(--line);color:var(--accent);padding:1px 7px;border-radius:99px;font-size:9px;margin:0 3px 3px 0}
+  .toc{columns:3;column-gap:24px;font-size:10px;line-height:1.55}
+  .toc b{color:var(--accent)}
+  .marks{color:var(--muted);font-size:9.4px}
+  footer{margin-top:26px;border-top:1px solid var(--line);padding-top:8px;color:var(--muted);font-size:9.2px}
+  @page{size:A4;margin:14mm 12mm;@bottom-right{content:"p. " counter(page);font-size:9px;color:#888}}
+  h2,h3,h4{break-after:avoid}
+  .card,.calc,.trig,.tech,.warn,table{break-inside:avoid}
+  @media print{.wrap{max-width:none;padding:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>IAC Tax — Master Study Summary</h1>
+<p class="sub">Topics · Calculations · Section Triggers · Exam Technique &nbsp;|&nbsp; SAICA IAC 2026 (YoA ending 28 Feb 2026) &nbsp;|&nbsp; T. Van Heerden &nbsp;|&nbsp; compiled from the IAC Tax Notes &amp; Tutorials (College of Accounting / ITC past papers) + Endunamoo</p>
+
+<div class="card">
+<b>Contents</b>
+<div class="toc">
+<b>Part 0 · Exam technique</b><br>
+0.1 How tax is tested<br>
+0.2 Discussion framework (IRAC+case law)<br>
+0.3 Calculation framework<br>
+0.4 Trigger-spotting method<br>
+<b>Part 1 · Master pro-forma</b><br>
+1.1 Taxable income framework<br>
+<b>Part 2 · Topics</b><br>
+1 Gross income, residence &amp; source<br>
+2 Special inclusions &amp; exempt income<br>
+3 General &amp; specific deductions<br>
+4 Trading stock (s22)<br>
+5 Capital allowances<br>
+6 Recoupments &amp; disposals<br>
+7 Repairs (s11(d))<br>
+8 Capital gains tax<br>
+9 Value-added tax<br>
+10 Individuals &amp; allowances (s8(1))<br>
+11 Fringe benefits (7th Sch)<br>
+12 Retirement &amp; medical<br>
+13 Employees' &amp; provisional tax<br>
+14 Lump sums &amp; severance<br>
+15 Dividends &amp; CTC<br>
+16 Companies &amp; assessed losses<br>
+17 Corporate rules (s41–47)<br>
+18 Interest &amp; s24J<br>
+19 Foreign tax (s25D/24I/6quat/10B)<br>
+20 Transfer pricing (s31)<br>
+21 Leasing<br>
+22 IP &amp; royalties<br>
+23 Debt benefits (s19/12A)<br>
+24 Share-based (s8C)<br>
+25 Estate duty<br>
+26 Donations tax<br>
+27 Deceased estates &amp; trusts<br>
+28 Tax administration (TAA)<br>
+29 GAAR<br>
+<b>Part 3 · Trigger cheat-sheet</b><br>
+<b>Part 4 · Case law</b><br>
+<b>Part 5 · ITC tutorial map</b><br>
+</div>
+</div>
+
+<!-- ===================== PART 0 ===================== -->
+<h2>Part 0 · Exam technique — the meta-skill</h2>
+
+<h3>0.1 How tax is tested in the IAC</h3>
+<ul>
+  <li>You are given a <b>legislation handbook / rate card</b> in the exam. <b>You do not memorise every threshold</b> — you memorise the <i>structure, triggers and method</i>, and read exact rates/brackets off the card. Marks are for <b>applying the law to the facts</b>, not reciting it.</li>
+  <li>Two answer types: <b>(a) Discussion</b> ("discuss/explain the tax consequences") and <b>(b) Calculation</b> ("calculate the tax liability / taxable income"). Many questions blend both.</li>
+  <li><b>~1 mark per valid point.</b> Short, distinct, applied sentences win. A paragraph with one idea = 1 mark; five crisp applied points = 5 marks.</li>
+  <li><b>Communication-skills marks (X1)</b> are awarded for logical layout, headings, and a memo/letter format when asked. Always use the requested format (memo "To/From/Subject", letter sign-off).</li>
+  <li><b>Read the "Required" precisely:</b> who is the taxpayer (individual / company / trust)? Which year? Which taxes (normal tax only? incl. VAT? CGT? donations?)? Stay in scope.</li>
+</ul>
+
+<h3>0.2 The discussion framework — "Identify → Rule → Apply → Case law → Conclude"</h3>
+<div class="tech"><b class="lbl">Per issue, write</b>
+<b>① Section</b> – name the section/definition that governs the item. &nbsp; <b>② Rule</b> – state the requirement it imposes. &nbsp; <b>③ Apply</b> – tie it to the specific facts/figures in the scenario. &nbsp; <b>④ Case law</b> – cite the leading case for any principle (one named case = often a mark). &nbsp; <b>⑤ Conclude</b> – state the consequence (included/deductible/taxable, and the amount).</div>
+<p class="marks">Model extract (Pine Jel): <i>"s11(a) is not relevant as s23B(3) gives priority to s24J… s24J(2) requires the amount be incurred in the production of income… purpose was to on-lend at a higher rate, so it is in production of income (PE Tramways)… re-lending at a profit constitutes a trade (Burgess / Solaglass)… Conclusion: the interest is deductible."</i> — each step scored a mark.</p>
+
+<h3>0.3 The calculation framework</h3>
+<ul>
+  <li>Always present a <b>vertical pro-forma</b> with a description column and a R column; <b>show every working</b> (workings earn marks even if the final number is wrong — "own-figure" / method marks).</li>
+  <li>Label each line with the <b>section</b> driving it (e.g. "s11(e) wear-and-tear"). Use <b>brackets for deductions</b>.</li>
+  <li>For VAT always show the <b>tax fraction 15/115</b> (output) or 15/115 on cost (input) and the section for timing/value.</li>
+  <li>State your <b>assumptions</b> where facts are ambiguous — a reasonable stated assumption protects the marks.</li>
+</ul>
+
+<h3>0.4 Trigger-spotting method</h3>
+<ul>
+  <li>Tax questions are <b>keyword-driven</b>. Each fact in the scenario is a deliberate trigger pointing to a section. Train yourself to read the scenario and annotate each fact with its section before writing.</li>
+  <li>Work the <b>master pro-forma top-to-bottom</b> (Part 1) — it forces completeness so you never miss an inclusion or deduction.</li>
+  <li>See <b>Part 3</b> for the keyword → section → action cheat-sheet.</li>
+</ul>
+
+<!-- ===================== PART 1 ===================== -->
+<h2>Part 1 · Master pro-forma — taxable income &amp; tax liability</h2>
+<div class="calc">
+<table>
+  <tr><td><b>GROSS INCOME</b> — s1 definition (resident: worldwide; non-resident: SA source)</td><td>xxx</td></tr>
+  <tr><td>+ Special inclusions — par (a)–(n) of "gross income" (annuities, alimony, lump sums, recoupments s8(4), etc.)</td><td>xxx</td></tr>
+  <tr><td>– Exempt income — s10 / s10B (dividends, interest exemption, foreign dividend, etc.)</td><td>(xxx)</td></tr>
+  <tr><td><b>= INCOME</b></td><td>xxx</td></tr>
+  <tr><td>– Deductions — s11(a) general + specific (s11(e), 12C, 13quin, 11(d), 24J, 11F, etc.) limited by s23</td><td>(xxx)</td></tr>
+  <tr><td>– Assessed loss b/f (s20)</td><td>(xxx)</td></tr>
+  <tr><td>+ Taxable capital gain — (net capital gain – annual exclusion) × inclusion rate (40% indiv / 80% co)</td><td>xxx</td></tr>
+  <tr><td>+ Amounts added per other provisions (e.g. s24C add-back, recoupment)</td><td>xxx</td></tr>
+  <tr><td><b>= TAXABLE INCOME</b></td><td><b>xxx</b></td></tr>
+  <tr><td>Normal tax per table (indiv sliding 18–45%; company 27%; trust 45%)</td><td>xxx</td></tr>
+  <tr><td>– Rebates (primary/secondary/tertiary) — individuals only</td><td>(xxx)</td></tr>
+  <tr><td>– Medical credits s6A &amp; s6B</td><td>(xxx)</td></tr>
+  <tr><td>– Foreign tax rebate s6quat</td><td>(xxx)</td></tr>
+  <tr><td><b>= Normal tax liability</b> &nbsp; (then – PAYE, – provisional tax = balance payable/refund)</td><td><b>xxx</b></td></tr>
+</table>
+</div>
+<div class="warn"><b class="lbl">Order matters</b>Dividends tax (20%), donations tax (20/25%) and estate duty (20/25%) are <b>separate taxes</b> — not part of the normal-tax pro-forma. Decide which taxes the "Required" wants before you start.</div>
+
+<!-- ===================== PART 2 ===================== -->
+<h2>Part 2 · Topic-by-topic summary</h2>
+
+<!-- 1 -->
+<h3>1 · Gross income, residence &amp; source</h3>
+<p><b>GI definition (s1):</b> the total amount, in cash or otherwise, received by or accrued to (resident = worldwide; non-resident = from an SA source), excluding receipts of a capital nature.</p>
+<ul>
+  <li><b>Resident</b> = ordinarily resident (Cohen / Kuttel) <i>or</i> physically present (day test). Resident → taxed on <b>worldwide</b> income; non-resident → only <b>SA-source</b>.</li>
+  <li><b>Amount</b> = money or money's value (Lategan; Brummeria — interest-free loan has a value).</li>
+  <li><b>Received</b> = for own benefit (Geldenhuys; Pyott — deposits still GI; Witwatersrand Racing Clubs).</li>
+  <li><b>Accrued</b> = unconditionally entitled (Mooi; Lategan). Earlier of received/accrued (Delfos).</li>
+  <li><b>Capital vs revenue</b> = intention / scheme of profit-making (Pick 'n Pay; Visser — tree vs fruit; Natal Estates; Stott; Founders Hill). <b>The big one</b> — argue both sides, conclude.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"foreign", "emigrated", "non-resident", "ordinarily resident" → residence &amp; source + s6quat / DTA. · "deposit / received in advance / refundable" → received for own benefit + maybe s24C. · "sold an asset — is it capital?" → capital vs revenue case law.</div>
+<div class="tech"><b class="lbl">Technique</b>For capital-vs-revenue, set out the intention test, apply BOTH the taxpayer's and SARS's argument with case law, then conclude. Onus that an amount exists is on SARS (Butcher Bros); onus that it's capital/exempt is on the taxpayer (s102 TAA).</div>
+
+<!-- 2 -->
+<h3>2 · Special inclusions &amp; exempt income</h3>
+<ul>
+  <li><b>Special inclusions</b> (par (a)–(n) of GI) bring in amounts <i>even if capital</i>: annuities (a), alimony, services/restraint of trade (cA/cB), lump sums (d) &amp; (e)(retirement) — separate tables, recoupments (n)/s8(4), lease premiums (g)/(h), key-man proceeds.</li>
+  <li><b>Exempt income (s10):</b> local dividends (s10(1)(k)); interest exemption (s10(1)(i)) — &lt;65: R23 800, 65+: R34 500; UIF/foreign pensions; s10(1)(o) foreign employment (R1.25m cap, 183/60 days); bursaries; uniform allowances.</li>
+  <li><b>Foreign dividends</b> — s10B: exempt if ≥10% holding (participation), else partial exemption ratio (effective ~20%).</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"restraint of trade", "annuity", "alimony", "lump sum", "lease premium" → special inclusion. · "interest received" → s10(1)(i) exemption. · "dividend" → s10(1)(k) exempt for normal tax (but 20% dividends tax). · "works abroad 183 days" → s10(1)(o)(ii).</div>
+
+<!-- 3 -->
+<h3>3 · General &amp; specific deductions</h3>
+<p><b>General deduction formula = s11(a) (positive test) read with s23 (negative test).</b></p>
+<ul>
+  <li><b>s11(a) requirements:</b> ① carrying on a <b>trade</b>; ② <b>expenditure &amp; losses</b>; ③ <b>actually incurred</b> (unconditional liability — Edgars; Nasionale Pers); ④ <b>in the production of income</b> (Port Elizabeth Tramways — closely connected to income-earning operations; Joffe — necessary concomitant); ⑤ during the year; ⑥ <b>not of a capital nature</b> (New State Areas — fixed vs floating capital; BP SA).</li>
+  <li><b>s23 prohibitions:</b> private/domestic (23(a),(b) home office rules); not in production (23(g)); tax itself (23(d)); provisions/reserves; bribes (23(o)); fines.</li>
+  <li><b>s23H</b> — prepaid expenditure: limited to portion enjoyed in the year (unless ≤R100k or service within 6 months).</li>
+  <li>Pre-trade expenditure s11A; legal costs s11(c); bad debts s11(i); doubtful debts s11(j).</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"is X deductible?" → s11(a) + s23 step-through. · "paid in advance / prepaid" → s23H. · "before the business started" → s11A. · "home office" → s23(b). · "legal fees / damages" → s11(c)/(a) + capital nature.</div>
+<div class="tech"><b class="lbl">Technique</b>March through each s11(a) requirement as a sub-heading, apply facts + case law to each, then check it isn't blocked by s23. One mark per requirement satisfied/failed.</div>
+
+<!-- 4 -->
+<h3>4 · Trading stock (s22)</h3>
+<ul>
+  <li><b>Closing stock s22(1)</b> — <i>added</i> to income at lower of cost or NRV (net realisable value); write-downs for obsolescence allowed if justified.</li>
+  <li><b>Opening stock s22(2)</b> — <i>deducted</i> (= prior closing).</li>
+  <li><b>Cost</b> = cost price + costs to bring to present location/condition (incl. customs); no NRV write-down merely for slow-moving without evidence.</li>
+  <li><b>s22(8)</b> — stock applied for private/non-trade use or distributed → deemed recovery at market value (or cost). <b>s22(4)</b> — acquired for no consideration → market value in &amp; out.</li>
+  <li><b>s23F</b> — limits deduction where stock not yet disposed of / income not yet received.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"inventory / stock on hand", "obsolete stock" → s22(1) lower of cost/NRV. · "took stock for own use / donated stock / drawings" → s22(8). · "free stock / inherited stock" → s22(4).</div>
+
+<!-- 5 -->
+<h3>5 · Capital allowances</h3>
+<table>
+  <tr><th>Section</th><th>Asset</th><th>Rate / method</th></tr>
+  <tr><td class="s">s11(e)</td><td>Movable assets (general wear &amp; tear)</td><td>Per Interpretation Note 47 write-off period (straight-line on cost); apportion for part-year; small items (&lt;R7 000) full write-off.</td></tr>
+  <tr><td class="s">s12C</td><td>New/used manufacturing plant &amp; machinery</td><td>New &amp; unused: <b>40% / 20% / 20% / 20%</b>. Used: <b>20% × 5 yrs</b>. No apportionment — full year. On cost (or moving cost).</td></tr>
+  <tr><td class="s">s12E</td><td>Small Business Corp assets</td><td>Manufacturing: <b>100%</b> write-off. Non-manufacturing: <b>50/30/20</b>.</td></tr>
+  <tr><td class="s">s13</td><td>Industrial buildings (manufacturing process)</td><td><b>5%</b> straight-line on cost of erection.</td></tr>
+  <tr><td class="s">s13quin</td><td>New &amp; unused commercial buildings</td><td><b>5%</b> p.a. on cost (non-residential). Buyer of part: 55% (whole bldg) / 30% (improvements) of price = deemed cost.</td></tr>
+  <tr><td class="s">s13sex</td><td>New residential units (own ≥5 in SA)</td><td><b>5%</b> (+<b>5%</b> extra = 10% for low-cost units). 55% of price if bought.</td></tr>
+  <tr><td class="s">s12N / s12F / s11D</td><td>Improvements on govt/PPP land; airports/ports; R&amp;D</td><td>Special regimes — apply if scenario flags them.</td></tr>
+</table>
+<div class="trig"><b class="lbl">Triggers</b>"machine / equipment used in manufacturing" → s12C (40/20/20/20). · "delivery vehicle / office furniture / computers" → s11(e) (IN47). · "small business corporation" → s12E. · "built / bought a factory" → s13; "office block / shop, new" → s13quin; "block of flats, owns 5+" → s13sex.</div>
+<div class="warn"><b class="lbl">Watch-out</b>s11(e) <b>apportions</b> for part of a year; s12C does <b>not</b> (full allowance in year brought into use). "New &amp; unused" is required for s12C 40%, s13quin, s13sex — if second-hand, drop to the used rate.</div>
+
+<!-- 6 -->
+<h3>6 · Recoupments &amp; disposal allowances</h3>
+<ul>
+  <li><b>s8(4)(a) recoupment:</b> on disposal, recoup allowances previously claimed = lower of (proceeds, cost) − tax value. Included in income (special inclusion). Capped at cost (excess is a capital gain).</li>
+  <li><b>s11(o) scrapping/disposal allowance:</b> if proceeds &lt; tax value on disposal (and useful life ≤10 yrs originally), the shortfall is deductible.</li>
+  <li><b>s24M</b> — proceeds not determinable; <b>s20B</b> — proceeds not yet accrued.</li>
+</ul>
+<div class="calc"><h4>Recoupment &amp; CGT on asset disposal (typical layout)</h4>
+<table>
+  <tr><td>Proceeds</td><td>R500 000</td></tr>
+  <tr><td>Cost R600 000, allowances claimed R250 000 → tax value</td><td>R350 000</td></tr>
+  <tr><td>Recoupment s8(4) = lower(proceeds, cost) − tax value = 500 000 − 350 000</td><td>R150 000 (income)</td></tr>
+  <tr><td>CGT: proceeds 500 000 − recoupment 150 000 = 350 000; base cost = cost 600 000 − allowances 250 000 = 350 000 → no gain</td><td>R0</td></tr>
+</table>
+<p class="marks">If proceeds &gt; original cost, the excess above cost is a capital gain; recoupment is limited to allowances claimed.</p>
+</div>
+<div class="trig"><b class="lbl">Triggers</b>"sold a depreciable asset" → ALWAYS test s8(4) recoupment AND CGT. · "sold for less than tax value" → s11(o). · "proceeds payable over years / contingent" → s24M / s20B.</div>
+
+<!-- 7 -->
+<h3>7 · Repairs vs improvements (s11(d))</h3>
+<ul>
+  <li><b>s11(d)</b> deduction for <b>repairs</b> (restoration of part, same materials/function) — fully deductible. Requires the asset to be used in trade / income-producing.</li>
+  <li><b>Improvement</b> (betterment, new advantage, different material creating greater capacity) = capital → not s11(d); add to base cost / claim building allowance instead.</li>
+  <li>Cases: Flemming (genuine repair = restoration of damaged part); African Products (renewal of subsidiary part is a repair).</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"repaired / replaced / renovated / upgraded a building or machine" → s11(d) repair vs improvement test. "Improved capacity / better than before" = improvement (capital).</div>
+
+<!-- 8 -->
+<h3>8 · Capital gains tax (Eighth Schedule, via s26A)</h3>
+<p><b>Capital gain = Proceeds − Base cost</b>, per asset, per disposal.</p>
+<ul>
+  <li><b>Proceeds</b> (par 35) less <b>base cost</b> (par 20 — cost of acquisition, improvements, direct costs; pre-2001 use valuation date value / TAB / 20% rule).</li>
+  <li><b>Net capital gain</b> = sum of gains/losses − <b>annual exclusion</b> (R40 000 indiv; R300 000 in year of death) → × <b>inclusion rate</b>: indiv/special trust <b>40%</b>; company/other trust <b>80%</b>.</li>
+  <li><b>Effective max rates:</b> individual 18% · company 21.6% · trust 36%.</li>
+  <li><b>Primary residence</b> (par 45): first R2 000 000 of the <i>gain</i> excluded.</li>
+  <li><b>Roll-over relief</b>: par 65/66 (involuntary / replacement asset), s9HA (death), corporate rules.</li>
+  <li>Recoupment is removed from proceeds for CGT (no double tax).</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"sold / disposed / donated / emigrated / died" → disposal event. · "house / home" → par 45 R2m. · "shares sold" → capital (CGT) unless trader (revenue). · "replaced damaged asset with insurance" → par 65/66 roll-over.</div>
+<div class="warn"><b class="lbl">Watch-out</b>Donation, death, ceasing to be resident, and distribution in specie are all <b>deemed disposals at market value</b>. Capital losses are ring-fenced against capital gains only (cannot reduce ordinary income).</div>
+
+<!-- 9 -->
+<h3>9 · Value-added tax</h3>
+<ul>
+  <li><b>VAT payable</b> = output tax − input tax. Standard rate <b>15%</b>; tax fraction <b>15/115</b>.</li>
+  <li><b>Output</b> on taxable supplies by a <b>vendor</b> in the course of an enterprise. <b>Zero-rated</b> (s11 — exports, basic foods, going concern) vs <b>exempt</b> (s12 — financial services, residential rent, public transport, education). Exempt ≠ enterprise → no input.</li>
+  <li><b>Time of supply</b> (s9): earlier of invoice or payment; special rules — connected persons, fixed property (s9(3)(d): earlier of registration or payment), instalment credit, lay-by.</li>
+  <li><b>Value of supply</b> (s10): consideration × 15/115; connected persons → open market value.</li>
+  <li><b>Input denied</b> (s17(2)): entertainment, motor cars (sedans/double cabs), club subscriptions.</li>
+  <li><b>Deemed supplies:</b> fringe benefits, ceasing to be a vendor (exit), short-term insurance payouts, indemnity.</li>
+  <li><b>Adjustments</b>: change in use (s18), irrecoverable debts (s22 — claim input on bad debt; recovery → output), bad debt recovered.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"vendor / registered for VAT" → VAT in scope. · "exported / sold as a going concern / brown bread, milk" → zero-rated (s11). · "interest, rent of a house, school fees" → exempt (s12). · "company car / staff meals" → fringe-benefit deemed supply + possible input denial. · "fixed property sold" → s9(3)(d) timing. · "bad debt written off" → s22 input adjustment.</div>
+<div class="tech"><b class="lbl">Technique</b>For each transaction: ① Is it a supply by a vendor in an enterprise? ② Standard / zero / exempt? ③ Time of supply? ④ Value × 15/115? ⑤ Any input denial or adjustment? Do output and input for <b>both parties</b> if asked.</div>
+
+<!-- 10 -->
+<h3>10 · Individuals — allowances &amp; advances (s8(1))</h3>
+<ul>
+  <li><b>Travel allowance:</b> included in income; reduce by business portion. Deemed cost (fixed cost + fuel + maintenance per SARS tables ÷ total km × business km) <b>or</b> actual costs; need a logbook. <b>80%</b> subject to PAYE (20% if &gt;80% business use). Reimbursive: tax-free up to prescribed rate/km if no other travel allowance &amp; ≤ business km.</li>
+  <li><b>Subsistence allowance (s8(1)(c)):</b> away ≥1 night → reduce by deemed daily amounts (meals+incidental / incidental only — read rate card) or actual (proof). Foreign travel: per-country amounts.</li>
+  <li><b>Right of use of company car (7th Sch 2(b))</b> is a <i>fringe benefit</i>, not s8(1) — compare the two if the question offers a choice.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"travel allowance + logbook / km" → s8(1)(b) deemed vs actual. · "away on business / nights away / per diem" → s8(1)(c) subsistence. · "should I take a car or an allowance?" → compare 7th Sch 2(b) FB vs travel allowance.</div>
+
+<!-- 11 -->
+<h3>11 · Fringe benefits (Seventh Schedule)</h3>
+<table>
+  <tr><th>Para</th><th>Benefit</th><th>Cash equivalent</th></tr>
+  <tr><td class="s">2(a)</td><td>Asset for no/low consideration</td><td>Market value (cost for trading stock) − consideration paid.</td></tr>
+  <tr><td class="s">2(b)</td><td>Right of use of motor vehicle</td><td><b>3.5%</b> of determined value per month (<b>3.25%</b> with maintenance plan); reduce for business km, employee-borne costs; less private-use payments.</td></tr>
+  <tr><td class="s">2(b)</td><td>Right of use of other asset</td><td>15% p.a. of value (or rental cost) × use period.</td></tr>
+  <tr><td class="s">2(d)</td><td>Residential accommodation</td><td>Formula: (A−B)×C/100×D/12; or actual cost if not employer-owned.</td></tr>
+  <tr><td class="s">2(f)</td><td>Low-interest loan</td><td>(Official rate − rate charged) × loan × period. Official rate = repo + 1%.</td></tr>
+  <tr><td class="s">2(e)/(h)/(k)/(l)</td><td>Free services / debt paid / insurance / fund contributions</td><td>Cost to employer (employer retirement contributions are a taxable FB but deductible to employee under s11F).</td></tr>
+</table>
+<div class="trig"><b class="lbl">Triggers</b>"company car" → 2(b) 3.5%/3.25%. · "staff loan below prime / interest-free loan" → 2(f) official rate. · "lives in a company house" → 2(d). · "got the asset cheap / for free" → 2(a). · "employer pays medical/RA/insurance" → 2(i)/(j)/(k)/(l).</div>
+
+<!-- 12 -->
+<h3>12 · Retirement contributions &amp; medical credits</h3>
+<ul>
+  <li><b>s11F retirement deduction:</b> greater of contributions limited to <b>27.5%</b> of higher of (remuneration, taxable income incl. taxable capital gain), <b>capped at R350 000</b> p.a. Excess carries forward.</li>
+  <li><b>s6A medical scheme fees credit:</b> fixed monthly credit per member + dependants (read rate card) — a <i>rebate</i> off tax.</li>
+  <li><b>s6B additional medical credit:</b> for out-of-pocket + excess contributions; formula differs for 65+/disability vs under-65 (25% of (qualifying expenses − 7.5% of taxable income) component).</li>
+</ul>
+<div class="calc"><h4>s11F worked logic (Fazlin)</h4>
+<table>
+  <tr><td>Higher of: 27.5% × remuneration (R300 000) = R82 500</td><td></td></tr>
+  <tr><td>or 27.5% × taxable income incl. TCG (R326 200 + R40 000) = R100 705 → use higher, cap R350 000</td><td>R100 705</td></tr>
+  <tr><td>Contribution R… deductible up to the lower of actual and the limit</td><td>deduct</td></tr>
+</table></div>
+<div class="trig"><b class="lbl">Triggers</b>"contributes to pension/provident/RA" → s11F (27.5%, cap R350k). · "member of a medical aid / X dependants" → s6A. · "own medical expenses / disability" → s6B.</div>
+
+<!-- 13 -->
+<h3>13 · Employees' tax (PAYE) &amp; provisional tax</h3>
+<ul>
+  <li><b>PAYE</b> withheld by employer on <b>"remuneration"</b> (4th Sch). Excludes amounts to independent contractors (control/supervision test; premises &amp; tools statutory exclusion). Travel allowance: 80% in remuneration. SDL 1%, UIF 1%+1%.</li>
+  <li><b>Provisional tax</b>: taxpayers earning non-remuneration income (companies, sole traders, rental, etc.). <b>1st payment</b> (6 months): 50% of estimated tax. <b>2nd</b> (year-end): full estimate — if taxable income ≤R1m use "basic amount"; &gt;R1m must be within 80% or face s89quat/par20 penalty. <b>3rd</b> (top-up, voluntary) to avoid interest.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"is she an employee or independent contractor?" → 4th Sch remuneration/independent-trade test. · "estimate / 6-month / 80% / basic amount" → provisional tax. · "under-estimated taxable income &gt;R1m" → par 20 under-estimation penalty.</div>
+
+<!-- 14 -->
+<h3>14 · Retirement lump sums &amp; severance benefits</h3>
+<ul>
+  <li>Lump sums on <b>retirement/death/retrenchment</b> and <b>severance benefits</b> are taxed on <b>separate (concessional) tax tables</b> — cumulative, with a tax-free amount (read rate card, e.g. first ~R550 000 at 0%).</li>
+  <li><b>Withdrawal</b> (resignation) lump sums use a harsher withdrawal table (smaller tax-free amount).</li>
+  <li><b>s10C</b> exempts the portion from non-deductible contributions previously made.</li>
+  <li><b>Severance benefit</b> qualifies for the retirement table if: ≥55, or ill-health, or retrenchment (not a connected-person director &gt;5% unless retrenchment).</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"retrenched / retired / lump sum from pension/provident/RA" → 2nd Schedule + retirement table. · "resigned and withdrew" → withdrawal table. · "retrenchment package" → severance benefit (retirement table).</div>
+
+<!-- 15 -->
+<h3>15 · Dividends &amp; contributed tax capital (CTC)</h3>
+<ul>
+  <li><b>Dividends tax 20%</b> — a withholding tax on the <i>beneficial owner</i>, withheld by the company/regulated intermediary. Exempt recipients: SA resident companies, retirement funds, PBOs (declaration + written undertaking required).</li>
+  <li><b>CTC</b> = consideration received for share issues; a return of CTC is <b>not a dividend</b> (capital, reduces base cost / triggers CGT). Directors must designate CTC vs dividend.</li>
+  <li>Dividends exempt from <b>normal</b> tax (s10(1)(k)) but subject to dividends tax (unless exempt owner). Dividends in specie → company pays the 20%.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"declared a dividend" → 20% dividends tax + identify exempt owners. · "return of capital / capital distribution" → CTC vs dividend (CGT). · "dividend to a holding company" → exempt (declaration).</div>
+
+<!-- 16 -->
+<h3>16 · Companies &amp; assessed losses (s20)</h3>
+<ul>
+  <li>Company rate <b>27%</b>. <b>s20 assessed loss</b> carries forward; for companies the set-off is <b>capped at the higher of R1m or 80% of taxable income</b> (so a minimum 20% of profit is taxed before old losses).</li>
+  <li>Individuals: assessed loss from a <b>"suspect trade"</b> (hobby-type, s20A) is <b>ring-fenced</b> (cannot offset other income) if the "3-of-5 years loss" / listed-trade tests are met.</li>
+  <li>Trade requirement: a company must still carry on a trade to carry the loss (continuity).</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"company with brought-forward loss + big profit" → s20 80%/R1m cap. · "individual side-business making losses (farming, B&amp;B, sport)" → s20A ring-fencing. · "dormant company / change of shareholding" → loss continuity.</div>
+
+<!-- 17 -->
+<h3>17 · Corporate rules (s41–47) — group reorganisations</h3>
+<table>
+  <tr><th>Section</th><th>Transaction</th><th>Relief</th></tr>
+  <tr><td class="s">s42</td><td>Asset-for-share</td><td>Roll-over: transferor disposes at base cost/tax value; no immediate CGT/recoupment; gets shares.</td></tr>
+  <tr><td class="s">s44</td><td>Amalgamation/merger</td><td>Roll-over on merger of companies.</td></tr>
+  <tr><td class="s">s45</td><td>Intra-group transfer</td><td>Tax-neutral transfers between ≥70%-held group companies.</td></tr>
+  <tr><td class="s">s46 / s47</td><td>Unbundling / liquidation distribution</td><td>Roll-over relief on distributing shares / winding up.</td></tr>
+</table>
+<ul>
+  <li>Relief also covers <b>transfer duty, STT and VAT</b> (s45 §). De-grouping charge if assets leave the group within 6 years.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"transferred assets to a group company / restructure / incorporate a business for shares" → corporate rules. Test: is it asset-for-share (s42), intra-group (s45, ≥70%), or unbundling (s46)?</div>
+
+<!-- 18 -->
+<h3>18 · Interest &amp; section 24J</h3>
+<ul>
+  <li><b>s24J</b> spreads interest on an "instrument" over its term on a <b>yield-to-maturity</b> (accrual) basis — overrides cash timing. Issuer deducts (s24J(2)); holder includes (s24J(3)).</li>
+  <li><b>s23B(3)</b>: where s24J applies, s11(a) cannot — apply the specific provision.</li>
+  <li><b>s24O</b> — interest to acquire shares in an operating company deemed in production of income (deductible).</li>
+  <li><b>s8F/8FA</b> — interest on hybrid debt / hybrid interest reclassified as a <b>dividend in specie</b> (not deductible).</li>
+  <li>Withholding tax on interest to non-residents <b>15%</b>.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"loan / bond / debenture / interest accrued" → s24J accrual. · "borrowed to buy shares" → s24O. · "shareholder loan, excessive interest, subordinated" → s8F/8FA hybrid. · "interest paid to a foreign lender" → 15% WHT.</div>
+
+<!-- 19 -->
+<h3>19 · Foreign tax (s25D / s24I / s6quat / s10B / s9D)</h3>
+<ul>
+  <li><b>s25D</b> — translate foreign receipts/accruals &amp; expenditure to ZAR at the <b>spot</b> or average rate.</li>
+  <li><b>s24I</b> — exchange gains/losses on <b>monetary items</b> (foreign debtors/creditors/loans, FECs) included/deducted on a <b>year-end translation</b> basis (realised + unrealised).</li>
+  <li><b>s6quat</b> — rebate for foreign taxes paid on foreign income (limited to SA tax on that income).</li>
+  <li><b>s9D</b> — CFC net income imputed to SA resident shareholders (&gt;50% holding) unless FBE exemption.</li>
+  <li><b>s10B</b> — foreign dividend exemptions (participation / ratio).</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"foreign currency transaction / forex debtor or loan / FEC" → s24I + s25D. · "paid tax overseas" → s6quat rebate. · "controlled foreign company / offshore subsidiary &gt;50%" → s9D. · "foreign dividend" → s10B + s6quat.</div>
+
+<!-- 20 -->
+<h3>20 · Transfer pricing (s31)</h3>
+<ul>
+  <li>Applies to <b>cross-border transactions between connected persons</b> not at <b>arm's length</b>. SARS adjusts to the arm's-length price (primary adjustment) and treats the benefit as a deemed <b>dividend/loan</b> (secondary adjustment, 20% dividends tax).</li>
+  <li>Documentation &amp; OECD methods (CUP, resale, cost-plus, TNMM, profit-split).</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"sold to / charged a foreign parent or subsidiary at a non-market price / management fee / royalty to offshore connected party" → s31.</div>
+
+<!-- 21 -->
+<h3>21 · Leasing</h3>
+<ul>
+  <li><b>Operating lease:</b> lessor includes rental (GI); lessee deducts rental (s11(a)). VAT on each rental.</li>
+  <li><b>Lease premium</b> (par (g) GI): lump sum for the right of use → fully taxable to lessor on receipt; lessee deducts over the lease period (s11(f)), max 25 years.</li>
+  <li><b>Leasehold improvements</b> (par (h)): obligation to improve → value included in lessor's GI; lessor s11(g) allowance over lease term; lessee s11(g) deduction.</li>
+  <li><b>Instalment credit / finance lease (s23A):</b> capital allowances limited to rental income (anti-avoidance). Sale-and-leaseback rules.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"lease premium / lump sum to lease" → par (g) + s11(f). · "tenant must build/improve" → par (h) + s11(g). · "sale and leaseback" → s23A/s23D limitations.</div>
+
+<!-- 22 -->
+<h3>22 · Intellectual property &amp; royalties</h3>
+<ul>
+  <li><b>s11(gB)/(gC)</b> — deduction for acquiring/registering IP (some IP excluded — trademarks not deductible). Invented/devised IP: allowance on cost over time.</li>
+  <li><b>s23I</b> — denies deductions for royalties/IP payments to connected non-taxable persons (anti-avoidance).</li>
+  <li>Royalty <b>withholding tax 15%</b> to non-residents.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"bought/registered a patent, design, copyright" → s11(gB)/(gC) (trademark = no deduction). · "royalty to a foreigner" → 15% WHT + s23I.</div>
+
+<!-- 23 -->
+<h3>23 · Debt benefits — s19 &amp; Eighth Schedule par 12A</h3>
+<ul>
+  <li>When a debt is <b>reduced/waived</b> for less than the amount owed → a <b>"reduction amount" (debt benefit)</b>.</li>
+  <li><b>Use the loan was applied to determines the consequence:</b> deductible expenditure (operating) → s19 (recoupment / reduce assessed loss); <b>trading stock</b> → reduce cost/closing stock; <b>allowance asset</b> → par 12A reduces base cost then limits future allowances (s19(7)); <b>capital asset</b> → par 12A reduces base cost (then capital loss/gain).</li>
+  <li>VAT only reverses if the creditor who waived also charged the original VAT (Pine Jel principle).</li>
+  <li>Exclusions: donations (s19(8)), group/connected reductions, deceased estate, etc.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"debt written off / waived / compromise / business rescue / debt restructure" → s19 / par 12A. Trace <b>what the borrowed money was spent on</b> — that drives the treatment.</div>
+
+<!-- 24 -->
+<h3>24 · Share-based payments (s8C)</h3>
+<ul>
+  <li><b>s8C</b> — equity instruments acquired by virtue of employment vest → gain (market value − consideration paid) taxed as <b>remuneration</b> on vesting, not on grant.</li>
+  <li>Restricted shares: no tax until restriction lifts (vesting). Dividends on restricted shares may be revenue (s10(1)(k) exclusion).</li>
+  <li>Company side: s11(lA) deduction for shares issued to employees.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"employee share scheme / options / restricted shares / vesting" → s8C (tax on vesting, included in remuneration).</div>
+
+<!-- 25 -->
+<h3>25 · Estate duty (Estate Duty Act)</h3>
+<ul>
+  <li><b>Dutiable estate × 20%</b> (first R30m) <b>/ 25%</b> (above R30m).</li>
+  <li>Property (s3(2)) + deemed property (s3(3): life insurance proceeds, donationes mortis causa, accrual claim) − deductions (s4: debts, funeral, bequests to spouse s4(q), PBOs s4(h)) − <b>s4A abatement R3 500 000</b> (portable → surviving spouse can use R7m).</li>
+  <li>Spouse bequest fully deductible (s4(q)).</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"died / deceased estate / estate duty" → Estate Duty Act pro-forma. · "life policy on the deceased" → s3(3) deemed property. · "left everything to spouse" → s4(q) deduction.</div>
+
+<!-- 26 -->
+<h3>26 · Donations tax</h3>
+<ul>
+  <li><b>20%</b> (≤R30m cumulative) / <b>25%</b> (&gt;R30m) on the value of property disposed of <b>gratuitously</b> by a resident. Donor liable (donee jointly if unpaid).</li>
+  <li><b>Exemptions:</b> spouse donations (unlimited); annual <b>R100 000</b> (natural persons); bona fide maintenance; PBOs; donations cancelled within 6 months.</li>
+  <li><b>s58 deemed donation:</b> disposal for inadequate consideration. <b>s7/par 68–73 attribution</b>: income/gains diverted via donation taxed back to donor.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"gave / donated / sold cheaply to a relative" → donations tax + s58 + attribution (s7). · "donation to spouse / PBO" → exempt. · "&gt;R100 000 to children" → 20% on excess.</div>
+
+<!-- 27 -->
+<h3>27 · Deceased estates &amp; trusts</h3>
+<ul>
+  <li><b>Death (s9HA):</b> deemed disposal of all assets at market value (CGT) — except to surviving spouse (roll-over). Annual exclusion R300 000 in year of death.</li>
+  <li><b>Deceased estate</b> is a separate taxpayer for post-death income/gains until distribution.</li>
+  <li><b>Trusts:</b> rate <b>45%</b> (special trusts taxed like individuals). <b>Conduit principle (s25B / par 80):</b> income/gains <b>flow through</b> to beneficiaries with a vested right and are taxed in their hands; otherwise taxed in the trust.</li>
+  <li><b>s7 / par 68–73 attribution</b>: income/gains attributed back to the donor where a donation/low-interest loan funded the trust.</li>
+  <li><b>s7C</b>: interest-free / low-interest loan to a trust → the foregone interest (official rate) is a <b>deemed annual donation</b> (uses the R100k exemption).</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"trust / beneficiary / vested vs discretionary" → conduit s25B. · "interest-free loan to a trust" → s7C deemed donation. · "donor funded the trust" → s7 attribution. · "died" → s9HA + spouse roll-over.</div>
+
+<!-- 28 -->
+<h3>28 · Tax administration (TAA)</h3>
+<ul>
+  <li><b>s102 burden of proof</b> on the taxpayer (that an amount is exempt/deductible/non-taxable); SARS bears onus that an amount <i>exists</i>.</li>
+  <li><b>Assessments</b> &amp; prescription: SARS generally cannot reopen after <b>3 years</b> (5 for self-assessment) unless fraud, misrepresentation or non-disclosure.</li>
+  <li><b>Dispute:</b> objection (s104) → appeal → ADR / Tax Board / Tax Court. <b>s164 "pay now, argue later"</b> (request suspension of payment).</li>
+  <li><b>Penalties:</b> understatement penalty (s222 — 0–200% by behaviour table), admin non-compliance penalties, s89quat interest. <b>Voluntary disclosure (VDP)</b> relief.</li>
+  <li>Tax practitioners must register (s240); SAICA member ethical duties.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"SARS reassessed / additional assessment / dispute / penalty" → TAA. · "3 years ago / prescribed" → prescription. · "disagree with SARS" → s104 objection + s164 suspension. · "understated income" → s222 USP table.</div>
+
+<!-- 29 -->
+<h3>29 · General Anti-Avoidance Rules (GAAR, s80A–80L)</h3>
+<ul>
+  <li>SARS can attack an <b>"impermissible avoidance arrangement"</b> if: ① an arrangement; ② sole/main purpose = tax benefit; ③ + one tainted element: abnormality (not arm's length), lack of commercial substance, misuse/abuse of the Act, or (business context) abnormal rights/obligations.</li>
+  <li>Consequence: SARS disregards/re-characterises the arrangement.</li>
+  <li>Distinguish <b>tax planning (legal)</b> vs <b>avoidance (GAAR)</b> vs <b>evasion (criminal)</b>.</li>
+</ul>
+<div class="trig"><b class="lbl">Triggers</b>"scheme / step transaction / round-trip / no commercial purpose / solely to save tax / abnormal terms" → GAAR. Always check specific anti-avoidance (s7, s8F, s23I, s31) <b>first</b>, then GAAR as the catch-all.</div>
+
+<!-- ===================== PART 3 ===================== -->
+<h2>Part 3 · Trigger cheat-sheet — keyword → section → action</h2>
+<table>
+  <tr><th>When you read…</th><th>Think…</th><th>Do</th></tr>
+  <tr><td>"non-resident / emigrated / foreign income"</td><td>Residence &amp; source; s6quat; DTA; s9HA exit</td><td>Resident=worldwide; classify source; rebate foreign tax; exit charge on emigration.</td></tr>
+  <tr><td>"received a deposit / in advance"</td><td>Received for own benefit (Pyott); s24C</td><td>Include in GI; claim s24C if future contractual expense.</td></tr>
+  <tr><td>"sold an asset — capital?"</td><td>Capital vs revenue case law; CGT</td><td>Argue intention both ways; if capital → 8th Sch; test s8(4) recoupment.</td></tr>
+  <tr><td>"is X deductible?"</td><td>s11(a) + s23</td><td>Step through all 6 requirements + negative test; case law each.</td></tr>
+  <tr><td>"prepaid expense"</td><td>s23H</td><td>Limit to portion enjoyed (unless ≤R100k / 6-month rule).</td></tr>
+  <tr><td>"manufacturing plant / machine"</td><td>s12C (40/20/20/20)</td><td>Full-year allowance; check new vs used; recoupment on sale.</td></tr>
+  <tr><td>"vehicle / furniture / computer"</td><td>s11(e) IN47</td><td>Straight-line, apportion part-year.</td></tr>
+  <tr><td>"new commercial / residential building"</td><td>s13quin / s13sex (5%)</td><td>Needs new &amp; unused; 55% rule if bought part.</td></tr>
+  <tr><td>"repaired / renovated"</td><td>s11(d) repair vs improvement</td><td>Restoration=deduct; betterment=capital.</td></tr>
+  <tr><td>"inventory / took stock for own use"</td><td>s22(1)/(8)</td><td>Closing at lower cost/NRV; private use=deemed recovery.</td></tr>
+  <tr><td>"VAT vendor / supply"</td><td>VAT s7–s22</td><td>Output/input, std/zero/exempt, timing, value×15/115, denials.</td></tr>
+  <tr><td>"company car / cheap loan / company house"</td><td>7th Sch fringe benefits</td><td>2(b) 3.5%; 2(f) official rate; 2(d) accommodation formula.</td></tr>
+  <tr><td>"travel allowance + logbook"</td><td>s8(1)(b)</td><td>Deemed cost vs actual; 80% PAYE.</td></tr>
+  <tr><td>"pension / RA contribution"</td><td>s11F</td><td>27.5% of higher of rem/TI, cap R350k.</td></tr>
+  <tr><td>"retrenched / retired / lump sum"</td><td>2nd Sch + retirement table; severance</td><td>Separate table; s10C; tax-free portion.</td></tr>
+  <tr><td>"dividend declared"</td><td>Dividends tax 20%; s10(1)(k)</td><td>Exempt for normal tax; 20% WHT unless exempt owner.</td></tr>
+  <tr><td>"group restructure / asset-for-share"</td><td>Corporate rules s42–47</td><td>Roll-over relief; ≥70% (s45); de-grouping charge.</td></tr>
+  <tr><td>"loan / interest / debenture"</td><td>s24J accrual; s24O; s8F</td><td>YTM spreading; s23B priority over s11(a).</td></tr>
+  <tr><td>"forex debtor / loan / FEC"</td><td>s24I + s25D</td><td>Translate; include realised+unrealised gains/losses.</td></tr>
+  <tr><td>"connected cross-border price"</td><td>s31 transfer pricing</td><td>Arm's-length adjustment + 20% secondary.</td></tr>
+  <tr><td>"debt waived / written off"</td><td>s19 / par 12A</td><td>Trace use of funds → recoupment / stock / allowance / base cost.</td></tr>
+  <tr><td>"employee shares / options vesting"</td><td>s8C</td><td>Gain on vesting = remuneration.</td></tr>
+  <tr><td>"died / deceased estate"</td><td>s9HA; estate duty; spouse roll-over</td><td>MV disposal; R300k exclusion; s4A R3.5m.</td></tr>
+  <tr><td>"donated / sold cheap to relative"</td><td>Donations tax; s58; s7 attribution</td><td>20%/25%; R100k exemption; income attributed back.</td></tr>
+  <tr><td>"trust / beneficiary / loan to trust"</td><td>s25B conduit; s7C; s7 attribution</td><td>Flow-through to vested beneficiary; s7C deemed donation.</td></tr>
+  <tr><td>"SARS reassessed / penalty / object"</td><td>TAA — s102, s104, s164, s222</td><td>Onus, prescription, objection, pay-now-argue-later, USP.</td></tr>
+  <tr><td>"scheme solely to save tax"</td><td>GAAR s80A; specific AA first</td><td>Test purpose + tainted element.</td></tr>
+</table>
+
+<!-- ===================== PART 4 ===================== -->
+<h2>Part 4 · Case-law quick reference</h2>
+<table>
+  <tr><th>Principle</th><th>Case</th></tr>
+  <tr><td>Amount = money's value</td><td>Lategan; CSARS v Brummeria</td></tr>
+  <tr><td>Received = own benefit</td><td>Geldenhuys; Pyott; WITS Racing Clubs</td></tr>
+  <tr><td>Accrued = unconditionally entitled</td><td>Mooi; Lategan; Delfos (earlier of)</td></tr>
+  <tr><td>Capital vs revenue (intention/scheme of profit)</td><td>Visser; Pick 'n Pay; Natal Estates; Stott; Founders Hill; Elandsheuwel</td></tr>
+  <tr><td>Trade = wide; venture for profit</td><td>Burgess; Solaglass</td></tr>
+  <tr><td>In production of income</td><td>Port Elizabeth Tramways; Joffe; Sub-Nigel</td></tr>
+  <tr><td>Actually incurred (unconditional liability)</td><td>Edgars Stores; Nasionale Pers; Golden Dumps</td></tr>
+  <tr><td>Capital nature of expenditure (fixed vs floating capital)</td><td>New State Areas; BP Southern Africa</td></tr>
+  <tr><td>Repairs vs improvements</td><td>Flemming; African Products</td></tr>
+  <tr><td>Onus an amount exists is on SARS</td><td>CIR v Butcher Bros</td></tr>
+</table>
+
+<!-- ===================== PART 5 ===================== -->
+<h2>Part 5 · ITC tutorial map — what each drills</h2>
+<table>
+  <tr><th>Tut</th><th>Scenario (source)</th><th>Topics / triggers tested</th></tr>
+  <tr><td class="s">Tax 01</td><td>Arnod Properties (ITC '13)</td><td>Corporate rules; VAT; general &amp; specific deductions; retirement lump sums &amp; severance; share-based payments; CGT &amp; estate duty.</td></tr>
+  <tr><td class="s">Tax 02</td><td>Dizzy Chemicals (ITC '14)</td><td>Gross income; trading stock; capital allowances, recoupments &amp; disposals; CGT; VAT &amp; dividends tax.</td></tr>
+  <tr><td class="s">Tax 03</td><td>Pine Jel (ITC '15)</td><td>s24J interest deductibility; debt benefits s19/par 12A; VAT on fixed property &amp; settlement; severance benefits.</td></tr>
+  <tr><td class="s">Tax 04</td><td>Jonathan Small (ITC '16)</td><td>Individuals; allowances &amp; fringe benefits; retirement; gross income.</td></tr>
+  <tr><td class="s">Tax 05</td><td>Ukwaka (ITC '17 Jan)</td><td>General deduction; foreign tax rebate (s6quat); corporate rules; provisional tax; double-tax agreements.</td></tr>
+  <tr><td class="s">Tax 06</td><td>Speak Easy (ITC '17 Jun)</td><td>Trade; debt benefits; VAT; individuals.</td></tr>
+  <tr><td class="s">Tax 07</td><td>On The Line (ITC '22 Jan)</td><td>Trusts; VAT; dividends; individuals &amp; barter transactions.</td></tr>
+  <tr><td class="s">Tax 08</td><td>Beeprop (ITC '22 Jun)</td><td>Sale-and-leaseback; capital allowances; recoupments; anti-avoidance; asset-for-share; CGT; dividends; residence.</td></tr>
+  <tr><td class="s">Tax 09</td><td>Bala Family Trust (ITC '23)</td><td>s11(a); employees' tax; fringe benefits; retirement contributions; source; VAT. (Also Trusts; estate duty; s24J; s9HA; CGT; TAA.)</td></tr>
+  <tr><td class="s">Tax 10</td><td>Long Term Capital Expertise (UCT)</td><td>Employment benefits; ring-fencing of assessed losses (s20A); right of use of motor vehicle vs travel allowance; gross income. (Also VAT; leases; general deduction; capital allowances; repairs vs improvements.)</td></tr>
+</table>
+<div class="tech"><b class="lbl">How to use Part 5</b>Before each tutorial, write the topic list from memory, then attempt the question <b>closed-book</b> under time. Mark against the memo, and log every section you <i>missed spotting</i> — those blind spots are your real study list.</div>
+
+<footer>
+IAC Tax master summary — compiled from the IAC 2026 Tax Notes &amp; Tutorials (College of Accounting / ITC past papers) and Endunamoo CTA material for private exam preparation. <b>Confirm all monetary thresholds, brackets and rebates against the SARS rate card / legislation handbook supplied in the exam</b> — rates change annually. Always apply the law to the scenario; never dump theory.
+</footer>
+
+</div>
+</body>
+</html>
