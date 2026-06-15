@@ -36,6 +36,12 @@
   .tech b.lbl{color:var(--good);display:block;font-size:9.6px;text-transform:uppercase;letter-spacing:.4px;margin-bottom:1px}
   .warn{background:var(--warnbg);border-left:4px solid var(--warn);padding:7px 11px;margin:7px 0;border-radius:0 5px 5px 0}
   .warn b.lbl{color:var(--warn);display:block;font-size:9.6px;text-transform:uppercase;letter-spacing:.4px;margin-bottom:1px}
+  .plain{background:#eef4fb;border-left:4px solid #234d7a;padding:5px 10px;margin:6px 0;border-radius:0 5px 5px 0;font-size:10.2px}
+  .plain b.lbl{color:#234d7a;display:block;font-size:9.4px;text-transform:uppercase;letter-spacing:.4px;margin-bottom:1px}
+  .ex{background:#fff;border:1px solid var(--line);border-radius:6px;padding:9px 12px;margin:9px 0}
+  .ex h4{margin:0 0 4px;color:var(--accent2);font-size:11.5px}
+  .ex table{margin:5px 0}
+  .ex td:last-child{text-align:right;white-space:nowrap}
   .formula{background:#1c2230;color:#e9edf3;border-radius:6px;padding:9px 12px;margin:7px 0;font-family:"Consolas",monospace;font-size:9.6px;white-space:pre-wrap;line-height:1.6}
   .chip{display:inline-block;background:var(--soft2);border:1px solid var(--line);color:var(--accent);padding:1px 7px;border-radius:99px;font-size:9px;margin:0 3px 3px 0}
   .toc{columns:3;column-gap:24px;font-size:10px;line-height:1.55}
@@ -542,8 +548,177 @@
 </table>
 <div class="tech"><b class="lbl">How to use Part 5</b>Before each tutorial, write the topic list from memory, then attempt the question <b>closed-book</b> under time. Mark against the memo, and log every section you <i>missed spotting</i> — those blind spots are your real study list.</div>
 
-<footer>
-IAC Tax master summary — compiled from the IAC 2026 Tax Notes &amp; Tutorials (College of Accounting / ITC past papers) and Endunamoo CTA material for private exam preparation. <b>Confirm all monetary thresholds, brackets and rebates against the SARS rate card / legislation handbook supplied in the exam</b> — rates change annually. Always apply the law to the scenario; never dump theory.
+<!-- ===================== PART 6 ===================== -->
+<h2>Part 6 · Worked examples — plain English + the numbers</h2>
+<p class="marks">Each example: the quick concept, then the calculation laid out exactly as you'd write it. Figures from the IAC/Milpark worked examples.</p>
+
+<h3>6.1 Gross income — putting a value on "amount received"</h3>
+<div class="ex"><h4>Interest-free loan has a value (Brummeria)</h4>
+<p>Frankie (72) lends R10m interest-free to a developer (natural person) on 1 Aug; in return he lives in a house. Prime = 10%.</p>
+<table>
+  <tr><td>Value in developer's gross income = prime × loan × period: 10% × R10 000 000 × 7/12</td><td><b>R583 333</b></td></tr>
+  <tr><td>If a 5% loan instead: (10% − 5%) × R10 000 000 × 7/12</td><td>R291 667</td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>Getting something for free (free use of money) is still "an amount" with a money value — tax the benefit you didn't pay for. Quantify it as the interest saved.</div></div>
+<div class="ex"><h4>Deposits / agent money — "for your own benefit" (Geldenhuys)</h4>
+<p>Letting agent collects a R12 000 deposit (held in trust) + R60 000 rent; keeps 10% commission.</p>
+<table>
+  <tr><td>Deposit — not for own benefit → excluded</td><td>R0</td></tr>
+  <tr><td>Commission only (R60 000 × 10%) → in gross income</td><td><b>R6 000</b></td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>Only money you keep for yourself is yours to be taxed on. Don't gross-up R60k then deduct R54k — only include the R6k. Note: amounts are <b>not discounted</b> to present value (Peoples Stores) — include the full face amount once unconditionally entitled (Mooi).</div></div>
+
+<h3>6.2 Deductions &amp; timing</h3>
+<div class="ex"><h4>Pre-trade expenditure ring-fenced (s11A)</h4>
+<p>New rental trade starts when tenant moves in (30 Jun). Rates 31 Jan–30 Jun = R75 000 (pre-trade); rest R25 000.</p>
+<table>
+  <tr><td>Rental income</td><td>60 000</td></tr>
+  <tr><td>Less s11(a) (post-trade rates R25 000)</td><td>(25 000)</td></tr>
+  <tr><td>Less s11A pre-trade (R75 000, limited to R35 000 income of <i>same</i> trade)</td><td>(35 000)</td></tr>
+  <tr><td>Balance R40 000 carried forward; other (service) income R20 000 → <b>taxable income</b></td><td><b>20 000</b></td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>Costs before trading start are only deductible against income <i>from that same trade</i>; the unused part rolls forward — it can't shelter other income. Renovations = capital (→ base cost).</div></div>
+<div class="ex"><h4>Prepaid expenditure (s23H + provisos)</h4>
+<p>Year-end 30 Jun. Office rent R90k (1 Feb, annual), security R120k (1 Mar, annual), stationery R24k (1 May, 3 months).</p>
+<table>
+  <tr><td>Office: current portion 90k × 5/12</td><td>37 500</td></tr>
+  <tr><td>Security: current portion 120k × 4/12</td><td>40 000</td></tr>
+  <tr><td>Stationery: 24k × 2/3 (service within 6 months → proviso (aa), fully deductible)</td><td>16 000</td></tr>
+  <tr><td>Prepaid (office 52 500 + security 80 000) = 132 500 &gt; R100 000 &amp; not within 6 months → <b>NOT</b> deductible now</td><td>nil</td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>You can only deduct the part of a prepayment you've "used up" this year. Exception: deduct it all if it's small (total prepaid ≤ R100 000) <i>or</i> the service is delivered within 6 months of year-end.</div></div>
+
+<h3>6.3 Capital allowances</h3>
+<div class="ex"><h4>s11(e) wear-and-tear (apportioned)</h4>
+<p>Delivery vehicle R50 000, brought into use 1 Sep, Dec year-end, 4-year write-off.</p>
+<table>
+  <tr><td>Y1: 50 000 × ¼ × 4/12</td><td>R4 167</td></tr>
+  <tr><td>Y2: 50 000 × ¼ (full year)</td><td>R12 500</td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>s11(e) is straight-line AND apportioned for the months used in year 1.</div></div>
+<div class="ex"><h4>s12C manufacturing plant (NOT apportioned)</h4>
+<p>2nd-hand machine R1.5m; new machine R2m + R50k install; Y2 each moved R30k.</p>
+<table>
+  <tr><td>Y1 used machine: 1 500 000 × 20%</td><td>300 000</td></tr>
+  <tr><td>Y1 new machine: (2 000 000 + 50 000) × 40%</td><td>820 000</td></tr>
+  <tr><td>Y2 used: 1 500 000 × 20% + moving 30 000/4 (remaining life)</td><td>307 500</td></tr>
+  <tr><td>Y2 new: 2 050 000 × 20% + moving 30 000/3</td><td>420 000</td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>New &amp; unused manufacturing plant = 40/20/20/20, full allowance in year 1 (no apportioning). Cost includes installation + supporting structures; later moving costs are written off over the asset's remaining tax life.</div></div>
+<div class="ex"><h4>s13sex residential units</h4>
+<p>5 new flats bought from developer @ R500k; 5 low-cost houses erected @ R280k (rent &lt;1% cost).</p>
+<table>
+  <tr><td>Flats (bought part of a building → 55% deemed cost): 500 000 × 5% × 5 × 55%</td><td>68 750</td></tr>
+  <tr><td>Houses (low-cost &lt; R300k → 10%): 280 000 × 10% × 5</td><td>140 000</td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>Own ≥5 new residential units used in trade → 5% (10% for low-cost). If you <i>bought</i> part of a building rather than building it, use 55% of the price as the cost base.</div></div>
+<div class="ex"><h4>Comprehensive lease (premium + improvements)</h4>
+<p>10-yr lease from 1 Jul; premium R200k; rent R10k/m; obliged to build factory R1m (cost R1.2m, done 1 Sep). 31 Dec year-end.</p>
+<table>
+  <tr><td>Lease premium s11(f): 200 000 × 1/10 × 4/12</td><td>6 667</td></tr>
+  <tr><td>Rentals s11(a): 10 000 × 4</td><td>40 000</td></tr>
+  <tr><td>Leasehold improvements s11(g): 1 000 000 × 4/118 (months remaining from completion)</td><td>33 898</td></tr>
+  <tr><td>Excess over obligation s13(1): (1 200 000 − 1 000 000) × 5%</td><td>10 000</td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>Premium is spread over the lease term (s11(f)); the <i>obligated</i> improvement value is spread over the months left on the lease from completion (s11(g)); anything you spend <i>above</i> the obligation gets the normal building allowance.</div></div>
+
+<h3>6.4 Disposal — recoupment + CGT (one machine, two taxes)</h3>
+<div class="ex"><h4>Non-resident sells SA property (s35A + CGT)</h4>
+<p>Greg (non-resident, natural person) bought property R2.5m (2010), sells for R5.5m (2023).</p>
+<table>
+  <tr><td>Buyer withholds s35A: 5 500 000 × 7.5% (advance, not final)</td><td>412 500</td></tr>
+  <tr><td>Greg CGT: proceeds 5 500 000 − base cost 2 500 000</td><td>3 000 000</td></tr>
+  <tr><td>Less annual exclusion</td><td>(40 000)</td></tr>
+  <tr><td>× 40% inclusion → taxable capital gain</td><td><b>1 184 000</b></td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>When a non-resident sells SA property, the buyer pre-pays a slice of the seller's tax to SARS (7.5% individual / 10% company / 15% trust). The seller still does the full CGT calc and offsets the amount withheld.</div></div>
+
+<h3>6.5 VAT</h3>
+<div class="ex"><h4>Registration, imports &amp; exports</h4>
+<table>
+  <tr><td>Compulsory registration: taxable supplies in any 12 months &gt; <b>R1 000 000</b> (all branches added — s50)</td><td></td></tr>
+  <tr><td>Import of <b>goods</b> (non-BLNS): (customs value 120 000 + 10% 12 000 + surcharge 5 600) × 15%</td><td>20 640</td></tr>
+  <tr><td>Import of <b>services</b> for exempt use (80%): 60 000 × 80% × 15%</td><td>7 200</td></tr>
+  <tr><td>Direct export with proof in 90 days → zero-rated; no proof → standard 100 000 × 15%</td><td>0 / 15 000</td></tr>
+  <tr><td>Sale of going concern (criteria met, both vendors) → <b>zero-rated</b></td><td>0</td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>Output − Input = VAT. Imported goods add 10% + duties to the customs value first. You only self-charge VAT on imported services to the extent you use them for <i>non-taxable</i> (exempt) purposes. Exports &amp; going concerns are 0% only if you have the proof.</div></div>
+
+<h3>6.6 Retirement</h3>
+<div class="ex"><h4>s11F contribution limit (Zubaida)</h4>
+<p>Salary 400k; employer pension FB 48k; rental 250k; TCG 20k. Actual contributions (incl. R100k undeducted b/f) = 316k.</p>
+<table>
+  <tr><td>Remuneration = 400 000 + 48 000 → 27.5% =</td><td>123 200</td></tr>
+  <tr><td>27.5% × taxable income incl. TCG (718 000) =</td><td>197 450</td></tr>
+  <tr><td>Deduction = lesser of R350 000 and higher of above (197 450)</td><td>(197 450)</td></tr>
+  <tr><td>Excess 316 000 − 197 450 = 118 550 carried forward; Taxable income</td><td><b>520 550</b></td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>Deduct retirement contributions up to 27.5% of the bigger of your pay or taxable income, hard-capped at R350k. Anything over the cap isn't lost — it rolls to next year. The employer's contribution is first added as a fringe benefit, then forms part of <i>your</i> deductible contribution.</div></div>
+<div class="ex"><h4>Lump sums — retirement vs withdrawal table</h4>
+<table>
+  <tr><td><b>Retirement</b> (Hopewell): 1 100 000 − 140 000 undeducted = 960 000; tax 39 600 + 27% × (960 000 − 770 000)</td><td>90 900</td></tr>
+  <tr><td><b>Withdrawal</b> (Naledi): transfer 15 000 = R0; cash 50 000 − 20 000 = 30 000; tax (30 000 − 27 500) × 18%</td><td>450</td></tr>
+  <tr><td><b>Cumulative</b> (Simone): tax on (all lumps) − tax on (prior lumps) = 633 150 − 357 750</td><td>275 405</td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>Resignation withdrawals are taxed harder (small tax-free band) than retirement/retrenchment lump sums. Lump sums are <b>cumulative</b>: tax all of them on the table, subtract tax already charged on earlier ones, leaving the tax on the current one. Subtract contributions that never got a deduction first.</div></div>
+<div class="ex"><h4>Annuity + s10C exemption (Natalie)</h4>
+<table>
+  <tr><td>Lump sum 300 000 − undeducted 300 000 → in gross income</td><td>0</td></tr>
+  <tr><td>Annuity 8 000 × 2 = 16 000 (GI); s10C exemption (remaining undeducted 20 000) covers</td><td>(16 000) → 0</td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>Contributions you never got to deduct come back to shelter you in retirement — first against the lump sum (2nd Schedule), then any leftover exempts your annuity income via s10C.</div></div>
+
+<h3>6.7 Dividends tax &amp; CTC</h3>
+<div class="ex"><h4>Five quick dividend-tax calcs</h4>
+<table>
+  <tr><td><b>CTC balance:</b> opening 1 000 000; capitalisation issue 500 000 is tainted (not CTC); distribute 200 000 CTC → closing</td><td>800 000</td></tr>
+  <tr><td><b>Dividend in specie</b> (laptops): MV 5 780 × 2 × 20% (company pays)</td><td>2 312</td></tr>
+  <tr><td><b>Interest-free loan to shareholder</b> = deemed dividend: 100 000 × 122/365 × 8.5% (official rate)</td><td>2 841</td></tr>
+  <tr><td><b>s64N foreign rebate:</b> div 3 750 000 × 20% = 750 000, less foreign 7% (262 500) → withhold</td><td>487 500</td></tr>
+  <tr><td><b>Return of capital:</b> reduces base cost; ROC &gt; base cost → excess is an immediate capital gain (par 76B)</td><td></td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>Dividends tax is 20% on the beneficial owner; the <i>company</i> pays it on dividends in specie &amp; deemed dividends (cheap shareholder loans). CTC = real capital put in — returning it isn't a dividend. SA-company shareholders are exempt (s64F).</div></div>
+
+<h3>6.8 Donations tax &amp; attribution (s7)</h3>
+<div class="ex"><h4>Donations tax with exemptions</h4>
+<table>
+  <tr><td>Artwork MV 80 000 + car MV 105 000</td><td>185 000</td></tr>
+  <tr><td>Less general exemption s56(2)(b)</td><td>(100 000)</td></tr>
+  <tr><td>× 20% → donations tax (payable by donor, end of next month)</td><td><b>17 000</b></td></tr>
+</table>
+<p class="marks">Exempt: to spouse (unlimited), bona-fide maintenance, PBO, returned within 6 months; only R100 000 p.a. general exemption (natural persons).</p>
+<div class="plain"><b class="lbl">In plain English</b>Give away an asset for nothing → 20% (25% over R30m cumulative) on its market value, after a R100k yearly free allowance. Use market value, not cost.</div></div>
+<div class="ex"><h4>s7 attribution — donate income away, still taxed (Sam)</h4>
+<table>
+  <tr><td>Salary</td><td>550 000</td></tr>
+  <tr><td>s7(3) rental diverted to minor child</td><td>120 000</td></tr>
+  <tr><td>s7(8) rental diverted to non-resident child</td><td>180 000</td></tr>
+  <tr><td>Taxable income (the scheme fails)</td><td><b>850 000</b></td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>You can't dodge tax by donating income-producing assets to your kids — the income is taxed back in the donor's hands (s7(3) minors, s7(8) non-residents), and you still pay donations tax on the gift.</div></div>
+
+<h3>6.9 Estate duty</h3>
+<div class="ex"><h4>Estate-duty pro-forma (Mr A)</h4>
+<table>
+  <tr><td>Property + deemed property (house 1.9m, car 250k, art 5m, bank 202k)</td><td>7 352 000</td></tr>
+  <tr><td>Less deductions (credit card 2 000, executor 50 000, income tax 120 000)</td><td>(172 000)</td></tr>
+  <tr><td>Net value of estate</td><td>7 180 000</td></tr>
+  <tr><td>Less s4A abatement</td><td>(3 500 000)</td></tr>
+  <tr><td>Dutiable amount × 20%</td><td><b>736 000</b></td></tr>
+</table>
+<div class="plain"><b class="lbl">In plain English</b>Add everything owned + deemed (life policies, accrual) at market value on death, subtract debts/admin and the R3.5m abatement, tax the rest at 20% (25% over R30m). Bequests to a spouse are fully deductible. Assets are valued at death-date MV (or actual arm's-length sale price), ignoring later damage or sweetheart will-prices.</div></div>
+
+<h3>6.10 Trusts — the conduit principle</h3>
+<div class="ex"><h4>Allocate every rand (Connect Trust)</h4>
+<p>Discretionary trust; R100 000 income (div 45k / interest 35k / rent 20k). Annuity + discretionary distributions made; rest retained. Income keeps its <b>nature</b> as it flows out (s25B / par 80).</p>
+<ul>
+  <li><b>Vested/distributed to a beneficiary</b> → taxed in that beneficiary (keeps nature: interest gets s10(1)(i), dividends s10(1)(k)).</li>
+  <li><b>Distributed to a minor, or funded by a donor</b> → attributed back to the <b>donor</b> (s7(3)/(5)); income from a <i>different</i> donor's asset (grandfather) is NOT attributed to the father.</li>
+  <li><b>Retained, no donor</b> → taxed in the <b>trust</b> at 45%.</li>
+</ul>
+<div class="plain"><b class="lbl">In plain English</b>Three "buckets" for every rand: the <b>beneficiary</b> (if vested/received), the <b>donor</b> (if a minor benefits or the donor funded it), else the <b>trust</b>. Split each income type proportionately, then drop each slice into the right bucket. A loss can't flow through (s25B(3) limits a beneficiary's deduction to their vested income — the rest stays in the trust).</div></div>
+
+<footer>IAC Tax master summary — compiled from the IAC 2026 Tax Notes &amp; Tutorials (College of Accounting / ITC past papers), the Milpark/PGDA worked examples and Endunamoo CTA material for private exam preparation. <b>Confirm all monetary thresholds, brackets and rebates against the SARS rate card / legislation handbook supplied in the exam</b> — rates change annually. Always apply the law to the scenario; never dump theory.
 </footer>
 
 </div>
