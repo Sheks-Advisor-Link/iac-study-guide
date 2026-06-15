@@ -7,7 +7,7 @@
   :root{ --ink:#161a1f; --muted:#5b626d; --line:#bcc3cc; --accent:#6d4d12; --accent2:#8a5a00; --blue:#234d7a;
          --soft:#faf7f1; --soft2:#f1ece2; --pbg:#eef4fb; }
   *{box-sizing:border-box}
-  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:9px;line-height:1.4}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:9px;line-height:1.42}
   .wrap{max-width:900px;margin:0 auto;padding:20px}
   h1{font-size:18px;margin:0;color:var(--accent)}
   .sub{color:var(--muted);font-size:8.5px;margin:1px 0 6px}
@@ -17,14 +17,15 @@
   h3{font-size:10px;margin:8px 0 2px;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:1px}
   p{margin:3px 0}
   ul{margin:2px 0 4px 13px;padding:0}
-  li{margin:1.5px 0}
+  li{margin:1.8px 0}
   b{color:#111}
   .s{color:var(--blue);font-weight:700}
-  .rule{break-inside:avoid;margin:0 0 6px}
-  .pr{break-inside:avoid;background:var(--pbg);border-left:3px solid var(--blue);border-radius:0 4px 4px 0;padding:4px 8px;margin:5px 0}
+  .rule{break-inside:avoid;margin:0 0 7px}
+  .pr{break-inside:avoid;background:var(--pbg);border-left:3px solid var(--blue);border-radius:0 4px 4px 0;padding:5px 8px;margin:6px 0}
   .pr h3{border:none;margin:0 0 2px;color:var(--blue)}
-  .pr li{margin:1px 0}
+  .pr li{margin:1.6px 0}
   .pr .tag{font-weight:700;color:var(--accent2)}
+  .num{background:#1c2230;color:#e9edf3;border-radius:3px;padding:1px 5px;font-family:"Consolas",monospace;font-size:8.4px}
   .cols2{column-count:2;column-gap:14px}
   @page{size:A4;margin:11mm 10mm;@bottom-right{content:"p. " counter(page);font-size:8px;color:#999}}
   h2,h3{break-after:avoid}
@@ -34,231 +35,247 @@
 <div class="wrap">
 
 <h1>IAC Tax — Rules in Simple Terms <span style="font-weight:400;font-size:12px">+ a principle from every example</span></h1>
-<div class="sub">SAICA IAC 2026 · the fastest pass through everything · T. Van Heerden · from the Milpark/PGDA worked examples + IAC Tax Notes</div>
-<div class="banner"><b>How to use:</b> Part 1 = every rule in one plain line. Part 2 = the single principle each worked example exists to teach. Read Part 1 for the map, Part 2 to lock in the exam tricks. ⚠ Confirm rand figures on the exam rate card.</div>
+<div class="sub">SAICA IAC 2026 · the fastest pass through everything · T. Van Heerden · from the IAC Tax Notes + Milpark/PGDA worked examples</div>
+<div class="banner"><b>How to use:</b> Part 1 = every rule with its key numbers &amp; mechanism. Part 2 = the principle each worked example teaches, with the trick that earns the mark. ⚠ Confirm rand thresholds/brackets on the exam rate card.</div>
 
 <!-- ============ PART 1 ============ -->
-<h2>Part 1 · Every tax rule, in simple terms</h2>
+<h2>Part 1 · Every tax rule, in simple terms (with the detail)</h2>
 <div class="cols2">
 
-<div class="rule"><h3>Gross income (s1)</h3><ul>
-<li><b>Resident</b> taxed on worldwide income; <b>non-resident</b> only on SA-source.</li>
-<li>"Amount" = cash <b>or anything with a money value</b>; use it at the date you become entitled.</li>
-<li>Taxed at the <b>earlier of received or accrued</b>; "received" = for <b>your own benefit</b>; "accrued" = <b>unconditionally entitled</b>.</li>
-<li><b>Capital receipts excluded</b> — unless a special inclusion (par a–n) drags them in (annuities, restraint, lump sums, lease premiums).</li>
+<div class="rule"><h3>Gross income (s1) &amp; residence</h3><ul>
+<li><b>Resident</b> = ordinarily resident (Cohen/Kuttel — your "real home") <i>or</i> the physical-presence day test (91 days this yr + 91 avg over 5 yrs + 915 total) → taxed <b>worldwide</b>. Non-resident → only <b>SA-source</b>.</li>
+<li><b>"Total amount, in cash or otherwise"</b> = money or anything with a money value (Lategan; Brummeria); valued at the date you become entitled.</li>
+<li><b>"Received by"</b> = for your <b>own benefit</b> (Geldenhuys; Pyott — deposits count); <b>"accrued to"</b> = <b>unconditionally entitled</b> (Mooi); taxed at the <b>earlier</b> of the two (Delfos). Amounts are not discounted (Peoples Stores).</li>
+<li><b>Capital receipts excluded</b> — judged on intention/scheme of profit (Visser tree-vs-fruit, Pick 'n Pay, Natal Estates change of intention, Stott). Onus that it's capital is on the <b>taxpayer</b> (s102).</li>
+<li><b>Special inclusions (par a–n)</b> pull amounts in even if capital: annuities, alimony, services/restraint (cA/cB), retirement lump sums (e), recoupments (n), lease premiums (g), leasehold improvements (h).</li>
 </ul></div>
 
-<div class="rule"><h3>Exemptions (s10)</h3><ul>
-<li>Local dividends exempt (but 20% dividends tax). Interest exemption R23 800 (&lt;65) / R34 500 (65+).</li>
-<li>Foreign employment (183/60 days) exempt up to R1.25m. Foreign dividends partly exempt (s10B).</li>
+<div class="rule"><h3>Exempt income (s10) &amp; s24C</h3><ul>
+<li>Local dividends exempt for normal tax (s10(1)(k)) — but 20% dividends tax. Interest exemption <span class="num">R23 800</span> (&lt;65) / <span class="num">R34 500</span> (65+).</li>
+<li>Foreign employment s10(1)(o)(ii): exempt up to <span class="num">R1.25m</span> if &gt;183 days (incl. 60 continuous) abroad. Foreign dividends partly exempt (s10B; full if ≥10% holding).</li>
+<li><b>s24C allowance:</b> income received in advance under a contract that funds future deductible costs under the <b>same</b> contract (Big G) → defer the matching portion; reverses next year.</li>
 </ul></div>
 
-<div class="rule"><h3>Deductions (s11(a) + s23)</h3><ul>
-<li>Deduct if: <b>trade · expenditure actually incurred · in production of income · not capital</b> (and not blocked by s23).</li>
-<li><b>s23H</b> prepaid: only the part used this year (unless ≤R100k or delivered ≤6 months).</li>
-<li><b>s11A</b> pre-trade costs ring-fenced to that trade. <b>s11(c)</b> legal (non-capital, trade). <b>s11(d)</b> repairs (not improvements).</li>
+<div class="rule"><h3>Deductions — s11(a) + s23</h3><ul>
+<li><b>Positive test (s11(a)):</b> ① a trade; ② expenditure/loss; ③ <b>actually incurred</b> = unconditional liability (Edgars; Nasionale Pers); ④ in <b>production of income</b> = closely connected to income operations (PE Tramways; Joffe); ⑤ in the year; ⑥ <b>not capital</b> (fixed vs floating capital — New State Areas; BP SA).</li>
+<li><b>Negative test (s23):</b> private/domestic &amp; home office (a),(b); not-for-trade (g); the tax itself (d); reserves/provisions; bribes/fines (o).</li>
+<li><b>s23H</b> prepaid: only the portion enjoyed this year — unless total prepaid ≤<span class="num">R100k</span> or goods/services delivered within 6 months of year-end.</li>
+<li><b>s11A</b> pre-trade (ring-fenced); <b>s11(c)</b> legal (non-capital, trade); <b>s11(d)</b> repairs; <b>s11(i)/(j)</b> bad/doubtful debts; <b>s11(l)/(m)</b> fund contributions / annuities.</li>
 </ul></div>
 
 <div class="rule"><h3>Trading stock (s22)</h3><ul>
-<li>Closing stock <b>added</b> (lower of cost/NRV); opening stock <b>deducted</b>.</li>
-<li>Free/inherited stock in at market value (s22(4)); stock for own use/donated = deemed recovery (s22(8)).</li>
+<li>Closing stock <b>added</b> to income at lower of <b>cost or NRV</b>; opening stock <b>deducted</b>; purchases deducted (s11(a)). Cost = price + costs to bring to present location &amp; condition.</li>
+<li><b>s22(4)</b> free/inherited stock → market value in. <b>s22(8)</b> stock to private use / donated / dividend in specie → deemed recovery at cost or MV. <b>s23F</b> denies the deduction until stock disposed / income received.</li>
 </ul></div>
 
 <div class="rule"><h3>Capital allowances</h3><ul>
-<li><b>s11(e)</b> wear &amp; tear: straight-line, apportion part-year. <b>s12C</b> plant: 40/20/20/20 new (full year).</li>
-<li><b>s13quin/s13sex</b> buildings 5% (10% low-cost homes); bought part of a building → 55% of price = cost.</li>
-<li><b>s12B/12BA</b> renewables 100%/125%. Lease premium s11(f) over term; improvements s11(g) over months left.</li>
+<li><b>s11(e)</b> movables: straight-line over IN47 life, <b>apportioned</b> part-year; &lt;R7 000 items full write-off.</li>
+<li><b>s12C</b> manufacturing plant: <b>40/20/20/20</b> new, 20%×5 used — <b>full year, no apportion</b>; cost includes installation; later moving costs over remaining life.</li>
+<li><b>s12E</b> SBC 100% (mfg) / 50-30-20. <b>s13</b> industrial 5%; <b>s13quin</b> commercial 5%; <b>s13sex</b> residential 5% (10% low-cost), need ≥5 units; <b>55%</b> of price if you buy (not build) part of a building.</li>
+<li><b>s12B/12BA</b> renewables 100% / 125% (window). <b>s11(f)</b> lease premium over lease term (max 25 yrs); <b>s11(g)</b> improvements over months left from completion; <b>s12N</b> lessee deemed owner of improvements.</li>
 </ul></div>
 
-<div class="rule"><h3>Recoupments (s8(4))</h3><ul>
-<li>Sell a depreciated asset → recoup allowances = lower(proceeds, cost) − tax value; <b>never more than allowances claimed</b>.</li>
-<li>Proceeds &gt; cost → excess is a capital gain. Proceeds &lt; tax value → s11(o) scrapping loss.</li>
+<div class="rule"><h3>Recoupments &amp; scrapping</h3><ul>
+<li><b>s8(4)</b> recoupment on disposal = lower(proceeds, cost) − tax value; included in income; <b>capped at allowances claimed</b> (excess over cost → CGT).</li>
+<li><b>s11(o)</b> scrapping loss if proceeds &lt; tax value (asset life ≤10 yrs). <b>s24M/s20B</b> for proceeds not determinable / not yet accrued.</li>
 </ul></div>
 
-<div class="rule"><h3>CGT (8th Schedule)</h3><ul>
-<li><b>Gain = proceeds − base cost</b>; net gains − annual exclusion (R40k) × inclusion (40% indiv / 80% co).</li>
-<li>Deemed disposals at market value: <b>donation, death, emigration, dividend in specie, asset to private use, connected persons</b>.</li>
-<li>Primary residence: first R2m of gain free. Roll-overs: spouse (s9HB), insurance/replacement (par 65/66), death (s9HA).</li>
+<div class="rule"><h3>CGT (8th Schedule, via s26A)</h3><ul>
+<li><b>Gain = proceeds (par 35) − base cost (par 20)</b>. Base cost = cost + transfer duty + improvements + advertising + agent's commission (exclude repairs); pre-2001 → valuation/TAB/20% rule.</li>
+<li>Net gains − <b>annual exclusion</b> <span class="num">R40k</span> (R300k in death year) × inclusion <b>40%</b> indiv / <b>80%</b> co. Effective max: 18% / 21.6% / trust 36%.</li>
+<li><b>Deemed disposals at MV:</b> donation, death (s9HA), emigration (s9H), dividend in specie, asset→private use, connected persons. <b>Roll-overs:</b> spouse (s9HB), insurance/replacement (par 65/66).</li>
+<li>Primary residence: first <span class="num">R2m</span> of gain free (apportion for &gt;2ha/business use). Personal-use-asset losses disregarded (par 53). s9C: equity shares held ≥3 yrs = capital.</li>
 </ul></div>
 
-<div class="rule"><h3>VAT (15%)</h3><ul>
-<li>Output − input = VAT. Register if 12-month supplies &gt; R1m. Zero-rated (exports, basics, going concern) vs exempt (interest, residential rent, transport, education — no input).</li>
-<li>Imported goods: customs +10% +duties ×15%. Imported services: VAT on non-taxable-use %. Cars/entertainment = input denied.</li>
+<div class="rule"><h3>VAT (15%, fraction 15/115)</h3><ul>
+<li>Output − input = VAT. <b>Register</b> if 12-month taxable supplies &gt;<span class="num">R1m</span> (voluntary &gt;R50k). <b>Zero-rated</b> (exports, basic foods, fuel, going concern) keep input; <b>exempt</b> (interest, residential rent, transport, education) get <b>no</b> input.</li>
+<li><b>Time of supply (s9):</b> earlier of invoice/payment; connected persons = delivery/performance; fixed property (s9(3)(d)) = earlier of registration/payment.</li>
+<li><b>Imported goods:</b> (customs value + 10% + duties) × 15%. <b>Imported services:</b> VAT on the non-taxable-use %. <b>Input denied (s17(2)):</b> entertainment, motor cars, club subs. Adjustments: change-in-use (s18), bad debts (s22).</li>
 </ul></div>
 
-<div class="rule"><h3>Individuals &amp; fringe benefits</h3><ul>
-<li>Travel allowance: deemed cost or actual (logbook); 80% PAYE. Subsistence: deemed daily if ≥1 night away.</li>
-<li>FB: car 3.5%/3.25% of value; cheap loan = official − charged; asset = MV − paid; accommodation by formula.</li>
-<li><b>s11F</b> retirement: 27.5% of higher of pay/TI, cap R350k. Medical credits s6A/s6B.</li>
+<div class="rule"><h3>Individuals — allowances</h3><ul>
+<li><b>Travel (s8(1)(b)):</b> included, reduce by business portion — deemed cost (fixed+fuel+maintenance tables ÷ total km × business km) <b>or</b> actual; logbook required; <b>80%</b> through PAYE (20% if &gt;80% business).</li>
+<li><b>Subsistence (s8(1)(c)):</b> away ≥1 night → reduce by deemed daily amounts (meals+incidental / incidental only) or actual.</li>
+<li>Reimbursive travel tax-free up to the prescribed rate/km if no other allowance.</li>
+</ul></div>
+
+<div class="rule"><h3>Fringe benefits (7th Schedule)</h3><ul>
+<li><b>2(a)</b> asset cheap/free = MV (cost if stock) − paid. <b>2(b)</b> company car = <span class="num">3.5%</span>/mth of determined value (<span class="num">3.25%</span> with maintenance plan), reduce for business km &amp; employee-borne costs.</li>
+<li><b>2(d)</b> accommodation by formula (A−B)×C/100×D/12. <b>2(f)</b> low-interest loan = (official − charged) × loan × period; official = repo+1%. <b>2(l)</b> employer fund contributions taxable but deductible via s11F.</li>
+</ul></div>
+
+<div class="rule"><h3>Retirement &amp; medical</h3><ul>
+<li><b>s11F:</b> deduct contributions up to 27.5% of the higher of remuneration / taxable income (incl. TCG), capped <span class="num">R350k</span>; excess carries forward.</li>
+<li><b>s6A</b> medical credit (fixed monthly per member/dependant — a rebate). <b>s6B</b> additional credit (25% / 33⅓% of qualifying out-of-pocket above the threshold).</li>
 </ul></div>
 
 <div class="rule"><h3>Employees' &amp; provisional tax</h3><ul>
-<li>PAYE on "remuneration"; independent contractors excluded. Labour brokers/PSPs special rules.</li>
-<li>Provisional: 1st = 50% est.; 2nd = full est. (within 80% if TI&gt;R1m); basic amount if low.</li>
+<li><b>PAYE</b> on "remuneration" (4th Sch); independent contractors excluded (control/supervision; premises + ≥3 staff exclusion). Labour brokers need an exemption certificate; PSPs taxed at company rate.</li>
+<li><b>Provisional:</b> 1st (6 mths) = 50% of estimate; 2nd (year-end) = full estimate — within 80% if TI&gt;<span class="num">R1m</span> else par-20 penalty; use "basic amount" (last assessment +8%/yr if &gt;18 mths old) if low; 3rd = voluntary top-up.</li>
 </ul></div>
 
 <div class="rule"><h3>Lump sums &amp; severance</h3><ul>
-<li>Retirement/retrenchment/severance = retirement table (cumulative); resignation = harsher withdrawal table.</li>
-<li>Subtract non-deducted contributions first; leftover exempts annuity (s10C).</li>
+<li>Retirement / death / retrenchment / severance → <b>retirement table</b> (first ~R550k at 0%); resignation → harsher <b>withdrawal table</b> (first R27 500 at 0%).</li>
+<li><b>Cumulative</b>: tax all lumps to date, less tax on prior lumps. Subtract non-deducted contributions first; leftover exempts annuity income (s10C). Severance needs ≥55 / ill-health / retrenchment.</li>
 </ul></div>
 
 <div class="rule"><h3>Dividends, CTC &amp; companies</h3><ul>
-<li>Dividends tax 20% on the owner (company pays for in-specie &amp; deemed dividends); SA-company owners exempt (s64F).</li>
-<li>CTC = real capital in; returning it isn't a dividend. Company rate 27%; assessed loss s20 capped at higher of R1m/80%.</li>
-<li>Corporate rules s42 (asset-for-share) / s45 (intra-group ≥70%) give roll-over relief.</li>
+<li><b>Dividends tax 20%</b> on the beneficial owner; the company pays it on dividends <b>in specie</b> and deemed dividends (cheap shareholder loans). SA-resident company / fund / PBO owners exempt (s64F, with declaration).</li>
+<li><b>CTC</b> = consideration for shares issued; returning CTC is <b>not</b> a dividend (reduces base cost). Company rate <span class="num">27%</span>; <b>s20</b> assessed-loss set-off capped at higher of R1m / 80% of TI; s20A ring-fences suspect trades.</li>
+<li><b>Corporate rules:</b> s42 asset-for-share, s45 intra-group (≥70%), s46 unbundling → roll-over (also covers transfer duty/STT/VAT; 6-yr de-grouping charge).</li>
 </ul></div>
 
-<div class="rule"><h3>Interest &amp; foreign</h3><ul>
-<li><b>s24J</b> spreads interest on a yield-to-maturity basis (beats cash timing; s23B priority).</li>
-<li><b>s24I</b> forex gains/losses on monetary items (realised + unrealised). <b>s6quat</b> foreign tax rebate. <b>s9D</b> CFC.</li>
+<div class="rule"><h3>Interest, forex &amp; foreign</h3><ul>
+<li><b>s24J:</b> interest on an "instrument" spread on a yield-to-maturity basis (overrides cash; s23B gives it priority over s11(a)). <b>s24O</b> interest to buy operating-company shares deductible; <b>s8F/8FA</b> hybrid interest = dividend in specie.</li>
+<li><b>s25D</b> translate forex at spot/average; <b>s24I</b> monetary items retranslated at year-end (realised + unrealised); <b>s24I(7)</b> defers pre-production differences. <b>s6quat</b> foreign tax rebate (capped); <b>s9D</b> CFC; <b>s31</b> transfer pricing (arm's length + 20% secondary).</li>
 </ul></div>
 
 <div class="rule"><h3>Estate duty &amp; donations</h3><ul>
-<li>Estate duty: (property + deemed − debts − R3.5m abatement) × 20% (25% &gt;R30m); spouse bequests deductible.</li>
-<li>Donations tax 20%/25% on MV after R100k free; spouse/PBO/maintenance exempt; s7 attributes diverted income back to donor.</li>
+<li><b>Estate duty:</b> (property s3(2) + deemed property s3(3): life policies, accrual claim − deductions s4: debts, admin, spouse s4(q), PBO − <b>s4A abatement</b> <span class="num">R3.5m</span>, portable to R7m) × <b>20%</b> (25% &gt;R30m).</li>
+<li><b>Donations tax 20%</b> (25% &gt;R30m cumulative) on MV of gratuitous disposals; <b>R100k</b> annual exemption (natural persons); spouse / PBO / maintenance / 6-month-return exempt. <b>s58</b> deemed donation for inadequate consideration; <b>s7</b> attributes diverted income back to the donor.</li>
 </ul></div>
 
-<div class="rule"><h3>Trusts</h3><ul>
-<li>Conduit (s25B): income keeps its nature and is taxed in the <b>vested beneficiary</b>; else in the <b>trust (45%)</b>.</li>
-<li>Minor/donor-funded income → back to <b>donor</b> (s7). Interest-free loan to trust → s7C deemed donation.</li>
+<div class="rule"><h3>Trusts &amp; deceased estates</h3><ul>
+<li><b>Conduit (s25B / par 80):</b> income/gains keep their nature and are taxed in the <b>vested beneficiary</b>; retained &amp; un-attributed amounts taxed in the <b>trust (45%)</b>.</li>
+<li><b>Attribution (s7/par 68–73):</b> minor child (s7(3)), spouse (s7(2)), non-resident (s7(8)), retained (s7(5)) → back to donor. <b>s7C</b>: interest-free loan to a trust = deemed annual donation. <b>s9HA</b> death = MV disposal (spouse roll-over s9HB).</li>
 </ul></div>
 
 <div class="rule"><h3>TAA &amp; GAAR</h3><ul>
-<li>Onus on taxpayer (s102); 3-year prescription; object s104; pay-now-argue-later s164; USP s222.</li>
-<li>GAAR (s80A): arrangement + main purpose tax benefit + a tainted element → SARS re-characterises. Specific anti-avoidance first.</li>
+<li><b>s102</b> onus on taxpayer; <b>3-year</b> prescription (5 self-assessment) unless fraud/non-disclosure; <b>s104</b> objection → appeal → ADR/Tax Board/Tax Court; <b>s164</b> pay-now-argue-later; <b>s222</b> understatement penalty (0–200%); VDP relief.</li>
+<li><b>GAAR (s80A):</b> arrangement + sole/main purpose = tax benefit + a tainted element (abnormality / no commercial substance / misuse). Apply specific anti-avoidance first.</li>
 </ul></div>
 
 </div>
 
 <!-- ============ PART 2 ============ -->
-<h2 class="b">Part 2 · One principle from every worked example</h2>
+<h2 class="b">Part 2 · One principle from every worked example (with the detail)</h2>
 
 <div class="pr"><h3>Gross income — illustrative examples</h3><ul>
-<li><span class="tag">Free use of money:</span> an interest-free loan/benefit is GI valued at the interest saved (Brummeria).</li>
-<li><span class="tag">Payment in kind:</span> value at market value on the date you become entitled, not the contract date.</li>
-<li><span class="tag">Notional income:</span> what you <i>could</i> have earned is never taxed — you must actually receive/accrue (Lategan/Mooi).</li>
-<li><span class="tag">Agent money:</span> only your own-benefit slice (commission) is GI; never gross-up then deduct (Geldenhuys).</li>
-<li><span class="tag">Overpayment:</span> a duplicate receipt isn't GI until you're unconditionally entitled (may be recouped later).</li>
-<li><span class="tag">Illegal income:</span> still fully taxable.</li>
-<li><span class="tag">No discounting:</span> include the full face amount once entitled, even if only payable later (Peoples Stores).</li>
+<li><span class="tag">Free use of money (Brummeria):</span> an interest-free loan is GI = interest saved (prime × loan × period). <span class="num">10% × R10m × 7/12 = R583 333</span>; a 5% loan → only the 5% shortfall.</li>
+<li><span class="tag">Payment in kind:</span> shares/goods received as payment are valued at <b>market value on the date of entitlement</b>, not the (lower) contract value.</li>
+<li><span class="tag">Notional income:</span> what you <i>could</i> have earned (cash hidden under a floor) is never taxed — no receipt/accrual (Lategan/Mooi).</li>
+<li><span class="tag">Agent money (Geldenhuys):</span> a R60k rent collection where you keep 10% → only <b>R6 000</b> is GI; the R54k passed on isn't yours. Never include R60k then deduct R54k.</li>
+<li><span class="tag">Overpayment:</span> a duplicate receipt isn't GI until you're unconditionally entitled (repayable for 5 yrs); may be recouped if never repaid.</li>
+<li><span class="tag">Illegal income</span> (e.g. drug sales) is still fully taxable. <span class="tag">No discounting (Peoples Stores):</span> R15m receivable in 11 months is GI at the <b>full R15m</b>, not its PV.</li>
 </ul></div>
 
 <div class="pr"><h3>Deductions</h3><ul>
-<li><span class="tag">s11A:</span> pre-trade costs only shelter income from that same trade; excess carries forward.</li>
-<li><span class="tag">s23H:</span> deduct only the used-up portion of a prepayment, unless total prepaid ≤R100k or delivered within 6 months.</li>
-<li><span class="tag">s11(c):</span> legal fees deductible if non-capital and protecting trade income (e.g. enforcing a loss-of-profits claim) — and the payout is taxable.</li>
-<li><span class="tag">s11(l)/(m):</span> employer retirement-fund contributions deductible; annuities to retired ex-employees fully deductible.</li>
+<li><span class="tag">s11A:</span> pre-trade rates of R75k shelter only the R35k same-trade income; the R40k balance carries forward — it can't reduce other (service) income.</li>
+<li><span class="tag">s23H:</span> office &amp; security prepayments of R132 500 (&gt;R100k, &gt;6 months) are <b>not</b> deductible now; stationery (delivered within 6 months) is fully deductible despite being prepaid.</li>
+<li><span class="tag">s11(c):</span> legal fees to enforce a loss-of-profits insurance claim are deductible (non-capital, protects trade income) — and the payout is itself taxable.</li>
+<li><span class="tag">s11(l)/(m):</span> employer pension/RA contributions deductible (s11(l)); annuities to staff who retired due to old age fully deductible (s11(m)).</li>
 </ul></div>
 
-<div class="pr"><h3>Trading stock &amp; foreign exchange (Corp Tax)</h3><ul>
-<li><span class="tag">s23F:</span> no deduction for stock bought but not yet sold / income not yet received.</li>
-<li><span class="tag">s22 cost:</span> stock cost = price + all costs to bring it to its present location &amp; condition.</li>
-<li><span class="tag">Debt benefit on stock:</span> a waived loan that funded stock reduces the cost of that stock (s19).</li>
-<li><span class="tag">s22(4):</span> stock acquired for nothing comes in at market value.</li>
-<li><span class="tag">s22(8):</span> stock taken for private use or distributed as a dividend in specie = deemed recovery at cost/MV.</li>
-<li><span class="tag">s25D:</span> translate foreign amounts to rand at spot (or average) rate.</li>
-<li><span class="tag">s24I:</span> monetary items (forex debtors/loans/FECs) are retranslated at year-end — include realised <i>and</i> unrealised differences.</li>
-<li><span class="tag">s24I(7):</span> forex differences on a capital asset bought pre-production are deferred until the asset is brought into use.</li>
+<div class="pr"><h3>Trading stock &amp; foreign exchange (Corporate Tax)</h3><ul>
+<li><span class="tag">s23F:</span> no deduction for stock purchased but not yet sold / where the related income hasn't been received.</li>
+<li><span class="tag">Cost of stock:</span> includes customs &amp; costs to bring it to present location/condition — not just the invoice price.</li>
+<li><span class="tag">Debt benefit on stock:</span> a waived loan that funded trading stock reduces the <b>cost of that stock</b> (s19), not a recoupment.</li>
+<li><span class="tag">s22(4):</span> stock acquired for no consideration enters at market value (and the same MV is the deemed cost).</li>
+<li><span class="tag">s22(8):</span> stock taken for private use or given as a dividend in specie triggers a deemed recovery at cost/MV.</li>
+<li><span class="tag">s25D:</span> a foreign-currency transaction is translated to rand at the spot rate on transaction date.</li>
+<li><span class="tag">s24I:</span> forex debtors/creditors/loans are retranslated at year-end — recognise both <b>realised and unrealised</b> gains/losses (transaction date → year-end → realisation date).</li>
+<li><span class="tag">s24I(7):</span> exchange differences on a capital asset bought before it's brought into use are <b>deferred</b> until the asset is in use (added to/below its cost).</li>
 </ul></div>
 
-<div class="pr"><h3>Capital allowances (Corp Tax)</h3><ul>
-<li><span class="tag">s11(e):</span> straight-line and apportioned for the months the asset is used.</li>
-<li><span class="tag">s12C:</span> 40/20/20/20 on new manufacturing plant — full year, no apportioning; cost includes installation; later moving costs spread over remaining life.</li>
-<li><span class="tag">s12B/12BA:</span> renewables get 100% (or 125% in the incentive window).</li>
-<li><span class="tag">s13sex:</span> 5% (10% for low-cost units); if you buy part of a building, use 55% of the price as cost.</li>
-<li><span class="tag">s12N:</span> a lessee who improves (government) land is deemed the owner and claims the building allowance.</li>
-<li><span class="tag">IP s11(gC):</span> patents/designs get an allowance over their life — trademarks get nothing.</li>
+<div class="pr"><h3>Capital allowances (Corporate Tax)</h3><ul>
+<li><span class="tag">s11(e):</span> R50k vehicle, used 1 Sep, 4-yr life → Y1 <span class="num">50 000 × ¼ × 4/12 = 4 167</span>; Y2 <span class="num">12 500</span> (apportion Y1 only).</li>
+<li><span class="tag">s12C:</span> new machine R2m + R50k install → <span class="num">×40% = 820 000</span> full year; used machine → 20%; later moving costs over remaining life.</li>
+<li><span class="tag">s13sex:</span> flats bought → <span class="num">500k × 5% × 5 × 55% = 68 750</span>; low-cost houses built → <span class="num">280k × 10% × 5 = 140 000</span>.</li>
+<li><span class="tag">Lease (s11(f)/(g)/s13):</span> premium spread over the lease; obligated improvement over months left from completion; spend above the obligation gets the normal 5% building allowance.</li>
+<li><span class="tag">s12N:</span> a lessee improving (government) land is deemed the owner → claims the s13-type allowance on the improvement.</li>
+<li><span class="tag">IP (s11(gC)):</span> patents/designs get an allowance over their life; <b>trademarks get nothing</b>.</li>
 </ul></div>
 
-<div class="pr"><h3>Capital gains tax (CGT lecture examples)</h3><ul>
-<li><span class="tag">CGT-1 residence:</span> residents taxed on worldwide gains; non-residents only on SA immovable property &amp; PE assets.</li>
-<li><span class="tag">CGT-2 intention:</span> a personal asset sold with no profit-scheme is capital (and often excluded).</li>
-<li><span class="tag">CGT-3/4 mechanics:</span> the annual exclusion reduces both gains and losses before the inclusion rate.</li>
-<li><span class="tag">CGT-5 emigration (s9H):</span> ceasing to be resident triggers a deemed disposal at MV — except SA immovable property &amp; cash.</li>
-<li><span class="tag">CGT-6 immigration:</span> becoming a resident resets base cost to market value.</li>
-<li><span class="tag">CGT-7 base cost:</span> include acquisition cost, transfer duty, improvements, advertising &amp; agent's commission — exclude repairs.</li>
-<li><span class="tag">CGT-8 allowance assets:</span> remove the recoupment from proceeds and reduce base cost by allowances — recoupment can never exceed allowances claimed.</li>
-<li><span class="tag">CGT-9:</span> donations tax paid is added (proportionally) to base cost.</li>
-<li><span class="tag">CGT-10 proceeds:</span> reduce proceeds by any amount already taxed in gross income (no double tax).</li>
-<li><span class="tag">CGT-12/13 primary residence:</span> first R2m of gain free; apportion for &gt;2ha land or business/letting use.</li>
-<li><span class="tag">CGT-14 personal use:</span> moving an asset to private use is a deemed disposal at MV; personal-use <i>losses</i> are disregarded (par 53).</li>
-<li><span class="tag">CGT-15 par 65:</span> involuntary disposal (insurance) qualifies for roll-over; insurance proceeds limited to original cost.</li>
-<li><span class="tag">CGT-16 connected persons:</span> transactions are deemed to happen at market value.</li>
-<li><span class="tag">CGT-17 death (s9HA):</span> deemed disposal at MV at death — except assets to a spouse (s9HB roll-over at base cost).</li>
-<li><span class="tag">CGT-18 s9C:</span> equity shares held ≥3 years are deemed capital — even for a share dealer.</li>
-<li><span class="tag">CGT-19:</span> a dividend in specie is a deemed disposal at market value.</li>
-<li><span class="tag">CGT-20 par 76B:</span> a return of capital reduces base cost; once base cost hits nil the excess is an immediate gain.</li>
-<li><span class="tag">CGT-21–23 par 12A:</span> a waived debt that funded an asset reduces its base cost (and caps future allowances).</li>
+<div class="pr"><h3>Capital gains tax (CGT lecture — 23 examples)</h3><ul>
+<li><span class="tag">CGT-1 residence:</span> residents = worldwide gains; non-residents only on SA immovable property &amp; permanent-establishment assets.</li>
+<li><span class="tag">CGT-2 intention:</span> a private car sold without a profit-scheme is capital — and a personal-use asset, so the gain is disregarded.</li>
+<li><span class="tag">CGT-3/4 mechanics:</span> sum gains &amp; losses, the annual exclusion reduces <b>both</b>, then apply the inclusion rate.</li>
+<li><span class="tag">CGT-5 emigration (s9H):</span> ceasing residence = deemed disposal at MV of all assets <b>except</b> SA immovable property &amp; cash (which stay in the SA net).</li>
+<li><span class="tag">CGT-6 immigration:</span> on becoming resident, base cost of foreign assets is reset to market value (you don't tax pre-arrival growth).</li>
+<li><span class="tag">CGT-7 base cost:</span> cost R1m + transfer duty 50k + jacuzzi (improvement) 15k + advertising 30k + 5% agent commission — <b>repairs excluded</b>.</li>
+<li><span class="tag">CGT-8 allowance asset:</span> remove the recoupment from proceeds and reduce base cost by allowances; the recoupment can never exceed past allowances.</li>
+<li><span class="tag">CGT-9:</span> donations tax paid is added (proportionally) to the donee's base cost.</li>
+<li><span class="tag">CGT-10 proceeds:</span> reduce proceeds by any portion already taxed in gross income — no double tax.</li>
+<li><span class="tag">CGT-12/13 primary residence:</span> first <b>R2m of the gain</b> excluded; apportion for land &gt;2ha or business/letting use.</li>
+<li><span class="tag">CGT-14 to personal use:</span> deemed disposal at MV; a loss on a personal-use asset is disregarded (par 53).</li>
+<li><span class="tag">CGT-15 par 65:</span> insurance/involuntary proceeds qualify for roll-over; insurance is limited to original cost and the recoupment/gain can be spread over the replacement asset.</li>
+<li><span class="tag">CGT-16 connected persons:</span> a non-arm's-length deal is treated as happening at market value.</li>
+<li><span class="tag">CGT-17 death (s9HA):</span> deemed disposal at MV at death — except assets left to a spouse, which roll over at base cost (s9HB).</li>
+<li><span class="tag">CGT-18 s9C:</span> equity shares held ≥3 years are deemed capital — even a share dealer's; a change to capital intention is at MV.</li>
+<li><span class="tag">CGT-19 dividend in specie:</span> distributing an asset is a deemed disposal at market value.</li>
+<li><span class="tag">CGT-20 par 76B:</span> a return of capital reduces base cost; once base cost is nil the excess is an immediate capital gain.</li>
+<li><span class="tag">CGT-21–23 par 12A:</span> a waived debt that funded an asset reduces that asset's base cost (allowance assets also have future allowances capped, s19(7)).</li>
 </ul></div>
 
 <div class="pr"><h3>VAT (worked examples)</h3><ul>
-<li><span class="tag">Registration:</span> compulsory once 12-month taxable supplies exceed R1m — add all branches together (s50).</li>
-<li><span class="tag">Import goods:</span> VAT base = customs value + 10% + duties, then ×15%.</li>
-<li><span class="tag">Import services:</span> self-account VAT only on the non-taxable (exempt) portion of use.</li>
-<li><span class="tag">Exports:</span> zero-rated only if you hold export proof within 90 days, otherwise standard-rated.</li>
+<li><span class="tag">Registration:</span> compulsory once 12-month taxable supplies exceed R1m; add <b>all branches</b> together (s50) — you can't split to avoid it.</li>
+<li><span class="tag">Import goods:</span> base = customs value + 10% + duties, then ×15% (<span class="num">137 600 × 15% = 20 640</span>); full input if 100% taxable use.</li>
+<li><span class="tag">Import services:</span> self-account VAT only on the exempt-use portion (<span class="num">60 000 × 80% × 15% = 7 200</span>).</li>
+<li><span class="tag">Exports:</span> zero-rated only with export proof within 90 days — otherwise standard-rated at 15%.</li>
 <li><span class="tag">Going concern:</span> zero-rated when the criteria are met and both parties are vendors.</li>
-<li><span class="tag">Fixed property (Pine Jel):</span> output/input accounted on a payment basis (s9(3)(d)/s16(4)).</li>
-<li><span class="tag">Credit waiver (Pine Jel):</span> a loan is an exempt financial service — VAT only reverses (s22) if the creditor who waived also charged the original VAT.</li>
+<li><span class="tag">Fixed property (Pine Jel):</span> output/input on a <b>payment basis</b> (s9(3)(d) / s16(4)) — only as the purchase price is settled.</li>
+<li><span class="tag">Credit waiver (Pine Jel):</span> a loan is an exempt financial service → no VAT reverses; s22 only applies if the creditor who waived also charged the original VAT.</li>
 </ul></div>
 
 <div class="pr"><h3>Individuals &amp; fringe benefits (Worked Examples 2024)</h3><ul>
-<li><span class="tag">Assessed loss s20A:</span> losses from "suspect" hobby-type trades are ring-fenced (3-of-5-year / listed-trade tests).</li>
-<li><span class="tag">Travel allowance:</span> reduce by business km using deemed cost tables or actual costs — logbook essential; 80% goes through PAYE.</li>
-<li><span class="tag">Subsistence:</span> deemed daily amounts apply only if away ≥1 night.</li>
-<li><span class="tag">Car FB:</span> 3.5% (3.25% with maintenance plan) of determined value per month, reduced for business use &amp; employee-borne costs.</li>
-<li><span class="tag">Loan FB:</span> benefit = (official rate − rate charged) × loan × period.</li>
-<li><span class="tag">VAT on FB:</span> the employer accounts output VAT (tax fraction) on the fringe benefit granted.</li>
-<li><span class="tag">s8C shares:</span> the gain on a restricted equity instrument is taxed as remuneration on <b>vesting</b>, not on grant.</li>
+<li><span class="tag">Assessed loss s20A:</span> losses from "suspect" hobby-type trades are ring-fenced if you've lost in 3 of the last 5 years (or it's a listed trade).</li>
+<li><span class="tag">Travel allowance:</span> reduce by business km using the deemed-cost tables or actual costs — a logbook is essential; 80% is subject to PAYE.</li>
+<li><span class="tag">Subsistence:</span> deemed daily amounts apply only when away from home ≥1 night.</li>
+<li><span class="tag">Car FB:</span> 3.5% (3.25% with a maintenance plan) of determined value per month, reduced for business use and employee-borne running costs.</li>
+<li><span class="tag">Loan FB:</span> benefit = (official rate − rate charged) × loan × period; if the employee's rate exceeds the official rate any subsidy is instead taxed.</li>
+<li><span class="tag">VAT on FB:</span> the employer accounts output VAT (tax fraction) on the cash equivalent of the benefit.</li>
+<li><span class="tag">s8C shares:</span> the gain (MV − consideration) on a restricted equity instrument is taxed as <b>remuneration on vesting</b>, not on grant.</li>
 </ul></div>
 
 <div class="pr"><h3>Employees' &amp; provisional tax (Worked Examples 2024)</h3><ul>
-<li><span class="tag">Independent trade:</span> not an "employee" if free of control/supervision (statutory exclusion if own premises &amp; ≥3 staff).</li>
-<li><span class="tag">Labour broker:</span> PAYE withheld unless a valid exemption certificate is held.</li>
-<li><span class="tag">Personal service provider:</span> taxed at company rate with very limited deductions; PAYE applies.</li>
-<li><span class="tag">Basic amount:</span> if the last assessment is &gt;18 months old, escalate it 8% per year.</li>
-<li><span class="tag">Provisional 2nd payment:</span> if TI &gt; R1m the estimate must be within 80% of actual or a par-20 penalty applies.</li>
+<li><span class="tag">Independent trade:</span> not an employee if free of control/supervision; statutory exclusion if own premises &amp; ≥3 unconnected staff.</li>
+<li><span class="tag">Labour broker:</span> PAYE must be withheld unless a valid exemption certificate is produced.</li>
+<li><span class="tag">Personal service provider:</span> taxed at the company rate with very limited deductions; the payer withholds PAYE.</li>
+<li><span class="tag">Basic amount:</span> if the latest assessment is &gt;18 months old, escalate it by 8% per year for the 2nd provisional estimate.</li>
+<li><span class="tag">2nd provisional:</span> if taxable income &gt; R1m, the estimate must be within 80% of actual or a 20% under-estimation penalty (par 20) applies.</li>
 </ul></div>
 
 <div class="pr"><h3>Retirement (worked examples)</h3><ul>
-<li><span class="tag">s11F:</span> deduct up to 27.5% of the higher of pay/taxable income, capped at R350k; excess carries forward.</li>
-<li><span class="tag">Severance:</span> qualifies for the retirement table only if ≥55, ill-health, or retrenchment.</li>
-<li><span class="tag">Withdrawal:</span> amounts transferred between funds are tax-free; only the cash taken is taxed (harsher table).</li>
-<li><span class="tag">Cumulative:</span> tax all lump sums to date, subtract tax on earlier ones = tax on the current one.</li>
-<li><span class="tag">s10C:</span> contributions never deducted come back to exempt your annuity income.</li>
+<li><span class="tag">s11F (Zubaida):</span> deduction = lesser of R350k and 27.5% × higher of remuneration (incl. employer-contribution FB) / taxable income; excess (R118 550) carries forward.</li>
+<li><span class="tag">Severance:</span> a lump sum is a severance benefit only if ≥55, ill-health, or retrenchment (not an early-resignation package under 55).</li>
+<li><span class="tag">Withdrawal vs retirement:</span> amounts transferred between funds are tax-free (para 6); only cash taken is taxed, on the harsher withdrawal table.</li>
+<li><span class="tag">Cumulative (Simone):</span> tax on all lump sums to date <b>less</b> tax on prior lump sums = tax on the current one (<span class="num">633 150 − 357 750 = 275 405</span>).</li>
+<li><span class="tag">s10C (Natalie):</span> contributions never deducted first reduce the lump sum, then exempt the annuity income.</li>
 </ul></div>
 
 <div class="pr"><h3>Dividends, CTC &amp; corporate rules</h3><ul>
-<li><span class="tag">CTC:</span> a capitalisation issue out of profits is tainted (not CTC); returning genuine CTC is not a dividend.</li>
-<li><span class="tag">Dividend in specie / cheap loan:</span> the <i>company</i> pays the 20% (deemed-dividend on a low-interest shareholder loan = official rate × loan).</li>
-<li><span class="tag">s64N:</span> a rebate for foreign dividend tax already withheld caps total tax at 20%.</li>
-<li><span class="tag">Liquidation:</span> split the distribution into CTC (capital) and dividend (20% DWT); company shareholders are exempt (s64F).</li>
-<li><span class="tag">s42:</span> asset-for-share gives roll-over relief when the requirements are met.</li>
-<li><span class="tag">s24BA:</span> an asset-for-share at a value mismatch triggers a company capital gain / reduced share base cost.</li>
-<li><span class="tag">s103:</span> changing shareholding solely to use an assessed loss is disallowed (anti-avoidance).</li>
+<li><span class="tag">CTC:</span> a capitalisation issue out of profits is tainted (not CTC); only genuine paid-in capital is CTC, and returning it isn't a dividend.</li>
+<li><span class="tag">Dividend in specie / cheap loan:</span> the <b>company</b> pays the 20% (deemed dividend on a low-interest shareholder loan = official rate × loan × period).</li>
+<li><span class="tag">s64N:</span> a rebate for foreign dividend tax already withheld caps total tax at 20% (e.g. 7% foreign + 13% local).</li>
+<li><span class="tag">Liquidation:</span> split the distribution into CTC (capital, no DWT) and dividend (20% DWT); company shareholders are exempt (s64F) but still get the cash.</li>
+<li><span class="tag">s42 asset-for-share:</span> roll-over relief (transfer at base cost/tax value) when the requirements are met.</li>
+<li><span class="tag">s24BA:</span> an asset-for-share at a value mismatch creates a company capital gain / reduced base cost in the shares.</li>
+<li><span class="tag">s103:</span> changing shareholding mainly to use an assessed loss is struck down (anti-avoidance).</li>
 </ul></div>
 
 <div class="pr"><h3>Donations, estate duty &amp; attribution</h3><ul>
-<li><span class="tag">Donations tax:</span> 20% on market value after the R100k annual exemption; spouse/PBO/maintenance/6-month-return are exempt.</li>
-<li><span class="tag">s7 attribution:</span> income diverted via donation is taxed back in the donor — minor child s7(3), spouse s7(2), non-resident s7(8).</li>
-<li><span class="tag">Estate duty:</span> (property + deemed property − debts/admin − R3.5m abatement) × 20%; spouse bequests fully deductible.</li>
-<li><span class="tag">Estate valuation:</span> use death-date market value (or the actual arm's-length sale price); ignore later damage or below-value will conditions.</li>
+<li><span class="tag">Donations tax (Sam):</span> 20% on market value after the R100k exemption (<span class="num">185 000 − 100 000 = 85 000 × 20% = 17 000</span>); payable by end of the next month.</li>
+<li><span class="tag">Exemptions (Peter Pan):</span> spouse (unlimited), bona-fide maintenance, PBO, and assets returned within 6 months are all exempt — the R100k general exemption is used only once.</li>
+<li><span class="tag">s7 attribution (Sam):</span> donating rental properties to a minor (s7(3)) and a non-resident (s7(8)) child still taxes that income in the donor — and donations tax applies too.</li>
+<li><span class="tag">Estate duty (Mr A):</span> (property + deemed 7 352 000 − debts/admin 172 000 − R3.5m) × 20% = <span class="num">736 000</span>.</li>
+<li><span class="tag">Estate valuation:</span> use death-date MV (or the actual arm's-length sale price); ignore later damage or a below-value "sweetheart" sale in the will.</li>
 </ul></div>
 
 <div class="pr"><h3>Trusts</h3><ul>
-<li><span class="tag">Conduit (s25B):</span> income keeps its nature flowing out and is taxed in the vested beneficiary; retained, un-donated income is taxed in the trust at 45%.</li>
-<li><span class="tag">Attribution:</span> income to a minor or from a donor-funded asset is taxed in the donor — but income from a <i>different</i> donor's asset is not.</li>
-<li><span class="tag">s25B(3):</span> a beneficiary's deduction is capped at their vested income — losses stay trapped in the trust.</li>
-<li><span class="tag">s7C:</span> an interest-free/low-interest loan to a trust creates a deemed annual donation (the foregone interest).</li>
+<li><span class="tag">Conduit (Connect Trust):</span> split income by type, then tax each slice in the vested beneficiary (keeping its nature — interest gets s10(1)(i), dividends s10(1)(k)); retained, un-donated income is taxed in the trust at 45%.</li>
+<li><span class="tag">Attribution:</span> a minor's income / income from a donor-funded asset is taxed in the <b>donor</b> (s7(3)/(5)) — but income from a <i>different</i> donor's asset (e.g. grandfather's) is not attributed to the father.</li>
+<li><span class="tag">s25B(3):</span> a beneficiary's deduction is capped at their vested income — a property loss stays trapped in the trust.</li>
+<li><span class="tag">s7C:</span> an interest-free / low-interest loan to a trust creates a deemed annual donation equal to the foregone interest (uses the R100k exemption).</li>
 </ul></div>
 
 <div class="pr"><h3>International &amp; withholding (s35A / s50)</h3><ul>
-<li><span class="tag">s35A:</span> a buyer of SA property from a non-resident withholds 7.5% (individual) / 10% (company) / 15% (trust) as an advance of the seller's tax.</li>
-<li><span class="tag">s50B interest WHT:</span> 15% on SA-source interest paid to a non-resident — but bank &amp; listed-bond interest is exempt (s50D).</li>
-<li><span class="tag">s6quat:</span> a rebate for foreign taxes paid, limited to the SA tax on that foreign income.</li>
-<li><span class="tag">s9D / s10B:</span> CFC income is imputed to &gt;50% resident holders; foreign dividends get participation/ratio exemption.</li>
+<li><span class="tag">s35A (Greg):</span> the buyer withholds 7.5% (individual) / 10% (company) / 15% (trust) of the price as an advance against the non-resident seller's CGT (<span class="num">5.5m × 7.5% = 412 500</span>); the seller still does the full CGT calc.</li>
+<li><span class="tag">s50B (Tiaan):</span> 15% WHT on SA-source interest to a non-resident — but interest from a bank and listed bonds is exempt (s50D); all of it is exempt from normal tax (s10(1)(h)).</li>
+<li><span class="tag">s6quat:</span> a rebate for foreign tax paid, limited to the SA tax attributable to that foreign income.</li>
+<li><span class="tag">s9D / s10B:</span> CFC net income is imputed to &gt;50% resident shareholders; foreign dividends enjoy the participation (≥10%) or ratio exemption.</li>
 </ul></div>
 
-<div class="banner" style="margin-top:8px"><b>Fastest revision loop:</b> read a Part 1 rule → read its Part 2 principles → attempt the matching ITC tutorial closed-book → log any principle you missed. Repeat per topic.</div>
+<div class="banner" style="margin-top:8px"><b>Fastest revision loop:</b> read a Part 1 rule (with its numbers) → read its Part 2 principles → attempt the matching ITC tutorial closed-book → log any principle you missed. Repeat per topic until none are missed.</div>
 
 </div>
 </body>
