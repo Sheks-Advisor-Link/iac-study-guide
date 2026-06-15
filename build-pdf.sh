@@ -8,7 +8,7 @@
 #   # system libs (Debian/Ubuntu): apt-get install -y libpango-1.0-0 libpangocairo-1.0-0 libgdk-pixbuf-2.0-0 libffi-dev libcairo2
 set -euo pipefail
 cd "$(dirname "$0")"
-for src in IAC-Study-Guide Substantive-Procedures IAC-Tax-Summary; do
+for src in IAC-Study-Guide Substantive-Procedures IAC-Tax-Summary IAC-Tax-RateCard; do
   [ -f "$src.html" ] || continue
   python3 -c "from weasyprint import HTML; HTML('$src.html', base_url='.').write_pdf('$src.pdf')"
   echo "Wrote $src.pdf"
