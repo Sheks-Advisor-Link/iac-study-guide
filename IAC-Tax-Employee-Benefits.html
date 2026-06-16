@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IAC Tax — Employee Benefits Made Simple</title>
+<style>
+  :root{ --ink:#161a1f; --muted:#5b626d; --line:#bcc3cc; --accent:#6d4d12; --accent2:#8a5a00; --blue:#234d7a; --green:#1f6b3a; --pur:#5a3d82;
+         --soft:#faf7f1; --soft2:#f1ece2; --pbg:#eef4fb; --gbg:#eef8f0; --tbg:#fbf1e8; }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:10px;line-height:1.45}
+  .wrap{max-width:880px;margin:0 auto;padding:22px}
+  h1{font-size:20px;margin:0;color:var(--accent)}
+  .sub{color:var(--muted);font-size:9px;margin:2px 0 8px}
+  .banner{background:#fff7e6;border:1px solid #e7c97a;color:#7a5300;border-radius:4px;padding:5px 9px;font-size:9px;margin-bottom:9px}
+  h2{font-size:13px;margin:16px 0 6px;color:#fff;background:var(--accent);padding:5px 9px;border-radius:3px}
+  h2.b{background:var(--blue)}h2.g{background:var(--green)}h2.p{background:var(--pur)}
+  h3{font-size:11px;margin:10px 0 3px;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:2px}
+  h4{font-size:10px;margin:7px 0 2px;color:var(--accent2)}
+  p{margin:4px 0}
+  ul,ol{margin:3px 0 5px 15px;padding:0}
+  li{margin:2px 0}
+  b{color:#111}
+  table{width:100%;border-collapse:collapse;margin:6px 0;font-size:9px}
+  th,td{border:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
+  th{background:var(--soft2);color:var(--accent);font-weight:700;font-size:8.4px;text-transform:uppercase}
+  tr{break-inside:avoid}
+  td.c{white-space:nowrap;font-weight:700;color:var(--blue)}
+  td.r{text-align:right;white-space:nowrap}
+  .ex{break-inside:avoid;background:#fff;border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:0 5px 5px 0;padding:7px 11px;margin:7px 0}
+  .ex h4{margin:0 0 3px;color:var(--blue)}
+  .ex td:last-child{text-align:right;white-space:nowrap}
+  .plain{background:var(--gbg);border-left:3px solid var(--green);padding:5px 10px;margin:6px 0;border-radius:0 4px 4px 0;font-size:9.4px}
+  .plain b.lbl{color:var(--green);display:block;font-size:8.6px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  .trig{background:var(--tbg);border-left:3px solid var(--accent2);padding:5px 10px;margin:6px 0;border-radius:0 4px 4px 0;font-size:9.4px}
+  .trig b.lbl{color:var(--accent2);display:block;font-size:8.6px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  .card{background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:8px 11px;margin:7px 0}
+  .formula{background:#1c2230;color:#e9edf3;border-radius:4px;padding:6px 10px;margin:5px 0;font-family:"Consolas",monospace;font-size:9px}
+  @page{size:A4;margin:13mm 11mm;@bottom-right{content:"p. " counter(page);font-size:8.5px;color:#999}}
+  h2,h3,h4{break-after:avoid}
+  .ex,.card,table,.plain,.trig{break-inside:avoid}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Employee Benefits — Tax Consequences Made Simple</h1>
+<div class="sub">How to spot, calculate &amp; discuss employment income · SAICA IAC 2026 · T. Van Heerden · from the Milpark/PGDA Worked Examples &amp; Lesson Slides</div>
+
+<div class="banner"><b>The whole section in one idea:</b> everything an employer gives an employee is taxed — the only questions are <b>(1) which "bucket" is it</b>, and <b>(2) what amount goes into the employee's income</b>. Master the 4 buckets and the 3-step fringe-benefit method below and you can handle any scenario.</div>
+
+<!-- ============ BIG PICTURE ============ -->
+<h2>1 · The big picture — 4 buckets of employment income ("SAFS")</h2>
+<table>
+<tr><th>Bucket</th><th>What it is</th><th>How it's taxed</th></tr>
+<tr><td class="c">S — Salary/wages</td><td>Cash for services (salary, bonus, commission, leave pay)</td><td>Full amount in gross income (par (c) / (i)). Bonuses &amp; commission on a <b>payment</b> basis (s7B).</td></tr>
+<tr><td class="c">A — Allowances</td><td>Cash given up-front to <b>spend on the employer's behalf</b> (travel, subsistence, other) — s8(1)</td><td><b>Include it, then reduce it</b> by the qualifying (business) portion. Net private portion is taxed.</td></tr>
+<tr><td class="c">F — Fringe benefits</td><td>Non-cash benefits (car, house, cheap loan, free asset) — 7th Schedule</td><td>Compute the <b>cash equivalent value</b> → include in gross income via <b>paragraph (i)</b>.</td></tr>
+<tr><td class="c">S — Share incentives</td><td>Shares/options from employment — s8C</td><td>Gain taxed as remuneration <b>on vesting</b> (not on grant).</td></tr>
+</table>
+<div class="plain"><b class="lbl">Easy way to remember</b><b>"SAFS"</b> = Salary, Allowances, Fringe benefits, Share schemes. Salary &amp; the taxable bits of A/F/S all end up in <b>gross income</b>, then flow through the normal tax calc (less deductions, less rebates/credits).</div>
+
+<!-- ============ 3 STEP METHOD ============ -->
+<h2 class="b">2 · The universal 3-step method for ANY fringe benefit ("T–V–C")</h2>
+<ol>
+<li><b>T — is it a Taxable benefit?</b> Identify <b>which paragraph 2</b> of the 7th Schedule it falls under (2(a) free asset, 2(b) use of asset/car, 2(d) accommodation, 2(f) cheap loan, 2(i) medical, etc.).</li>
+<li><b>V — does it have Value?</b> Check the <b>"no-value" rule</b> for that paragraph (e.g. bravery/long-service awards, business-use assets, expat accommodation ≤2 years). If a no-value rule applies → nothing taxed.</li>
+<li><b>C — Calculate the Cash equivalent</b> using that paragraph's valuation rule, then <b>less any consideration paid by the employee</b>. Include the result in gross income (par (i)).</li>
+</ol>
+<div class="plain"><b class="lbl">Always write these 3 steps</b>Even if a step is "yes, no no-value rule applies", say it — each step is a mark, and it stops you jumping straight to a number and missing the no-value escape.</div>
+
+<!-- ============ ALLOWANCES ============ -->
+<h2 class="g">3 · Allowances (s8(1)) — "include it, then reduce it"</h2>
+
+<h3>3.1 Travel allowance — s8(1)(b)</h3>
+<ul>
+<li>The allowance is <b>included</b>; reduce it by the <b>business portion</b> (business km ÷ total km). Need a <b>logbook</b>.</li>
+<li>Two reduction methods — pick the one giving the <b>bigger reduction</b>: <b>deemed cost</b> (fixed + fuel + maintenance per the SARS tables) <b>or actual cost</b> (only if records kept). Vehicle cost capped at R800 000 for wear-and-tear &amp; finance.</li>
+<li><b>80%</b> of the allowance goes through PAYE (20% if &gt;80% business use).</li>
+</ul>
+<div class="ex"><h4>Example (WE6) — deemed vs actual, pick the bigger reduction</h4>
+<p>Car R880k (capped R800k), allowance R6 000/m from 1 Nov (4 months → R24 000), 20 000 km total, 6 000 business.</p>
+<table>
+<tr><td>Actual-cost reduction (W&amp;T R800k/7 + finance + running) × 6 000/20 000</td><td>R21 905</td></tr>
+<tr><td>Deemed-cost reduction R6.94/km × 6 000 km</td><td>R41 640</td></tr>
+<tr><td>Elect deemed (bigger); reduction limited to the allowance R24 000</td><td>(R24 000)</td></tr>
+<tr><td><b>Taxable travel allowance</b></td><td><b>R0</b></td></tr>
+</table>
+<div class="plain"><b class="lbl">How the calc works</b>Work out both reductions, choose the larger, but you can never reduce by <b>more than the allowance received</b>. Here the business use wipes it out entirely.</div></div>
+<div class="trig"><b class="lbl">Trap (WE7):</b> if an employee leases a car and <b>subleases it to the employer</b> for a right of use, the rental from the employer is <b>deemed a travel allowance</b> (s8(1)(b)(iv)) — no separate company-car fringe benefit, and the rental expense is not deductible.</div>
+
+<h3>3.2 Subsistence allowance — s8(1)(c)</h3>
+<ul>
+<li>For being <b>away from home ≥1 night</b> on business. Reduce by: <b>actual accommodation</b> cost <b>+</b> the <b>higher of</b> deemed or actual <b>meals &amp; incidentals</b> (deemed amounts read off the rate card).</li>
+</ul>
+<div class="ex"><h4>Example (WE8)</h4>
+<table>
+<tr><td>Subsistence allowance</td><td>R8 000</td></tr>
+<tr><td>Less actual accommodation (R1 200 × 4)</td><td>(R4 800)</td></tr>
+<tr><td>Less meals/incidentals: higher of actual R450 or deemed R522/day × 5</td><td>(R2 610)</td></tr>
+<tr><td><b>Taxable</b></td><td><b>R590</b></td></tr>
+</table></div>
+
+<h3>3.3 Other allowances — s8(1)(a)</h3>
+<ul>
+<li>Clothing, cellphone, entertainment, daily meal allowances etc. Reduce <b>only</b> by amounts the employee <b>actually spent AND accounted for</b> (or refunded) — capped at the deemed amount where one exists.</li>
+</ul>
+<div class="ex"><h4>Example (WE10) — daily meal allowance, capped at deemed</h4>
+<table>
+<tr><td>Allowance (R175 × 10 trips)</td><td>R1 750</td></tr>
+<tr><td>Less reduction: actual R250/day but <b>capped at deemed R161/day</b> × 10</td><td>(R1 610)</td></tr>
+<tr><td><b>Taxable</b></td><td><b>R140</b></td></tr>
+</table>
+<div class="plain"><b class="lbl">Key point</b>You can only reduce by what you spent <b>and proved</b> — and never more than the deemed daily cap. If the employee doesn't account to the employer, <b>no reduction</b> (WE9).</div></div>
+
+<!-- ============ FRINGE BENEFITS ============ -->
+<h2 class="p">4 · Fringe benefits (7th Schedule) — the menu + formulas</h2>
+<table>
+<tr><th>Para 2</th><th>Benefit</th><th>Cash equivalent (the formula)</th><th>No-value escape</th></tr>
+<tr><td class="c">2(a)</td><td>Free/cheap <b>asset</b> (ownership passes)</td><td><b>Cost</b> (or MV) − consideration paid</td><td>Bravery/long-service award (≤R5 000); fuel/meals at work</td></tr>
+<tr><td class="c">2(b)</td><td><b>Use</b> of an asset (other than a car)</td><td><b>15% p.a.</b> × lower(cost, MV) × days/365 − consideration; (or actual rental cost)</td><td>Asset used mainly for business; given for major part of its life</td></tr>
+<tr><td class="c">2(b)</td><td>Use of a <b>motor vehicle</b></td><td><b>3.5%</b> (or <b>3.25%</b> with maintenance plan) × <b>determined value</b> × months</td><td>Pooled cars; ≥80% business use (reduced on assessment)</td></tr>
+<tr><td class="c">2(d)</td><td><b>Residential accommodation</b></td><td>Lower of cost (if rented) or <b>(A−B)×C/100×D/12</b></td><td>Expat ≤2 yrs / away from home (capped R25 000/m)</td></tr>
+<tr><td class="c">2(f)</td><td><b>Low-interest loan</b></td><td>(<b>official rate − rate charged</b>) × loan × period</td><td>Loans &lt;R3 000; study loans (conditions)</td></tr>
+<tr><td class="c">2(h)/(e)</td><td>Employer pays employee's <b>debt</b> / free services</td><td>Amount paid / cost to employer</td><td>—</td></tr>
+<tr><td class="c">2(i)</td><td>Employer <b>medical-aid</b> contributions</td><td>Amount contributed (deemed paid by employee → s6A credit)</td><td>Contributions for retired/deceased employees' dependants</td></tr>
+<tr><td class="c">2(l)</td><td>Employer <b>retirement-fund</b> contributions</td><td>Per the fund-value formula (taxable FB, but deductible via s11F)</td><td>—</td></tr>
+</table>
+
+<h4>The motor-vehicle "determined value" (key for 2(b) cars)</h4>
+<div class="formula">Determined value = retail MV when first granted, LESS 15% reducing-balance depreciation for each completed 12 months between the employer's purchase and the grant of use.</div>
+<p>Then reduce the value of private use by: <b>business-km</b> portion (business ÷ total km), and <b>private running costs</b> the employee bore (private km × deemed fuel/km; licence/insurance/maintenance × private ÷ total).</p>
+
+<div class="ex"><h4>Example (WE15) — company car</h4>
+<p>Vehicle R460 000 (incl. maintenance plan → 3.25%), 25 000 km total, 18 000 business; employee pays fuel (deemed fuel 183.8c/km).</p>
+<table>
+<tr><td>Value of private use: 3.25% × R460 000 × 12</td><td>R179 400</td></tr>
+<tr><td>Less business-use reduction: 18 000/25 000 × R179 400</td><td>(R129 168)</td></tr>
+<tr><td>Less private fuel (employee-borne): 7 000 km × 183.8c</td><td>(R12 866)</td></tr>
+<tr><td><b>Cash equivalent</b></td><td><b>R37 366</b></td></tr>
+</table>
+<div class="plain"><b class="lbl">How the calc works</b>Start with 3.25% × value × 12 = the full private-use value. Knock off the business portion (you're not taxed for working), then knock off running costs the employee paid out of their own pocket.</div></div>
+
+<div class="ex"><h4>Example (WE16) — use of an asset (laptop, 2(b))</h4>
+<p>Laptop cost R8 000 (MV R7 500), used 1 Aug–31 Jan (184 days), employee paid R200; not mainly for business.</p>
+<table>
+<tr><td>15% × lower(8 000, 7 500) × 184/366</td><td>R566</td></tr>
+<tr><td>Less consideration paid</td><td>(R200)</td></tr>
+<tr><td><b>Cash equivalent</b></td><td><b>R366</b></td></tr>
+</table></div>
+
+<div class="ex"><h4>Example (WE13) — residential accommodation, 2(d)</h4>
+<p>Employer <b>rents</b> a flat (R15 000/m for 6 months); employee earns R750 000. Value = lower of cost or the formula.</p>
+<table>
+<tr><td>Cost to employer: R15 000 × 6</td><td>R90 000</td></tr>
+<tr><td>Formula (A−B)×C/100×D/12 = (750 000 − 95 750) × 19/100 × 6/12</td><td>R62 154</td></tr>
+<tr><td><b>Cash equivalent</b> = lower of the two</td><td><b>R62 154</b></td></tr>
+</table>
+<div class="plain"><b class="lbl">The formula in words</b>A = remuneration proxy (≈ last year's remuneration) · B = the abatement (the tax threshold, R95 750) · C = 17/18/19 (higher if employer also supplies furniture &amp; power) · D = months. Read B &amp; C off the rate card.</div></div>
+<div class="trig"><b class="lbl">Expat no-value (WE14):</b> accommodation to an expat for ≤2 years has <b>no value</b> — <b>except</b> to the extent it exceeds <b>R25 000/month</b>. So R35 000/m → tax only (35 000 − 25 000) × months.</div>
+
+<div class="ex"><h4>Example (WE17) — low-interest loan vs subsidy, 2(f)</h4>
+<p>Employee borrows R2 500 000 at 7%; employer pays 3% of the interest; employee pays the rest.</p>
+<table>
+<tr><td><b>(a)</b> Official rate 6% (employer 3% + employee 4% = 7% &gt; 6%) → it's a <b>subsidy</b>: employer's 3% × R2.5m</td><td>R75 000</td></tr>
+<tr><td><b>(b)</b> Official rate 8%: interest @ official (8% × 2.5m) R200 000 − employee's 4% (R100 000)</td><td>R100 000</td></tr>
+</table>
+<div class="plain"><b class="lbl">How to read it</b>If the total rate the employee effectively pays is below the official rate → low-interest loan benefit = (official − employee's rate) × loan. If the employer <b>pays part of the interest</b>, that subsidy is itself a benefit. Official rate = repo + 1%.</div></div>
+
+<div class="ex"><h4>Example (WE11) — free asset, 2(a) (bravery award)</h4>
+<table>
+<tr><td>Cost of asset given to employee</td><td>R5 600</td></tr>
+<tr><td>Less bravery/long-service no-value exclusion</td><td>(R5 000)</td></tr>
+<tr><td><b>Cash equivalent</b></td><td><b>R600</b></td></tr>
+</table></div>
+
+<div class="ex"><h4>Example (WE19) — medical-aid contributions, 2(i)</h4>
+<ul style="margin:2px 0 0 14px">
+<li>Employer pays R3 500/m → a <b>fringe benefit</b> in the employee's income (par 12A).</li>
+<li>BUT it's <b>deemed paid by the employee</b>, so he also gets the <b>s6A medical credit</b> (e.g. (R728 + R246) × 12) against his tax. Net effect is small — but show both.</li>
+</ul></div>
+
+<!-- ============ SHARE INCENTIVES ============ -->
+<h2 class="b">5 · Share incentives — s8C (tax on vesting)</h2>
+<ul>
+<li>A <b>restricted equity instrument</b> (can't be freely sold for a period) is <b>not</b> taxed on grant or exercise — only when it <b>vests</b> (the restriction lifts).</li>
+<li><b>On vesting:</b> gain = <b>market value on vesting − consideration paid</b> → taxed as <b>remuneration</b> (gross income par (n)).</li>
+<li>Any earlier gross-income inclusion is deferred by <b>s10(1)(nD)</b> until vesting. After vesting, the shares are normal CGT assets with <b>base cost = MV on vesting</b>.</li>
+</ul>
+<div class="ex"><h4>Example (WE22) — option over 1 000 shares</h4>
+<table>
+<tr><td>Y1 grant: (MV 15 − paid 10) × 1 000 = 5 000, but exempt s10(1)(nD) (not vested)</td><td>R0</td></tr>
+<tr><td>Y3 exercise: restriction still on → <b>not a vesting event</b></td><td>R0</td></tr>
+<tr><td>Y6 vesting (restriction lifts): (MV 48 − paid 10) × 1 000 = remuneration</td><td>R38 000</td></tr>
+<tr><td>Y8 sale: CGT proceeds (60 × 1 000) − base cost (48 × 1 000) = capital gain</td><td>R12 000</td></tr>
+</table>
+<div class="plain"><b class="lbl">Timeline trick</b>Nothing happens until <b>vesting</b> — that's when s8C fires (income). After that it's a normal share: future growth is <b>CGT</b>, using the vesting MV as base cost.</div></div>
+
+<!-- ============ VAT ============ -->
+<h2 class="g">6 · VAT on fringe benefits (employer side)</h2>
+<ul>
+<li>The employer accounts <b>output VAT</b> on the <b>cash equivalent</b> of most fringe benefits (× tax fraction 15/115), because granting the benefit is a deemed supply.</li>
+<li><b>Motor-vehicle</b> right of use: input was <b>denied</b> on purchase (s17(2)(c)), so output uses the special formula <b>(0.3% × determined value × …) × 15/115</b>; without a maintenance plan use 0.6%.</li>
+<li>No VAT on cash salary/allowances (employment isn't an enterprise). Long-service asset: claim input on cost, output on the taxable cash-equivalent.</li>
+</ul>
+
+<!-- ============ EXAM TECHNIQUE + TRIGGERS ============ -->
+<h2 class="p">7 · Exam technique &amp; the triggers to spot</h2>
+<div class="card">
+<b>Technique:</b> ① classify the item into a bucket (SAFS) → ② for a fringe benefit run <b>T-V-C</b> (paragraph → no-value rule → cash equivalent) → ③ show the formula &amp; workings (own-figure marks) → ④ <b>less consideration paid</b> → ⑤ state the gross-income inclusion (par (i)/(n)) and any linked credit (s6A) or VAT. One applied point = one mark; always name the paragraph.</div>
+<table>
+<tr><th>When the scenario says…</th><th>Think → section</th><th>What to do</th></tr>
+<tr><td>"travel/car allowance + km / logbook"</td><td>s8(1)(b) travel allowance</td><td>Include; reduce by business km (deemed vs actual, bigger); 80% PAYE.</td></tr>
+<tr><td>"away on business / nights away / per diem"</td><td>s8(1)(c) subsistence</td><td>Reduce by accommodation + higher of deemed/actual meals.</td></tr>
+<tr><td>"cellphone / clothing / entertainment allowance"</td><td>s8(1)(a) other allowance</td><td>Reduce only by amounts spent &amp; accounted for (deemed cap).</td></tr>
+<tr><td>"company car / right to use a vehicle"</td><td>7th Sch 2(b) — 3.5%/3.25%</td><td>Determined value × % × months − business km − private running costs.</td></tr>
+<tr><td>"use of a laptop/asset for private use"</td><td>7th Sch 2(b) — 15% p.a.</td><td>15% × lower(cost,MV) × days/365 − consideration.</td></tr>
+<tr><td>"given/sold an asset cheaply / award"</td><td>7th Sch 2(a)</td><td>Cost (or MV) − consideration; check bravery/long-service exclusion.</td></tr>
+<tr><td>"lives in a company house / flat"</td><td>7th Sch 2(d)</td><td>Lower of cost (if rented) or (A−B)×C/100×D/12; expat ≤2yr no-value &gt;R25k.</td></tr>
+<tr><td>"staff loan / interest-free / below prime"</td><td>7th Sch 2(f)</td><td>(official − charged) × loan × period; employer-paid interest = subsidy.</td></tr>
+<tr><td>"employer pays medical aid / insurance / debt"</td><td>7th Sch 2(i)/(k)/(h)</td><td>Amount paid = benefit; for medical also give the s6A credit.</td></tr>
+<tr><td>"share option / restricted shares / vesting"</td><td>s8C</td><td>Tax (MV on vesting − consideration) as remuneration on vesting; then CGT.</td></tr>
+<tr><td>"employer is a VAT vendor + a benefit"</td><td>VAT deemed supply</td><td>Output VAT on the cash equivalent (× 15/115); car uses 0.3%/0.6% formula.</td></tr>
+</table>
+
+<div class="plain"><b class="lbl">Three things examiners reward</b>① Always <b>name the paragraph</b> (2(b), 2(d)…). ② Always <b>check the no-value rule</b> before calculating. ③ Always <b>subtract consideration paid by the employee</b> at the end. Miss these and you lose easy marks even with the right number.</div>
+
+<p class="sub" style="margin-top:10px">Compiled from the IAC 2026 Milpark/PGDA Worked Examples (2024) &amp; Lesson Slides for private exam preparation. Read all deemed amounts, the determined-value depreciation, official interest rate, formula constants (B, C) and medical-credit amounts off the SARS rate card / legislation handbook supplied in the exam.</p>
+
+</div>
+</body>
+</html>
