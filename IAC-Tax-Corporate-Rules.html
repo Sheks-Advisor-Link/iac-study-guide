@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IAC Tax — Corporate Rules (s41, s42, s45, s24BA, s40CA) + Examples</title>
+<style>
+  :root{ --ink:#161a1f; --muted:#5b626d; --line:#bcc3cc; --accent:#6d4d12; --accent2:#8a5a00; --blue:#234d7a; --green:#1f6b3a;
+         --soft:#faf7f1; --soft2:#f1ece2; --pbg:#eef4fb; --gbg:#eef8f0; }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:10px;line-height:1.45}
+  .wrap{max-width:880px;margin:0 auto;padding:22px}
+  h1{font-size:20px;margin:0;color:var(--accent)}
+  .sub{color:var(--muted);font-size:9px;margin:2px 0 8px}
+  .banner{background:#fff7e6;border:1px solid #e7c97a;color:#7a5300;border-radius:4px;padding:5px 9px;font-size:9px;margin-bottom:9px}
+  h2{font-size:13px;margin:16px 0 6px;color:#fff;background:var(--accent);padding:5px 9px;border-radius:3px}
+  h3{font-size:11px;margin:10px 0 3px;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:2px}
+  h4{font-size:10px;margin:7px 0 2px;color:var(--accent2)}
+  p{margin:4px 0}
+  ul{margin:3px 0 5px 15px;padding:0}
+  li{margin:2px 0}
+  b{color:#111}
+  table{width:100%;border-collapse:collapse;margin:6px 0;font-size:9.2px}
+  th,td{border:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
+  th{background:var(--soft2);color:var(--accent);font-weight:700;font-size:8.6px;text-transform:uppercase}
+  tr{break-inside:avoid}
+  td.c{white-space:nowrap;font-weight:700;color:var(--blue)}
+  td.r{text-align:right;white-space:nowrap}
+  .ex{break-inside:avoid;background:#fff;border:1px solid var(--line);border-left:3px solid var(--blue);border-radius:0 5px 5px 0;padding:7px 11px;margin:7px 0}
+  .ex h4{margin:0 0 3px;color:var(--blue)}
+  .plain{background:var(--gbg);border-left:3px solid var(--green);padding:5px 10px;margin:6px 0;border-radius:0 4px 4px 0;font-size:9.4px}
+  .plain b.lbl{color:var(--green);display:block;font-size:8.6px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  .key{background:var(--pbg);border-left:3px solid var(--blue);padding:5px 10px;margin:6px 0;border-radius:0 4px 4px 0;font-size:9.4px}
+  .key b.lbl{color:var(--blue);display:block;font-size:8.6px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  .card{background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:8px 11px;margin:7px 0}
+  @page{size:A4;margin:13mm 11mm;@bottom-right{content:"p. " counter(page);font-size:8.5px;color:#999}}
+  h2,h3,h4{break-after:avoid}
+  .ex,.card,table,.plain,.key{break-inside:avoid}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Corporate Rules of the Income Tax Act</h1>
+<div class="sub">s41 · s42 · s45 · s24BA · s40CA — rules in simple terms + worked examples · SAICA IAC 2026 · T. Van Heerden</div>
+
+<div class="banner"><b>The big idea:</b> the corporate rules (s41–47; only <b>s41, s42 &amp; s45</b> are examinable) let assets move between companies/shareholders in a <b>tax-neutral</b> way — no immediate CGT or recoupment — by making the receiver "<b>step into the shoes</b>" of the transferor. The tax isn't forgiven, it's <b>deferred</b> until the asset later leaves. <b>s24BA</b> and <b>s40CA</b> are the partner provisions that police value mismatches and set the acquirer's base cost.</div>
+
+<h2>Overview — how the five sections fit together</h2>
+<table>
+<tr><th>Section</th><th>What it does</th><th>One-line trigger</th></tr>
+<tr><td class="c">s41</td><td><b>Gateway / definitions.</b> Defines "group of companies" (≥70%), and says the rules override most provisions <i>but some (like s24BA) still apply</i>.</td><td>Always read first — sets the definitions for s42 &amp; s45.</td></tr>
+<tr><td class="c">s42</td><td><b>Asset-for-share.</b> Person transfers an asset to a resident company <b>in exchange for equity shares</b> → roll-over.</td><td>"…in exchange for shares" + holds a qualifying interest after.</td></tr>
+<tr><td class="c">s45</td><td><b>Intra-group transfer.</b> Asset moved between companies <b>in the same ≥70% group</b> (consideration is NOT shares) → roll-over.</td><td>Transfer between group companies for cash/loan.</td></tr>
+<tr><td class="c">s24BA</td><td><b>Anti-avoidance on value mismatch</b> in an asset-for-share: if the asset MV ≠ the shares MV, tax the difference.</td><td>Shares issued ≠ market value of the asset.</td></tr>
+<tr><td class="c">s40CA</td><td><b>Base cost rule:</b> a company that acquires an asset by <b>issuing/giving shares</b> takes the asset at the MV of the shares issued (+ any s24BA gain).</td><td>Company pays for an asset with its own shares.</td></tr>
+</table>
+
+<!-- ================= s41 ================= -->
+<h2>s41 — Definitions &amp; the gateway</h2>
+<ul>
+<li><b>"Group of companies"</b> here is <b>narrower</b> than the s1 definition: a controlling company + ≥70%-held subsidiaries. <b>Excluded:</b> companies effectively managed outside SA and non-profit companies. Shares held as trading stock / under a repo are ignored when testing the 70%.</li>
+<li>The corporate rules <b>override most other sections</b> (e.g. s8(4)(a) recoupments are switched off on the roll-over) — <b>but s41(2)</b> keeps certain sections alive, importantly <b>s24BA</b>.</li>
+<li>The rules apply <b>automatically</b> to a qualifying transaction unless the parties <b>elect out in writing</b>.</li>
+</ul>
+<div class="plain"><b class="lbl">In plain English</b>s41 is the "rulebook cover": it tells you who counts as a group (70%), turns off the normal exit taxes when you roll over — but warns that s24BA can still bite a bad-value deal.</div>
+
+<!-- ================= s42 ================= -->
+<h2>s42 — Asset-for-share transactions</h2>
+<h4>When it applies (all must hold)</h4>
+<ul>
+<li>A <b>person</b> (company, trust or natural person) disposes of an <b>asset</b> whose <b>market value ≥ its base cost</b> (no built-in loss);</li>
+<li>to a <b>resident company</b>, <b>in exchange for equity shares</b> in that company; and</li>
+<li>after the deal the person holds a <b>"qualifying interest"</b> — listed shares (or to be listed within 12 months), a CIS portfolio, <b>≥10% equity &amp; voting rights</b>, a fellow group company share, <i>or</i> the person is a natural person who will be <b>engaged full-time</b> in the company's business.</li>
+<li>The asset must <b>keep its nature</b> (capital asset stays capital; trading stock stays trading stock).</li>
+</ul>
+<h4>Tax effect (roll-over)</h4>
+<ul>
+<li>The person disposes <b>at base cost / trading-stock value</b> → <b>no capital gain, no recoupment</b>.</li>
+<li>The <b>shares received</b> take a base cost = the base cost of the asset given up, acquired on the same date.</li>
+<li>The <b>company "steps into the shoes"</b> of the person (same cost, date, allowances, future recoupment/gain).</li>
+<li>Applies <b>automatically</b> unless elected out in writing (or the disposal has no tax effect, or the asset is a share/debt in that same company).</li>
+</ul>
+
+<div class="ex"><h4>Example 16.1 — does it qualify? (the qualifying-interest test)</h4>
+<p>A person transfers trading stock (cost R100 000, MV R120 000) to ABC (Pty) Ltd for shares:</p>
+<table>
+<tr><td>① Receives <b>5%</b> of equity shares (unlisted company)</td><td class="r"><b>No</b> — &lt;10% in an unlisted company</td></tr>
+<tr><td>② 5% + company will be <b>listed within 12 months</b></td><td class="r"><b>Yes</b> — listed-share interest</td></tr>
+<tr><td>③ 5% + person will work <b>full-time</b> for the company</td><td class="r"><b>Yes</b> — full-time-engagement interest</td></tr>
+</table>
+<div class="plain"><b class="lbl">Principle</b>Below 10% normally fails — <i>unless</i> the shares are (becoming) listed, or the transferor will be a full-time worker in the business.</div></div>
+
+<div class="ex"><h4>Example 16.2 — the roll-over numbers</h4>
+<p>Mr X transfers a commercial building (base cost R600 000, MV R1 500 000) to ABC (Pty) Ltd, a resident company, for <b>15%</b> of its equity shares.</p>
+<table>
+<tr><td>Qualifies: resident co · for equity shares · MV (1.5m) &gt; base cost (600k) · 15% ≥ 10% qualifying interest</td><td class="r">s42 applies</td></tr>
+<tr><td>Mr X deemed proceeds = base cost → R600 000 − R600 000</td><td class="r"><b>No capital gain</b></td></tr>
+<tr><td>Mr X's base cost in the <b>new shares</b></td><td class="r">R600 000</td></tr>
+<tr><td>ABC's base cost in the <b>building</b> (steps into shoes)</td><td class="r">R600 000</td></tr>
+</table>
+<div class="plain"><b class="lbl">Principle</b>The R900 000 built-in gain isn't taxed now — it's parked in both the shares and the building at R600 000, and surfaces only when Mr X sells the shares or ABC sells the building.</div></div>
+
+<!-- ================= s45 ================= -->
+<h2>s45 — Intra-group transactions</h2>
+<h4>When it applies</h4>
+<ul>
+<li>An asset is transferred between two companies that are part of the <b>same group of companies</b> (the s41 ≥70% definition);</li>
+<li>the consideration <b>may be anything except equity shares</b> (shares would trigger s42 instead);</li>
+<li>assets generally keep their nature. <b>Unlike s42, s45 does NOT require MV ≥ carrying value</b> (built-in losses can roll too).</li>
+<li>Applies <b>by default</b> unless the parties agree in writing not to apply it.</li>
+</ul>
+<h4>Tax effect</h4>
+<ul>
+<li><b>No capital gain or recoupment</b> for the transferring company; the transferee <b>steps into the shoes</b> (date &amp; cost of acquisition, allowances claimed to date, etc.).</li>
+<li>Tax is <b>deferred until the asset is disposed of outside the group</b> (a "de-grouping" charge protects against assets leaving the group shortly after — anti-avoidance, not examinable in detail).</li>
+</ul>
+
+<div class="ex"><h4>Example — s45 roll-over</h4>
+<p>Holdco owns 100% of both Sub A and Sub B (all SA resident → a group). Sub A sells a machine (tax value R800 000, MV R2 000 000, allowances of R400 000 claimed) to Sub B for <b>R2 000 000 cash</b>.</p>
+<table>
+<tr><td>Same ≥70% group · consideration is cash (not shares) → s45 applies by default</td><td class="r">roll-over</td></tr>
+<tr><td>Sub A: capital gain &amp; s8(4) recoupment</td><td class="r"><b>R0 (deferred)</b></td></tr>
+<tr><td>Sub B acquires the machine at Sub A's tax value &amp; history</td><td class="r">R800 000</td></tr>
+<tr><td>When Sub B later sells the machine <b>outside the group</b></td><td class="r">tax crystallises then</td></tr>
+</table>
+<div class="plain"><b class="lbl">Principle</b>Moving assets <i>within</i> a 70% group is tax-neutral — the group is treated as one economic unit; the receiver inherits the cost, date and allowances, so the deferred gain/recoupment comes home only when the asset leaves the group.</div></div>
+
+<!-- ================= s24BA ================= -->
+<h2>s24BA — Value mismatch in an asset-for-share deal</h2>
+<ul>
+<li>Applies when a company acquires an asset and pays with its <b>own shares</b>, but the value given (shares) ≠ the value received (asset) — i.e. <b>not what arm's-length parties would do</b>. (Kept alive even inside s42 by s41(2).)</li>
+<li><b>If asset MV &gt; shares MV</b> (company gained value): the <b>company</b> has a <b>deemed capital gain</b> = asset MV − shares MV.</li>
+<li><b>If shares MV &gt; asset MV</b> (company over-paid in shares): the excess reduces the holder's base cost in the shares / is treated as a deemed dividend in specie.</li>
+</ul>
+
+<div class="ex"><h4>Example 17 — s24BA + s40CA together</h4>
+<p>A (Pty) Ltd issues shares (2% holding, MV <b>R250 000</b>) to James for a capital asset (MV <b>R400 000</b>, base cost R200 000). Not a connected person, &lt;10% → s42 does <b>not</b> apply, so it's an ordinary disposal + s24BA.</p>
+<table>
+<tr><td><b>A (Pty) Ltd</b> — asset MV R400k &gt; shares MV R250k → deemed capital gain s24BA = 400 000 − 250 000</td><td class="r">R150 000</td></tr>
+<tr><td>Taxable capital gain = 150 000 × 80%</td><td class="r"><b>R120 000</b></td></tr>
+<tr><td>A's base cost in the asset (s40CA): shares MV 250 000 + s24BA gain 150 000</td><td class="r">R400 000</td></tr>
+<tr><td><b>James</b> — proceeds on disposing the asset = MV of shares received</td><td class="r">R250 000</td></tr>
+<tr><td>Less base cost of asset</td><td class="r">(R200 000)</td></tr>
+<tr><td>Capital gain R50 000 − annual exclusion R40 000 = 10 000 × 40%</td><td class="r"><b>R4 000</b></td></tr>
+<tr><td>James's base cost in the <b>shares</b>: asset base cost 200 000 − excess (400k−250k) 150 000</td><td class="r">R50 000</td></tr>
+</table>
+<div class="plain"><b class="lbl">Principle</b>If a company gets an asset worth more than the shares it hands over, SARS taxes the company on the bargain (s24BA). The asset's cost is then bumped up by that taxed gain (s40CA) so it isn't taxed twice later.</div></div>
+
+<!-- ================= s40CA ================= -->
+<h2>s40CA — Base cost of an asset acquired by issuing shares</h2>
+<ul>
+<li>Where a company acquires an asset and the consideration is the <b>issue of its own shares</b>, the company is deemed to have <b>actually incurred a cost = the market value of the shares issued</b> (s40CA(a)) — so it has a proper base cost / cost for allowances.</li>
+<li><b>Plus s40CA(b):</b> that cost is <b>increased by any capital gain the company had to recognise under s24BA</b> (avoids double tax — see Example 17, asset base cost = 250 000 + 150 000 = R400 000).</li>
+<li>Where s42 applies instead, the company takes the asset at the transferor's base cost (step-in) — increased by any s24BA gain.</li>
+</ul>
+
+<div class="ex"><h4>Example — straightforward s40CA</h4>
+<p>B Ltd issues new shares with a market value of <b>R1 000 000</b> to acquire equipment (the deal is at arm's length, so no s24BA).</p>
+<table>
+<tr><td>B Ltd's deemed cost / base cost in the equipment (s40CA(a))</td><td class="r"><b>R1 000 000</b></td></tr>
+<tr><td>This is the figure B uses for s11(e)/s12C allowances &amp; future CGT base cost</td><td class="r">—</td></tr>
+</table>
+<div class="plain"><b class="lbl">Principle</b>Paying for an asset with your own shares isn't "free" for tax — the company gets a real cost equal to the value of the shares it issued, so it can claim allowances and has a base cost.</div></div>
+
+<!-- ================= EXTRAS ================= -->
+<h2>Transfer duty, STT &amp; VAT (s41–47)</h2>
+<ul>
+<li><b>Transfer duty</b> exemption for immovable property transferred under a corporate rule; <b>STT</b> exemption for equity shares transferred.</li>
+<li><b>VAT:</b> the parties are treated as <b>one and the same person</b> for goods/services supplied under s42/44/45/47 where both are vendors — but for s42 &amp; s45 only on the supply of a <b>going concern</b> (s8(25) VAT Act).</li>
+</ul>
+
+<div class="card">
+<h3 style="margin-top:0">Exam technique — how to answer a corporate-rules question</h3>
+<ol style="margin:3px 0 0 15px">
+<li><b>Identify the transaction:</b> shares issued for an asset → s42 / s24BA / s40CA; asset moved within a 70% group for cash → s45.</li>
+<li><b>Check the requirements</b> one by one (resident company? equity shares? MV ≥ base cost? qualifying interest ≥10% / listed / full-time? same group ≥70%?). State each as met / not met.</li>
+<li><b>State the consequence:</b> roll-over (no gain/recoupment; step into the shoes) — and the <b>base costs</b> of both the asset and the shares.</li>
+<li><b>Always test s24BA</b> separately on any value mismatch (s41(2) keeps it alive even inside s42); then fix the base cost with <b>s40CA</b>.</li>
+<li>Mention the <b>election out in writing</b>, and <b>transfer duty / STT / VAT</b> relief if relevant.</li>
+</ol>
+</div>
+
+<div class="key"><b class="lbl">One-line memory hooks</b><b>s41</b> = rulebook &amp; 70% group · <b>s42</b> = asset → shares (roll-over, step into shoes) · <b>s45</b> = asset within group for cash (roll-over) · <b>s24BA</b> = punish a bad-value share swap (asset MV &gt; shares MV → company capital gain) · <b>s40CA</b> = the buyer's asset cost = MV of shares issued (+ s24BA gain).</div>
+
+<p class="sub" style="margin-top:10px">Compiled from the IAC 2026 Tax Notes &amp; the Milpark/PGDA worked examples for private exam preparation. Confirm rates &amp; thresholds against the exam rate card; the s42/s45 detailed anti-avoidance provisions are not currently examinable.</p>
+
+</div>
+</body>
+</html>
