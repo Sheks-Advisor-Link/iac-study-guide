@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IAC ACC — Control Interests: Subsidiaries, Associates &amp; Joint Arrangements</title>
+<style>
+  :root{ --ink:#161a1f; --muted:#5b626d; --line:#bcc3cc; --accent:#234d7a; --accent2:#2c5d92; --gold:#6d4d12; --green:#1f6b3a; --pur:#5a3d82;
+         --soft:#f5f8fc; --soft2:#e9f0f8; --pbg:#eef4fb; --gbg:#eef8f0; --tbg:#fbf1e8; }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:10px;line-height:1.45}
+  .wrap{max-width:880px;margin:0 auto;padding:22px}
+  h1{font-size:20px;margin:0;color:var(--accent)}
+  .sub{color:var(--muted);font-size:9px;margin:2px 0 8px}
+  .banner{background:#fff7e6;border:1px solid #e7c97a;color:#7a5300;border-radius:4px;padding:5px 9px;font-size:9px;margin-bottom:9px}
+  h2{font-size:13px;margin:16px 0 6px;color:#fff;background:var(--accent);padding:5px 9px;border-radius:3px}
+  h2.g{background:var(--green)}h2.p{background:var(--pur)}h2.gold{background:var(--gold)}
+  h3{font-size:11px;margin:10px 0 3px;color:var(--accent);border-bottom:1px solid var(--line);padding-bottom:2px}
+  h4{font-size:10px;margin:7px 0 2px;color:var(--accent2)}
+  p{margin:4px 0}
+  ul,ol{margin:3px 0 5px 15px;padding:0}
+  li{margin:2px 0}
+  b{color:#111}
+  table{width:100%;border-collapse:collapse;margin:6px 0;font-size:9px}
+  th,td{border:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
+  th{background:var(--soft2);color:var(--accent);font-weight:700;font-size:8.4px;text-transform:uppercase}
+  tr{break-inside:avoid}
+  td.c{white-space:nowrap;font-weight:700;color:var(--accent)}
+  .trig{background:var(--tbg);border-left:3px solid var(--gold);padding:5px 10px;margin:6px 0;border-radius:0 4px 4px 0;font-size:9.3px}
+  .trig b.lbl{color:var(--gold);display:block;font-size:8.6px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  .met{background:var(--gbg);border-left:3px solid var(--green);padding:5px 10px;margin:6px 0;border-radius:0 4px 4px 0;font-size:9.3px}
+  .met b.lbl{color:var(--green);display:block;font-size:8.6px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  .q{break-inside:avoid;background:#fff;border:1px solid var(--line);border-radius:5px;margin:8px 0;overflow:hidden}
+  .q .qh{background:var(--accent);color:#fff;padding:4px 9px;font-weight:700;font-size:10.5px}
+  .q .qb{padding:6px 10px;background:var(--pbg);font-style:italic}
+  .q .sol{padding:6px 10px}
+  .q .sol h4{margin:2px 0}
+  .card{background:var(--soft);border:1px solid var(--line);border-radius:5px;padding:8px 11px;margin:7px 0}
+  @page{size:A4;margin:13mm 11mm;@bottom-right{content:"p. " counter(page);font-size:8.5px;color:#999}}
+  h2,h3,h4{break-after:avoid}
+  .q,.card,table,.trig,.met{break-inside:avoid}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Control Interests — Subsidiaries, Associates &amp; Joint Arrangements</h1>
+<div class="sub">How to classify an investment &amp; answer discussion questions · IFRS 10 · IAS 28 · IFRS 11 · SAICA IAC 2026 · T. Van Heerden</div>
+
+<div class="banner"><b>The one question every scenario is really asking:</b> "How much power does the investor have over the investee?" The answer puts the investment in one of four boxes, and each box has its own accounting. Your job in a discussion question is to <b>test each requirement of the relevant standard against the facts, conclude, and state the treatment.</b></div>
+
+<!-- ============ DECISION TREE ============ -->
+<h2>1 · The big picture — classify in one decision tree</h2>
+<table>
+<tr><th>Level of influence</th><th>Box / Standard</th><th>Accounting treatment</th></tr>
+<tr><td class="c">CONTROL (alone)</td><td><b>Subsidiary</b> — IFRS 10</td><td><b>Consolidate</b> (line-by-line; recognise NCI &amp; goodwill, IFRS 3).</td></tr>
+<tr><td class="c">JOINT CONTROL</td><td><b>Joint arrangement</b> — IFRS 11</td><td><b>Joint operation:</b> recognise own share of assets, liabilities, income &amp; expenses. <b>Joint venture:</b> equity-account (IAS 28).</td></tr>
+<tr><td class="c">SIGNIFICANT INFLUENCE</td><td><b>Associate</b> — IAS 28</td><td><b>Equity method</b> (cost + share of post-acquisition profits − dividends).</td></tr>
+<tr><td class="c">NONE</td><td><b>Investment</b> — IFRS 9</td><td>Fair value (FVTPL or FVOCI election) / financial asset.</td></tr>
+</table>
+<div class="met"><b class="lbl">Answer order — always the same 5 moves</b>① Name the standard → ② state each <b>requirement/definition</b> → ③ <b>apply the facts</b> (point to the trigger) → ④ <b>conclude</b> on the classification → ⑤ state the <b>accounting treatment</b>. Work the tree <b>top-down</b>: rule control out before significant influence.</div>
+
+<!-- ============ IFRS 10 ============ -->
+<h2 class="gold">2 · IFRS 10 — Control (Subsidiary)</h2>
+<p><b>Definition:</b> an investor controls an investee when it is <b>exposed to, or has rights to, variable returns</b> from its involvement AND has the <b>ability to affect those returns through its power</b> over the investee. <b>All THREE elements must be present.</b></p>
+
+<h3>Requirement 1 — POWER over the investee</h3>
+<p>Existing <b>rights</b> that give the <b>current ability to direct the "relevant activities"</b> (the activities that significantly affect the investee's returns — e.g. sales, purchasing, funding, appointing key management).</p>
+<div class="trig"><b class="lbl">Say POWER is met when the scenario shows…</b>
+<ul style="margin:2px 0 0 14px">
+<li><b>&gt;50% of the voting rights</b> (and votes decide the relevant activities); or</li>
+<li><b>De facto control</b> — a large holding (e.g. 40–49%) while the rest is <b>widely dispersed</b> and the investor has <b>consistently elected the majority of the board</b>;</li>
+<li><b>Substantive potential voting rights</b> — options/convertibles that are <b>currently exercisable</b> and not deeply out-of-the-money;</li>
+<li><b>Contractual rights</b> — a shareholders' agreement / right to <b>appoint, remove or direct the board</b> or key management;</li>
+<li>rights are <b>substantive</b> (can actually be exercised), <b>not merely protective</b> (e.g. veto on liquidation or above-budget capex = protective → does NOT give power).</li>
+</ul></div>
+
+<h3>Requirement 2 — EXPOSURE / RIGHTS TO VARIABLE RETURNS</h3>
+<p>The investor's returns must have the <b>potential to vary</b> with the investee's performance.</p>
+<div class="trig"><b class="lbl">Say VARIABLE RETURNS is met when…</b> the investor receives <b>dividends</b>, changes in the investment's value, <b>management/service fees</b>, <b>synergies</b>, cost savings, or returns <b>not available to other holders</b>. (Returns can be positive or negative.)</div>
+
+<h3>Requirement 3 — LINK: ability to use power to affect returns</h3>
+<p>The investor must be a <b>principal</b> (acting for itself), not an <b>agent</b> (acting for others).</p>
+<div class="trig"><b class="lbl">Say the LINK is met (principal) when…</b> the investor can <b>appoint/remove the decision-maker</b>, sets strategy, and its returns are <b>significant &amp; variable</b>. <b>Agent (no control)</b> when a manager holds a small stake, earns a <b>market-related fee</b>, and can be <b>removed without cause</b> by others.</div>
+<div class="met"><b class="lbl">Conclusion &amp; treatment</b>All three present → <b>subsidiary</b> → <b>consolidate</b> from the date control is obtained; recognise goodwill &amp; NCI (IFRS 3); de-consolidate when control is lost.</div>
+
+<!-- ============ IAS 28 ============ -->
+<h2 class="g">3 · IAS 28 — Significant Influence (Associate)</h2>
+<p><b>Definition:</b> the <b>power to participate</b> in the financial and operating policy decisions of the investee, <b>but NOT control or joint control</b> over those policies.</p>
+<h4>The presumptions (your starting point)</h4>
+<ul>
+<li><b>≥20% of voting rights → presumed</b> to have significant influence (rebut only with clear evidence it doesn't).</li>
+<li><b>&lt;20% → presumed NOT</b> to have significant influence (rebut with evidence that it does).</li>
+</ul>
+<div class="trig"><b class="lbl">Say SIGNIFICANT INFLUENCE is met when the scenario shows any of…</b>
+<ul style="margin:2px 0 0 14px">
+<li><b>20%–50%</b> of the voting power (the presumption); OR &lt;20% but with the indicators below;</li>
+<li><b>Representation on the board</b> of directors;</li>
+<li><b>Participation in policy-making</b> processes — incl. decisions about <b>dividends/distributions</b>;</li>
+<li><b>Material transactions</b> between the investor and investee;</li>
+<li><b>Interchange of managerial personnel</b>; or</li>
+<li>provision of <b>essential technical information</b>.</li>
+</ul></div>
+<div class="met"><b class="lbl">Conclusion &amp; treatment</b>"Participate but not control" → <b>associate</b> → <b>equity method</b>: carry at cost + share of post-acquisition profit/OCI − dividends received; test for impairment.</div>
+
+<!-- ============ IFRS 11 ============ -->
+<h2 class="p">4 · IFRS 11 — Joint Control (Joint Arrangement)</h2>
+<p><b>Joint control</b> = the <b>contractually agreed sharing of control</b>, which exists <b>only when decisions about the relevant activities require the UNANIMOUS consent</b> of the parties sharing control.</p>
+<h3>Step A — Is there joint control? (both must hold)</h3>
+<div class="trig"><b class="lbl">Say JOINT CONTROL is met when…</b>
+<ul style="margin:2px 0 0 14px">
+<li>there is a <b>contractual arrangement</b> (e.g. a shareholders'/joint-venture agreement); AND</li>
+<li>decisions on the relevant activities need the <b>unanimous consent</b> of the sharing parties — i.e. <b>no single party can act alone</b> (classic <b>50/50</b>, or any split where two+ parties must agree).</li>
+</ul>
+<b>Watch:</b> a simple majority where one party holds &gt;50% is NOT joint control (that's control). Joint control needs collective + unanimous decision-making.</div>
+
+<h3>Step B — Classify the joint arrangement</h3>
+<table>
+<tr><th>Type</th><th>Trigger / when it is this type</th><th>Accounting</th></tr>
+<tr><td class="c">Joint operation</td><td>Parties have <b>rights to the assets</b> and <b>obligations for the liabilities</b>. Often <b>not</b> in a separate vehicle; OR the vehicle's legal form / contract / other facts give the parties direct rights (e.g. they take all the output &amp; fund the costs).</td><td>Each party recognises its <b>own share of assets, liabilities, revenue &amp; expenses</b>.</td></tr>
+<tr><td class="c">Joint venture</td><td>Parties have <b>rights to the net assets</b> only. Usually a <b>separate vehicle</b> (e.g. a company) that legally separates the parties from its assets/liabilities.</td><td><b>Equity method</b> (IAS 28).</td></tr>
+</table>
+<div class="met"><b class="lbl">How to decide JO vs JV</b>Ask: do the parties get the <b>assets &amp; bear the liabilities</b> directly (→ joint operation), or only a share of the <b>net assets/profit</b> (→ joint venture)? A separate legal entity points to JV <i>unless</i> the contract/facts override it.</div>
+
+<!-- ============ TREATMENT SUMMARY ============ -->
+<h2>5 · Accounting-treatment summary (state this in your conclusion)</h2>
+<table>
+<tr><th>Classification</th><th>In the consolidated AFS</th><th>In the separate AFS</th></tr>
+<tr><td class="c">Subsidiary</td><td>Consolidate (IFRS 10) + goodwill &amp; NCI (IFRS 3)</td><td>Cost, or fair value (IFRS 9), or equity method — per IAS 27 election</td></tr>
+<tr><td class="c">Joint operation</td><td>Own share of assets/liabilities/income/expenses (IFRS 11)</td><td>Same (the share)</td></tr>
+<tr><td class="c">Joint venture</td><td>Equity method (IAS 28)</td><td>Cost / fair value / equity method (IAS 27)</td></tr>
+<tr><td class="c">Associate</td><td>Equity method (IAS 28)</td><td>Cost / fair value / equity method (IAS 27)</td></tr>
+</table>
+
+<!-- ============ HOW TO ANSWER ============ -->
+<h2 class="gold">6 · How to answer a discussion question (technique)</h2>
+<ol>
+<li><b>State the standard &amp; definition</b> you are testing (start with IFRS 10 control).</li>
+<li><b>List each requirement</b> as a sub-heading (Power · Variable returns · Link).</li>
+<li><b>Apply the facts to each</b> — quote the trigger from the scenario ("X holds 45% while the rest is widely held and X appoints the board → de facto power").</li>
+<li><b>Conclude per requirement</b> (met / not met) then <b>overall</b> (it is / isn't a subsidiary).</li>
+<li>If control fails, <b>step down</b> the tree: test joint control (IFRS 11), then significant influence (IAS 28).</li>
+<li><b>State the treatment</b> that follows from your conclusion.</li>
+</ol>
+<div class="card"><b>Mark-earning phrases:</b> "control requires <b>all three</b> elements" · "the <b>relevant activities</b> are directed by…" · "this is a <b>substantive</b> right, not merely <b>protective</b>" · "applying the <b>de facto control</b> principle…" · "the parties require <b>unanimous consent</b>, so control is shared" · "rights to the <b>net assets</b> (JV) vs rights to the <b>assets &amp; liabilities</b> (JO)" · "the ≥20% presumption is <b>rebutted/supported</b> because…".</div>
+
+<!-- ============ WORKED Q&A ============ -->
+<h2 class="p">7 · Worked discussion questions &amp; model solutions</h2>
+
+<div class="q"><div class="qh">Q1 · Majority shares but no power</div>
+<div class="qb">P holds 55% of Q's voting shares, but a shareholders' agreement gives R (a 30% holder) the right to direct Q's operating &amp; financing policies and to appoint the majority of the board.</div>
+<div class="sol">
+<h4>IFRS 10 — Power</h4>
+<ul>
+<li>Power = the current ability to direct the <b>relevant activities</b>. Here the <b>contractual right</b> sits with R, not P — substance over the 55% legal holding.</li>
+<li>P has variable returns (dividends) but <b>cannot direct</b> the relevant activities → the power element <b>fails</b>.</li>
+</ul>
+<h4>Conclusion</h4><p>P does <b>not</b> control Q. Test significant influence: P's 55% economic interest + likely board participation → <b>associate</b> (equity method). R, who has the power, would assess control.</p>
+<div class="met"><b class="lbl">Lesson</b>Voting % is only a starting point — <b>contractual rights can shift power</b> away from the majority holder.</div>
+</div></div>
+
+<div class="q"><div class="qh">Q2 · De facto control (&lt;50%)</div>
+<div class="qb">H owns 45% of S. The remaining 55% is held by thousands of shareholders, none owning more than 1%. H has elected the majority of the board at each of the last three AGMs and no other shareholder has organised to vote against it.</div>
+<div class="sol">
+<h4>IFRS 10 — three elements</h4>
+<ul>
+<li><b>Power:</b> although &lt;50%, the other holdings are <b>widely dispersed</b> and H has <b>practically directed</b> the relevant activities (elects the board) → <b>de facto control</b> → power <b>met</b>.</li>
+<li><b>Variable returns:</b> dividends + change in value → <b>met</b>.</li>
+<li><b>Link:</b> H acts as principal and uses its power for its own returns → <b>met</b>.</li>
+</ul>
+<h4>Conclusion</h4><p>All three met → <b>S is a subsidiary</b> → <b>consolidate</b> (recognise NCI of 55%).</p>
+</div></div>
+
+<div class="q"><div class="qh">Q3 · Potential voting rights</div>
+<div class="qb">A owns 40% of B and holds options (currently exercisable, in-the-money) over a further 15% of B's shares. The other 45% is held by one competitor.</div>
+<div class="sol">
+<h4>IFRS 10 — Power</h4>
+<ul>
+<li><b>Substantive potential voting rights</b> (currently exercisable &amp; in-the-money) are included when assessing power → A effectively commands <b>55%</b> → power <b>met</b>.</li>
+<li>If the options were <b>not yet exercisable</b> or deeply out-of-the-money → not substantive → exclude them → no control.</li>
+</ul>
+<h4>Conclusion</h4><p>Treat the options as substantive → A <b>controls</b> B → subsidiary, consolidate.</p>
+</div></div>
+
+<div class="q"><div class="qh">Q4 · Significant influence (incl. rebutting &lt;20%)</div>
+<div class="qb">(a) C owns 25% of D, has 2 of 9 board seats and its finance director sits on D's dividend committee. (b) Alternatively, C owns only 18% but still has a board seat and helps set D's operating policy.</div>
+<div class="sol">
+<h4>IAS 28 — significant influence</h4>
+<ul>
+<li>(a) 25% → <b>≥20% presumption</b> applies, and it's <b>confirmed</b> by board representation + participation in dividend policy → significant influence <b>met</b>.</li>
+<li>(b) 18% → the &lt;20% presumption of "no influence" is <b>rebutted</b> by the board seat + policy participation → significant influence <b>met</b>.</li>
+<li>In both, C does not control or jointly control → it only <b>participates</b>.</li>
+</ul>
+<h4>Conclusion</h4><p>D is an <b>associate</b> → <b>equity method</b>.</p>
+</div></div>
+
+<div class="q"><div class="qh">Q5 · Joint arrangement — JV vs JO</div>
+<div class="qb">E and F each own 50% of NewCo and their agreement requires unanimous consent for all relevant activities. (a) NewCo is a company that sells to third parties; the parties share its profits. (b) Alternatively, the contract says E and F each take 50% of NewCo's output and are each obliged to fund 50% of its costs.</div>
+<div class="sol">
+<h4>IFRS 11 — joint control</h4>
+<ul>
+<li>Contractual arrangement + <b>unanimous consent</b> + 50/50 (no party acts alone) → <b>joint control met</b>.</li>
+</ul>
+<h4>Classify</h4>
+<ul>
+<li>(a) Separate vehicle, parties have rights to the <b>net assets</b>/profit → <b>joint venture</b> → <b>equity method</b>.</li>
+<li>(b) The contract gives rights to the <b>output (assets)</b> and obligations for the <b>costs (liabilities)</b> → <b>joint operation</b> → each recognises its <b>50% share of assets, liabilities, income &amp; expenses</b>.</li>
+</ul>
+</div></div>
+
+<div class="q"><div class="qh">Q6 · Agent vs principal (no control)</div>
+<div class="qb">G, a fund manager, holds 5% of a fund it manages, earns a market-related management fee, and the investors can remove G at any time by simple majority without cause.</div>
+<div class="sol">
+<h4>IFRS 10 — the link (principal vs agent)</h4>
+<ul>
+<li>G makes decisions but the <b>investors can remove it without cause</b> and its economic exposure (5% + market fee) is small → G acts as an <b>agent</b>, not a principal.</li>
+</ul>
+<h4>Conclusion</h4><p>G does <b>not</b> control the fund (no link between power &amp; returns) → no consolidation; account for the 5% as an IFRS 9 investment.</p>
+</div></div>
+
+<!-- ============ TRIGGER TABLE ============ -->
+<h2 class="g">8 · Trigger cheat-table — "if the scenario says… → it points to…"</h2>
+<table>
+<tr><th>Scenario clue</th><th>Points to</th><th>Requirement it satisfies</th></tr>
+<tr><td>&gt;50% of voting shares</td><td>Control → subsidiary</td><td>IFRS 10 Power</td></tr>
+<tr><td>40–49% + rest widely dispersed + appoints board</td><td>De facto control → subsidiary</td><td>IFRS 10 Power</td></tr>
+<tr><td>Options/convertibles currently exercisable &amp; in-the-money</td><td>Substantive potential voting rights → control</td><td>IFRS 10 Power</td></tr>
+<tr><td>Right to appoint/remove the board or key management</td><td>Contractual power → control</td><td>IFRS 10 Power</td></tr>
+<tr><td>Veto only on liquidation / above-budget capex</td><td>Protective right → does NOT give power</td><td>IFRS 10 (rules power out)</td></tr>
+<tr><td>Earns dividends, fees, synergies, value changes</td><td>Variable returns present</td><td>IFRS 10 Returns</td></tr>
+<tr><td>Can be removed without cause / small fee &amp; stake</td><td>Agent → no control</td><td>IFRS 10 Link (fails)</td></tr>
+<tr><td>20–50% holding</td><td>Associate (presumed)</td><td>IAS 28 Significant influence</td></tr>
+<tr><td>Board seat / sets dividend policy / swaps managers / essential tech</td><td>Significant influence (even if &lt;20%)</td><td>IAS 28 (supports/rebuts presumption)</td></tr>
+<tr><td>Contract + unanimous consent / 50:50 split</td><td>Joint control → joint arrangement</td><td>IFRS 11 Joint control</td></tr>
+<tr><td>Parties take the output &amp; fund the costs / no separate vehicle</td><td>Joint operation</td><td>IFRS 11 classification</td></tr>
+<tr><td>Separate company, parties share only the net profit</td><td>Joint venture → equity method</td><td>IFRS 11 classification</td></tr>
+<tr><td>&lt;20%, no board seat, passive</td><td>Plain investment → IFRS 9</td><td>(no influence)</td></tr>
+</table>
+
+<p class="sub" style="margin-top:10px">Compiled for private IAC exam preparation from IFRS 10 (Consolidated Financial Statements), IAS 28 (Investments in Associates &amp; Joint Ventures) &amp; IFRS 11 (Joint Arrangements). Always apply the requirements to the specific facts — control is about <b>substance</b>, not just the shareholding percentage.</p>
+
+</div>
+</body>
+</html>
