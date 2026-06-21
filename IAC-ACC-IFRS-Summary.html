@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IAC ACC — IFRS Topic Summary (Classify · Recognise · Measure · Journals)</title>
+<style>
+  :root{ --ink:#161a1f; --muted:#5b626d; --line:#bcc3cc; --accent:#234d7a; --accent2:#2c5d92; --gold:#6d4d12; --green:#1f6b3a; --pur:#5a3d82; --red:#9a3b3b;
+         --soft:#f5f8fc; --soft2:#e9f0f8; --jbg:#1c2230; --exbg:#eef8f0; --kbg:#fbf1e8; }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:9.3px;line-height:1.42}
+  .wrap{max-width:900px;margin:0 auto;padding:20px}
+  h1{font-size:19px;margin:0;color:var(--accent)}
+  .sub{color:var(--muted);font-size:9px;margin:2px 0 7px}
+  .banner{background:#fff7e6;border:1px solid #e7c97a;color:#7a5300;border-radius:4px;padding:5px 9px;font-size:8.8px;margin-bottom:8px}
+  h2{font-size:12.5px;margin:14px 0 5px;color:#fff;background:var(--accent);padding:4px 9px;border-radius:3px}
+  h2.gold{background:var(--gold)}h2.g{background:var(--green)}h2.p{background:var(--pur)}h2.r{background:var(--red)}
+  h3{font-size:10.6px;margin:9px 0 2px;color:var(--accent);font-weight:700}
+  p{margin:3px 0}
+  ul{margin:2px 0 3px 14px;padding:0}
+  li{margin:1.4px 0}
+  b{color:#111}
+  .topic{break-inside:avoid;border:1px solid var(--line);border-radius:5px;padding:6px 9px;margin:6px 0;background:#fff}
+  .crm{font-size:8.9px;margin:2px 0}
+  .crm .lab{display:inline-block;min-width:78px;font-weight:700;color:var(--accent2);vertical-align:top}
+  .crm .row{margin:1.5px 0}
+  table.j{width:100%;border-collapse:collapse;margin:4px 0;font-size:8.5px}
+  table.j td{border:1px solid #44506a;padding:2px 6px;background:var(--jbg);color:#e9edf3;font-family:"Consolas",monospace}
+  table.j td.dr{padding-left:10px}table.j td.cr{padding-left:24px}
+  table.j td:last-child{text-align:right;white-space:nowrap}
+  .jh{font-weight:700;color:var(--gold);font-size:8.4px;text-transform:uppercase;margin:3px 0 1px}
+  .ex{background:var(--exbg);border-left:3px solid var(--green);padding:3px 8px;margin:3px 0;border-radius:0 4px 4px 0;font-size:8.7px}
+  .ex b.lbl{color:var(--green);font-size:8px;text-transform:uppercase;letter-spacing:.3px}
+  .k{background:var(--kbg);border-left:3px solid var(--gold);padding:3px 8px;margin:3px 0;border-radius:0 4px 4px 0;font-size:8.7px}
+  .k b.lbl{color:var(--gold);font-size:8px;text-transform:uppercase;letter-spacing:.3px}
+  table{width:100%;border-collapse:collapse;margin:4px 0;font-size:8.6px}
+  th,td{border:1px solid var(--line);padding:3px 5px;text-align:left;vertical-align:top}
+  th{background:var(--soft2);color:var(--accent);font-weight:700;font-size:8px;text-transform:uppercase}
+  .cols2{column-count:2;column-gap:12px}
+  @page{size:A4;margin:11mm 9mm;@bottom-right{content:"p. " counter(page);font-size:8px;color:#999}}
+  h2,h3{break-after:avoid}
+  .topic,table.j,.ex,.k,table{break-inside:avoid}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>IFRS Topic Summary — Classify · Recognise · Measure · Journals</h1>
+<div class="sub">Every standard in one structure · SAICA IAC 2026 · T. Van Heerden &nbsp;|&nbsp; consolidations &amp; associates are in the separate "Control Interests" pack</div>
+<div class="banner"><b>Read every topic the same way:</b> <b>Classify</b> (what box?) → <b>Initial recognition</b> (when?) → <b>Initial measurement</b> (at what amount?) → <b>Subsequent measurement</b> (model?) → <b>Journals</b>. Master that rhythm and you can attack any IFRS question. Dr = debit, Cr = credit.</div>
+
+<!-- FRAMEWORK -->
+<h2 class="gold">Conceptual Framework — the foundation</h2>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Asset</span> a present economic resource controlled by the entity from past events (potential to produce economic benefits).</div>
+<div class="row"><span class="lab">Liability</span> a present obligation to transfer an economic resource as a result of past events.</div>
+<div class="row"><span class="lab">Recognise</span> when it meets the definition AND provides users with <b>relevant</b> info that <b>faithfully represents</b> (and benefits &gt; cost).</div>
+<div class="row"><span class="lab">Measure</span> historical cost OR current value (fair value, value in use, current cost). Each standard picks the basis.</div>
+</div>
+</div>
+
+<!-- ============ NON-CURRENT ASSETS ============ -->
+<h2>1 · Non-current assets</h2>
+
+<h3>IAS 16 — Property, Plant &amp; Equipment</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Classify</span> tangible items held for use in production/supply/rental/admin, expected &gt;1 period.</div>
+<div class="row"><span class="lab">Recognise</span> probable future economic benefits + cost measured reliably.</div>
+<div class="row"><span class="lab">Initial meas.</span> <b>cost</b> = purchase price (less trade discount) + import duties/non-refundable taxes + directly attributable costs (delivery, installation, testing, site prep) + PV of dismantling/restoration estimate + qualifying borrowing costs (IAS 23).</div>
+<div class="row"><span class="lab">Subsequent</span> <b>Cost model</b> (cost − accumulated depreciation − impairment) <b>or Revaluation model</b> (fair value at reval date − subsequent dep − impairment). Depreciate over useful life to residual value; <b>component</b> depreciation; review UL/residual/method annually (= change in estimate, prospective, IAS 8).</div>
+</div>
+<div class="jh">Journals</div>
+<table class="j">
+<tr><td class="dr">Dr PPE (cost)</td><td>x</td></tr><tr><td class="cr">Cr Bank / Payable</td><td>x</td></tr>
+<tr><td class="dr">Dr Depreciation (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Accumulated depreciation</td><td>x</td></tr>
+<tr><td class="dr">Dr PPE / Accum dep (revaluation up)</td><td>x</td></tr><tr><td class="cr">Cr Revaluation surplus (OCI)</td><td>x</td></tr>
+<tr><td class="dr">Dr Impairment loss (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Accumulated impairment</td><td>x</td></tr>
+</table>
+<div class="k"><b class="lbl">Disposal &amp; reval extras</b>Disposal: Dr Bank, Dr Accum dep, Cr PPE, with the balancing profit/loss in P/L. Revaluation <b>decrease</b> → P/L (unless reversing a prior surplus → OCI first). Optional realisation: Dr Revaluation surplus, Cr Retained earnings as the asset is used. <b>Deferred tax</b> on revaluation → OCI.</div>
+<div class="ex"><b class="lbl">Example (IAS 16)</b>Machine R1m + R50k installation + R30k dismantling PV → cost R1 080 000; depreciate over 10 yrs (residual nil) → R108 000/yr.</div>
+</div>
+
+<h3>IAS 23 — Borrowing Costs</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Classify</span> interest &amp; other costs to borrow funds.</div>
+<div class="row"><span class="lab">Capitalise</span> those <b>directly attributable to a qualifying asset</b> (takes a substantial time to get ready). Specific loan: actual costs <b>less</b> investment income on temporary surplus. General: capitalisation rate × expenditure. Start when expenditure + borrowing + activities begin; suspend during idle periods; stop when ready.</div>
+<div class="row"><span class="lab">Else</span> expense to P/L.</div>
+</div>
+<table class="j"><tr><td class="dr">Dr Qualifying asset</td><td>x</td></tr><tr><td class="cr">Cr Bank / Interest payable</td><td>x</td></tr></table>
+</div>
+
+<h3>IAS 40 — Investment Property</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Classify</span> land/building held to earn <b>rentals</b> or for <b>capital appreciation</b> — NOT owner-occupied (IAS 16) and not for sale (IAS 2/IFRS 5).</div>
+<div class="row"><span class="lab">Recognise/Initial</span> as IAS 16 — cost + transaction costs.</div>
+<div class="row"><span class="lab">Subsequent</span> <b>Fair value model</b> (remeasure to FV each year, changes → <b>P/L</b>, <b>no depreciation</b>) OR <b>Cost model</b> (as IAS 16). Policy applies to all IP.</div>
+</div>
+<table class="j"><tr><td class="dr">Dr Investment property (FV increase)</td><td>x</td></tr><tr><td class="cr">Cr Fair value adjustment (P/L)</td><td>x</td></tr></table>
+<div class="k"><b class="lbl">Change of use</b>Transfer in/out (e.g. owner-occupied → IP) at the date use changes; under FV model, remeasure to FV with the IAS 16 revaluation rules up to transfer date.</div>
+</div>
+
+<h3>IAS 38 — Intangible Assets</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Classify</span> identifiable (separable OR arising from contractual/legal rights) non-monetary asset without physical substance.</div>
+<div class="row"><span class="lab">Recognise</span> probable benefits + cost reliable. <b>Research → expense.</b> <b>Development → capitalise</b> if "<b>PIRATE</b>": Probable benefits · Intention to complete · Resources adequate · Ability to use/sell · Technical feasibility · Expenditure measurable. Internally generated <b>goodwill/brands/mastheads</b> → never recognised.</div>
+<div class="row"><span class="lab">Initial meas.</span> cost (purchased) or directly attributable development cost.</div>
+<div class="row"><span class="lab">Subsequent</span> cost or revaluation (only if an <b>active market</b>). <b>Finite</b> life → amortise over UL; <b>indefinite</b> → no amortisation, <b>annual impairment</b> test.</div>
+</div>
+<table class="j">
+<tr><td class="dr">Dr Research expense (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Bank</td><td>x</td></tr>
+<tr><td class="dr">Dr Intangible asset (development)</td><td>x</td></tr><tr><td class="cr">Cr Bank</td><td>x</td></tr>
+<tr><td class="dr">Dr Amortisation (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Accumulated amortisation</td><td>x</td></tr>
+</table>
+</div>
+
+<h3>IAS 36 — Impairment of Assets</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Scope</span> most non-financial assets (PPE, intangibles, goodwill, investments in subs/associates).</div>
+<div class="row"><span class="lab">Trigger</span> indicators (external: market/rates/decline; internal: damage, obsolescence, worse performance) OR <b>annual</b> for goodwill &amp; indefinite-life intangibles.</div>
+<div class="row"><span class="lab">Measure</span> impairment = carrying amount − <b>recoverable amount</b>; recoverable = <b>higher of</b> FV less costs of disposal &amp; <b>value in use</b> (PV of future cash flows at a pre-tax discount rate).</div>
+<div class="row"><span class="lab">CGU</span> if asset doesn't generate independent cash flows, test the cash-generating unit; allocate loss to <b>goodwill first</b>, then pro-rata to other assets (not below their own recoverable amount).</div>
+</div>
+<table class="j"><tr><td class="dr">Dr Impairment loss (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Accumulated impairment</td><td>x</td></tr></table>
+<div class="k"><b class="lbl">Reversal</b>Reverse if indicators gone — but <b>limited to depreciated historical cost</b>, and <b>goodwill impairment is never reversed</b>.</div>
+</div>
+
+<!-- ============ INVENTORIES & HFS ============ -->
+<h2 class="g">2 · Inventories &amp; assets held for sale</h2>
+
+<h3>IAS 2 — Inventories</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Classify</span> held for sale in the ordinary course, in production for sale, or materials/supplies to be consumed.</div>
+<div class="row"><span class="lab">Measure</span> at the <b>lower of cost and NRV</b>. <b>Cost</b> = purchase + conversion (direct labour + production overheads) + costs to bring to present location/condition; formula <b>FIFO or weighted average</b> (no LIFO). <b>NRV</b> = estimated selling price − costs to complete − costs to sell.</div>
+</div>
+<table class="j">
+<tr><td class="dr">Dr Cost of sales / write-down (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Inventory (allowance)</td><td>x</td></tr>
+</table>
+<div class="ex"><b class="lbl">Example (IAS 2)</b>Cost R100; NRV = selling R110 − completion R5 − selling R12 = R93 → carry at R93, write down R7 to P/L. Reversal allowed if NRV recovers (limited to original write-down).</div>
+</div>
+
+<h3>IFRS 5 — Non-current Assets Held for Sale &amp; Discontinued Operations</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Classify HFS</span> when carrying amount will be recovered <b>principally through sale</b>: available for <b>immediate sale</b> in present condition AND sale <b>highly probable</b> (committed plan, active marketing at a reasonable price, expected within <b>12 months</b>).</div>
+<div class="row"><span class="lab">Measure</span> at the <b>lower of carrying amount and fair value less costs to sell</b>; <b>stop depreciating</b>; present separately (current asset).</div>
+<div class="row"><span class="lab">Discontinued op</span> a component disposed of / held for sale that is a separate major line of business or geographical area → present its results separately.</div>
+</div>
+<table class="j"><tr><td class="dr">Dr Impairment loss (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Non-current asset held for sale</td><td>x</td></tr></table>
+</div>
+
+<!-- ============ LEASES ============ -->
+<h2 class="p">3 · IFRS 16 — Leases</h2>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Classify</span> a contract that conveys the <b>right to control the use</b> of an <b>identified asset</b> for a period in exchange for consideration (control = direct the use + obtain substantially all the economic benefits).</div>
+<div class="row"><span class="lab">Recognise (lessee)</span> at commencement, a <b>right-of-use (ROU) asset</b> &amp; a <b>lease liability</b> — unless <b>short-term (≤12m)</b> or <b>low-value</b> (expense on a straight-line basis).</div>
+<div class="row"><span class="lab">Initial meas.</span> <b>Liability</b> = PV of lease payments (fixed + in-substance fixed + variable on index/rate + residual value guarantees + purchase/termination options reasonably certain) at the rate <b>implicit</b> in the lease (or the <b>incremental borrowing rate</b>). <b>ROU asset</b> = liability + initial direct costs + prepayments + dismantling estimate − lease incentives received.</div>
+<div class="row"><span class="lab">Subsequent</span> Liability at <b>amortised cost</b> (add interest, deduct payments). ROU asset at <b>cost − depreciation − impairment</b>, over the <b>shorter</b> of lease term &amp; useful life (or UL if ownership transfers/purchase option certain).</div>
+</div>
+<div class="jh">Journals (lessee)</div>
+<table class="j">
+<tr><td class="dr">Dr Right-of-use asset</td><td>x</td></tr><tr><td class="cr">Cr Lease liability</td><td>x</td></tr>
+<tr><td class="dr">Dr Lease liability (capital portion)</td><td>x</td></tr><tr><td class="dr">Dr Interest / finance cost (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Bank</td><td>x</td></tr>
+<tr><td class="dr">Dr Depreciation (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Accumulated depreciation (ROU)</td><td>x</td></tr>
+</table>
+<div class="k"><b class="lbl">Lessor (IFRS 16)</b><b>Finance lease</b> (transfers substantially all risks &amp; rewards) → derecognise the asset, recognise a <b>net investment in the lease</b> (receivable); split receipts into interest income &amp; capital. <b>Operating lease</b> → keep the asset, recognise rental income straight-line.</div>
+</div>
+
+<!-- ============ REVENUE ============ -->
+<h2 class="gold">4 · IFRS 15 — Revenue from Contracts with Customers</h2>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">5 steps</span> ① identify the <b>contract</b> → ② identify <b>performance obligations</b> (distinct goods/services) → ③ determine the <b>transaction price</b> → ④ <b>allocate</b> the price to each PO (relative stand-alone selling price) → ⑤ <b>recognise revenue</b> as/when each PO is satisfied.</div>
+<div class="row"><span class="lab">Timing</span> <b>Over time</b> if: customer simultaneously receives &amp; consumes; OR the entity creates/enhances an asset the customer controls; OR no alternative use + enforceable right to payment for work done. Otherwise <b>point in time</b> (control transfers).</div>
+<div class="row"><span class="lab">Price issues</span> variable consideration (expected value / most likely + <b>constraint</b>); significant financing component (discount); non-cash; amounts payable to customer; <b>principal vs agent</b> (gross vs net).</div>
+</div>
+<div class="jh">Journals</div>
+<table class="j">
+<tr><td class="dr">Dr Bank / Trade receivable</td><td>x</td></tr><tr><td class="cr">Cr Revenue</td><td>x</td></tr>
+<tr><td class="dr">Dr Bank (advance received)</td><td>x</td></tr><tr><td class="cr">Cr Contract liability (deferred income)</td><td>x</td></tr>
+<tr><td class="dr">Dr Contract liability (as PO satisfied)</td><td>x</td></tr><tr><td class="cr">Cr Revenue</td><td>x</td></tr>
+</table>
+<div class="ex"><b class="lbl">Example (IFRS 15)</b>Sell a machine (R100k) + 2-yr service (R20k) for R110k → allocate by stand-alone prices (100:20) → machine R91 667 (point in time), service R18 333 (over 2 yrs).</div>
+</div>
+
+<!-- ============ FINANCIAL INSTRUMENTS ============ -->
+<h2 class="g">5 · Financial instruments (IFRS 9 &amp; IAS 32)</h2>
+<h3>IFRS 9 — Financial assets &amp; liabilities</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Classify (assets)</span> by <b>business model</b> + <b>SPPI</b> test: <b>Amortised cost</b> (hold to collect + cash flows are solely principal &amp; interest); <b>FVOCI (debt)</b> (hold to collect <b>and</b> sell + SPPI); <b>FVTPL</b> (everything else / trading). <b>Equity investments:</b> default FVTPL, irrevocable election to <b>FVOCI</b> (gains/losses <b>never recycled</b>; only dividends → P/L).</div>
+<div class="row"><span class="lab">Initial meas.</span> <b>fair value + transaction costs</b> (but for FVTPL, transaction costs → P/L).</div>
+<div class="row"><span class="lab">Subsequent</span> per class. <b>Amortised cost</b> = effective-interest method. <b>FVOCI debt:</b> FV in OCI, but interest/ECL/FX in P/L; recycle on disposal. <b>Impairment (ECL):</b> 3-stage model; <b>simplified</b> (lifetime ECL) for trade receivables.</div>
+<div class="row"><span class="lab">Liabilities</span> amortised cost (default) or FVTPL.</div>
+</div>
+<table class="j">
+<tr><td class="dr">Dr Financial asset</td><td>x</td></tr><tr><td class="cr">Cr Bank</td><td>x</td></tr>
+<tr><td class="dr">Dr Impairment loss / ECL (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Loss allowance</td><td>x</td></tr>
+<tr><td class="dr">Dr Financial asset (FV gain, FVTPL)</td><td>x</td></tr><tr><td class="cr">Cr Fair value gain (P/L)</td><td>x</td></tr>
+</table>
+</div>
+
+<h3>IAS 32 — Presentation (liability vs equity)</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Classify</span> as a <b>liability</b> if there's a contractual obligation to deliver cash/another asset; as <b>equity</b> if no such obligation (residual interest).</div>
+<div class="row"><span class="lab">Compound</span> instrument (e.g. <b>convertible bond</b>): split — <b>liability</b> = PV of cash flows at the market rate for similar non-convertible debt; <b>equity</b> = residual (proceeds − liability).</div>
+</div>
+<table class="j"><tr><td class="dr">Dr Bank (proceeds)</td><td>x</td></tr><tr><td class="cr">Cr Liability component (PV)</td><td>x</td></tr><tr><td class="cr">Cr Equity component (residual)</td><td>x</td></tr></table>
+</div>
+
+<!-- ============ PROVISIONS & LIABILITIES ============ -->
+<h2 class="r">6 · Provisions &amp; liabilities (IAS 37)</h2>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Classify</span> <b>provision</b> = a liability of uncertain timing/amount. <b>Contingent liability</b> = possible obligation / not probable / can't measure → <b>disclose</b> only. <b>Contingent asset</b> → disclose if probable; recognise only when virtually certain.</div>
+<div class="row"><span class="lab">Recognise provision</b></span> if ALL: ① a <b>present obligation</b> (legal or <b>constructive</b>) from a past event; ② <b>probable</b> outflow; ③ <b>reliable estimate</b>.</div>
+<div class="row"><span class="lab">Measure</span> <b>best estimate</b> of the expenditure (expected value for large populations; most likely for single items); <b>discount</b> if the time value is material.</div>
+</div>
+<table class="j">
+<tr><td class="dr">Dr Expense (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Provision</td><td>x</td></tr>
+<tr><td class="dr">Dr Finance cost (unwinding discount)</td><td>x</td></tr><tr><td class="cr">Cr Provision</td><td>x</td></tr>
+</table>
+<div class="k"><b class="lbl">Watch</b>No provision for <b>future operating losses</b>; <b>onerous contracts</b> → provide for the unavoidable net cost; <b>restructuring</b> → only once a detailed plan exists AND a valid expectation has been raised (announced).</div>
+</div>
+
+<!-- ============ EMPLOYEE & SHARE ============ -->
+<h2 class="p">7 · Employee benefits &amp; share-based payments</h2>
+<h3>IAS 19 — Employee Benefits</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Short-term</span> (salaries, leave, bonus) → accrue undiscounted in the period earned.</div>
+<div class="row"><span class="lab">Post-employment</span> <b>Defined contribution</b> → expense the contributions. <b>Defined benefit</b> → recognise the <b>net defined benefit liability</b>; <b>service cost &amp; net interest → P/L</b>; <b>remeasurements (actuarial gains/losses) → OCI</b> (not recycled).</div>
+</div>
+<table class="j"><tr><td class="dr">Dr Employee benefit expense (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Bank / Accrual / Net DB liability</td><td>x</td></tr></table>
+</div>
+
+<h3>IFRS 2 — Share-based Payments</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Equity-settled</span> measure at the <b>grant-date fair value</b> of the equity instruments; expense over the <b>vesting period</b>; adjust for service/non-market conditions (not for market conditions). No remeasurement after grant.</div>
+<div class="row"><span class="lab">Cash-settled</span> (e.g. share appreciation rights) measure at the <b>fair value of the liability, remeasured each reporting date</b> through P/L until settled.</div>
+</div>
+<table class="j">
+<tr><td class="dr">Dr Employee cost (P/L) — equity-settled</td><td>x</td></tr><tr><td class="cr">Cr Share-based payment reserve (equity)</td><td>x</td></tr>
+<tr><td class="dr">Dr Employee cost (P/L) — cash-settled</td><td>x</td></tr><tr><td class="cr">Cr Liability</td><td>x</td></tr>
+</table>
+</div>
+
+<!-- ============ TAXES ============ -->
+<h2>8 · IAS 12 — Income Taxes (incl. deferred tax)</h2>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Current tax</span> tax payable on taxable profit for the year (per the Tax Act).</div>
+<div class="row"><span class="lab">Deferred tax</span> on <b>temporary differences</b> = carrying amount − <b>tax base</b>, × the tax rate. <b>Taxable</b> temp diff → <b>DTL</b>; <b>deductible</b> temp diff &amp; assessed losses → <b>DTA</b> (only if probable future taxable profit). Use the rate expected when it reverses (e.g. 80% CGT inclusion → effective rate for capital items).</div>
+<div class="row"><span class="lab">Exemptions</span> initial-recognition exemption; tax on items in OCI/equity goes to <b>OCI/equity</b> (e.g. revaluation).</div>
+</div>
+<table class="j">
+<tr><td class="dr">Dr Income tax expense (P/L)</td><td>x</td></tr><tr><td class="cr">Cr Current tax payable / Deferred tax (SFP)</td><td>x</td></tr>
+<tr><td class="dr">Dr Deferred tax asset</td><td>x</td></tr><tr><td class="cr">Cr Income tax expense</td><td>x</td></tr>
+</table>
+<div class="ex"><b class="lbl">Example (IAS 12)</b>Asset carrying amount R500k, tax base R350k → taxable temp diff R150k × 27% = <b>DTL R40 500</b>: Dr Tax expense, Cr Deferred tax liability.</div>
+</div>
+
+<!-- ============ FOREIGN, GRANTS ============ -->
+<h2 class="g">9 · Foreign currency (IAS 21) &amp; grants (IAS 20)</h2>
+<h3>IAS 21 — The Effects of Changes in Foreign Exchange Rates</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Initial</span> record a foreign transaction at the <b>spot rate</b> on the transaction date.</div>
+<div class="row"><span class="lab">Year-end</span> <b>monetary items</b> (cash, receivables, payables, loans) → retranslate at the <b>closing rate</b>; exchange differences → <b>P/L</b>. <b>Non-monetary</b> at cost → keep historical rate; at fair value → rate when FV measured.</div>
+<div class="row"><span class="lab">Foreign operation</b></span> translate assets/liabilities at closing rate, income at average; differences → <b>OCI (FCTR)</b>, recycled on disposal.</div>
+</div>
+<table class="j"><tr><td class="dr">Dr Forex loss (P/L) / Cr Forex gain</td><td>x</td></tr><tr><td class="cr">Cr / Dr Monetary item</td><td>x</td></tr></table>
+</div>
+
+<h3>IAS 20 — Government Grants</h3>
+<div class="topic">
+<div class="crm">
+<div class="row"><span class="lab">Recognise</span> when there's <b>reasonable assurance</b> the entity will comply with the conditions AND the grant will be received.</div>
+<div class="row"><span class="lab">Match</span> to the related costs (income approach). <b>Income grant</b> → P/L (or net against the expense). <b>Asset grant</b> → either <b>deferred income</b> (release over the asset's life) or <b>deduct from the asset's cost</b>.</div>
+</div>
+<table class="j"><tr><td class="dr">Dr Bank</td><td>x</td></tr><tr><td class="cr">Cr Deferred income (grant)</td><td>x</td></tr><tr><td class="dr">Dr Deferred income</td><td>x</td></tr><tr><td class="cr">Cr Income / Depreciation (P/L)</td><td>x</td></tr></table>
+</div>
+
+<!-- ============ PRESENTATION / OTHER ============ -->
+<h2 class="gold">10 · Policies, events &amp; presentation</h2>
+<div class="cols2">
+<div class="topic">
+<h3 style="margin-top:0">IAS 8 — Policies, Estimates &amp; Errors</h3>
+<ul>
+<li><b>Change in accounting policy</b> → apply <b>retrospectively</b> (restate comparatives).</li>
+<li><b>Change in estimate</b> (UL, residual, ECL) → <b>prospective</b> (current &amp; future).</li>
+<li><b>Prior-period error</b> → <b>retrospective restatement</b> (restate comparatives, opening retained earnings).</li>
+</ul>
+</div>
+<div class="topic">
+<h3 style="margin-top:0">IAS 10 — Events After the Reporting Period</h3>
+<ul>
+<li><b>Adjusting</b> events: provide evidence of conditions <b>at</b> year-end → adjust the AFS (e.g. debtor insolvency, NRV evidence, court ruling).</li>
+<li><b>Non-adjusting</b>: arose <b>after</b> year-end → disclose only (e.g. fire, dividend declared, share issue). <b>Going concern</b> after year-end → always adjust the basis.</li>
+</ul>
+</div>
+</div>
+<div class="topic">
+<h3 style="margin-top:0">IAS 33 — Earnings Per Share (listed)</h3>
+<div class="crm">
+<div class="row"><span class="lab">Basic EPS</span> = profit attributable to <b>ordinary</b> shareholders ÷ <b>weighted-average</b> ordinary shares.</div>
+<div class="row"><span class="lab">Diluted EPS</span> adjusts for potential ordinary shares (options, convertibles) that would reduce EPS.</div>
+</div>
+</div>
+
+<div class="k" style="margin-top:8px"><b class="lbl">Exam technique for ACC</b>For any item: ① state the standard &amp; <b>classify</b> it → ② recognition criteria (met?) → ③ initial measurement (show the cost build-up) → ④ subsequent model + this year's movement → ⑤ <b>the journal</b> → ⑥ deferred-tax &amp; disclosure consequence. Always tie the number to the principle; show workings for own-figure marks.</div>
+
+<p class="sub" style="margin-top:8px">Compiled for private IAC exam preparation from IFRS (IAS 2/8/10/12/16/19/20/21/23/32/33/36/37/38/40, IFRS 2/5/9/15/16). Consolidations, associates &amp; joint arrangements are in the separate "Control Interests" pack. Confirm rates/thresholds &amp; the latest amendments against your standards. Apply to the scenario.</p>
+
+</div>
+</body>
+</html>
