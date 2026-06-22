@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IAC Tax — Death of a Natural Person: CGT, Estate Duty, Donations Tax &amp; Trusts</title>
+<style>
+  :root{ --ink:#161a1f; --muted:#5b626d; --line:#bcc3cc; --accent:#6d4d12; --accent2:#8a5a00; --blue:#234d7a; --green:#1f6b3a; --pur:#5a3d82; --red:#9a3b3b;
+         --soft:#faf7f1; --soft2:#f1ece2; --calcbg:#eef4fb; --exbg:#eef8f0; --kbg:#fbf1e8; }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:10.2px;line-height:1.48}
+  .wrap{max-width:880px;margin:0 auto;padding:20px}
+  h1{font-size:19px;margin:0;color:var(--accent)}
+  .sub{color:var(--muted);font-size:9.4px;margin:2px 0 8px}
+  .banner{background:#fff7e6;border:1px solid #e7c97a;color:#7a5300;border-radius:4px;padding:6px 10px;font-size:9.6px;margin-bottom:9px}
+  h2{font-size:13.5px;margin:15px 0 6px;color:#fff;background:var(--accent);padding:5px 9px;border-radius:3px}
+  h2.b{background:var(--blue)}h2.g{background:var(--green)}h2.p{background:var(--pur)}h2.r{background:var(--red)}
+  h3{font-size:11.5px;margin:9px 0 3px;color:var(--accent);font-weight:700}
+  p{margin:4px 0}
+  ul,ol{margin:3px 0 5px 16px;padding:0}
+  li{margin:3px 0}
+  b{color:#111}
+  table{width:100%;border-collapse:collapse;margin:6px 0;font-size:9.6px}
+  th,td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+  th{background:var(--soft2);color:var(--accent);font-weight:700;font-size:8.8px;text-transform:uppercase}
+  td.c{white-space:nowrap;font-weight:700;color:var(--blue)}
+  .calc{background:var(--calcbg);border:1px solid #bcd3ec;border-radius:5px;padding:7px 11px;margin:7px 0}
+  .calc h3{margin:0 0 3px;color:var(--blue)}
+  .calc table{font-size:9.5px}
+  .calc td:last-child{text-align:right;white-space:nowrap}
+  .ex{background:var(--exbg);border-left:3px solid var(--green);padding:6px 11px;margin:7px 0;border-radius:0 4px 4px 0}
+  .ex b.lbl{color:var(--green);display:block;font-size:8.6px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  .k{background:var(--kbg);border-left:3px solid var(--accent2);padding:6px 11px;margin:7px 0;border-radius:0 4px 4px 0;font-size:9.6px}
+  .k b.lbl{color:var(--accent2);display:block;font-size:8.6px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  @page{size:A4;margin:13mm 12mm;@bottom-right{content:"p. " counter(page);font-size:8.5px;color:#999}}
+  h2,h3{break-after:avoid}
+  table,.calc,.ex,.k{break-inside:avoid}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Death of a Natural Person — CGT · Estate Duty · Donations Tax · Trusts</h1>
+<div class="sub">Structure, calculation formats &amp; worked examples · SAICA IAC 2026 · T. Van Heerden &nbsp;|&nbsp; CGT inclusion 40% · estate duty 20%/25% · donations tax 20%/25%</div>
+
+<div class="banner"><b>The big picture — death triggers up to 3 separate taxes &amp; 3 taxpayers.</b> ① The <b>deceased</b> (final income-tax return to date of death, incl. <b>CGT on a deemed disposal s9HA</b>). ② The <b>deceased estate</b> (a separate taxpayer for income/gains after death — s25). ③ <b>Estate duty</b> on the dutiable estate. <b>Donations tax</b> &amp; <b>trusts</b> are the <i>lifetime estate-planning</i> tools that shrink what's taxed at death. <b>Do the calcs in order:</b> CGT → final income tax → estate duty (the income-tax/CGT debt is then deductible for estate duty).</div>
+
+<!-- 1 -->
+<h2 class="b">1 · CGT on death — s9HA (deemed disposal)</h2>
+<ul>
+<li>The deceased is <b>deemed to dispose of all assets at market value</b> on the date of death (a deemed disposal to the estate).</li>
+<li><b>Exceptions (no CGT):</b> ① assets <b>bequeathed to the surviving spouse</b> → <b>roll-over (s9HB)</b>: deemed disposed at <b>base cost</b>, the spouse inherits the base cost (tax deferred to second death); ② <b>cash/SA currency</b>; ③ retirement-fund interests &amp; qualifying long-term insurance proceeds.</li>
+<li><b>Annual exclusion in the year of death = R300 000</b> (instead of the usual R40 000).</li>
+<li><b>Primary residence:</b> the R2 000 000 gain exclusion still applies to the deemed disposal of the home.</li>
+<li>The <b>deceased estate acquires</b> the assets at <b>market value</b> (= its base cost); when the estate later sells/distributes, the <b>estate</b> computes its own CGT (R40 000 annual exclusion, individual rates).</li>
+</ul>
+<div class="calc"><h3>Format — deceased's CGT on death</h3>
+<table>
+<tr><td>Per asset: Proceeds (= market value at death) − base cost = capital gain/(loss)</td><td>x</td></tr>
+<tr><td>(exclude assets to spouse — roll-over; exclude cash)</td><td>—</td></tr>
+<tr><td>Primary residence: gain − R2 000 000 exclusion</td><td>x</td></tr>
+<tr><td>Sum of capital gains &amp; losses</td><td>x</td></tr>
+<tr><td>Less: annual exclusion (year of death)</td><td>(300 000)</td></tr>
+<tr><td>= Net capital gain × <b>40% inclusion</b></td><td>x</td></tr>
+<tr><td><b>= Taxable capital gain</b> → into the final return (taxed at individual rates)</td><td><b>x</b></td></tr>
+</table></div>
+
+<!-- 2 -->
+<h2 class="g">2 · Income tax — the deceased &amp; the deceased estate</h2>
+<ul>
+<li><b>Deceased (final return):</b> all income received/accrued <b>to the date of death</b>, plus the taxable capital gain above; taxed at individual rates with rebates apportioned for the part-year.</li>
+<li><b>Deceased estate (s25):</b> a <b>separate "natural person" taxpayer</b> for income &amp; gains arising <b>after</b> death until assets are distributed/an heir is ascertained; taxed at individual rates. <i>(The estate generally does not qualify for the s6 rebates or the interest exemption — confirm against the Act.)</i></li>
+<li>Once income accrues to an <b>ascertained heir/legatee</b>, it is taxed in the <b>heir's</b> hands.</li>
+</ul>
+
+<!-- 3 -->
+<h2 class="r">3 · Estate duty (Estate Duty Act)</h2>
+<div class="calc"><h3>Format — the estate-duty calculation</h3>
+<table>
+<tr><td><b>Property</b> (s3(2)) — all the deceased's property at death (immovable &amp; movable; worldwide if ordinarily resident), at market value</td><td>x</td></tr>
+<tr><td>+ <b>Deemed property</b> (s3(3)) — domestic <b>life-insurance policy</b> proceeds on the deceased's life; <b>donationes mortis causa</b>; an <b>accrual claim</b> in the estate's favour; property the deceased was competent to dispose of</td><td>x</td></tr>
+<tr><td><b>= Gross value of the estate</b></td><td>x</td></tr>
+<tr><td>− <b>Deductions</b> (s4): funeral &amp; deathbed expenses; <b>debts</b> due at death (incl. the deceased's final income-tax/CGT liability); administration costs (executor's &amp; Master's fees); bequests to <b>PBOs</b> (s4(h)); <b>property to the surviving spouse — s4(q), unlimited</b></td><td>(x)</td></tr>
+<tr><td><b>= Net value of the estate</b></td><td>x</td></tr>
+<tr><td>− <b>s4A abatement</b> (portable to spouse → up to R7m)</td><td>(3 500 000)</td></tr>
+<tr><td><b>= Dutiable amount</b></td><td>x</td></tr>
+<tr><td>× <b>20%</b> (first R30m) / <b>25%</b> (above R30m)</td><td></td></tr>
+<tr><td><b>= Estate duty</b></td><td><b>x</b></td></tr>
+</table></div>
+<div class="k"><b class="lbl">Who pays</b>The executor pays the duty out of the estate, but <b>s11/s13 apportions</b> some of it to recipients of deemed property (e.g. a policy beneficiary bears the duty on their policy). The <b>s4A abatement</b> not used by the first-dying spouse rolls over to the survivor.</div>
+
+<!-- 4 -->
+<h2 class="p">4 · Donations tax (the lifetime estate-planning tool)</h2>
+<ul>
+<li><b>20%</b> (cumulative donations ≤ R30m) / <b>25%</b> (&gt; R30m) on the value of property donated by a resident; <b>donor</b> is liable (payable by the end of the month after the donation).</li>
+<li><b>Exemptions:</b> donations to a <b>spouse</b> (unlimited, s56(1)(a)); the annual <b>R100 000</b> (natural persons); bona-fide maintenance; <b>PBOs</b>; donations cancelled within 6 months.</li>
+<li><b>Donationes mortis causa</b> (a donation in contemplation of death) are <b>exempt from donations tax</b> — but fall into <b>estate duty</b> as deemed property.</li>
+<li><b>s58</b> deems a donation where property is sold for inadequate consideration; <b>s7 / par 68–73</b> attribute income/gains back to the donor (while alive); <b>s7C</b> deems a donation on a low/interest-free loan to a trust.</li>
+</ul>
+<div class="calc"><h3>Format — donations tax (per year)</h3>
+<table>
+<tr><td>Market value of property donated</td><td>x</td></tr>
+<tr><td>− exempt donations (spouse, PBO, maintenance)</td><td>(x)</td></tr>
+<tr><td>− annual exemption (natural person)</td><td>(100 000)</td></tr>
+<tr><td>= Net donation × 20% (/25%)</td><td><b>x</b></td></tr>
+</table></div>
+
+<!-- 5 -->
+<h2 class="b">5 · Trusts &amp; death (why they're an estate-planning tool)</h2>
+<ul>
+<li>Assets placed in a trust during life are <b>NOT part of your estate</b> at death → <b>no estate duty</b> on them, and <b>no s9HA CGT</b> on death (the trust, not you, owns them). Future <b>growth accrues in the trust, outside your estate</b> ("pegging").</li>
+<li><b>But</b> if you <b>sold</b> assets to the trust on a <b>loan account</b>, that <b>loan is an asset in your estate</b> (at its face value) and <b>s7C</b> deemed a donation each year on the foregone interest (official rate − rate charged), using the R100k exemption.</li>
+<li><b>Trust income/CGT while you're alive:</b> <b>conduit principle (s25B)</b> flows vested income to beneficiaries keeping its nature; otherwise taxed in the <b>trust (45%; CGT inclusion 80% → effective 36%)</b>; <b>s7</b> attributes income/gains from donated assets back to you (the donor) — this attribution <b>stops at your death</b>.</li>
+</ul>
+
+<!-- 6 -->
+<h2 class="r">6 · Worked example (CGT + estate duty linked)</h2>
+<div class="ex"><b class="lbl">Facts</b>Mr A (resident, married, with a R2m life policy on his own life) dies owning: a <b>holiday home</b> (base cost R2m, MV R5m) bequeathed to his son; his <b>primary residence</b> (base cost R1.5m, MV R4m) to his son; <b>shares</b> (base cost R200k, MV R900k) to his son; <b>cash</b> R500k; and an <b>investment property</b> (MV R3m) bequeathed to his <b>wife</b>. Funeral R30k; debts R200k; executor &amp; Master's fees R250k.</div>
+<div class="calc"><h3>Step 1 — CGT on death (s9HA)</h3>
+<table>
+<tr><td>Holiday home: 5 000 000 − 2 000 000</td><td>3 000 000</td></tr>
+<tr><td>Primary residence: (4 000 000 − 1 500 000) − R2m exclusion</td><td>500 000</td></tr>
+<tr><td>Shares: 900 000 − 200 000</td><td>700 000</td></tr>
+<tr><td>Investment property to spouse → s9HB roll-over</td><td>0</td></tr>
+<tr><td>Cash → no CGT</td><td>0</td></tr>
+<tr><td>Sum of gains</td><td>4 200 000</td></tr>
+<tr><td>Less annual exclusion (year of death)</td><td>(300 000)</td></tr>
+<tr><td>× 40% inclusion → <b>taxable capital gain</b> (in final return)</td><td><b>1 560 000</b></td></tr>
+</table>
+<p style="margin:2px 0 0">Tax on the gain at the marginal rate (≈ up to 45%; effective max 18% on the gain) becomes a <b>debt of the estate</b> for estate duty.</p>
+</div>
+<div class="calc"><h3>Step 2 — Estate duty</h3>
+<table>
+<tr><td>Property: holiday home 5 000 000 + primary residence 4 000 000 + shares 900 000 + cash 500 000 + investment property 3 000 000</td><td>13 400 000</td></tr>
+<tr><td>+ Deemed property: life policy</td><td>2 000 000</td></tr>
+<tr><td>Gross value</td><td>15 400 000</td></tr>
+<tr><td>− Funeral expenses</td><td>(30 000)</td></tr>
+<tr><td>− Debts</td><td>(200 000)</td></tr>
+<tr><td>− Executor &amp; Master's fees</td><td>(250 000)</td></tr>
+<tr><td>− Bequest to spouse (investment property) — s4(q)</td><td>(3 000 000)</td></tr>
+<tr><td>Net value of estate</td><td>11 920 000</td></tr>
+<tr><td>− s4A abatement</td><td>(3 500 000)</td></tr>
+<tr><td>Dutiable amount × 20%</td><td>8 420 000</td></tr>
+<tr><td><b>Estate duty</b></td><td><b>1 684 000</b></td></tr>
+</table>
+<p style="margin:2px 0 0"><i>(For completeness, also deduct the deceased's final income-tax/CGT liability as a "debt due" — shown here within debts for simplicity.)</i></p>
+</div>
+<div class="ex"><b class="lbl">Donations-tax mini-example</b>If, during the year, Mr A had donated R600 000 to his children and R200 000 to his wife: wife = exempt; children R600 000 − R100 000 = R500 000 × 20% = <b>R100 000 donations tax</b> (and the gifted growth is now outside his estate).</div>
+
+<!-- 7 -->
+<h2 class="g">7 · Estate-planning techniques (how to reduce the taxes)</h2>
+<table>
+<tr><th>Technique</th><th>Effect</th></tr>
+<tr><td class="c">Bequeath to spouse</td><td>s4(q) estate-duty deduction + s9HB CGT roll-over → defers <b>both</b> taxes to the second death (and the abatement is portable → up to R7m).</td></tr>
+<tr><td class="c">Use a trust ("peg" the estate)</td><td>Move growth assets out of the estate now → future growth escapes estate duty &amp; the s9HA CGT on death; watch s7C &amp; the loan account left in the estate.</td></tr>
+<tr><td class="c">Donate during life</td><td>R100 000 p.a. free; reduces the estate, but donations tax at 20%/25% on the excess — compare to estate duty at 20%/25%.</td></tr>
+<tr><td class="c">Life insurance</td><td>Provides <b>liquidity</b> to pay estate duty &amp; CGT without forcing asset sales (but the policy is deemed property unless structured/exempt).</td></tr>
+<tr><td class="c">Buy-and-sell / keyman</td><td>Funds the purchase of a deceased's business interest; can be excluded from the estate if requirements met.</td></tr>
+</table>
+
+<!-- 8 -->
+<h2 class="r">8 · How to approach &amp; discuss it in the exam</h2>
+<ol>
+<li><b>State who the taxpayers are</b> — the deceased (to date of death), the deceased estate, and (for planning) any trust; identify the taxes that arise.</li>
+<li><b>Do the calculations in order:</b> ① CGT on death (s9HA) → ② the deceased's final income tax → ③ <b>estate duty</b> (remember the income-tax/CGT liability is a <b>debt</b> deductible there).</li>
+<li><b>For each asset, ask:</b> to the spouse? (→ roll-over &amp; s4(q)) · primary residence? (→ R2m) · cash? (→ no CGT) · a policy/accrual/trust asset? (→ deemed property).</li>
+<li><b>Apply each exclusion/deduction</b> and quote the section (s9HA, s9HB, s4(q), s4A).</li>
+<li><b>Discussion marks:</b> explain the <i>interaction</i> (spouse bequest defers both taxes; a trust keeps growth out of the estate; donations tax vs estate duty trade-off), then <b>conclude/advise</b> on the most tax-efficient structure.</li>
+</ol>
+<div class="k"><b class="lbl">Mark-earning phrases</b>"deemed disposal at market value on death (s9HA), except to the surviving spouse (roll-over, s9HB)" · "annual exclusion of R300 000 in the year of death" · "the surviving-spouse bequest is deductible (s4(q)) and defers estate duty to the second death" · "the s4A abatement is portable between spouses" · "the income-tax/CGT liability is a debt deductible for estate duty" · "assets in a trust fall outside the dutiable estate".</div>
+
+<p class="sub" style="margin-top:9px">Compiled for private IAC exam preparation from the Income Tax Act (s9HA/9HB, s25, 8th Schedule, s7/s7C), the Estate Duty Act &amp; the donations-tax provisions. Confirm rates, the abatement &amp; exclusions against the rate card; apply to the scenario.</p>
+
+</div>
+</body>
+</html>
