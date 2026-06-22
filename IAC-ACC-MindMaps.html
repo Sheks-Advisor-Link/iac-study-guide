@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IAC ACC — IFRS Mind-Maps (Journals &amp; Audit Assertions per topic)</title>
+<style>
+  :root{ --ink:#1c2128; --line:#222; --pink:#e7b6c8; --pinkbg:#fbeef3; --orange:#e8a05c; --orangebg:#fdf1e6;
+         --teal:#5bb3a8; --tealbg:#e9f5f3; --pur:#9a86c4; --purbg:#f1edf8; --blue:#5b8fc7; --bluebg:#eaf1fa;
+         --gold:#c79a3a; --goldbg:#faf3e2; --green:#3f9468; --muted:#666; }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:8.6px;line-height:1.34}
+  .wrap{max-width:900px;margin:0 auto;padding:14px}
+  .topic{break-before:page;padding-top:4px}
+  .topic:first-child{break-before:auto}
+  .map{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;align-items:stretch}
+  .box{border:1.6px solid var(--line);border-radius:11px;padding:5px 8px;background:#fff}
+  .box h4{margin:0 0 2px;font-size:9px;letter-spacing:.4px;text-transform:uppercase;font-weight:800;border-bottom:1.4px dashed #bbb;padding-bottom:1px}
+  .box ul{margin:2px 0 0 12px;padding:0}
+  .box li{margin:1.2px 0}
+  .box.pink{background:var(--pinkbg);border-color:var(--pink)} .box.pink h4{color:#b15a7c}
+  .box.orange{background:var(--orangebg);border-color:var(--orange)} .box.orange h4{color:#b66f22}
+  .box.teal{background:var(--tealbg);border-color:var(--teal)} .box.teal h4{color:#2f7c72}
+  .box.pur{background:var(--purbg);border-color:var(--pur)} .box.pur h4{color:#6b54a0}
+  .box.blue{background:var(--bluebg);border-color:var(--blue)} .box.blue h4{color:#3a6aa0}
+  .box.gold{background:var(--goldbg);border-color:var(--gold)} .box.gold h4{color:#9a751f}
+  .center{grid-column:1 / 4;text-align:center;margin:5px 0}
+  .center .std{display:inline-block;font-size:30px;font-weight:900;letter-spacing:1px;color:#1c2128;border:3px solid #1c2128;border-radius:14px;padding:2px 22px;background:#fff}
+  .center .name{display:block;font-size:9px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:1px}
+  h2.page{font-size:13px;margin:0 0 4px;color:#1c2128}
+  .lower{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:8px}
+  .sect h3{font-size:11px;font-weight:800;margin:0 0 3px;letter-spacing:.5px;text-transform:uppercase}
+  .sect.j h3{color:#2f7c72}.sect.a h3{color:#b66f22}
+  table.j{width:100%;border-collapse:collapse;font-size:7.8px;margin:2px 0}
+  table.j td{padding:1px 4px;font-family:"Consolas",monospace}
+  table.j td:last-child{text-align:right;color:#888}
+  .jt{font-weight:700;text-decoration:underline;font-size:7.9px;margin-top:3px}
+  .as{margin:0;padding:0;list-style:none}
+  .as li{margin:2.4px 0;padding-left:2px}
+  .as b{color:#1c2128}
+  .chip{display:inline-block;font-size:6.6px;font-weight:800;padding:0 4px;border-radius:6px;text-transform:uppercase;vertical-align:middle}
+  .hi{background:#f3d2d2;color:#9a3b3b}.lo{background:#d7ecdd;color:#2c6b45}.no{background:#e2e6ea;color:#555}
+  .hdr{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #1c2128;margin-bottom:5px}
+  .hdr .brand{font-size:8px;color:var(--muted);font-weight:700;letter-spacing:1px}
+  @page{size:A4;margin:9mm 8mm;@bottom-right{content:"p. " counter(page);font-size:7.5px;color:#aaa}}
+  .box,.sect,table.j{break-inside:avoid}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ===================== IAS 2 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IFRS Mind-Maps — Journals &amp; Audit Assertions</h2><span class="brand">IAC 2026 · T. VAN HEERDEN</span></div>
+<div class="map">
+  <div class="box pink"><h4>Scope / Excluded</h4><ul><li>Excludes: financial instruments (IFRS 9); biological assets (IAS 41)</li><li>Producers of agri/forest products &amp; commodity broker-traders → measured at <b>NRV / FV less costs to sell</b></li></ul></div>
+  <div class="box teal"><h4>Definition</h4><ul><li>Assets <b>held for sale</b> in the ordinary course</li><li>In the <b>process of production</b> for such sale</li><li>Materials/supplies <b>to be consumed</b> in production</li></ul></div>
+  <div class="box orange"><h4>Cost includes</h4><ul><li>Purchase cost (less trade discount)</li><li>Conversion cost (labour + production overheads)</li><li>Costs to bring to <b>location &amp; condition</b></li><li><b>Exclude:</b> abnormal waste, storage, admin, selling</li></ul></div>
+  <div class="center"><span class="std">IAS 2</span><span class="name">Inventories</span></div>
+  <div class="box blue"><h4>Cost formula</h4><ul><li><b>FIFO</b> or <b>weighted average</b> (no LIFO)</li><li>Standard cost / retail method ok if ≈ cost</li><li>Same formula for similar inventories</li></ul></div>
+  <div class="box gold"><h4>NRV</h4><ul><li>Lower of <b>cost</b> and <b>NRV</b></li><li>NRV = selling price − costs to complete − costs to sell</li><li>Written down when damaged/obsolete; tested <b>each year-end</b></li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Inventory sold → cost of sales (P/L)</li><li>Write-down → P/L; <b>reversal</b> limited to original write-down</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Buy raw materials</div><table class="j"><tr><td>Dr Inventory (SFP)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Bank / Creditor</td><td>x</td></tr></table>
+    <div class="jt">Sale of inventory</div><table class="j"><tr><td>Dr Cost of sales (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Inventory (SFP)</td><td>x</td></tr></table>
+    <div class="jt">Write-down to NRV</div><table class="j"><tr><td>Dr Write-down (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Inventory / allowance</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Completeness</b> <span class="chip lo">low</span> — all inventory recorded; risk of understating assets → <b>attend stock count</b> (floor→sheet).</li>
+      <li><b>Existence</b> <span class="chip hi">high</span> — recorded inventory exists; overstatement risk → <b>stock count</b> (sheet→floor).</li>
+      <li><b>Valuation</b> <span class="chip hi">high</span> — at lower of cost/NRV; estimation risk → <b>invoice inspection &amp; NRV recalculation</b>.</li>
+      <li><b>Rights</b> <span class="chip lo">low</span> — owned, not consignment → inspect contracts/GRNs.</li>
+      <li><b>Cut-off</b> <span class="chip hi">high</span> — right period → last GRNs/dispatches around year-end.</li>
+      <li><b>Presentation</b> <span class="chip lo">low</span> — disclosed per IAS 2 → AFS vs GL comparison.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IAS 16 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IAS 16 — Property, Plant &amp; Equipment</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>Definition / Classify</h4><ul><li>Tangible items held for use in production/supply/rental/admin</li><li>Expected to be used &gt;1 period</li><li>Component approach (significant parts)</li></ul></div>
+  <div class="box teal"><h4>Initial recognition</h4><ul><li>Probable future benefits AND</li><li>Cost measured reliably</li></ul></div>
+  <div class="box orange"><h4>Initial measurement = cost</h4><ul><li>Purchase price − trade discount</li><li>+ directly attributable (delivery, install, test, site prep)</li><li>+ PV dismantling/restoration</li><li>+ borrowing costs (IAS 23)</li></ul></div>
+  <div class="center"><span class="std">IAS 16</span><span class="name">Property, Plant &amp; Equipment</span></div>
+  <div class="box blue"><h4>Subsequent — models</h4><ul><li><b>Cost model:</b> cost − accum dep − impairment</li><li><b>Revaluation:</b> FV − later dep − impairment (whole class)</li></ul></div>
+  <div class="box gold"><h4>Depreciation</h4><ul><li>Over useful life to residual value</li><li>Review UL/residual/method annually (estimate → prospective)</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Reval ↑ → OCI (surplus); ↓ → P/L (unless reverses surplus)</li><li>Deferred tax on revaluation → OCI</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Acquisition</div><table class="j"><tr><td>Dr PPE</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Bank / Payable</td><td>x</td></tr></table>
+    <div class="jt">Depreciation</div><table class="j"><tr><td>Dr Depreciation (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Accum depreciation</td><td>x</td></tr></table>
+    <div class="jt">Revaluation increase</div><table class="j"><tr><td>Dr PPE / Accum dep</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Revaluation surplus (OCI)</td><td>x</td></tr></table>
+    <div class="jt">Disposal</div><table class="j"><tr><td>Dr Bank, Dr Accum dep</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr PPE, Cr/Dr profit/loss</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Existence</b> <span class="chip hi">high</span> — assets exist → <b>physically inspect</b> register→floor.</li>
+      <li><b>Completeness</b> <span class="chip lo">low</span> — all recorded → floor→register; scan repairs for capital items.</li>
+      <li><b>Rights</b> <span class="chip lo">low</span> — owned → <b>title deeds</b>, vehicle papers, invoices.</li>
+      <li><b>Valuation</b> <span class="chip hi">high</span> — cost, depreciation &amp; impairment correct → recalc depreciation; reval = valuer's report; impairment indicators.</li>
+      <li><b>Cut-off</b> <span class="chip lo">low</span> — additions/disposals in right period.</li>
+      <li><b>Presentation</b> <span class="chip lo">low</span> — IAS 16 disclosure (reconciliation, policy) → AFS review.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IAS 40 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IAS 40 — Investment Property</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>Definition / Classify</h4><ul><li>Land/building held to earn <b>rentals</b> or for <b>capital appreciation</b></li><li>NOT owner-occupied (IAS 16), NOT for sale (IAS 2/IFRS 5)</li></ul></div>
+  <div class="box teal"><h4>Recognition</h4><ul><li>Probable benefits + cost reliable (as IAS 16)</li></ul></div>
+  <div class="box orange"><h4>Initial measurement</h4><ul><li><b>Cost</b> + transaction costs</li></ul></div>
+  <div class="center"><span class="std">IAS 40</span><span class="name">Investment Property</span></div>
+  <div class="box blue"><h4>Subsequent — models</h4><ul><li><b>Fair value model:</b> remeasure to FV; changes → <b>P/L</b>; <b>no depreciation</b></li><li><b>Cost model:</b> as IAS 16</li><li>Policy applies to ALL IP</li></ul></div>
+  <div class="box gold"><h4>Change of use</h4><ul><li>Transfer in/out when use changes (e.g. owner-occupied → IP)</li><li>FV model: remeasure at transfer date</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>FV model = no depreciation (common error)</li><li>Deferred tax on FV gains</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Acquisition</div><table class="j"><tr><td>Dr Investment property</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Bank</td><td>x</td></tr></table>
+    <div class="jt">FV increase (FV model)</div><table class="j"><tr><td>Dr Investment property</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr FV adjustment (P/L)</td><td>x</td></tr></table>
+    <div class="jt">FV decrease</div><table class="j"><tr><td>Dr FV adjustment (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Investment property</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Existence/Rights</b> <span class="chip lo">low</span> — exists &amp; owned → title deeds; physical inspection.</li>
+      <li><b>Valuation</b> <span class="chip hi">high</span> — fair value reasonable → <b>independent valuer</b> (competence/objectivity); recompute; market comparison.</li>
+      <li><b>Completeness</b> <span class="chip lo">low</span> — all IP recorded → fixed-asset register; minutes.</li>
+      <li><b>Classification</b> <span class="chip hi">high</span> — IP vs owner-occupied vs inventory → inspect use; lease agreements.</li>
+      <li><b>Presentation</b> <span class="chip lo">low</span> — IAS 40 disclosure (model, FV method, assumptions).</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IAS 38 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IAS 38 — Intangible Assets</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>Definition / Classify</h4><ul><li><b>Identifiable</b> (separable OR contractual/legal) non-monetary asset with <b>no physical substance</b></li><li>Controlled; future benefits</li></ul></div>
+  <div class="box teal"><h4>Recognition</h4><ul><li>Probable benefits + cost reliable</li><li>Research → <b>expense</b></li><li>Development → capitalise if <b>PIRATE</b></li><li>Internally-gen goodwill/brands → no</li></ul></div>
+  <div class="box orange"><h4>Initial measurement</h4><ul><li>Cost (purchased) or directly attributable development cost</li></ul></div>
+  <div class="center"><span class="std">IAS 38</span><span class="name">Intangible Assets</span></div>
+  <div class="box blue"><h4>Subsequent — models</h4><ul><li>Cost or revaluation (only if <b>active market</b>)</li><li><b>Finite:</b> amortise over UL</li><li><b>Indefinite:</b> no amortisation, annual impairment</li></ul></div>
+  <div class="box gold"><h4>PIRATE (capitalise dev.)</h4><ul><li>Probable benefits · Intention to complete · Resources · Ability to use/sell · Technical feasibility · Expenditure measurable</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Past research expensed → cannot reinstate</li><li>Amortisation starts when available for use</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Research</div><table class="j"><tr><td>Dr Research expense (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Bank</td><td>x</td></tr></table>
+    <div class="jt">Development (capitalised)</div><table class="j"><tr><td>Dr Intangible asset</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Bank</td><td>x</td></tr></table>
+    <div class="jt">Amortisation</div><table class="j"><tr><td>Dr Amortisation (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Accum amortisation</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Existence/Rights</b> <span class="chip lo">low</span>/<span class="chip hi">high</span> — intangible exists &amp; owned → registration/contracts (high risk = no physical form).</li>
+      <li><b>Valuation</b> <span class="chip hi">high</span> — cost &amp; amortisation/impairment → recalc; impairment for indefinite-life.</li>
+      <li><b>Recognition (Dev.)</b> <span class="chip hi">high</span> — PIRATE met before capitalising → inspect evidence of each criterion.</li>
+      <li><b>Completeness</b> <span class="chip lo">low</span> — all recorded.</li>
+      <li><b>Presentation</b> <span class="chip lo">low</span> — IAS 38 disclosure (finite/indefinite, UL).</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IAS 36 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IAS 36 — Impairment of Assets</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>Scope</h4><ul><li>Most non-financial assets: PPE, intangibles, goodwill, investments in subs/associates</li></ul></div>
+  <div class="box teal"><h4>Trigger (when to test)</h4><ul><li>Indicators: external (market, rates) / internal (damage, obsolescence, worse performance)</li><li><b>Annual</b>: goodwill &amp; indefinite-life intangibles</li></ul></div>
+  <div class="box orange"><h4>Measure</h4><ul><li>Impairment = carrying amount − <b>recoverable amount</b></li><li>Recoverable = <b>higher of</b> FV less costs of disposal &amp; <b>value in use</b> (PV future CF, pre-tax rate)</li></ul></div>
+  <div class="center"><span class="std">IAS 36</span><span class="name">Impairment</span></div>
+  <div class="box blue"><h4>CGU</h4><ul><li>Test the cash-generating unit if no independent cash flows</li><li>Allocate loss: <b>goodwill first</b>, then pro-rata</li></ul></div>
+  <div class="box gold"><h4>Reversal</h4><ul><li>Reverse if indicators gone — limited to depreciated historical cost</li><li><b>Goodwill: never reversed</b></li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>VIU uses pre-tax rate &amp; pre-financing cash flows</li><li>Exclude future restructuring not yet committed</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Recognise impairment</div><table class="j"><tr><td>Dr Impairment loss (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Accum impairment</td><td>x</td></tr></table>
+    <div class="jt">Reversal (not goodwill)</div><table class="j"><tr><td>Dr Asset / Accum impairment</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Reversal of impairment (P/L)</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Valuation</b> <span class="chip hi">high</span> — recoverable amount correct → re-perform VIU; assess discount rate vs peers; agree cash flows to budgets/contracts.</li>
+      <li><b>Completeness</b> <span class="chip hi">high</span> — all impairment indicators identified → discuss with mgmt; review industry/market.</li>
+      <li><b>Accuracy</b> <span class="chip hi">high</span> — calc &amp; allocation (goodwill first) → recalc; trace JE to GL.</li>
+      <li><b>Presentation</b> <span class="chip lo">low</span> — IAS 36 disclosure (assumptions, sensitivities).</li>
+      <li><b>Mgmt bias</b> <span class="chip hi">high</span> — assess optimism in assumptions; back-test prior estimates.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IFRS 5 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IFRS 5 — Non-current Assets Held for Sale</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>Classify as HFS</h4><ul><li>Carrying amount recovered <b>principally through sale</b>, not use</li><li>Available for <b>immediate sale</b> in present condition</li></ul></div>
+  <div class="box teal"><h4>"Highly probable"</h4><ul><li>Committed plan + active marketing</li><li>Reasonable price</li><li>Sale expected within <b>12 months</b></li></ul></div>
+  <div class="box orange"><h4>Measure</h4><ul><li><b>Lower of</b> carrying amount &amp; <b>fair value less costs to sell</b></li><li><b>Stop depreciating</b></li></ul></div>
+  <div class="center"><span class="std">IFRS 5</span><span class="name">Held for Sale</span></div>
+  <div class="box blue"><h4>Presentation</h4><ul><li>Separately as current asset (and liabilities of disposal group)</li></ul></div>
+  <div class="box gold"><h4>Discontinued op</h4><ul><li>Component = separate major line/geographic area</li><li>Results shown separately (one line, P/L)</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Fails criteria → reclassify back at lower of CA (had it not been HFS) &amp; recoverable amount</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Classify / remeasure</div><table class="j"><tr><td>Dr NCA held for sale</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr PPE</td><td>x</td></tr></table>
+    <div class="jt">Write-down to FV less CTS</div><table class="j"><tr><td>Dr Impairment loss (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr NCA held for sale</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Classification</b> <span class="chip hi">high</span> — HFS criteria met → inspect board approval, marketing, plan.</li>
+      <li><b>Valuation</b> <span class="chip hi">high</span> — lower of CA &amp; FVLCS → valuer report; recompute; check depreciation stopped.</li>
+      <li><b>Existence/Rights</b> <span class="chip lo">low</span> — title deeds; inspection.</li>
+      <li><b>Presentation</b> <span class="chip hi">high</span> — separate presentation &amp; discontinued-op disclosure → AFS review.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IFRS 16 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IFRS 16 — Leases (lessee)</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>Definition / Classify</h4><ul><li>Contract conveys <b>right to control use</b> of an <b>identified asset</b> for a period for consideration</li><li>Exemptions: short-term ≤12m, low-value → expense</li></ul></div>
+  <div class="box teal"><h4>Recognition</h4><ul><li>At commencement: recognise <b>ROU asset</b> + <b>lease liability</b></li></ul></div>
+  <div class="box orange"><h4>Initial measurement</h4><ul><li><b>Liability</b> = PV of lease payments @ implicit rate (or IBR)</li><li><b>ROU</b> = liability + IDC + prepayments + dismantling − incentives</li></ul></div>
+  <div class="center"><span class="std">IFRS 16</span><span class="name">Leases</span></div>
+  <div class="box blue"><h4>Subsequent</h4><ul><li>Liability: amortised cost (+interest −payments)</li><li>ROU: cost − depreciation − impairment (shorter of term/UL)</li></ul></div>
+  <div class="box gold"><h4>Lessor</h4><ul><li><b>Finance lease</b>: derecognise asset → net investment (receivable)</li><li><b>Operating</b>: keep asset, rental income</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Payments incl. RV guarantees, options reasonably certain</li><li>Split each payment: interest vs capital</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals (lessee)</h3>
+    <div class="jt">Commencement</div><table class="j"><tr><td>Dr Right-of-use asset</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Lease liability</td><td>x</td></tr></table>
+    <div class="jt">Payment</div><table class="j"><tr><td>Dr Lease liability, Dr Interest</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Bank</td><td>x</td></tr></table>
+    <div class="jt">Depreciation</div><table class="j"><tr><td>Dr Depreciation (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Accum dep (ROU)</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Completeness</b> <span class="chip hi">high</span> — all leases recognised → scan rentals in GL for off-balance leases.</li>
+      <li><b>Valuation</b> <span class="chip hi">high</span> — PV of liability &amp; ROU correct → recompute discounting; agree inputs to contract.</li>
+      <li><b>Rights/Obligations</b> <span class="chip lo">low</span> — signed lease; lessee is entity.</li>
+      <li><b>Classification</b> <span class="chip hi">high</span> — exemptions applied correctly → assess low-value/short-term.</li>
+      <li><b>Presentation</b> <span class="chip lo">low</span> — IFRS 16 maturity &amp; expense disclosure.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IFRS 15 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IFRS 15 — Revenue from Contracts with Customers</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>Step 1–2</h4><ul><li>Identify the <b>contract</b> (approved, rights, payment terms, commercial substance)</li><li>Identify <b>performance obligations</b> (distinct goods/services)</li></ul></div>
+  <div class="box teal"><h4>Step 3–4</h4><ul><li><b>Transaction price</b> (variable consideration + constraint, financing, non-cash)</li><li><b>Allocate</b> by relative stand-alone selling price</li></ul></div>
+  <div class="box orange"><h4>Step 5 — recognise</h4><ul><li>When/as PO satisfied = <b>control transfers</b></li><li>Over time (3 criteria) or point in time (5 indicators)</li></ul></div>
+  <div class="center"><span class="std">IFRS 15</span><span class="name">Revenue</span></div>
+  <div class="box blue"><h4>Over time criteria</h4><ul><li>Customer consumes as performed; or</li><li>Creates/enhances asset customer controls; or</li><li>No alternative use + right to payment</li></ul></div>
+  <div class="box gold"><h4>Special</h4><ul><li>Principal (gross) vs agent (net)</li><li>Contract asset / liability (deferred income)</li><li>Right of return → refund liability</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Control, not risks &amp; rewards, drives timing</li><li>Warranties: assurance vs service</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Sale</div><table class="j"><tr><td>Dr Bank / Receivable</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Revenue</td><td>x</td></tr></table>
+    <div class="jt">Advance received</div><table class="j"><tr><td>Dr Bank</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Contract liability</td><td>x</td></tr></table>
+    <div class="jt">PO satisfied later</div><table class="j"><tr><td>Dr Contract liability</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Revenue</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Occurrence</b> <span class="chip hi">high</span> — revenue is real (fraud risk) → agree to delivery notes/contracts.</li>
+      <li><b>Completeness</b> <span class="chip lo">low</span> — all sales recorded → trace dispatches to invoices.</li>
+      <li><b>Accuracy</b> <span class="chip hi">high</span> — correct amount &amp; allocation → recompute; price list.</li>
+      <li><b>Cut-off</b> <span class="chip hi">high</span> — right period (when control transfers) → inspect delivery dates around y/e.</li>
+      <li><b>Presentation</b> <span class="chip lo">low</span> — IFRS 15 disaggregation disclosure.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IFRS 9 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IFRS 9 — Financial Instruments</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>Classify (assets)</h4><ul><li>Business model + <b>SPPI</b> test</li><li>Amortised cost / FVOCI (debt) / FVTPL</li><li>Equity: FVTPL default; FVOCI election (no recycling)</li></ul></div>
+  <div class="box teal"><h4>Initial measurement</h4><ul><li>Fair value + transaction costs</li><li>(FVTPL: costs → P/L)</li></ul></div>
+  <div class="box orange"><h4>Subsequent</h4><ul><li>Amortised cost = effective interest</li><li>FVOCI debt: FV→OCI; interest/ECL/FX→P/L; recycle</li><li>FVTPL: FV→P/L</li></ul></div>
+  <div class="center"><span class="std">IFRS 9</span><span class="name">Financial Instruments</span></div>
+  <div class="box blue"><h4>Impairment (ECL)</h4><ul><li>3-stage expected credit loss model</li><li><b>Simplified</b> (lifetime ECL) for trade receivables</li></ul></div>
+  <div class="box gold"><h4>Liabilities</h4><ul><li>Amortised cost (default) or FVTPL</li><li>Own-credit FV change → OCI</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Derecognise when rights expire / transferred with risks</li><li>Hedge accounting optional</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Acquire asset</div><table class="j"><tr><td>Dr Financial asset</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Bank</td><td>x</td></tr></table>
+    <div class="jt">ECL</div><table class="j"><tr><td>Dr Impairment / ECL (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Loss allowance</td><td>x</td></tr></table>
+    <div class="jt">FV gain (FVTPL)</div><table class="j"><tr><td>Dr Financial asset</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr FV gain (P/L)</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Classification</b> <span class="chip hi">high</span> — business model &amp; SPPI correct → inspect policy, instruments.</li>
+      <li><b>Valuation</b> <span class="chip hi">high</span> — FV/amortised cost &amp; ECL → recompute; expert for FV; assess ECL assumptions.</li>
+      <li><b>Existence/Rights</b> <span class="chip lo">low</span> — confirmations from banks/counterparties.</li>
+      <li><b>Completeness</b> <span class="chip lo">low</span> — all instruments recorded → minutes, agreements.</li>
+      <li><b>Presentation</b> <span class="chip hi">high</span> — IFRS 7 risk disclosure → AFS review.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IAS 37 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IAS 37 — Provisions, Contingent Liabilities &amp; Assets</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>Classify</h4><ul><li><b>Provision</b>: liability of uncertain timing/amount</li><li><b>Contingent liability</b>: possible / not probable → disclose</li><li><b>Contingent asset</b>: disclose if probable</li></ul></div>
+  <div class="box teal"><h4>Recognise provision (ALL)</h4><ul><li><b>Present obligation</b> (legal/constructive) from past event</li><li><b>Probable</b> outflow</li><li><b>Reliable estimate</b></li></ul></div>
+  <div class="box orange"><h4>Measure</h4><ul><li><b>Best estimate</b> of expenditure</li><li>Expected value (large pop) / most likely (single)</li><li>Discount if material</li></ul></div>
+  <div class="center"><span class="std">IAS 37</span><span class="name">Provisions</span></div>
+  <div class="box blue"><h4>Special cases</h4><ul><li>Onerous contract → provide unavoidable net cost</li><li>Restructuring → detailed plan + announced</li><li>No future operating losses</li></ul></div>
+  <div class="box gold"><h4>Reimbursement</h4><ul><li>Recognise asset only if virtually certain; ≤ provision</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Unwind discount → finance cost</li><li>Review &amp; adjust each year-end</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Raise provision</div><table class="j"><tr><td>Dr Expense (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Provision</td><td>x</td></tr></table>
+    <div class="jt">Unwind discount</div><table class="j"><tr><td>Dr Finance cost (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Provision</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Completeness</b> <span class="chip hi">high</span> — all obligations provided → minutes, legal letters, post-y/e payments.</li>
+      <li><b>Valuation</b> <span class="chip hi">high</span> — best estimate → recompute; expert/legal confirmation; discount rate.</li>
+      <li><b>Existence/Obligation</b> <span class="chip hi">high</span> — present obligation exists → inspect contracts, correspondence.</li>
+      <li><b>Presentation</b> <span class="chip hi">high</span> — provision vs contingent disclosure → AFS review.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IAS 12 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IAS 12 — Income Taxes (incl. Deferred Tax)</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>Components</h4><ul><li><b>Current tax</b> (per Tax Act on taxable profit)</li><li><b>Deferred tax</b> (temporary differences)</li></ul></div>
+  <div class="box teal"><h4>Deferred tax = </h4><ul><li>(Carrying amount − <b>tax base</b>) × tax rate</li><li>Taxable temp diff → <b>DTL</b></li><li>Deductible temp diff / assessed loss → <b>DTA</b> (if probable profit)</li></ul></div>
+  <div class="box orange"><h4>Tax base</h4><ul><li>Asset: future deductible amount</li><li>Liability: CA − future deductible</li></ul></div>
+  <div class="center"><span class="std">IAS 12</span><span class="name">Income Taxes</span></div>
+  <div class="box blue"><h4>Rate</h4><ul><li>Expected rate when it reverses</li><li>Capital items → CGT inclusion (e.g. 80%) → effective rate</li></ul></div>
+  <div class="box gold"><h4>Exemptions</h4><ul><li>Initial recognition exemption</li><li>Tax on OCI/equity items → OCI/equity</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>DTA only if probable future taxable profit (judgement)</li><li>Offset only if legal right</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Current tax</div><table class="j"><tr><td>Dr Income tax expense (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Current tax payable</td><td>x</td></tr></table>
+    <div class="jt">Deferred tax (DTL)</div><table class="j"><tr><td>Dr Income tax expense (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Deferred tax liability</td><td>x</td></tr></table>
+    <div class="jt">DTA raised</div><table class="j"><tr><td>Dr Deferred tax asset</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Income tax expense</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Accuracy/Valuation</b> <span class="chip hi">high</span> — temp diffs &amp; rate correct → recompute tax base vs CA; specialist review.</li>
+      <li><b>Recoverability (DTA)</b> <span class="chip hi">high</span> — probable future profit → inspect budgets; assess assumptions.</li>
+      <li><b>Completeness</b> <span class="chip hi">high</span> — all temp diffs included → reconcile to fixed assets, provisions.</li>
+      <li><b>Presentation</b> <span class="chip lo">low</span> — IAS 12 tax-rate reconciliation disclosure.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IAS 21 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IAS 21 — Foreign Exchange</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>Key terms</h4><ul><li><b>Functional currency</b> = currency of the primary economic environment</li><li>Presentation currency may differ</li></ul></div>
+  <div class="box teal"><h4>Initial</h4><ul><li>Record foreign transaction at the <b>spot rate</b> on transaction date</li></ul></div>
+  <div class="box orange"><h4>Year-end — monetary</h4><ul><li><b>Monetary</b> items (cash, debtors, creditors, loans) → <b>closing rate</b></li><li>Differences → <b>P/L</b></li></ul></div>
+  <div class="center"><span class="std">IAS 21</span><span class="name">Foreign Exchange</span></div>
+  <div class="box blue"><h4>Year-end — non-monetary</h4><ul><li>At cost → historical rate</li><li>At fair value → rate when FV measured</li></ul></div>
+  <div class="box gold"><h4>Foreign operation</h4><ul><li>Assets/liabilities → closing rate</li><li>Income → average rate</li><li>Differences → <b>OCI (FCTR)</b>, recycled on disposal</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Forex on a capital asset (pre-use) may defer (link IAS 16/IAS 23)</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Forex loss on creditor</div><table class="j"><tr><td>Dr Forex loss (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Foreign creditor</td><td>x</td></tr></table>
+    <div class="jt">Forex gain on debtor</div><table class="j"><tr><td>Dr Foreign debtor</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Forex gain (P/L)</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Accuracy/Valuation</b> <span class="chip hi">high</span> — correct rates applied → agree rates to a credible source; recompute translation.</li>
+      <li><b>Completeness</b> <span class="chip lo">low</span> — all forex items retranslated → review GL for foreign balances.</li>
+      <li><b>Classification</b> <span class="chip hi">high</span> — monetary vs non-monetary; P/L vs OCI (FCTR).</li>
+      <li><b>Presentation</b> <span class="chip lo">low</span> — IAS 21 disclosure (functional currency, FCTR).</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IAS 23 + IAS 20 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IAS 23 Borrowing Costs &nbsp;·&nbsp; IAS 20 Government Grants</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>IAS 23 — capitalise when</h4><ul><li>Directly attributable to a <b>qualifying asset</b> (substantial time to get ready)</li><li>Else → expense</li></ul></div>
+  <div class="box teal"><h4>IAS 23 — amount</h4><ul><li>Specific loan: actual − investment income on surplus</li><li>General: capitalisation rate × expenditure</li></ul></div>
+  <div class="box orange"><h4>IAS 23 — timing</h4><ul><li>Start: expenditure + borrowing + activities</li><li>Suspend when idle; stop when ready</li></ul></div>
+  <div class="center"><span class="std">IAS 23 / 20</span><span class="name">Borrowing Costs · Grants</span></div>
+  <div class="box blue"><h4>IAS 20 — recognise when</h4><ul><li><b>Reasonable assurance</b> of compliance AND receipt</li><li>Match to related costs (income approach)</li></ul></div>
+  <div class="box gold"><h4>IAS 20 — presentation</h4><ul><li>Asset grant: deferred income OR deduct from asset cost</li><li>Income grant: P/L or net against expense</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Repayment of grant → change in estimate (prospective)</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Capitalise borrowing cost</div><table class="j"><tr><td>Dr Qualifying asset</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Bank / Interest payable</td><td>x</td></tr></table>
+    <div class="jt">Grant (deferred income)</div><table class="j"><tr><td>Dr Bank</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Deferred income</td><td>x</td></tr></table>
+    <div class="jt">Release grant</div><table class="j"><tr><td>Dr Deferred income</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Income / Depreciation</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Accuracy</b> <span class="chip hi">high</span> — borrowing cost &amp; grant release correct → recompute capitalisation rate &amp; period.</li>
+      <li><b>Existence/Occurrence</b> <span class="chip lo">low</span> — grant agreement; loan agreement.</li>
+      <li><b>Completeness</b> <span class="chip lo">low</span> — all qualifying costs/grants recorded.</li>
+      <li><b>Presentation</b> <span class="chip lo">low</span> — IAS 23/20 disclosure (rate, grant policy).</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IAS 19 + IFRS 2 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IAS 19 Employee Benefits &nbsp;·&nbsp; IFRS 2 Share-based Payments</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>IAS 19 — short-term</h4><ul><li>Salaries, leave, bonus → accrue undiscounted in period earned</li></ul></div>
+  <div class="box teal"><h4>IAS 19 — post-employment</h4><ul><li><b>Defined contribution</b>: expense contributions</li><li><b>Defined benefit</b>: net DB liability; service cost &amp; net interest → P/L; remeasurements → OCI</li></ul></div>
+  <div class="box orange"><h4>IFRS 2 — equity-settled</h4><ul><li>Measure at <b>grant-date FV</b></li><li>Expense over <b>vesting period</b></li><li>No remeasurement (adjust for service/non-market conditions)</li></ul></div>
+  <div class="center"><span class="std">IAS 19 / IFRS 2</span><span class="name">Employee &amp; Share-based</span></div>
+  <div class="box blue"><h4>IFRS 2 — cash-settled</h4><ul><li>FV of liability, <b>remeasured each period</b> → P/L</li><li>Until settled</li></ul></div>
+  <div class="box gold"><h4>Vesting conditions</h4><ul><li>Service/performance (non-market) → adjust number expected to vest</li><li>Market condition → built into grant-date FV</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Equity-settled credit goes to <b>equity reserve</b> (not liability)</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">DB / employee cost</div><table class="j"><tr><td>Dr Employee benefit expense</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Accrual / Net DB liability</td><td>x</td></tr></table>
+    <div class="jt">Equity-settled SBP</div><table class="j"><tr><td>Dr Employee cost (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr SBP reserve (equity)</td><td>x</td></tr></table>
+    <div class="jt">Cash-settled SBP</div><table class="j"><tr><td>Dr Employee cost (P/L)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Liability</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions</h3>
+    <ul class="as">
+      <li><b>Valuation/Accuracy</b> <span class="chip hi">high</span> — FV &amp; actuarial estimates → expert/actuary; recompute expense over vesting.</li>
+      <li><b>Completeness</b> <span class="chip lo">low</span> — all schemes recorded → minutes, scheme rules.</li>
+      <li><b>Classification</b> <span class="chip hi">high</span> — equity vs cash-settled; DB vs DC → inspect terms.</li>
+      <li><b>Presentation</b> <span class="chip lo">low</span> — IAS 19/IFRS 2 disclosure.</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+<!-- ===================== IAS 8 + IAS 10 ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">IAS 8 Policies/Estimates/Errors &nbsp;·&nbsp; IAS 10 Events After Reporting</h2><span class="brand">IAC 2026</span></div>
+<div class="map">
+  <div class="box pink"><h4>IAS 8 — policy change</h4><ul><li>Apply <b>retrospectively</b> (restate comparatives &amp; opening RE)</li><li>Only if required by a standard or more relevant/reliable</li></ul></div>
+  <div class="box teal"><h4>IAS 8 — estimate change</h4><ul><li><b>Prospective</b> (current &amp; future)</li><li>e.g. useful life, residual, ECL, provision</li></ul></div>
+  <div class="box orange"><h4>IAS 8 — prior error</h4><ul><li><b>Retrospective restatement</b> (restate comparatives &amp; opening balances)</li></ul></div>
+  <div class="center"><span class="std">IAS 8 / 10</span><span class="name">Policies · Events</span></div>
+  <div class="box blue"><h4>IAS 10 — adjusting</h4><ul><li>Evidence of conditions <b>at</b> year-end → adjust AFS</li><li>e.g. debtor insolvency, NRV, court ruling, error</li></ul></div>
+  <div class="box gold"><h4>IAS 10 — non-adjusting</h4><ul><li>Arose <b>after</b> year-end → disclose only</li><li>e.g. fire, dividend declared, share issue</li></ul></div>
+  <div class="box pur"><h4>Key tips</h4><ul><li>Going concern lost after y/e → always adjust the basis</li><li>Dividends declared after y/e → not a liability</li></ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Key journals</h3>
+    <div class="jt">Prior-period error / policy</div><table class="j"><tr><td>Dr/Cr Retained earnings (opening)</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr/Dr Asset / Liability</td><td>x</td></tr></table>
+    <div class="jt">Adjusting event</div><table class="j"><tr><td>Dr Expense / impairment</td><td>x</td></tr><tr><td>&nbsp;&nbsp;Cr Asset / Provision</td><td>x</td></tr></table>
+  </div>
+  <div class="sect a"><h3>Audit assertions / focus</h3>
+    <ul class="as">
+      <li><b>Accuracy</b> <span class="chip hi">high</span> — restatement computed &amp; classified correctly → recompute; trace to comparatives.</li>
+      <li><b>Completeness</b> <span class="chip hi">high</span> — all subsequent events identified → review minutes, post-y/e records to report date.</li>
+      <li><b>Classification</b> <span class="chip hi">high</span> — policy vs estimate vs error; adjusting vs non-adjusting → assess nature.</li>
+      <li><b>Presentation</b> <span class="chip hi">high</span> — IAS 8/10 disclosure (nature, amount, reason).</li>
+    </ul>
+  </div>
+</div>
+</div>
+
+</div>
+</body>
+</html>
