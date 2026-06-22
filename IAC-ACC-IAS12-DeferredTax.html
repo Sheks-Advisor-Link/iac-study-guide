@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IAS 12 — Deferred Tax &amp; Tax Rate Reconciliation</title>
+<style>
+  :root{ --ink:#161a1f; --muted:#5b626d; --line:#bcc3cc; --accent:#234d7a; --accent2:#2c5d92; --gold:#6d4d12; --green:#1f6b3a; --red:#9a3b3b;
+         --soft:#f5f8fc; --soft2:#e9f0f8; --exbg:#eef8f0; --kbg:#fbf1e8; --calcbg:#eef4fb; }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:10.2px;line-height:1.48}
+  .wrap{max-width:880px;margin:0 auto;padding:20px}
+  h1{font-size:20px;margin:0;color:var(--accent)}
+  .sub{color:var(--muted);font-size:9.5px;margin:2px 0 8px}
+  .banner{background:#fff7e6;border:1px solid #e7c97a;color:#7a5300;border-radius:4px;padding:6px 10px;font-size:9.6px;margin-bottom:9px}
+  h2{font-size:13.5px;margin:15px 0 6px;color:#fff;background:var(--accent);padding:5px 9px;border-radius:3px}
+  h2.g{background:var(--green)}h2.gold{background:var(--gold)}h2.r{background:var(--red)}
+  h3{font-size:11.5px;margin:9px 0 3px;color:var(--accent);font-weight:700}
+  p{margin:4px 0}
+  ul,ol{margin:3px 0 5px 16px;padding:0}
+  li{margin:3px 0}
+  b{color:#111}
+  table{width:100%;border-collapse:collapse;margin:6px 0;font-size:9.6px}
+  th,td{border:1px solid var(--line);padding:4px 7px;text-align:left;vertical-align:top}
+  th{background:var(--soft2);color:var(--accent);font-weight:700;font-size:8.8px;text-transform:uppercase}
+  td.c{white-space:nowrap;font-weight:700;color:var(--accent2)}
+  td.r{text-align:right;white-space:nowrap}
+  .calc{background:var(--calcbg);border:1px solid #bcd3ec;border-radius:5px;padding:7px 11px;margin:7px 0}
+  .calc h3{margin:0 0 3px;color:var(--accent)}
+  .calc table{font-size:9.5px}
+  .calc td:last-child{text-align:right;white-space:nowrap}
+  .k{background:var(--kbg);border-left:3px solid var(--gold);padding:6px 11px;margin:7px 0;border-radius:0 4px 4px 0;font-size:9.6px}
+  .k b.lbl{color:var(--gold);display:block;font-size:8.6px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  .ex{background:var(--exbg);border-left:3px solid var(--green);padding:6px 11px;margin:7px 0;border-radius:0 4px 4px 0}
+  .ex b.lbl{color:var(--green);display:block;font-size:8.6px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  @page{size:A4;margin:13mm 12mm;@bottom-right{content:"p. " counter(page);font-size:8.5px;color:#999}}
+  h2,h3{break-after:avoid}
+  table,.k,.ex,.calc{break-inside:avoid}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>IAS 12 — Deferred Tax &amp; Tax-Rate Reconciliation</h1>
+<div class="sub">Rules · the calculation formats · a full worked solution · SAICA IAC 2026 · T. Van Heerden &nbsp;|&nbsp; company rate 27% · CGT inclusion 80% (effective 21.6%)</div>
+
+<div class="banner"><b>Two engines in IAS 12:</b> <b>(1) Current tax</b> = taxable income × rate (start from accounting profit and adjust). <b>(2) Deferred tax</b> = the tax effect of <b>temporary differences</b> (Carrying Amount vs Tax Base) × the rate expected on reversal. The <b>tax-rate reconciliation</b> then proves the total tax expense by starting at "accounting profit × 27%" and adjusting only for <b>permanent differences, rate differences &amp; prior-year items</b> — temporary differences never appear (deferred tax already handles them).</div>
+
+<!-- 1 -->
+<h2>1 · The core rules</h2>
+<h3>Tax base (the amount the asset/liability is "worth" to SARS)</h3>
+<ul>
+<li><b>Asset:</b> tax base = the amount that will be <b>deductible for tax in future</b> = cost − tax allowances already claimed. (If the economic benefits aren't taxable, tax base = carrying amount.)</li>
+<li><b>Liability:</b> tax base = carrying amount − the amount <b>deductible for tax in future</b>. (For revenue received in advance that's already taxed: tax base = CA − amount not taxable in future = often 0.)</li>
+</ul>
+<h3>Temporary differences → DTL or DTA</h3>
+<table>
+<tr><th>Situation</th><th>Type</th><th>Gives</th><th>Why</th></tr>
+<tr><td>Asset: <b>CA &gt; TB</b> &nbsp;(or Liability: CA &lt; TB)</td><td><b>Taxable</b> temp diff</td><td><b>Deferred tax LIABILITY</b></td><td>Future taxable profit will be higher (e.g. tax allowances claimed faster than depreciation).</td></tr>
+<tr><td>Asset: <b>CA &lt; TB</b> &nbsp;(or Liability: CA &gt; TB)</td><td><b>Deductible</b> temp diff</td><td><b>Deferred tax ASSET</b></td><td>Future tax deduction available (e.g. provision expensed now, deductible later); raise a DTA only if <b>probable future taxable profit</b>.</td></tr>
+</table>
+<h3>Rate &amp; "manner of recovery"</h3>
+<ul>
+<li>Use the rate <b>expected when the difference reverses</b>. Recovery <b>through use</b> → normal rate <b>27%</b>. Recovery <b>through sale</b> (e.g. land, investment property at fair value) → <b>CGT rate</b> (27% × 80% = <b>21.6%</b>). Investment property at fair value is <b>presumed</b> recovered through sale.</li>
+</ul>
+<h3>Exemptions &amp; where deferred tax goes</h3>
+<ul>
+<li><b>Initial recognition exemption:</b> no deferred tax on the initial recognition of an asset/liability in a transaction that is <b>not a business combination</b> and affects <b>neither</b> accounting <b>nor</b> taxable profit; <b>no deferred tax on goodwill</b>.</li>
+<li>Deferred tax on items recognised in <b>OCI/equity</b> (e.g. a revaluation surplus, FVOCI) goes to <b>OCI/equity</b>, not P/L.</li>
+<li>Raise a <b>DTA on an assessed loss / unused credits</b> only to the extent future taxable profit is <b>probable</b>.</li>
+</ul>
+
+<!-- 2 -->
+<h2 class="gold">2 · Permanent vs temporary differences (this is the key sort)</h2>
+<table>
+<tr><th>Permanent differences (NO deferred tax — appear in the RECON)</th><th>Temporary differences (deferred tax — do NOT appear in the recon)</th></tr>
+<tr><td>Non-deductible expenses: <b>fines &amp; penalties</b>, non-deductible <b>donations</b>, certain legal fees, non-deductible portion of fringe/entertainment, depreciation on assets with no tax allowance. <b>Exempt income:</b> local <b>dividends</b>, certain government grants. <b>Different-rate items:</b> the <b>non-taxable portion of a capital gain</b> (20% for companies). <b>Prior-year</b> under/over provision; <b>unrecognised</b> DTA/assessed loss.</td><td>Depreciation vs <b>wear-and-tear/s12C</b>; <b>provisions</b> (leave pay, warranty, bonus) deductible only when paid; <b>income received in advance</b>; <b>prepaid</b> expenses; <b>doubtful-debt</b> allowance vs s11(j); revaluations; <b>assessed loss</b> raised as a DTA.</td></tr>
+</table>
+<div class="k"><b class="lbl">The golden split</b><b>Permanent</b> differences never reverse → they change the <b>effective tax rate</b> → they go in the <b>tax-rate reconciliation</b>. <b>Temporary</b> differences reverse over time → they are dealt with by <b>deferred tax</b> → they do <b>NOT</b> go in the reconciliation.</div>
+
+<!-- 3 -->
+<h2 class="g">3 · The deferred-tax calculation FORMAT (balance-sheet method)</h2>
+<div class="calc"><h3>Per item: CA − TB → temp diff → × rate</h3>
+<table>
+<tr><th>Item</th><th>Carrying amount</th><th>Tax base</th><th>Temp diff</th><th>Rate</th><th>Deferred tax</th></tr>
+<tr><td>Asset / liability A</td><td class="r">CA</td><td class="r">TB</td><td class="r">CA−TB</td><td class="r">27%</td><td class="r">DTL/(DTA)</td></tr>
+<tr><td>…</td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td></tr>
+<tr><td><b>Closing deferred tax balance (SFP)</b></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"><b>net DTL/(DTA)</b></td></tr>
+</table></div>
+<div class="calc"><h3>Movement reconciliation (→ the P/L charge)</h3>
+<table>
+<tr><td>Opening deferred tax balance</td><td>x</td></tr>
+<tr><td>Movement to <b>P/L</b> (deferred tax expense / (income)) — balancing</td><td>x</td></tr>
+<tr><td>Movement to <b>OCI/equity</b> (e.g. on revaluation)</td><td>x</td></tr>
+<tr><td><b>Closing deferred tax balance</b> (= per the calc above)</td><td><b>x</b></td></tr>
+</table></div>
+
+<!-- 4 -->
+<h2 class="g">4 · The tax-rate reconciliation FORMAT</h2>
+<div class="calc"><h3>Rand reconciliation</h3>
+<table>
+<tr><td>Accounting profit before tax × 27% &nbsp;(<i>expected/"normal" tax</i>)</td><td>x</td></tr>
+<tr><td>+ Tax effect of <b>non-deductible expenses</b> (amount × 27%)</td><td>x</td></tr>
+<tr><td>− Tax effect of <b>exempt income</b> (amount × 27%)</td><td>(x)</td></tr>
+<tr><td>± Tax effect of items taxed at a <b>different rate</b> (e.g. non-taxable 20% of a capital gain)</td><td>x</td></tr>
+<tr><td>± <b>Prior-year</b> under/(over) provision</td><td>x</td></tr>
+<tr><td>± <b>Unrecognised</b> deferred tax asset / assessed loss not raised</td><td>x</td></tr>
+<tr><td><b>= Tax expense per P/L</b> (current + deferred)</td><td><b>x</b></td></tr>
+</table></div>
+<div class="k"><b class="lbl">% version (also examinable)</b>Same structure expressed as %: start at <b>27%</b>, add/subtract each item's % effect (item × 27% ÷ accounting profit), and end at the <b>effective tax rate</b> (tax expense ÷ accounting profit).</div>
+
+<!-- 5 -->
+<h2 class="r">5 · Full worked solution</h2>
+<div class="ex"><b class="lbl">Facts (28 Feb 2026, rate 27%)</b>Accounting profit before tax = <b>R1 000 000</b>. It includes: depreciation R200 000 (machine); local dividends received R50 000 (exempt); a traffic fine R20 000 (non-deductible); donations R10 000 (non-deductible); and a <b>leave-pay provision raised of R40 000</b> (deductible only when paid). Tax allowance (s12C) on the machine = R300 000. Machine: cost R1 000 000, accumulated depreciation R200 000. Assume opening deferred tax = nil.</div>
+
+<div class="calc"><h3>Step 1 — Current tax (start at accounting profit, adjust)</h3>
+<table>
+<tr><td>Accounting profit before tax</td><td>1 000 000</td></tr>
+<tr><td>Add: depreciation (accounting, add back)</td><td>200 000</td></tr>
+<tr><td>Less: wear-and-tear / s12C (tax allowance)</td><td>(300 000)</td></tr>
+<tr><td>Add: fine (non-deductible)</td><td>20 000</td></tr>
+<tr><td>Add: donations (non-deductible)</td><td>10 000</td></tr>
+<tr><td>Less: dividends (exempt)</td><td>(50 000)</td></tr>
+<tr><td>Add: leave-pay provision (not yet deductible)</td><td>40 000</td></tr>
+<tr><td><b>Taxable income</b></td><td><b>920 000</b></td></tr>
+<tr><td><b>Current tax @ 27%</b></td><td><b>248 400</b></td></tr>
+</table></div>
+
+<div class="calc"><h3>Step 2 — Deferred tax (CA vs TB)</h3>
+<table>
+<tr><th>Item</th><th>CA</th><th>TB</th><th>Temp diff</th><th>DT @27%</th></tr>
+<tr><td>Machine (CA 800 000 vs TB = 1 000 000 − 300 000)</td><td class="r">800 000</td><td class="r">700 000</td><td class="r">100 000</td><td class="r">27 000 DTL</td></tr>
+<tr><td>Leave-pay provision (liability; TB = 40 000 − 40 000)</td><td class="r">40 000</td><td class="r">0</td><td class="r">(40 000)</td><td class="r">(10 800) DTA</td></tr>
+<tr><td><b>Net closing deferred tax (liability)</b></td><td class="r"></td><td class="r"></td><td class="r"></td><td class="r"><b>16 200 DTL</b></td></tr>
+</table>
+<p style="margin:3px 0 0">Opening nil → closing net DTL R16 200 → <b>deferred tax expense (P/L) = R16 200</b> (DTL of 27 000 expense, less DTA of 10 800 income).</p>
+</div>
+
+<div class="calc"><h3>Step 3 — Total tax expense &amp; journals</h3>
+<table>
+<tr><td>Current tax</td><td>248 400</td></tr>
+<tr><td>Deferred tax</td><td>16 200</td></tr>
+<tr><td><b>Tax expense (P/L)</b></td><td><b>264 600</b></td></tr>
+</table>
+<p style="margin:3px 0 0"><b>Dr</b> Income tax expense 248 400 / <b>Cr</b> Current tax payable (SARS) 248 400. &nbsp; <b>Dr</b> Income tax expense 16 200 / <b>Cr</b> Deferred tax (SFP) 16 200.</p>
+</div>
+
+<div class="calc"><h3>Step 4 — Tax-rate reconciliation (proves the R264 600)</h3>
+<table>
+<tr><th>Reconciling item</th><th>R</th><th>%</th></tr>
+<tr><td>Accounting profit 1 000 000 × 27%</td><td class="r">270 000</td><td class="r">27.00</td></tr>
+<tr><td>+ Fine (non-deductible) 20 000 × 27%</td><td class="r">5 400</td><td class="r">0.54</td></tr>
+<tr><td>+ Donations (non-deductible) 10 000 × 27%</td><td class="r">2 700</td><td class="r">0.27</td></tr>
+<tr><td>− Dividends (exempt) 50 000 × 27%</td><td class="r">(13 500)</td><td class="r">(1.35)</td></tr>
+<tr><td><b>= Tax expense</b></td><td class="r"><b>264 600</b></td><td class="r"><b>26.46</b></td></tr>
+</table>
+<p style="margin:3px 0 0">✔ Reconciles to the tax expense. Note the <b>depreciation/s12C</b> and the <b>leave-pay provision</b> (temporary differences) do <b>not</b> appear — deferred tax dealt with them. Effective rate = 264 600 ÷ 1 000 000 = <b>26.46%</b>.</p>
+</div>
+
+<!-- 6 -->
+<h2 class="gold">6 · Watch-outs &amp; exam tips</h2>
+<ul>
+<li><b>Sort first:</b> for every adjustment ask "permanent or temporary?" — permanent → recon; temporary → deferred tax. Getting this split right earns most of the marks.</li>
+<li><b>Direction of deferred tax:</b> asset CA &gt; TB → DTL; asset CA &lt; TB → DTA; reverse for liabilities. Sense-check: tax allowances ahead of depreciation = DTL.</li>
+<li><b>Manner of recovery:</b> land/investment property at FV → use the <b>CGT effective rate (21.6%)</b>; split a revalued depreciable asset between "use" (27%) and "sale" (21.6%) portions if needed.</li>
+<li><b>OCI items:</b> deferred tax on a revaluation surplus or FVOCI goes to <b>OCI</b>, and that part is excluded from the P/L tax expense (and shown separately if reconciling).</li>
+<li><b>DTA recognition:</b> only raise a DTA (incl. on an assessed loss) if future taxable profit is <b>probable</b> — otherwise it's an <b>unrecognised</b> item that appears in the recon.</li>
+<li><b>Capital gains:</b> tax the gain at 80% inclusion; the <b>20% non-taxable portion</b> is a reconciling item (a "different rate" effect).</li>
+<li><b>Prior-year under/over provision</b> of current tax is a reconciling item (not a temporary difference).</li>
+</ul>
+
+<p class="sub" style="margin-top:9px">Compiled for private IAC exam preparation from IAS 12 <i>Income Taxes</i>. Confirm the company tax rate &amp; CGT inclusion against the rate card; apply to the scenario.</p>
+
+</div>
+</body>
+</html>
