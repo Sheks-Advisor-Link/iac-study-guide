@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IAC MAF — NPV &amp; Valuation Critique Mind-Maps</title>
+<style>
+  :root{ --ink:#1c2128; --line:#222; --pink:#e7b6c8; --pinkbg:#fbeef3; --orange:#e8a05c; --orangebg:#fdf1e6;
+         --teal:#5bb3a8; --tealbg:#e9f5f3; --pur:#9a86c4; --purbg:#f1edf8; --blue:#5b8fc7; --bluebg:#eaf1fa;
+         --gold:#c79a3a; --goldbg:#faf3e2; --green:#3f9468; --greenbg:#e7f3ec; --red:#cf6b6b; --redbg:#fbecec; --muted:#666; }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:8.7px;line-height:1.34}
+  .wrap{max-width:900px;margin:0 auto;padding:14px}
+  .topic{break-before:page;padding-top:4px}
+  .topic:first-child{break-before:auto}
+  .map{display:grid;grid-template-columns:1fr 1fr 1fr;gap:7px;align-items:stretch}
+  .box{border:1.6px solid var(--line);border-radius:11px;padding:5px 8px;background:#fff}
+  .box h4{margin:0 0 2px;font-size:9px;letter-spacing:.4px;text-transform:uppercase;font-weight:800;border-bottom:1.4px dashed #bbb;padding-bottom:1px}
+  .box ul{margin:2px 0 0 12px;padding:0}
+  .box li{margin:1.4px 0}
+  .box.pink{background:var(--pinkbg);border-color:var(--pink)} .box.pink h4{color:#b15a7c}
+  .box.orange{background:var(--orangebg);border-color:var(--orange)} .box.orange h4{color:#b66f22}
+  .box.teal{background:var(--tealbg);border-color:var(--teal)} .box.teal h4{color:#2f7c72}
+  .box.pur{background:var(--purbg);border-color:var(--pur)} .box.pur h4{color:#6b54a0}
+  .box.blue{background:var(--bluebg);border-color:var(--blue)} .box.blue h4{color:#3a6aa0}
+  .box.gold{background:var(--goldbg);border-color:var(--gold)} .box.gold h4{color:#9a751f}
+  .box.green{background:var(--greenbg);border-color:var(--green)} .box.green h4{color:#2c6b45}
+  .box.red{background:var(--redbg);border-color:var(--red)} .box.red h4{color:#a23b3b}
+  .center{grid-column:1 / 4;text-align:center;margin:5px 0}
+  .center .std{display:inline-block;font-size:24px;font-weight:900;letter-spacing:1px;color:#1c2128;border:3px solid #1c2128;border-radius:14px;padding:3px 26px;background:#fff}
+  .center .name{display:block;font-size:9px;color:var(--muted);margin-top:2px;text-transform:uppercase;letter-spacing:1px}
+  h2.page{font-size:13px;margin:0 0 4px;color:#1c2128}
+  .lower{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:8px}
+  .sect h3{font-size:11px;font-weight:800;margin:0 0 3px;letter-spacing:.5px;text-transform:uppercase}
+  .sect.j h3{color:#2f7c72}.sect.a h3{color:#b66f22}
+  table.j{width:100%;border-collapse:collapse;font-size:7.9px;margin:2px 0}
+  table.j td,table.j th{padding:1.5px 5px;border:1px solid #ccc}
+  table.j th{background:#eee;font-size:7.4px;text-transform:uppercase;text-align:left}
+  table.j td.r{text-align:right;font-family:"Consolas",monospace}
+  .chip{display:inline-block;font-size:6.6px;font-weight:800;padding:0 4px;border-radius:6px;text-transform:uppercase;vertical-align:middle}
+  .inc{background:#d7ecdd;color:#2c6b45}.exc{background:#f3d2d2;color:#9a3b3b}
+  .hdr{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #1c2128;margin-bottom:5px}
+  .hdr .brand{font-size:8px;color:var(--muted);font-weight:700;letter-spacing:1px}
+  @page{size:A4;margin:9mm 8mm;@bottom-right{content:"p. " counter(page);font-size:7.5px;color:#aaa}}
+  .box,.sect,table.j{break-inside:avoid}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ===================== NPV CRITIQUE ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">NPV — Build the correct base, then critique it</h2><span class="brand">IAC 2026 · MAF</span></div>
+<div class="map">
+  <div class="box green"><h4>Include in cash flows ✓</h4><ul>
+    <li><b>Incremental</b> CFs only (with-vs-without)</li>
+    <li><b>After-tax</b> operating flows</li>
+    <li><b>Tax shield</b> = wear-&amp;-tear/capital allowance × tax rate</li>
+    <li><b>Working capital</b> outflow when it rises; recovered at the end</li>
+    <li><b>Opportunity cost</b> (lost contribution / market rental)</li>
+    <li><b>Residual/scrap</b> value &amp; its tax (recoupment/loss)</li>
+  </ul></div>
+  <div class="box red"><h4>Exclude / strip out ✗</h4><ul>
+    <li><b>Sunk costs</b> (already spent: feasibility, past R&amp;D)</li>
+    <li><b>Allocated</b> head-office overheads (non-incremental)</li>
+    <li><b>Depreciation</b> (non-cash — only its tax effect counts)</li>
+    <li><b>Financing</b> flows: interest, loan capital, dividends (in the rate, not the CFs)</li>
+  </ul></div>
+  <div class="box orange"><h4>Consistency rules</h4><ul>
+    <li><b>Nominal CFs ↔ nominal (money) rate</b></li>
+    <li><b>Real CFs ↔ real rate</b> — never mix</li>
+    <li>(1+nominal)=(1+real)(1+inflation)</li>
+    <li>Inflate each line at its <b>own</b> rate</li>
+    <li>Discount rate = post-tax WACC (or project Ke)</li>
+  </ul></div>
+  <div class="center"><span class="std">NPV</span><span class="name">Net Present Value</span></div>
+  <div class="box blue"><h4>Timing conventions</h4><ul>
+    <li>Capital outflow at <b>t&nbsp;0</b></li>
+    <li>Operating flows usually <b>year-end</b> (t1…tn)</li>
+    <li>WC invested at start of the year it supports (t0)</li>
+    <li>Tax: same year or <b>lagged 1 year</b> — check the scenario</li>
+    <li>Discount with the <b>right year factor</b></li>
+  </ul></div>
+  <div class="box pur"><h4>Decision &amp; compare to…</h4><ul>
+    <li><b>NPV &gt; 0</b> → accept (adds value)</li>
+    <li><b>IRR vs cost of capital</b> (accept if IRR &gt; WACC)</li>
+    <li><b>Sensitivity</b> — % change to breakeven NPV</li>
+    <li><b>Scenario</b> best/worst case</li>
+    <li><b>Payback / discounted payback</b> (risk &amp; liquidity)</li>
+    <li>Industry &amp; historical benchmarks</li>
+  </ul></div>
+  <div class="box pink"><h4>Critique red flags 🔎</h4><ul>
+    <li>Wrong/too-low <b>discount rate</b> (used Ke not WACC, ignored risk)</li>
+    <li>Sunk or allocated costs left in</li>
+    <li>Depreciation deducted as a cash flow</li>
+    <li>WC ignored or never recovered</li>
+    <li>Tax omitted / no lag / no shield</li>
+    <li>Inflation inconsistent</li>
+    <li>Forecast too long; <b>optimistic-bias</b> growth</li>
+    <li>Terminal value dominates &amp; unjustified</li>
+  </ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Correct base — pro-forma layout</h3>
+    <table class="j">
+      <tr><th>Line (Rm)</th><th>t0</th><th>t1</th><th>t2</th><th>t3</th></tr>
+      <tr><td>Sales (incremental)</td><td class="r">–</td><td class="r">x</td><td class="r">x</td><td class="r">x</td></tr>
+      <tr><td>Less variable/cash costs</td><td class="r">–</td><td class="r">(x)</td><td class="r">(x)</td><td class="r">(x)</td></tr>
+      <tr><td>Opportunity cost</td><td class="r">–</td><td class="r">(x)</td><td class="r">(x)</td><td class="r">(x)</td></tr>
+      <tr><td>= Operating CF (pre-tax)</td><td class="r">–</td><td class="r">x</td><td class="r">x</td><td class="r">x</td></tr>
+      <tr><td>Tax @ rate</td><td class="r">–</td><td class="r">(x)</td><td class="r">(x)</td><td class="r">(x)</td></tr>
+      <tr><td>+ Tax shield (W&amp;T × t)</td><td class="r">–</td><td class="r">x</td><td class="r">x</td><td class="r">x</td></tr>
+      <tr><td>Capital outlay</td><td class="r">(x)</td><td class="r">–</td><td class="r">–</td><td class="r">x*</td></tr>
+      <tr><td>Working capital</td><td class="r">(x)</td><td class="r">(Δ)</td><td class="r">(Δ)</td><td class="r">x*</td></tr>
+      <tr><td><b>Net cash flow</b></td><td class="r">(x)</td><td class="r">x</td><td class="r">x</td><td class="r">x</td></tr>
+      <tr><td>Discount factor @ r%</td><td class="r">1.00</td><td class="r">.xx</td><td class="r">.xx</td><td class="r">.xx</td></tr>
+      <tr><td><b>PV</b></td><td class="r">(x)</td><td class="r">x</td><td class="r">x</td><td class="r">x</td></tr>
+    </table>
+    <div style="font-size:7.6px;color:#666;margin-top:2px">* recovered at end: residual value &amp; WC release. <b>NPV = Σ PV</b>.</div>
+  </div>
+  <div class="sect a"><h3>Marks-earning moves</h3>
+    <table class="j">
+      <tr><th>Trigger in the scenario</th><th>What to say / do</th></tr>
+      <tr><td>"already spent on a study"</td><td>Sunk → <b>exclude</b></td></tr>
+      <tr><td>"share of head-office cost"</td><td>Allocated → <b>exclude</b> (not incremental)</td></tr>
+      <tr><td>"depreciation R x"</td><td>Add back; bring in <b>tax allowance shield</b> only</td></tr>
+      <tr><td>"use existing machine/space"</td><td><b>Opportunity cost</b> = lost contribution/rental</td></tr>
+      <tr><td>"debtors/stock rise"</td><td><b>WC outflow</b>; release in final year</td></tr>
+      <tr><td>"financed by a loan @ x%"</td><td>Ignore interest in CFs — it's in the <b>WACC</b></td></tr>
+      <tr><td>Discount rate looks low</td><td>Should reflect <b>project risk</b>; recompute WACC</td></tr>
+    </table>
+  </div>
+</div>
+</div>
+
+<!-- ===================== VALUATIONS ===================== -->
+<div class="topic">
+<div class="hdr"><h2 class="page">Company / Equity Valuation — methods &amp; how to critique each</h2><span class="brand">IAC 2026 · MAF</span></div>
+<div class="map">
+  <div class="box teal"><h4>DCF — FCFF / FCFE</h4><ul>
+    <li><b>FCFF</b> = EBIT(1−t) + dep − capex − ΔWC → discount at <b>WACC</b> → enterprise value → less net debt = equity</li>
+    <li><b>FCFE</b> = FCFF − after-tax interest + net borrowing → discount at <b>Ke</b> → equity directly</li>
+    <li><b>Match the flow to the rate</b> (FCFF↔WACC, FCFE↔Ke)</li>
+  </ul></div>
+  <div class="box gold"><h4>Terminal value</h4><ul>
+    <li>Gordon: TVₙ = CFₙ(1+g)/(r−g)</li>
+    <li>Discount TV back to t0</li>
+    <li><b>g must be &lt; r</b> &amp; ≤ long-run GDP</li>
+    <li>Often the bulk of value → <b>test it hard</b></li>
+  </ul></div>
+  <div class="box blue"><h4>Multiples (relative)</h4><ul>
+    <li><b>P/E</b> × earnings (equity value)</li>
+    <li><b>EV/EBITDA</b> → EV, then − net debt</li>
+    <li><b>P/B</b> × net assets</li>
+    <li>Use <b>comparable</b> listed peers; adjust for size/risk/growth &amp; non-recurring items</li>
+  </ul></div>
+  <div class="center"><span class="std">VALUE</span><span class="name">What is the business worth?</span></div>
+  <div class="box pur"><h4>Net asset value (NAV)</h4><ul>
+    <li>Assets − liabilities at <b>fair value</b> (not book)</li>
+    <li>Add intangibles/contingents; mark to market</li>
+    <li>Floor value / asset-heavy or wind-up cases</li>
+    <li>Ignores going-concern earnings power</li>
+  </ul></div>
+  <div class="box pink"><h4>Dividend growth (DDM)</h4><ul>
+    <li>Ve = D₁/(Ke − g)</li>
+    <li>Best for stable dividend payers, minority stake</li>
+    <li>Very sensitive to <b>Ke</b> and <b>g</b></li>
+  </ul></div>
+  <div class="box green"><h4>Pick the method</h4><ul>
+    <li>Control stake / forecasts available → <b>DCF</b></li>
+    <li>Quick / peers exist → <b>multiples</b></li>
+    <li>Asset-rich / loss-making → <b>NAV</b></li>
+    <li>Stable payer / minority → <b>DDM</b></li>
+    <li>Triangulate &amp; give a <b>range</b></li>
+  </ul></div>
+</div>
+<div class="lower">
+  <div class="sect j"><h3>Critique each method</h3>
+    <table class="j">
+      <tr><th>Method</th><th>What to challenge</th></tr>
+      <tr><td>DCF</td><td>Discount rate (WACC inputs: Ke via CAPM β, cost of debt, weights), forecast horizon, growth, capex/WC realism, terminal-value share</td></tr>
+      <tr><td>Multiples</td><td>Are peers truly comparable? Cyclical/one-off earnings? Different gearing → use EV multiples; stale market prices</td></tr>
+      <tr><td>NAV</td><td>Book vs fair value, omitted intangibles/internally-generated goodwill, deferred tax on revaluation, going-concern vs break-up</td></tr>
+      <tr><td>DDM</td><td>g ≥ Ke breaks it; assumes constant payout; ignores retained-earnings value</td></tr>
+    </table>
+  </div>
+  <div class="sect a"><h3>Cross-checks &amp; phrasing</h3>
+    <table class="j">
+      <tr><th>Compare to…</th><th>Why</th></tr>
+      <tr><td>Other methods (range)</td><td>No single number is "right" — triangulate</td></tr>
+      <tr><td>Market cap / recent deals</td><td>Sanity-check vs what buyers paid</td></tr>
+      <tr><td>Net asset value (floor)</td><td>Earnings value should ≥ asset value</td></tr>
+      <tr><td>Control premium / minority discount</td><td>Adjust for the stake being valued</td></tr>
+      <tr><td>Sensitivity on r &amp; g</td><td>Show how fragile the answer is</td></tr>
+    </table>
+    <div style="font-size:7.8px;color:#444;margin-top:3px"><b>Exam line:</b> "The valuation is <i>only as good as its assumptions</i>; I would recompute using a risk-adjusted WACC, strip non-recurring items, and present a <b>range</b> cross-checked against comparable multiples and NAV."</div>
+  </div>
+</div>
+</div>
+
+</div></body></html>
