@@ -1,0 +1,585 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<title>IAC AUD — Substantive Procedures Mind-Maps (per account)</title>
+<style>
+:root{--ink:#1c2128;--muted:#666;--ins:#2f7c72;--rec:#9a751f;--rep:#b15a7c;--agr:#3a6aa0;--con:#6b54a0;--eva:#2c6b45;
+ --teal:#e9f5f3;--tealb:#5bb3a8;--pink:#fbeef3;--pinkb:#e7b6c8;--gold:#faf3e2;--goldb:#c79a3a;
+ --blue:#eaf1fa;--blueb:#5b8fc7;--pur:#f1edf8;--purb:#9a86c4;--green:#e7f3ec;--greenb:#3f9468;}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Verdana,Arial,sans-serif;font-size:9px;line-height:1.32}
+.page{display:flex;flex-direction:column;min-height:262mm;break-after:page;padding-top:2px}
+.page:last-child{break-after:auto}
+.spacer{flex:1 1 auto;min-height:6mm}
+.hdr{display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid #1c2128;margin-bottom:4px}
+.hdr h1{font-size:15px;margin:0}
+.hdr .std{font-size:8.5px;color:var(--muted);font-weight:700;letter-spacing:.5px}
+.brand{font-size:7.5px;color:var(--muted);letter-spacing:1px}
+.central{text-align:center;margin:6px 0 4px}
+.central .node{display:inline-block;background:#1c2128;color:#fff;font-weight:900;font-size:13px;line-height:1.15;letter-spacing:.5px;
+ border-radius:50px;padding:10px 30px;white-space:pre-line;box-shadow:0 2px 0 #999}
+.legend{text-align:center;font-size:7.4px;color:#555;margin:2px 0 6px}
+.legend span{display:inline-block;margin:0 3px;padding:0 5px;border-radius:6px;color:#fff;font-weight:700;text-transform:uppercase;font-size:6.6px}
+.branches{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.br{border:1.7px solid #999;border-radius:10px;padding:5px 9px;background:#fff;break-inside:avoid}
+.br h4{margin:0 0 3px;font-size:9.5px;font-weight:800;border-bottom:1.4px dashed #bbb;padding-bottom:2px}
+.br ul{margin:3px 0 0 2px;padding:0;list-style:none}
+.br li{margin:2.6px 0;padding-left:2px}
+.tag{display:inline-block;min-width:0;font-size:6.5px;font-weight:800;color:#fff;text-transform:uppercase;
+ padding:1px 5px;border-radius:8px;margin-right:4px;letter-spacing:.2px;vertical-align:1px}
+.t-ins{background:var(--ins)}.t-rec{background:var(--rec)}.t-rep{background:var(--rep)}
+.t-agr{background:var(--agr)}.t-con{background:var(--con)}.t-eva{background:var(--eva)}
+.br.teal{background:var(--teal);border-color:var(--tealb)}.br.teal h4{color:#2f7c72}
+.br.pink{background:var(--pink);border-color:var(--pinkb)}.br.pink h4{color:#b15a7c}
+.br.gold{background:var(--gold);border-color:var(--goldb)}.br.gold h4{color:#9a751f}
+.br.blue{background:var(--blue);border-color:var(--blueb)}.br.blue h4{color:#3a6aa0}
+.br.pur{background:var(--pur);border-color:var(--purb)}.br.pur h4{color:#6b54a0}
+.br.green{background:var(--green);border-color:var(--greenb)}.br.green h4{color:#2c6b45}
+.assert{align-self:flex-end;width:52%;background:#fff7e6;border:2px solid #e7c97a;border-radius:10px;padding:6px 9px}
+.assert h5{margin:0 0 3px;font-size:9.5px;color:#7a5300;text-transform:uppercase;letter-spacing:.5px;border-bottom:1.3px solid #e7c97a;padding-bottom:2px}
+.assert ul{margin:0;padding:0;list-style:none}
+.assert li{margin:2.4px 0}
+.lvl{display:inline-block;font-size:6.4px;font-weight:800;padding:0 4px;border-radius:6px;text-transform:uppercase;margin-left:3px}
+.hi{background:#f3d2d2;color:#9a3b3b}.med{background:#fbe7cf;color:#8a5a12}.lo{background:#d7ecdd;color:#2c6b45}
+.assert b{color:#1c2128}
+@page{size:A4;margin:9mm 8mm;@bottom-right{content:"p. " counter(page);font-size:7.5px;color:#aaa}}
+</style></head><body>
+<div class="page">
+<div class="hdr"><h1>Trade Receivables</h1><span class="std">IFRS 9 / IFRS 7 / IFRS 15</span></div>
+<div class="central"><span class="node">TRADE
+RECEIVABLES</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Debtors age analysis (CAATs / GAS)</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-perform the ageing per invoice date</li>
+<li><span class="tag t-agr">Agree/Trace</span>agree total to debtors control in GL & TB</li>
+<li><span class="tag t-ins">Inspect</span>extract credit balances → reclassify to payables</li>
+<li><span class="tag t-ins">Inspect</span>flag accounts over their credit limit → follow up</li>
+</ul></div>
+<div class="br pink"><h4>Customer confirmations (circularisation)</h4><ul>
+<li><span class="tag t-con">Confirm</span>positive confirmation at year-end</li>
+<li><span class="tag t-ins">Inspect</span>non-replies → bank statement for receipts after y/e</li>
+</ul></div>
+<div class="br gold"><h4>ECL / allowance workings & credit policy</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-perform the allowance calculation</li>
+<li><span class="tag t-eva">Evaluate/Enquire</span>compare default rates to historical write-offs</li>
+<li><span class="tag t-rep">Re-perform</span>back-test prior allowance vs actual write-offs</li>
+<li><span class="tag t-ins">Inspect</span>inspect minutes/policy for the % applied</li>
+</ul></div>
+<div class="br blue"><h4>Sales invoices & credit notes</h4><ul>
+<li><span class="tag t-rec">Recalculate</span>recalculate invoice totals & interest charged</li>
+<li><span class="tag t-agr">Agree/Trace</span>match credit notes to customer accounts</li>
+<li><span class="tag t-rep">Re-perform</span>sample: opening + movements = closing</li>
+</ul></div>
+<div class="br pur"><h4>Cession / pledge agreements & disclosure</h4><ul>
+<li><span class="tag t-ins">Inspect</span>inspect for pledged / ceded receivables (rights)</li>
+<li><span class="tag t-ins">Inspect</span>inspect IFRS 7 & IFRS 15 disclosure</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Valuation</b> <span class="lvl hi">high</span> — ECL / recoverability — the key risk</li>
+<li><b>Existence</b> <span class="lvl hi">high</span> — balances are real → circularise</li>
+<li><b>Rights</b> <span class="lvl med">med</span> — not ceded/factored → inspect agreements</li>
+<li><b>Cut-off</b> <span class="lvl med">med</span> — sales in the right period</li>
+<li><b>Presentation</b> <span class="lvl lo">low</span> — IFRS 7 & 15 disclosure</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Payables & Accruals</h1><span class="std">IAS 37 / IAS 21</span></div>
+<div class="central"><span class="node">PAYABLES
+&
+ACCRUALS</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Supplier statements</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>reconcile supplier statement to creditors ledger</li>
+<li><span class="tag t-ins">Inspect</span>investigate & follow up reconciling items</li>
+</ul></div>
+<div class="br pink"><h4>GRNs / goods-received notes (unmatched)</h4><ul>
+<li><span class="tag t-ins">Inspect</span>search for unrecorded liabilities</li>
+<li><span class="tag t-agr">Agree/Trace</span>match unmatched GRNs to recorded invoices</li>
+</ul></div>
+<div class="br gold"><h4>Post year-end cash book & payments</h4><ul>
+<li><span class="tag t-ins">Inspect</span>inspect payments after y/e for prior-period liabilities</li>
+<li><span class="tag t-agr">Agree/Trace</span>trace back to the correct period</li>
+</ul></div>
+<div class="br blue"><h4>Purchase invoices & contracts</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree recorded balances to invoices</li>
+<li><span class="tag t-ins">Inspect</span>cut-off: last GRNs / invoices around y/e</li>
+</ul></div>
+<div class="br pur"><h4>FX payables & closing spot rates</h4><ul>
+<li><span class="tag t-rec">Recalculate</span>revalue foreign payables at closing spot rate (IAS 21)</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Completeness</b> <span class="lvl hi">high</span> — all liabilities recorded — THE key assertion</li>
+<li><b>Cut-off</b> <span class="lvl hi">high</span> — liabilities in the right period</li>
+<li><b>Valuation</b> <span class="lvl med">med</span> — FX revaluation</li>
+<li><b>Obligations</b> <span class="lvl med">med</span> — a genuine obligation exists</li>
+<li><b>Presentation</b> <span class="lvl lo">low</span> — split current / non-current</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Inventory</h1><span class="std">IAS 2</span></div>
+<div class="central"><span class="node">INVENTORY</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Physical stock count / count sheets</h4><ul>
+<li><span class="tag t-ins">Inspect</span>sheet → floor (existence)</li>
+<li><span class="tag t-ins">Inspect</span>floor → sheet (completeness)</li>
+<li><span class="tag t-rep">Re-perform</span>perform test counts; note damaged / obsolete</li>
+</ul></div>
+<div class="br gold"><h4>NRV evidence (post-y/e sales, price lists)</h4><ul>
+<li><span class="tag t-rec">Recalculate</span>compare cost vs NRV; recompute write-down</li>
+<li><span class="tag t-ins">Inspect</span>inspect subsequent selling prices</li>
+</ul></div>
+<div class="br blue"><h4>Purchase invoices & cost records</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree cost to invoices</li>
+<li><span class="tag t-rep">Re-perform</span>verify cost formula (FIFO / weighted avg)</li>
+</ul></div>
+<div class="br pink"><h4>GRNs & dispatch notes around y/e</h4><ul>
+<li><span class="tag t-ins">Inspect</span>cut-off: last receipts & dispatches</li>
+</ul></div>
+<div class="br pur"><h4>CAATs inventory listing</h4><ul>
+<li><span class="tag t-ins">Inspect</span>extract negative / old / slow-moving lines</li>
+<li><span class="tag t-rec">Recalculate</span>recompute quantity × cost extensions</li>
+</ul></div>
+<div class="br green"><h4>Consignment contracts</h4><ul>
+<li><span class="tag t-con">Confirm</span>confirm ownership / rights (exclude consignment)</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Existence</b> <span class="lvl hi">high</span> — recorded stock exists → count sheet→floor</li>
+<li><b>Valuation</b> <span class="lvl hi">high</span> — lower of cost & NRV</li>
+<li><b>Cut-off</b> <span class="lvl hi">high</span> — received/dispatched in right period</li>
+<li><b>Rights</b> <span class="lvl med">med</span> — owned, not consignment</li>
+<li><b>Completeness</b> <span class="lvl lo">low</span> — all stock counted (floor→sheet)</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Property, Plant & Equipment</h1><span class="std">IAS 16 / IAS 36</span></div>
+<div class="central"><span class="node">PPE</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Fixed asset register (FAR)</h4><ul>
+<li><span class="tag t-ins">Inspect</span>register → floor (existence)</li>
+<li><span class="tag t-ins">Inspect</span>floor → register (completeness)</li>
+</ul></div>
+<div class="br pur"><h4>Title deeds / registration documents</h4><ul>
+<li><span class="tag t-ins">Inspect</span>confirm ownership & rights</li>
+</ul></div>
+<div class="br blue"><h4>Purchase invoices for additions</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree additions to invoices</li>
+<li><span class="tag t-ins">Inspect</span>capitalised costs directly attributable (IAS 16), not repairs</li>
+</ul></div>
+<div class="br gold"><h4>Depreciation workings</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-perform the depreciation charge</li>
+<li><span class="tag t-eva">Evaluate/Enquire</span>assess useful lives & residual values</li>
+</ul></div>
+<div class="br pink"><h4>Impairment indicators & calc</h4><ul>
+<li><span class="tag t-eva">Evaluate/Enquire</span>inspect minutes/indicators; test recoverable amount</li>
+</ul></div>
+<div class="br green"><h4>Disposal documents</h4><ul>
+<li><span class="tag t-rec">Recalculate</span>recompute profit / loss on disposal</li>
+<li><span class="tag t-ins">Inspect</span>cut-off of the disposal</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Existence</b> <span class="lvl hi">high</span> — assets exist → register→floor</li>
+<li><b>Valuation</b> <span class="lvl hi">high</span> — cost/depreciation/impairment</li>
+<li><b>Rights</b> <span class="lvl med">med</span> — owned → title deeds</li>
+<li><b>Completeness</b> <span class="lvl med">med</span> — all additions recorded</li>
+<li><b>Presentation</b> <span class="lvl lo">low</span> — IAS 16 disclosure</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Bank & Cash</h1><span class="std">IAS 7 / IAS 1</span></div>
+<div class="central"><span class="node">BANK
+& CASH</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Bank confirmation letter</h4><ul>
+<li><span class="tag t-con">Confirm</span>confirm balances, loans, guarantees</li>
+<li><span class="tag t-con">Confirm</span>confirm signatories & restrictions</li>
+</ul></div>
+<div class="br blue"><h4>Bank reconciliation</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-perform the bank reconciliation</li>
+<li><span class="tag t-agr">Agree/Trace</span>agree to GL & bank statement</li>
+<li><span class="tag t-ins">Inspect</span>investigate old / unusual reconciling items</li>
+</ul></div>
+<div class="br gold"><h4>Bank statements</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree balance to statement</li>
+<li><span class="tag t-ins">Inspect</span>identify restricted cash</li>
+</ul></div>
+<div class="br pink"><h4>Overdraft / loan facility letters</h4><ul>
+<li><span class="tag t-ins">Inspect</span>reclassify overdraft to current liabilities</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Existence</b> <span class="lvl hi">high</span> — cash exists → bank confirmation</li>
+<li><b>Rights</b> <span class="lvl med">med</span> — entity owns / can access it</li>
+<li><b>Completeness</b> <span class="lvl med">med</span> — all accounts confirmed</li>
+<li><b>Presentation</b> <span class="lvl med">med</span> — restricted cash / overdraft split</li>
+<li><b>Valuation</b> <span class="lvl lo">low</span> — FX cash at closing rate</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Going Concern / Cash-flow Forecast</h1><span class="std">ISA 570</span></div>
+<div class="central"><span class="node">GOING
+CONCERN</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>The cash-flow forecast</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-cast for arithmetic accuracy</li>
+<li><span class="tag t-eva">Evaluate/Enquire</span>build an independent expectation</li>
+<li><span class="tag t-agr">Agree/Trace</span>compare to prior-year actuals</li>
+</ul></div>
+<div class="br gold"><h4>Preparer track record</h4><ul>
+<li><span class="tag t-eva">Evaluate/Enquire</span>compare prior forecasts to actual results (competence)</li>
+</ul></div>
+<div class="br blue"><h4>Signed contracts & audited PY data</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree inputs to signed contracts / audited figures</li>
+</ul></div>
+<div class="br pink"><h4>Bank facility letters</h4><ul>
+<li><span class="tag t-con">Confirm</span>confirm overdraft / loan availability with bankers</li>
+</ul></div>
+<div class="br pur"><h4>Board / audit-committee minutes</h4><ul>
+<li><span class="tag t-ins">Inspect</span>inspect approval; assess feasibility of plans</li>
+</ul></div>
+<div class="br green"><h4>Legal correspondence & MRL</h4><ul>
+<li><span class="tag t-con">Confirm</span>contact legal counsel (litigation/claims)</li>
+<li><span class="tag t-ins">Inspect</span>written representation on feasibility (ISA 570.16(e))</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Reasonableness</b> <span class="lvl hi">high</span> — assumptions supportable</li>
+<li><b>Completeness</b> <span class="lvl hi">high</span> — all outflows/claims included</li>
+<li><b>Disclosure</b> <span class="lvl med">med</span> — material uncertainty disclosed</li>
+<li><b>Feasibility</b> <span class="lvl med">med</span> — management's plans realistic</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Impairment / Value-in-use</h1><span class="std">IAS 36 / IFRS 13</span></div>
+<div class="central"><span class="node">IMPAIR-
+MENT</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Management's recoverable-amount calc</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-perform VIU at the stated discount rate</li>
+<li><span class="tag t-rec">Recalculate</span>recompute impairment = CA − recoverable amount</li>
+<li><span class="tag t-ins">Inspect</span>confirm higher of VIU & FVLCD used</li>
+</ul></div>
+<div class="br blue"><h4>Approved strategic plan / budget</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree cash flows to the approved plan</li>
+<li><span class="tag t-ins">Inspect</span>exclude unsigned / non-operational flows</li>
+</ul></div>
+<div class="br gold"><h4>Signed contracts & price lists</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree inflows/outflows to contracts/active prices</li>
+</ul></div>
+<div class="br pur"><h4>Discount & growth rate evidence</h4><ul>
+<li><span class="tag t-eva">Evaluate/Enquire</span>compare discount rate to WACC / listed peers</li>
+<li><span class="tag t-eva">Evaluate/Enquire</span>assess growth rate vs market research</li>
+</ul></div>
+<div class="br pink"><h4>Expert FVLCD report</h4><ul>
+<li><span class="tag t-eva">Evaluate/Enquire</span>assess competence, objectivity & work</li>
+<li><span class="tag t-ins">Inspect</span>ensure termination benefits excluded from costs to sell</li>
+</ul></div>
+<div class="br green"><h4>Correcting journal, minutes, MRL, notes</h4><ul>
+<li><span class="tag t-ins">Inspect</span>posting to GL/AFS, approval & IAS 36 disclosure</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Valuation</b> <span class="lvl hi">high</span> — the whole question — estimate risk</li>
+<li><b>Presentation</b> <span class="lvl med">med</span> — IAS 36 disclosure</li>
+<li><b>Existence</b> <span class="lvl lo">low</span> — the asset/CGU exists</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Reliance on an Expert</h1><span class="std">ISA 500 / ISA 620</span></div>
+<div class="central"><span class="node">RELIANCE
+ON EXPERT</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Engagement letter / agreement</h4><ul>
+<li><span class="tag t-ins">Inspect</span>inspect scope, objectives & roles</li>
+</ul></div>
+<div class="br gold"><h4>Membership & qualifications evidence</h4><ul>
+<li><span class="tag t-eva">Evaluate/Enquire</span>assess competence — quals, accredited body, experience</li>
+</ul></div>
+<div class="br pink"><h4>Declaration of independence</h4><ul>
+<li><span class="tag t-eva">Evaluate/Enquire</span>assess objectivity — interests / relationships</li>
+</ul></div>
+<div class="br blue"><h4>Expert's report, methods, source data</h4><ul>
+<li><span class="tag t-eva">Evaluate/Enquire</span>assess methods & assumptions</li>
+<li><span class="tag t-agr">Agree/Trace</span>agree source data; assess completeness & accuracy</li>
+<li><span class="tag t-rep">Re-perform</span>re-perform; conclusions vs auditor expectation</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Reliability</b> <span class="lvl hi">high</span> — is it sufficient appropriate evidence?</li>
+<li><b>Competence</b> <span class="lvl hi">high</span> — C of C-O-S</li>
+<li><b>Objectivity</b> <span class="lvl hi">high</span> — O of C-O-S</li>
+<li><b>Scope/Work</b> <span class="lvl hi">high</span> — S of C-O-S → else ISA 620 own expert</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Capex / Foreign-currency Purchase</h1><span class="std">IAS 16 / IAS 21</span></div>
+<div class="central"><span class="node">CAPEX
+(FOREX)</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br blue"><h4>Supplier invoice</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree price, made out to the entity</li>
+<li><span class="tag t-rec">Recalculate</span>verify trade discount; recompute net price</li>
+</ul></div>
+<div class="br teal"><h4>Purchase / import contract</h4><ul>
+<li><span class="tag t-ins">Inspect</span>agree terms; FOB date = recognition date</li>
+</ul></div>
+<div class="br gold"><h4>Bill of lading / delivery docs</h4><ul>
+<li><span class="tag t-ins">Inspect</span>confirm FOB date; proof of receipt (signature)</li>
+</ul></div>
+<div class="br pur"><h4>Spot-rate source (credible)</h4><ul>
+<li><span class="tag t-rec">Recalculate</span>recompute € → ZAR at the correct spot rate</li>
+<li><span class="tag t-ins">Inspect</span>inspect correcting journal (wrong rate used)</li>
+</ul></div>
+<div class="br pink"><h4>Capitalised-cost schedule</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-cast the schedule</li>
+<li><span class="tag t-ins">Inspect</span>confirm directly attributable (freight, install, testing, duties); not maintenance</li>
+</ul></div>
+<div class="br green"><h4>FAR & GL</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>trace asset to FAR / GL (completeness)</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Accuracy/Valuation</b> <span class="lvl hi">high</span> — price, discount, spot rate</li>
+<li><b>Classification</b> <span class="lvl hi">high</span> — capital vs repairs; attributable costs</li>
+<li><b>Cut-off</b> <span class="lvl hi">high</span> — recognise on FOB date</li>
+<li><b>Occurrence</b> <span class="lvl med">med</span> — the purchase happened</li>
+<li><b>Completeness</b> <span class="lvl med">med</span> — recorded in FAR</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Deferred Tax Asset</h1><span class="std">IAS 12</span></div>
+<div class="central"><span class="node">DEFERRED
+TAX ASSET</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>DTA computation schedule</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-perform the DTA computation</li>
+<li><span class="tag t-agr">Agree/Trace</span>agree to GL / TB / AFS</li>
+<li><span class="tag t-ins">Inspect</span>confirm correct tax rate applied</li>
+</ul></div>
+<div class="br blue"><h4>Tax specialists' computation</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree the current-year tax loss</li>
+<li><span class="tag t-ins">Inspect</span>inspect for errors</li>
+</ul></div>
+<div class="br gold"><h4>Latest SARS assessment</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree the assessed loss brought forward</li>
+</ul></div>
+<div class="br pur"><h4>Future budgets / forecasts (KEY)</h4><ul>
+<li><span class="tag t-ins">Inspect</span>inspect estimated future taxable income</li>
+<li><span class="tag t-eva">Evaluate/Enquire</span>assess the budgeting process is robust</li>
+<li><span class="tag t-rep">Re-perform</span>back-test prior budgets vs actuals</li>
+</ul></div>
+<div class="br pink"><h4>Board minutes, notes & MRL</h4><ul>
+<li><span class="tag t-ins">Inspect</span>approval & recoverability-uncertainty disclosure</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Valuation</b> <span class="lvl hi">high</span> — recoverability — probable future profits</li>
+<li><b>Existence</b> <span class="lvl med">med</span> — the loss/temp difference exists</li>
+<li><b>Presentation</b> <span class="lvl med">med</span> — uncertainty disclosure</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Held for Sale / Property Valuation</h1><span class="std">IFRS 5 / IAS 40 / IFRS 13</span></div>
+<div class="central"><span class="node">HELD FOR
+SALE</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Valuation reports</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-perform all calcs & workings</li>
+<li><span class="tag t-ins">Inspect</span>lower of carrying amount & FVLCS</li>
+</ul></div>
+<div class="br blue"><h4>Engagement letter</h4><ul>
+<li><span class="tag t-ins">Inspect</span>process & framework (IAS 40/16/IFRS 13)</li>
+</ul></div>
+<div class="br pur"><h4>Title deeds</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree erf numbers / locations (rights)</li>
+</ul></div>
+<div class="br gold"><h4>GL / TB / AFS</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree the valuation figures</li>
+</ul></div>
+<div class="br green"><h4>Auditor's own expert</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>compare FV to recent market disposals</li>
+<li><span class="tag t-eva">Evaluate/Enquire</span>assess DCF & discount rate; agree inputs</li>
+</ul></div>
+<div class="br pink"><h4>Valuer independence & experience evidence</h4><ul>
+<li><span class="tag t-eva">Evaluate/Enquire</span>assess objectivity & competence (enquiry)</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Valuation</b> <span class="lvl hi">high</span> — fair value / FVLCS</li>
+<li><b>Rights</b> <span class="lvl med">med</span> — correct properties → title deeds</li>
+<li><b>Presentation</b> <span class="lvl med">med</span> — IFRS 5 classification & disclosure</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Net Investment in Leases — Lessor</h1><span class="std">IFRS 16 / IFRS 9</span></div>
+<div class="central"><span class="node">LEASE
+RECEIVABLE</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>CAATs lease schedule</h4><ul>
+<li><span class="tag t-rec">Recalculate</span>recalc gross investment</li>
+<li><span class="tag t-rec">Recalculate</span>recalc unearned finance income</li>
+<li><span class="tag t-rec">Recalculate</span>recalc net investment in the lease</li>
+</ul></div>
+<div class="br blue"><h4>Lease contracts</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree terms, payments & residual guarantees</li>
+</ul></div>
+<div class="br gold"><h4>Bank statements</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree lease payments received</li>
+</ul></div>
+<div class="br pur"><h4>IFRS 9 ECL on lease receivable</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-perform the ECL allowance</li>
+</ul></div>
+<div class="br pink"><h4>Lessee confirmations</h4><ul>
+<li><span class="tag t-con">Confirm</span>circularise lessees</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Valuation</b> <span class="lvl hi">high</span> — net investment & ECL</li>
+<li><b>Existence</b> <span class="lvl med">med</span> — lessees & balances real</li>
+<li><b>Rights</b> <span class="lvl med">med</span> — entity is the lessor</li>
+<li><b>Presentation</b> <span class="lvl med">med</span> — finance vs operating split</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Payroll & Wages</h1><span class="std">ISA 330 (analytical)</span></div>
+<div class="central"><span class="node">PAYROLL
+& WAGES</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Payroll records & headcount</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>build expectation = headcount × average wage</li>
+<li><span class="tag t-agr">Agree/Trace</span>compare to month / PY / budget / cost-centre</li>
+</ul></div>
+<div class="br gold"><h4>EMP201 returns</h4><ul>
+<li><span class="tag t-rec">Recalculate</span>recalculate PAYE / UIF / SDL</li>
+</ul></div>
+<div class="br blue"><h4>Production / sales data</h4><ul>
+<li><span class="tag t-eva">Evaluate/Enquire</span>wages as % of sales / production vs expectation</li>
+</ul></div>
+<div class="br pink"><h4>HR contracts & rate changes</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree wage rates</li>
+<li><span class="tag t-ins">Inspect</span>new appointments & terminations</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Accuracy</b> <span class="lvl hi">high</span> — amounts correctly calculated</li>
+<li><b>Occurrence</b> <span class="lvl med">med</span> — employees exist (no ghosts)</li>
+<li><b>Completeness</b> <span class="lvl med">med</span> — all wages recorded</li>
+<li><b>Cut-off</b> <span class="lvl med">med</span> — correct period</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Cash Bonus / Incentive Scheme</h1><span class="std">IAS 19</span></div>
+<div class="central"><span class="node">BONUS
+SCHEME</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Scheme rules / board minutes</h4><ul>
+<li><span class="tag t-ins">Inspect</span>inspect terms, target & % </li>
+<li><span class="tag t-ins">Inspect</span>confirm eligibility criteria</li>
+</ul></div>
+<div class="br gold"><h4>Audited revenue / trigger metric</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree to the trigger; confirm target met</li>
+</ul></div>
+<div class="br blue"><h4>Scheme calculation</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-perform each % / cash portion</li>
+</ul></div>
+<div class="br pink"><h4>Bank payments</h4><ul>
+<li><span class="tag t-agr">Agree/Trace</span>agree the bonus paid to the bank</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Accuracy</b> <span class="lvl hi">high</span> — correctly calculated</li>
+<li><b>Completeness</b> <span class="lvl med">med</span> — full accrual raised</li>
+<li><b>Occurrence</b> <span class="lvl med">med</span> — scheme actually triggered</li>
+<li><b>Cut-off</b> <span class="lvl med">med</span> — accrued in right period</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Accounting Estimates</h1><span class="std">ISA 540</span></div>
+<div class="central"><span class="node">ACCOUNTING
+ESTIMATES</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Management's estimation process & data</h4><ul>
+<li><span class="tag t-eva">Evaluate/Enquire</span>understand the process</li>
+<li><span class="tag t-ins">Inspect</span>test the integrity of the data used</li>
+</ul></div>
+<div class="br gold"><h4>Historical / industry data</h4><ul>
+<li><span class="tag t-eva">Evaluate/Enquire</span>assumptions vs history & industry</li>
+<li><span class="tag t-rep">Re-perform</span>build an independent point estimate / range</li>
+</ul></div>
+<div class="br blue"><h4>Subsequent-events evidence</h4><ul>
+<li><span class="tag t-ins">Inspect</span>events after y/e confirming the estimate</li>
+</ul></div>
+<div class="br pink"><h4>Prior estimates vs actual</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>back-test; consider management bias</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Valuation</b> <span class="lvl hi">high</span> — the estimate is reasonable</li>
+<li><b>Completeness</b> <span class="lvl med">med</span> — all estimates raised</li>
+<li><b>Presentation</b> <span class="lvl med">med</span> — estimation-uncertainty disclosure</li>
+</ul></div>
+</div>
+<div class="page">
+<div class="hdr"><h1>Group / Consolidation</h1><span class="std">IFRS 10 / IFRS 3 / ISA 600R</span></div>
+<div class="central"><span class="node">GROUP /
+CONSOL</span></div>
+<div class="legend">Branch = <b>evidence / source document</b> &nbsp;·&nbsp; sub-points = what to do with it: <span class="t-ins">Inspect</span><span class="t-rec">Recalculate</span><span class="t-rep">Re-perform</span><span class="t-agr">Agree</span><span class="t-con">Confirm</span><span class="t-eva">Evaluate</span></div>
+<div class="branches">
+<div class="br teal"><h4>Consolidation schedule</h4><ul>
+<li><span class="tag t-rep">Re-perform</span>re-cast the consolidation worksheet</li>
+</ul></div>
+<div class="br blue"><h4>Acquisition contract / SPA</h4><ul>
+<li><span class="tag t-ins">Inspect</span>% acquired, control date</li>
+<li><span class="tag t-rec">Recalculate</span>goodwill / NCI at acquisition</li>
+</ul></div>
+<div class="br gold"><h4>Component financial information</h4><ul>
+<li><span class="tag t-rec">Recalculate</span>since-acquisition movements</li>
+<li><span class="tag t-rec">Recalculate</span>current-year NCI, dividends, FCTR</li>
+</ul></div>
+<div class="br pur"><h4>Elimination journals</h4><ul>
+<li><span class="tag t-ins">Inspect</span>intra-group sales, profit in stock, balances</li>
+</ul></div>
+<div class="br pink"><h4>Component-auditor work (ISA 600R)</h4><ul>
+<li><span class="tag t-ins">Inspect</span>instructions, materiality & review of their work</li>
+</ul></div>
+</div>
+<div class="spacer"></div>
+<div class="assert"><h5>Assertions at risk — this account</h5><ul>
+<li><b>Accuracy</b> <span class="lvl hi">high</span> — consolidation arithmetic</li>
+<li><b>Completeness</b> <span class="lvl med">med</span> — all components consolidated</li>
+<li><b>Presentation</b> <span class="lvl hi">high</span> — IFRS 12 disclosure</li>
+<li><b>Valuation</b> <span class="lvl med">med</span> — goodwill / NCI</li>
+</ul></div>
+</div>
+</body></html>
