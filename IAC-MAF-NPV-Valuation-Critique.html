@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>IAC MAF — Critically Analysing NPV & Valuations</title>
+<style>
+  :root{--ink:#161a1f;--line:#bcc3cc;--muted:#5b626d;--accent:#5a3d82;--blue:#234d7a;--green:#1f6b3a;--gold:#6d4d12;--red:#9a3b3b;--soft2:#eee9f6;--calcbg:#eef4fb;--kbg:#fbf1e8;--exbg:#eef8f0}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:10px;line-height:1.46}
+  .wrap{max-width:900px;margin:0 auto;padding:18px}
+  h1{font-size:20px;margin:0;color:var(--accent)}
+  .sub{color:var(--muted);font-size:9.4px;margin:2px 0 8px}
+  .banner{background:#fff7e6;border:1px solid #e7c97a;color:#7a5300;border-radius:4px;padding:5px 9px;font-size:9.2px;margin-bottom:8px}
+  h2{font-size:13px;margin:13px 0 5px;color:#fff;background:var(--accent);padding:4px 9px;border-radius:3px}
+  h2.b{background:var(--blue)}h2.g{background:var(--green)}h2.gold{background:var(--gold)}h2.r{background:var(--red)}
+  h3{font-size:11px;margin:9px 0 3px;color:var(--accent);font-weight:700}
+  p{margin:3px 0}ul,ol{margin:2px 0 4px 15px;padding:0}li{margin:2px 0}b{color:#111}
+  table{width:100%;border-collapse:collapse;margin:5px 0;font-size:9.3px}
+  th,td{border:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
+  th{background:var(--soft2);color:var(--accent);font-weight:700;font-size:8.4px;text-transform:uppercase}
+  td.c{white-space:nowrap;font-weight:700;color:var(--blue)}
+  .calc{background:var(--calcbg);border:1px solid #bcd3ec;border-radius:5px;padding:7px 11px;margin:6px 0}
+  .calc td:last-child{text-align:right;white-space:nowrap}
+  .k{background:var(--kbg);border-left:3px solid var(--gold);padding:5px 10px;margin:6px 0;border-radius:0 4px 4px 0;font-size:9.3px}
+  .k b.lbl{color:var(--gold);display:block;font-size:8.4px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  @page{size:A4;margin:11mm 9mm;@bottom-right{content:"p. " counter(page);font-size:8px;color:#999}}
+  h2,h3{break-after:avoid}table,.k,.calc{break-inside:avoid}
+</style></head><body><div class="wrap">
+
+<h1>Critically Analysing NPV &amp; Valuations</h1>
+<div class="sub">The correct calculation base · the rules · what to look for &amp; compare to · SAICA IAC 2026 · T. Van Heerden</div>
+<div class="banner"><b>The skill being tested</b> (e.g. June 2025 "criticise the FCF valuation"): you're not re-doing the maths — you're judging whether the <b>inputs, method &amp; assumptions</b> are reasonable. Attack three things: <b>① the cash flows (right items in/out?), ② the discount rate (right rate for the risk?), ③ the assumptions (growth, period, terminal value, bias)</b> — and always say what you'd <b>compare</b> each to.</div>
+
+<!-- 1 -->
+<h2 class="b">1 · NPV — the correct calculation base</h2>
+<div class="calc"><table>
+<tr><th>Year</th><th>0</th><th>1 … n</th></tr>
+<tr><td>Revenue (incremental)</td><td></td><td>x</td></tr>
+<tr><td>− Variable &amp; <b>incremental/avoidable</b> fixed cash costs</td><td></td><td>(x)</td></tr>
+<tr><td>= Operating cash flow before tax</td><td></td><td>x</td></tr>
+<tr><td>− Tax on operating profit (incl. timing/lag)</td><td></td><td>(x)</td></tr>
+<tr><td>+ Capital-allowance (wear &amp; tear) <b>tax shield</b> (allowance × tax rate)</td><td></td><td>x</td></tr>
+<tr><td>− Initial investment / capex</td><td>(x)</td><td></td></tr>
+<tr><td>− Working-capital investment (Y0 + increments); + release at end</td><td>(x)</td><td>x</td></tr>
+<tr><td>+ Residual / terminal value (after-tax)</td><td></td><td>x</td></tr>
+<tr><td><b>= Net cash flow</b></td><td>(x)</td><td>x</td></tr>
+<tr><td>× Discount factor 1/(1+r)<sup>n</sup> at the cost of capital</td><td>1.00</td><td>0.xx</td></tr>
+<tr><td><b>= Present value → NPV = Σ PV</b></td><td></td><td><b>x</b></td></tr>
+</table></div>
+<div class="k"><b class="lbl">The relevant-cash-flow rules (what's IN / OUT)</b><b>Include:</b> incremental, future, <b>after-tax</b> operating cash flows · the <b>tax shield on capital allowances</b> · <b>working-capital</b> investment &amp; its release · <b>opportunity costs</b> · residual value. <b>Exclude:</b> <b>sunk</b> costs · <b>allocated/apportioned</b> head-office fixed costs (non-incremental) · <b>depreciation</b> (non-cash — but DO use its tax effect) · <b>financing</b> cash flows (interest, dividends, loan repayments — already in the discount rate) · past R&amp;D.</div>
+<div class="k"><b class="lbl">Two consistency rules</b><b>Inflation:</b> discount <b>real</b> cash flows at the <b>real</b> rate, or <b>nominal/money</b> cash flows at the <b>money</b> rate (Fisher: 1+money = (1+real)(1+inflation)) — never mix. <b>Discount rate:</b> use the <b>WACC</b> for an average-risk project financed in the existing structure; risk-adjust (pure-play beta) for different risk; use <b>APV</b> if financing side-effects are significant.</div>
+
+<!-- 2 -->
+<h2 class="r">2 · How to CRITICISE an NPV — the checklist</h2>
+<table>
+<tr><th>Attack</th><th>What to look for (the error)</th><th>Compare to / fix</th></tr>
+<tr><td class="c">Discount rate</td><td>Company WACC used for a <b>different-risk</b> project; book (not market) weights; rate not risk-adjusted; capital structure changing; real vs nominal mismatch with the cash flows.</td><td>Compare to a <b>risk-adjusted/pure-play</b> rate &amp; market data; check consistency with inflation basis.</td></tr>
+<tr><td class="c">Sunk &amp; allocated costs</td><td><b>Sunk</b> costs (e.g. past research, a feasibility study) wrongly included; <b>allocated</b> head-office overhead included though it won't change.</td><td>Strip them out — only incremental costs are relevant.</td></tr>
+<tr><td class="c">Depreciation &amp; financing</td><td><b>Depreciation</b> deducted as a cash flow (it's non-cash); <b>interest/dividends/loan repayments</b> in the cash flows (double counts — they're in the rate).</td><td>Remove; include only the <b>tax shield</b> on allowances.</td></tr>
+<tr><td class="c">Working capital</td><td>WC investment omitted; or not <b>released</b> at the end; growth in WC for rising sales ignored.</td><td>Add the WC outflow &amp; the terminal release.</td></tr>
+<tr><td class="c">Tax</td><td>Tax ignored or at the wrong rate; <b>timing/lag</b> ignored; capital allowances/recoupments omitted.</td><td>Apply the correct rate &amp; timing; include the allowance tax shield &amp; recoupment.</td></tr>
+<tr><td class="c">Forecast period</td><td>Period <b>too short</b> (cuts off value) or <b>too long</b> (unreliable far-out forecasts).</td><td>Use the asset/project life; add a terminal value if it continues.</td></tr>
+<tr><td class="c">Growth &amp; terminal value</td><td>Optimistic/unsupported growth; terminal value <b>dominates</b> the NPV; growth ≥ discount rate; no terminal value where the project continues.</td><td>Compare growth to GDP/industry/history; sensitivity on g.</td></tr>
+<tr><td class="c">Assumptions &amp; bias</td><td>Optimism (management/bonus-linked); inconsistent assumptions; unreliable source data; no <b>sensitivity/scenario</b> analysis.</td><td>Back-test prior forecasts vs actual; run sensitivity; corroborate data.</td></tr>
+<tr><td class="c">Qualitative</td><td>Ignores <b>real options</b> (expand/delay/abandon), strategic fit, ESG, competitor response.</td><td>Note flexibility &amp; non-financial value beyond the NPV number.</td></tr>
+</table>
+<div class="k"><b class="lbl">What to compare the NPV to (the verdict)</b>① NPV <b>vs zero</b> (positive = adds value); ② <b>IRR vs the cost of capital</b>; ③ <b>sensitivity</b> — how far an input can move before NPV = 0 (the critical variable); ④ <b>scenario</b> (best/base/worst); ⑤ <b>payback</b> (liquidity/risk screen); ⑥ assumptions vs <b>industry data, history &amp; prior-forecast accuracy</b>. Conclude: "the NPV is positive but <b>highly sensitive to [X]</b> / relies on optimistic [Y] → accept cautiously / recommend further work."</div>
+
+<!-- 3 -->
+<h2 class="gold">3 · The valuation methods — correct base &amp; how to critique each</h2>
+
+<h3>3.1 DCF (the main one)</h3>
+<div class="calc"><table>
+<tr><td><b>FCFF</b> = EBIT × (1 − tax) + depreciation − capex − increase in working capital</td><td></td></tr>
+<tr><td>Discount FCFF at the <b>WACC</b> → <b>Enterprise value</b>; − net debt = <b>equity value</b></td><td></td></tr>
+<tr><td><b>FCFE</b> = FCFF − after-tax interest + net new borrowing; discount at <b>Ke</b> → equity value directly</td><td></td></tr>
+<tr><td>Terminal value = final FCF × (1 + g) ÷ (discount rate − g); discount back to present</td><td></td></tr>
+</table></div>
+<ul>
+<li><b>Critique &amp; compare:</b> match the cash flow to the rate (<b>FCFF↔WACC, FCFE↔Ke</b> — a classic error); is the <b>growth rate</b> ≥ long-run GDP (unrealistic)? does the <b>terminal value</b> make up most of the value (over-reliant)? is the forecast period &amp; the rate reasonable? are the FCFs <b>normalised</b> (strip one-offs)? <b>Compare</b> to a multiples valuation &amp; to recent transactions; do a <b>range/sensitivity</b>.</li>
+</ul>
+
+<h3>3.2 Relative valuation (multiples)</h3>
+<div class="calc"><table>
+<tr><td>Equity value = earnings × <b>P/E</b> · or EV = EBITDA × <b>EV/EBITDA</b> (then − net debt) · or NAV × <b>P/B</b></td><td></td></tr>
+</table></div>
+<ul>
+<li><b>Critique &amp; compare:</b> are the <b>comparable companies</b> truly comparable (size, risk, growth, sector, gearing)? adjust for <b>accounting-policy</b> differences; is the metric (earnings/EBITDA) <b>distorted by one-offs</b> or cyclicality? a listed-company multiple includes a <b>marketability</b> premium an unlisted target lacks. <b>Compare</b> to DCF &amp; to actual sector deals.</li>
+</ul>
+
+<h3>3.3 Net asset value &amp; dividend growth</h3>
+<div class="calc"><table>
+<tr><td><b>NAV</b> = fair value of assets − liabilities (a <b>floor</b>/minimum value)</td><td></td></tr>
+<tr><td><b>Dividend growth (Gordon):</b> P0 = D1 ÷ (Ke − g)</td><td></td></tr>
+</table></div>
+<ul>
+<li><b>NAV critique:</b> ignores internally-generated goodwill &amp; future earnings; uses book not fair values; suits asset-heavy/liquidation, not a going concern.</li>
+<li><b>DDM critique:</b> extremely sensitive to <b>g</b>; needs <b>Ke &gt; g</b>; assumes constant growth (unrealistic); only for dividend-paying minority stakes.</li>
+</ul>
+<div class="k"><b class="lbl">Valuation adjustments to check</b>Add a <b>control premium</b> for a controlling stake; apply a <b>minority discount</b> and a <b>marketability/liquidity discount</b> (unlisted); add <b>surplus/non-operating assets</b>; add buyer-specific <b>synergies</b>; deduct contingent liabilities. A range (not a single number) is more credible.</div>
+
+<!-- 4 -->
+<h2 class="g">4 · The rules &amp; what to compare to — quick recap</h2>
+<ul>
+<li><b>NPV rule:</b> accept if NPV &gt; 0 (positive = value added). <b>IRR rule:</b> accept if IRR &gt; cost of capital (watch multiple IRRs &amp; ranking conflicts vs NPV — NPV wins).</li>
+<li><b>Match the rate to the flow:</b> all-firm flows (FCFF) → WACC; equity flows (FCFE/dividends) → Ke; real → real, nominal → nominal.</li>
+<li><b>Only relevant cash flows:</b> incremental, future, after-tax; include opportunity cost &amp; working capital; exclude sunk, allocated, depreciation (non-cash) &amp; financing.</li>
+<li><b>Always compare to:</b> zero / cost of capital · sensitivity &amp; scenario · another method (DCF vs multiples vs NAV) · industry data, history &amp; prior-forecast accuracy · recent comparable transactions.</li>
+<li><b>Conclude with a recommendation</b> that weighs the financial result <b>and</b> the reliability of the assumptions <b>and</b> the qualitative/strategic factors.</li>
+</ul>
+<div class="k"><b class="lbl">Exam phrasing that scores</b>"The discount rate does not reflect the project's higher risk — a <b>risk-adjusted rate</b> should be used." · "<b>Sunk</b> research costs of Rx have been incorrectly included." · "<b>Depreciation</b> is non-cash and should be excluded; only its tax shield is relevant." · "The <b>terminal value</b> represents x% of the valuation, so it is highly sensitive to the growth &amp; discount-rate assumptions." · "<b>FCFF</b> was discounted at <b>Ke</b> instead of <b>WACC</b>." · "The result should be tested with <b>sensitivity analysis</b> and compared to a <b>multiples</b> valuation &amp; recent transactions."</div>
+
+<p class="sub" style="margin-top:8px">Compiled for private IAC exam preparation (links to the June 2025 Ubud "criticise the FCF valuation" &amp; ratio-analysis requireds, and your MAF discussion-factors pack). Always critique cash flows, discount rate &amp; assumptions, and say what you'd compare each to.</p>
+
+</div></body></html>
