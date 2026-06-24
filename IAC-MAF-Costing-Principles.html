@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>IAC MAF — Costing Principles (in depth)</title>
+<style>
+  :root{--ink:#161a1f;--line:#bcc3cc;--muted:#5b626d;--accent:#5a3d82;--accent2:#6b54a0;--blue:#234d7a;--green:#1f6b3a;--gold:#6d4d12;--red:#9a3b3b;--soft2:#eee9f6;--calcbg:#eef4fb;--kbg:#fbf1e8;--exbg:#eef8f0;--tbg:#fbf1e8}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:9.8px;line-height:1.46}
+  .wrap{max-width:920px;margin:0 auto;padding:18px}
+  h1{font-size:20px;margin:0;color:var(--accent)}
+  .sub{color:var(--muted);font-size:9.4px;margin:2px 0 8px}
+  .banner{background:#fff7e6;border:1px solid #e7c97a;color:#7a5300;border-radius:4px;padding:5px 9px;font-size:9.2px;margin-bottom:8px}
+  .part{font-size:14px;margin:15px 0 4px;color:#fff;background:#222;padding:5px 10px;border-radius:3px;letter-spacing:.4px}
+  h2{font-size:12px;margin:11px 0 4px;color:#fff;background:var(--accent);padding:4px 9px;border-radius:3px}
+  h2.b{background:var(--blue)}h2.g{background:var(--green)}h2.gold{background:var(--gold)}h2.r{background:var(--red)}
+  h3{font-size:10.6px;margin:8px 0 2px;color:var(--accent);font-weight:700}
+  p{margin:3px 0}ul,ol{margin:2px 0 4px 15px;padding:0}li{margin:2px 0}b{color:#111}
+  table{width:100%;border-collapse:collapse;margin:5px 0;font-size:9px}
+  th,td{border:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
+  th{background:var(--soft2);color:var(--accent);font-weight:700;font-size:8.2px;text-transform:uppercase}
+  td.c{white-space:nowrap;font-weight:700;color:var(--blue)}
+  .f{background:var(--calcbg);border-left:3px solid var(--blue);padding:4px 9px;margin:4px 0;border-radius:0 4px 4px 0;font-size:9.2px;font-family:"Consolas",monospace}
+  .k{background:var(--kbg);border-left:3px solid var(--gold);padding:4px 9px;margin:5px 0;border-radius:0 4px 4px 0;font-size:9.2px}
+  .k b.lbl{color:var(--gold);display:block;font-size:8px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  .trig{background:var(--tbg);border-left:3px solid var(--gold);padding:4px 9px;margin:4px 0;border-radius:0 4px 4px 0;font-size:9.2px}
+  .cols2{column-count:2;column-gap:13px}
+  @page{size:A4;margin:11mm 9mm;@bottom-right{content:"p. " counter(page);font-size:8px;color:#999}}
+  h2,h3,.part{break-after:avoid}table,.k,.f,.trig{break-inside:avoid}
+</style></head><body><div class="wrap">
+
+<h1>Costing Principles — In-Depth Exam Guide</h1>
+<div class="sub">Calculation frameworks + the reasoning (what's in/out &amp; why) + discussion-question bank + strategy-question triggers · SAICA IAC 2026 · T. Van Heerden</div>
+<div class="banner"><b>The golden rule of costing:</b> the "right" cost depends on the <b>purpose</b>. For <b>inventory/external reporting</b> → full (absorption) cost. For <b>decisions</b> → only <b>relevant</b> costs (future, incremental, cash) incl. opportunity cost. For <b>control</b> → standard vs actual (variances). Always ask "what is this number <i>for</i>?" before you calculate.</div>
+
+<div class="part">PART A · COST CONCEPTS &amp; CLASSIFICATION</div>
+<table>
+<tr><th>Classification</th><th>Meaning &amp; why it matters</th></tr>
+<tr><td class="c">Direct vs indirect</td><td>Direct = traceable to the cost object (materials, labour); indirect (overheads) = shared → must be absorbed/allocated.</td></tr>
+<tr><td class="c">Variable / fixed / mixed / step</td><td>Behaviour with activity. Drives CVP, flexed budgets &amp; relevant costing. Mixed → split (high-low). Step = fixed within a range then jumps.</td></tr>
+<tr><td class="c">Product vs period</td><td>Product cost attaches to inventory (absorption); period cost expensed when incurred.</td></tr>
+<tr><td class="c">Relevant vs irrelevant</td><td>Relevant = <b>future + incremental + cash</b>. Irrelevant = sunk, committed, allocated, non-cash.</td></tr>
+<tr><td class="c">Sunk · committed</td><td>Already incurred / unavoidably contracted → <b>ignore</b> for decisions.</td></tr>
+<tr><td class="c">Opportunity cost</td><td>Benefit forgone from the next-best use of a resource → <b>include</b> (often the trickiest mark).</td></tr>
+<tr><td class="c">Avoidable vs unavoidable</td><td>Only <b>avoidable</b> costs are relevant to a shutdown/discontinue decision.</td></tr>
+<tr><td class="c">Controllable</td><td>For performance evaluation — assess managers only on what they control.</td></tr>
+</table>
+
+<div class="part">PART B · COSTING SYSTEMS</div>
+<h2 class="b">B1 · Absorption vs marginal (variable) costing</h2>
+<ul>
+<li><b>Absorption:</b> product cost = direct materials + direct labour + variable OH + <b>fixed production OH absorbed</b> (via the OAR). Fixed OH sits in inventory → profit moves with inventory levels. Required for IFRS/IAS 2.</li>
+<li><b>Marginal:</b> product cost = variable cost only; fixed OH = a period cost. <b>Contribution = sales − variable cost.</b> Better for decisions (no fixed-cost distortion).</li>
+</ul>
+<div class="f">OAR = budgeted overhead ÷ budgeted activity (units / labour hrs / machine hrs)
+Over/(under)-absorbed OH = absorbed (actual activity × OAR) − actual overhead
+Profit difference (absorption − marginal) = change in inventory units × fixed OH per unit</div>
+<div class="k"><b class="lbl">Why &amp; when</b>Production &gt; sales (inventory rises) → absorption profit &gt; marginal (fixed OH deferred in stock). The two reconcile by the fixed-OH in the inventory change. For a <b>decision</b>, use marginal (absorption can wrongly make a loss-making product look profitable, or defer fixed costs).</div>
+
+<h2 class="b">B2 · Activity-based costing (ABC)</h2>
+<ul>
+<li>Trace overheads to <b>activities</b> → assign to products via <b>cost drivers</b> (set-ups, orders, inspections), not a single volume base.</li>
+<li><b>Steps:</b> identify activities → pool costs → choose a driver → driver rate (pool ÷ driver volume) → assign to products.</li>
+<li><b>Use when</b> overheads are large &amp; diverse and products differ in volume/complexity → more accurate cost &amp; pricing; <b>cons:</b> costly/complex, driver choice subjective.</li>
+</ul>
+
+<h2 class="b">B3 · Job / batch / process &amp; throughput</h2>
+<ul>
+<li><b>Job/batch:</b> accumulate cost per job/batch; OAR for overheads.</li>
+<li><b>Process costing:</b> mass production → <b>equivalent units</b>. Cost per EU = costs ÷ EUs; value finished &amp; WIP. <b>Normal loss</b> = expected (cost absorbed by good units; scrap value reduces cost); <b>abnormal loss/gain</b> = unexpected → valued at full cost to P/L. Choose <b>FIFO</b> or <b>weighted average</b>. <b>Joint products</b>: split joint cost by sales value/units at split-off; <b>by-products</b> net off.</li>
+<li><b>Throughput accounting (TOC):</b> only material is variable → maximise <b>throughput (sales − material) per bottleneck hour</b>; rank products by that; elevate the constraint.</li>
+</ul>
+
+<div class="part">PART C · KEY EXAM CALCULATIONS &amp; FRAMEWORKS</div>
+<table>
+<tr><th>Calculation</th><th>Framework / formula</th></tr>
+<tr><td class="c">High-low (split mixed cost)</td><td>Variable/unit = (cost at high − cost at low) ÷ (units high − units low); fixed = total − (var × units).</td></tr>
+<tr><td class="c">Breakeven &amp; CVP</td><td>BE units = fixed ÷ contribution/unit; BE revenue = fixed ÷ C/S ratio; target-profit units = (fixed + profit) ÷ contribution/unit; <b>margin of safety</b> = (actual − BE) ÷ actual.</td></tr>
+<tr><td class="c">Multi-product CVP</td><td>Use weighted-average contribution at a fixed sales mix (or contribution per "bundle").</td></tr>
+<tr><td class="c">EOQ (inventory)</td><td>EOQ = √(2 × order cost × annual demand ÷ holding cost per unit); evaluate bulk discounts (saving vs extra holding).</td></tr>
+<tr><td class="c">Limiting factor</td><td>Contribution per unit of the scarce resource → rank → produce highest first.</td></tr>
+<tr><td class="c">Relevant cost of a decision</td><td>Sum only future incremental cash flows + opportunity costs; ignore sunk/allocated/depreciation.</td></tr>
+</table>
+<div class="k"><b class="lbl">CVP assumptions/limitations (discussion)</b>Linear cost &amp; revenue, constant sales mix, everything produced is sold, costs split cleanly fixed/variable → it's a <b>short-run approximation</b>; breaks down with volume discounts, step costs &amp; multiple products.</div>
+
+<div class="part">PART D · RELEVANT COSTING FOR DECISIONS — the reasoning</div>
+<h2 class="g">D1 · What's IN and what's OUT (and why)</h2>
+<table>
+<tr><th>Include (relevant)</th><th>Exclude (irrelevant)</th></tr>
+<tr><td>Future incremental cash flows; opportunity costs; avoidable fixed costs; incremental working capital.</td><td><b>Sunk</b> costs (already spent); <b>committed</b> costs; <b>allocated/apportioned</b> fixed OH (unless avoidable); <b>depreciation</b> &amp; notional/​non-cash charges; past R&amp;D.</td></tr>
+</table>
+<h3>Relevant cost of materials</h3>
+<ul>
+<li><b>In regular use (held in stock):</b> use <b>replacement cost</b> — using it now means you must replace it.</li>
+<li><b>Not in regular use (in stock):</b> use the <b>higher of</b> its scrap/realisable value or its value in an alternative use (the opportunity cost given up).</li>
+<li><b>Not in stock:</b> the <b>purchase price</b>.</li>
+</ul>
+<h3>Relevant cost of labour</h3>
+<ul>
+<li><b>Spare capacity:</b> only the incremental cost (nil if idle time is already paid; otherwise the extra hours).</li>
+<li><b>Full capacity:</b> labour cost <b>+ contribution forgone</b> on the work displaced (opportunity cost).</li>
+</ul>
+<h2 class="g">D2 · The decision frameworks</h2>
+<table>
+<tr><th>Decision</th><th>Framework + qualitative factors</th></tr>
+<tr><td class="c">Make vs buy / outsource</td><td>Compare incremental cost to make (variable + avoidable fixed) vs buy-in price. Qual: quality, reliability, capacity freed, supplier dependence, control of IP, staff, strategic importance, confidentiality.</td></tr>
+<tr><td class="c">Special / one-off order</td><td>Accept if price &gt; incremental cost AND spare capacity AND it won't cannibalise normal sales or undercut existing customers; if no spare capacity, add the opportunity cost.</td></tr>
+<tr><td class="c">Shutdown / discontinue</td><td>Compare contribution lost vs avoidable fixed costs saved; consider knock-on effects, redundancy costs, reversibility, reputation.</td></tr>
+<tr><td class="c">Limiting factor / product mix</td><td>Maximise contribution (or throughput) per unit of the scarce resource; overlay qualitative (key customers, minimum supply).</td></tr>
+<tr><td class="c">Joint products — process further?</td><td>Process further only if incremental revenue &gt; incremental further-processing cost; <b>ignore the joint costs</b> (already incurred at split-off).</td></tr>
+</table>
+
+<div class="part">PART E · STANDARD COSTING &amp; VARIANCES</div>
+<table>
+<tr><th>Variance</th><th>Formula</th></tr>
+<tr><td class="c">Material price</td><td>(std price − actual price) × actual qty purchased</td></tr>
+<tr><td class="c">Material usage</td><td>(std qty for actual output − actual qty used) × std price</td></tr>
+<tr><td class="c">Material mix / yield</td><td>Mix: (actual qty in std mix − actual qty in actual mix) × std price · Yield: (std input for output − actual total input) × std cost</td></tr>
+<tr><td class="c">Labour rate</td><td>(std rate − actual rate) × actual hours paid</td></tr>
+<tr><td class="c">Labour efficiency</td><td>(std hrs for output − actual hrs worked) × std rate; <b>idle time</b> = idle hrs × std rate</td></tr>
+<tr><td class="c">Variable OH exp / eff</td><td>Exp: (std rate − actual rate) × actual hrs · Eff: (std hrs − actual hrs) × std rate</td></tr>
+<tr><td class="c">Fixed OH exp / volume</td><td>Exp: budget − actual FOH · Volume (absorption only): (actual − budget output) × FOAR (= capacity + efficiency)</td></tr>
+<tr><td class="c">Sales price / volume</td><td>Price: (actual − std price) × actual units · Volume: (actual − budget units) × std contribution (marginal) or std profit (absorption); split into mix &amp; quantity</td></tr>
+</table>
+<div class="k"><b class="lbl">Interpreting variances (discussion)</b>Investigate by <b>size/%, controllability, trend, interdependence</b> (cheaper material → adverse usage/quality; a rushed job → adverse efficiency) and whether the <b>standard was realistic</b>. <b>Planning variance</b> = caused by a flawed original standard (uncontrollable); <b>operational variance</b> = what management could control — split them for a fair evaluation.</div>
+
+<div class="part">PART F · BUDGETING</div>
+<ul>
+<li><b>Types:</b> functional (sales, production, materials, labour, OH) → master budget; <b>cash budget</b> (receipts/payments timing — liquidity); <b>flexed budget</b> (flex to actual activity for fair comparison).</li>
+<li><b>Approaches:</b> incremental (last year ± %, embeds slack) vs <b>zero-based</b> (justify from zero); <b>rolling</b> (always current); <b>activity-based</b> budgeting; <b>beyond budgeting</b>.</li>
+<li><b>Behavioural:</b> participative (motivation but slack) vs imposed (fast but demotivating); set realistic, attainable targets; controllability.</li>
+</ul>
+
+<div class="part">PART G · PRICING &amp; TRANSFER PRICING</div>
+<div class="cols2">
+<div><h3>Pricing strategies</h3><ul>
+<li><b>Cost-plus</b> (simple, covers cost; ignores demand/competition).</li>
+<li><b>Market/value-based</b> (price to value; maximises profit, needs market data).</li>
+<li><b>Penetration</b> (low price to win share); <b>skimming</b> (high price to early adopters); <b>price discrimination</b> (different segments, needs separable markets/no resale).</li>
+<li><b>Target costing</b> (price − margin = target cost → design to it); <b>life-cycle</b> pricing.</li>
+</ul></div>
+<div><h3>Transfer pricing</h3><ul>
+<li>Aim: <b>goal congruence</b>, fair divisional evaluation, autonomy.</li>
+<li>Methods: market-based (best if a market exists), cost-based (full/variable ± markup), negotiated.</li>
+<li><b>Rule:</b> min = variable/marginal cost + opportunity cost to the seller; max = lowest external buy price.</li>
+<li>Watch divisional motivation &amp; cross-border tax (s31).</li>
+</ul></div>
+</div>
+
+<div class="part">PART H · DECISION-MAKING UNDER RISK &amp; UNCERTAINTY</div>
+<ul>
+<li><b>Sensitivity:</b> how far an input can move before the decision flips → the critical variable.</li>
+<li><b>Expected value</b> = Σ(probability × outcome) — good for repeated decisions; ignores risk attitude &amp; one-off impact.</li>
+<li><b>Decision trees</b> (sequential decisions, roll back); <b>simulation</b> (many variables).</li>
+<li><b>Value of perfect/imperfect information</b> = the increase in expected value from better decisions.</li>
+<li><b>Risk attitude:</b> maximin (cautious), maximax (optimist), minimax regret.</li>
+</ul>
+
+<div class="part">PART I · MODERN / STRATEGIC COSTING</div>
+<table>
+<tr><th>Technique</th><th>What &amp; when</th></tr>
+<tr><td class="c">Target costing</td><td>Market price − required margin = target cost; close the gap by design/value engineering. New/competitive products.</td></tr>
+<tr><td class="c">Life-cycle costing</td><td>All costs over the whole life (R&amp;D → disposal) → true profitability &amp; pricing.</td></tr>
+<tr><td class="c">Kaizen costing</td><td>Continuous incremental cost reduction during production.</td></tr>
+<tr><td class="c">Quality costs</td><td>Prevention + appraisal (conformance) vs internal + external failure (non-conformance) — spend on prevention to cut failure.</td></tr>
+<tr><td class="c">JIT / lean / TQM</td><td>Minimise inventory &amp; waste; pull production; continuous improvement. (Cuts holding cost, raises supplier-reliance risk.)</td></tr>
+<tr><td class="c">Environmental MA</td><td>Identify &amp; manage environmental costs (links to 6 capitals/ESG).</td></tr>
+</table>
+
+<div class="part">PART J · DISCUSSION-QUESTION BANK (what can be asked + how)</div>
+<ul>
+<li><b>"Critically evaluate the costing system"</b> → absorption vs ABC: is the current base distorting product costs? recommend ABC if overheads large/diverse (give pros/cons).</li>
+<li><b>"Why do absorption &amp; marginal profit differ?"</b> → fixed OH in inventory; reconcile; implications for decisions &amp; performance.</li>
+<li><b>"Should we make/buy / accept the order / close X?"</b> → relevant-costing answer + qualitative factors + recommendation.</li>
+<li><b>"Discuss the variances / their causes"</b> → size, controllability, interdependence, planning vs operational, realistic standard.</li>
+<li><b>"Evaluate the budgeting process / behaviour"</b> → participative vs imposed, slack, flexed vs fixed, ZBB/rolling/beyond budgeting.</li>
+<li><b>"Advise on the transfer price / pricing strategy"</b> → goal congruence / min-max rule; cost-plus vs value-based; penetration vs skimming.</li>
+<li><b>"Is the performance measure appropriate?"</b> → ROI vs RI/EVA (dysfunctional behaviour), balanced scorecard, controllability, non-financial &amp; ESG.</li>
+<li><b>"Limitations of CVP / standard costing / EOQ"</b> → state the assumptions &amp; why they break in the scenario.</li>
+<li><b>"Throughput / bottleneck"</b> → rank by throughput per bottleneck hour; how to elevate the constraint.</li>
+<li><b>Modern environment</b> → why target/life-cycle/kaizen/quality/JIT costing suit the scenario; criticisms of traditional standard costing.</li>
+</ul>
+<div class="k"><b class="lbl">How to answer a costing discussion</b>① state the principle/technique → ② apply it to the scenario facts/numbers → ③ give both advantages &amp; limitations → ④ <b>recommend &amp; conclude</b>. Bring a number in to support the words.</div>
+
+<div class="part">PART K · STRATEGY QUESTIONS — triggers &amp; the points to hit</div>
+<h2 class="r">K1 · How to recognise a strategy question (triggers)</h2>
+<div class="trig"><b>Scenario triggers →</b> "should the company <b>invest / expand / enter a new market / acquire / close</b>?"; "<b>critically evaluate</b> the decision / strategy"; "does it <b>align with the strategic objectives</b>?"; a change in the <b>macro environment</b> (interest rates, regulation, technology, competitors); <b>sustainability/ESG</b> goals; a new product, store, division or contract.</div>
+<h2 class="r">K2 · The frameworks to apply (pick what fits)</h2>
+<table>
+<tr><th>Framework</th><th>Use it when / what it gives</th></tr>
+<tr><td class="c">PESTEL</td><td>Macro-environment scan: Political, Economic, Social, Technological, Environmental, Legal → external opportunities/threats.</td></tr>
+<tr><td class="c">Porter's 5 Forces</td><td>Industry attractiveness: rivalry, new entrants, substitutes, buyer &amp; supplier power → can the firm earn returns here?</td></tr>
+<tr><td class="c">SWOT</td><td>Pull internal (strengths/weaknesses) &amp; external (opportunities/threats) together → the bridge to recommendations.</td></tr>
+<tr><td class="c">Porter's generic strategies</td><td>Cost leadership / differentiation / focus → is the firm's strategy clear &amp; consistent (avoid "stuck in the middle")?</td></tr>
+<tr><td class="c">Ansoff matrix</td><td>Growth: market penetration · market development · product development · diversification → classify &amp; assess the risk of the move.</td></tr>
+<tr><td class="c">Value chain</td><td>Where value/competitive advantage is created (primary &amp; support activities).</td></tr>
+<tr><td class="c">BCG matrix</td><td>Product/division portfolio: stars, cash cows, question marks, dogs → resource allocation.</td></tr>
+<tr><td class="c">6 Capitals / integrated thinking</td><td>Impact on financial, manufactured, intellectual, human, social &amp; relationship, natural capital → long-term value &amp; ESG.</td></tr>
+</table>
+<h2 class="r">K3 · The main points to TOUCH ON in every strategy answer</h2>
+<ol>
+<li><b>Strategic fit</b> — does it align with the company's <b>mission, objectives &amp; core competencies</b>? (state the objective, then test the decision against it.)</li>
+<li><b>Competitive advantage</b> — does it create or protect a <b>sustainable</b> advantage (cost or differentiation)? can rivals copy it?</li>
+<li><b>Financial viability</b> — returns vs cost: <b>NPV/IRR, payback, contribution, affordability</b> &amp; funding (link to the numbers).</li>
+<li><b>Risk</b> — business, financial, execution/integration, market, regulatory, reputational; sensitivity of the assumptions.</li>
+<li><b>Resources &amp; capabilities</b> — does the firm have the people, capacity, technology &amp; funding to execute?</li>
+<li><b>Stakeholders</b> — employees, customers, suppliers, community, shareholders, regulators — who is affected &amp; how?</li>
+<li><b>Opportunity cost &amp; alternatives</b> — what else could the resources do? is there a better option?</li>
+<li><b>Sustainability &amp; the long term</b> — 6 capitals, ESG, reputation, integrated/triple-context value over time.</li>
+<li><b>Conclude with a clear recommendation</b> — weigh financial + qualitative + risk → decide.</li>
+</ol>
+<div class="k"><b class="lbl">Strategy-answer formula</b>"This decision is <b>[aligned/not aligned]</b> with the objective of <b>[X]</b> because <b>[scenario fact]</b>; it <b>[creates/erodes]</b> competitive advantage; financially it <b>[adds/destroys] value</b> (NPV/return); the key risks are <b>[…]</b>; on balance I recommend <b>[…]</b>." Mark-earners: link every point to a <b>specific fact/number</b>, give <b>both sides</b>, cover <b>non-financial &amp; sustainability</b>, and <b>conclude</b>.</div>
+
+<div class="part">PART L · EXAM TECHNIQUE (costing)</div>
+<ul>
+<li><b>Identify the purpose</b> first → inventory (absorption) / decision (relevant) / control (variances) → that picks the costing approach.</li>
+<li><b>Calcs:</b> vertical layout, label each line, <b>show workings</b> (own-figure marks), state assumptions; for relevant costing add a one-line <b>reason</b> per item (why included/excluded) — these earn marks.</li>
+<li><b>Discussions:</b> principle → apply → both sides → recommend; bring numbers in.</li>
+<li><b>Don't</b> include sunk/allocated/depreciation in a decision; <b>don't</b> forget opportunity cost &amp; qualitative factors.</li>
+</ul>
+
+<p class="sub" style="margin-top:8px">Compiled for private IAC exam preparation across management-accounting costing principles (cost classification, costing systems, CVP, relevant costing, standard costing &amp; variances, budgeting, pricing &amp; transfer pricing, risk, modern costing) and strategy. Apply every framework to the specific scenario.</p>
+
+</div></body></html>
