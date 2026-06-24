@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>IAC MAF — Variance Analysis</title>
+<style>
+  :root{--ink:#161a1f;--line:#bcc3cc;--muted:#5b626d;--accent:#5a3d82;--blue:#234d7a;--green:#1f6b3a;--gold:#6d4d12;--red:#9a3b3b;--soft2:#eee9f6;--calcbg:#eef4fb;--kbg:#fbf1e8}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:var(--ink);font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:9.7px;line-height:1.45}
+  .wrap{max-width:920px;margin:0 auto;padding:18px}
+  h1{font-size:20px;margin:0;color:var(--accent)}
+  .sub{color:var(--muted);font-size:9.3px;margin:2px 0 8px}
+  .banner{background:#fff7e6;border:1px solid #e7c97a;color:#7a5300;border-radius:4px;padding:5px 9px;font-size:9.2px;margin-bottom:8px}
+  h2{font-size:12.5px;margin:13px 0 5px;color:#fff;background:var(--accent);padding:4px 9px;border-radius:3px}
+  h2.b{background:var(--blue)}h2.g{background:var(--green)}h2.gold{background:var(--gold)}h2.r{background:var(--red)}
+  h3{font-size:10.6px;margin:8px 0 2px;color:var(--accent);font-weight:700}
+  p{margin:3px 0}ul,ol{margin:2px 0 4px 15px;padding:0}li{margin:2px 0}b{color:#111}
+  table{width:100%;border-collapse:collapse;margin:5px 0;font-size:8.8px}
+  th,td{border:1px solid var(--line);padding:4px 6px;text-align:left;vertical-align:top}
+  th{background:var(--soft2);color:var(--accent);font-weight:700;font-size:8px;text-transform:uppercase}
+  td.c{white-space:nowrap;font-weight:700;color:var(--blue)}
+  .f{background:var(--calcbg);border-left:3px solid var(--blue);padding:4px 9px;margin:4px 0;border-radius:0 4px 4px 0;font-size:9px;font-family:"Consolas",monospace}
+  .k{background:var(--kbg);border-left:3px solid var(--gold);padding:5px 9px;margin:5px 0;border-radius:0 4px 4px 0;font-size:9.2px}
+  .k b.lbl{color:var(--gold);display:block;font-size:8px;text-transform:uppercase;letter-spacing:.3px;margin-bottom:1px}
+  @page{size:A4;margin:11mm 9mm;@bottom-right{content:"p. " counter(page);font-size:8px;color:#999}}
+  h2,h3{break-after:avoid}table,.k,.f{break-inside:avoid}
+</style></head><body><div class="wrap">
+
+<h1>Variance Analysis — Summary &amp; Discussion Points</h1>
+<div class="sub">Every variance: formula · causes · who's responsible · what to look at · SAICA IAC 2026 · T. Van Heerden</div>
+<div class="banner"><b>What variances are:</b> the difference between the <b>flexed-budget (standard) cost/revenue</b> for the actual output and the <b>actual</b> result. <b>Favourable (F)</b> = better than standard; <b>Adverse (A)</b> = worse. The point isn't the number — it's <b>why</b> it happened, <b>who</b> controls it, and whether one variance <b>caused</b> another. Always reconcile budget → actual via an <b>operating statement</b>.</div>
+
+<!-- FORMULAS -->
+<h2 class="b">1 · The variances &amp; formulas (memorise)</h2>
+<div class="f">MATERIAL  Price = (std price − actual price) × actual qty purchased
+          Usage = (std qty for actual output − actual qty used) × std price
+          Mix   = (actual qty in std mix − actual qty in actual mix) × std price
+          Yield = (std input for actual output − actual total input) × std cost per unit
+LABOUR    Rate       = (std rate − actual rate) × actual hours paid
+          Efficiency = (std hrs for actual output − actual hrs worked) × std rate
+          Idle time  = idle hours × std rate (always adverse)
+VAR. OH   Expenditure = (std rate − actual rate) × actual hours   [= AH×SR − actual VOH]
+          Efficiency  = (std hrs for output − actual hrs) × std rate
+FIXED OH  Expenditure = budgeted FOH − actual FOH
+          Volume (absorption only) = (actual − budgeted output) × FOAR  = Capacity + Efficiency
+          Capacity = (actual hrs − budgeted hrs) × FOAR ;  Efficiency = (std hrs − actual hrs) × FOAR
+SALES     Price  = (actual price − std price) × actual units sold
+          Volume = (actual − budgeted units) × std contribution (marginal) / std profit (absorption)
+          (split into Sales Mix &amp; Sales Quantity for multi-product)</div>
+<div class="k"><b class="lbl">Two reminders</b>① Use the <b>flexed</b> budget (standard for the <i>actual</i> output) — not the original fixed budget. ② <b>Fixed-OH volume</b> exists only under <b>absorption</b> costing (marginal has only the expenditure variance).</div>
+
+<!-- DISCUSSION TABLE -->
+<h2 class="g">2 · Each variance — causes, responsibility &amp; what to look at</h2>
+<table>
+<tr><th>Variance</th><th>Possible causes</th><th>Owner</th><th>What to look at / discuss</th></tr>
+<tr><td class="c">Material price</td><td>Supplier price change/inflation; bulk discount taken or missed; different <b>quality</b> bought; FX moves (imports); poor/emergency purchasing; out-of-date standard.</td><td>Purchasing</td><td>Controllable vs market-driven (→ planning variance?); link to <b>usage</b> (cheap material → more waste); is the standard current?</td></tr>
+<tr><td class="c">Material usage</td><td>Wastage/spoilage/theft; poor-quality material; low labour skill; machine faults; change in method; unrealistic standard.</td><td>Production</td><td>Interdependence with price &amp; labour; quality control; is wastage within normal loss?</td></tr>
+<tr><td class="c">Material mix</td><td>Using a cheaper/more-expensive blend than standard (substitutable inputs).</td><td>Production</td><td>Effect on <b>yield</b> &amp; product quality — a favourable mix often causes an adverse yield.</td></tr>
+<tr><td class="c">Material yield</td><td>Process efficiency; input quality; mix change; machine condition.</td><td>Production</td><td>Read together with the mix variance (the net of mix + yield = usage).</td></tr>
+<tr><td class="c">Labour rate</td><td>Wage/union increase; <b>overtime premium</b>; using higher/lower-grade staff; bonuses; outdated standard.</td><td>HR/Payroll</td><td>Controllable? link to <b>efficiency</b> (cheaper, less-skilled labour → adverse efficiency).</td></tr>
+<tr><td class="c">Labour efficiency</td><td>Skill/experience; motivation; training; <b>learning curve</b>; material quality; machine downtime; working conditions.</td><td>Production</td><td>Interdependence (low-grade labour or poor material → more hours); idle time excluded.</td></tr>
+<tr><td class="c">Idle time</td><td>Machine breakdown; material shortage; power cut; poor scheduling; strikes.</td><td>Production</td><td>Always adverse; is it controllable? recurring → process problem.</td></tr>
+<tr><td class="c">Variable OH expenditure</td><td>Indirect-cost price changes (utilities, indirect materials, consumables).</td><td>Production/Ops</td><td>Driven by the activity base used (usually labour/machine hrs).</td></tr>
+<tr><td class="c">Variable OH efficiency</td><td>Same drivers as labour efficiency (it's hours-based).</td><td>Production</td><td>Moves with the labour-efficiency variance.</td></tr>
+<tr><td class="c">Fixed OH expenditure</td><td>Actual fixed costs differ from budget (rent, salaries, insurance, unexpected costs); budgeting error.</td><td>Mgmt/Dept</td><td>Largely committed → often uncontrollable short-term; check the budget's realism.</td></tr>
+<tr><td class="c">Fixed OH volume (abs.)</td><td>Producing more/less than budgeted → over/under-absorption (capacity &amp; efficiency).</td><td>Production</td><td>Not a "cash" variance — an absorption artefact; split into capacity (hrs worked) &amp; efficiency (hrs vs std).</td></tr>
+<tr><td class="c">Sales price</td><td>Discounts/promotions; price changes; competition; market conditions.</td><td>Sales/Marketing</td><td>Link to <b>sales volume</b> (a price cut may lift volume); is it a deliberate strategy?</td></tr>
+<tr><td class="c">Sales volume / mix / quantity</td><td>Demand; marketing; competition; product quality; economy; price change.</td><td>Sales/Marketing</td><td>Mix = selling a richer/poorer product mix; quantity = total market/share; interdependence with price.</td></tr>
+</table>
+
+<!-- OPERATING STATEMENT -->
+<h2 class="gold">3 · The operating statement (reconcile budget → actual)</h2>
+<div class="f">MARGINAL costing
+  Budgeted contribution
+   ± Sales volume (×std contribution) ± Sales price
+   ± Material price/usage ± Labour rate/efficiency/idle ± Var-OH exp/eff
+  = Actual contribution
+   − Actual fixed overhead (± fixed-OH expenditure variance)
+  = Actual profit
+ABSORPTION costing: also include the FIXED-OH VOLUME variance (capacity + efficiency).</div>
+
+<!-- INVESTIGATION -->
+<h2 class="r">4 · When &amp; whether to investigate a variance</h2>
+<ul>
+<li><b>Size &amp; %</b> — material in rand and relative to the standard (set a threshold).</li>
+<li><b>Controllability</b> — is it within the manager's control, or external/market (→ a planning issue)?</li>
+<li><b>Trend</b> — one-off vs a worsening pattern over months.</li>
+<li><b>Interdependence</b> — does it explain/result from another variance (price↔usage, rate↔efficiency, mix↔yield, price↔volume)?</li>
+<li><b>Reliability of the standard</b> — is the standard out of date or unrealistic?</li>
+<li><b>Cost vs benefit</b> — only investigate if the expected benefit exceeds the cost.</li>
+</ul>
+
+<!-- PLANNING/OPERATIONAL -->
+<h2 class="b">5 · Planning vs operational variances</h2>
+<ul>
+<li><b>Planning variance</b> = caused by a <b>flawed/out-of-date original standard</b> → uncontrollable → revise the standard (e.g. a market price rose for everyone). Difference between the <b>original</b> and the <b>revised</b> standard.</li>
+<li><b>Operational variance</b> = difference between the <b>revised (realistic) standard</b> and the <b>actual</b> → what management could control → use it for fair performance evaluation.</li>
+</ul>
+<div class="k"><b class="lbl">Why it matters</b>Splitting them avoids blaming a manager for an unrealistic standard (planning) and isolates true performance (operational) — a common discussion mark.</div>
+
+<!-- INTERDEPENDENCE -->
+<h2 class="g">6 · Interdependence — link the variances (high-yield)</h2>
+<ul>
+<li><b>Cheaper material (F price) → more waste &amp; rework (A usage)</b> and possibly <b>A labour efficiency</b> &amp; quality problems.</li>
+<li><b>Lower-grade labour (F rate) → A labour efficiency</b> (slower) and <b>A material usage</b>.</li>
+<li><b>Favourable material mix → adverse yield</b> (cheaper blend, lower output).</li>
+<li><b>Sales price cut (A price) → higher sales volume (F volume)</b> — assess the net effect.</li>
+<li><b>Overtime to meet demand → A labour rate</b> (premium) but <b>F sales volume</b>.</li>
+</ul>
+
+<!-- LIMITATIONS / BEHAVIOURAL -->
+<h2 class="r">7 · Limitations of standard costing &amp; behavioural points</h2>
+<ul>
+<li><b>Modern environment:</b> less useful in <b>JIT/TQM/customised/short-life</b> production; standards date quickly; focuses on cost, not <b>quality &amp; continuous improvement</b> (kaizen); backward-looking.</li>
+<li><b>Dysfunctional behaviour:</b> buying cheap to beat the price variance (→ quality issues); over-producing to absorb fixed OH / create a favourable volume variance (builds inventory); cutting corners to hit efficiency targets.</li>
+<li><b>Behavioural:</b> the tightness of standards affects motivation — <b>ideal</b> (demotivating), <b>attainable</b> (best for motivation), <b>basic/loose</b> (no challenge); avoid a blame culture; apply <b>controllability</b>.</li>
+<li><b>Non-financial measures</b> (quality, delivery, customer satisfaction) should sit alongside variances (balanced scorecard).</li>
+</ul>
+
+<div class="k"><b class="lbl">Exam technique for a variance question</b>① compute the variance (state F/A); ② give the most likely <b>cause(s)</b> tied to the scenario; ③ name <b>who is responsible</b> &amp; whether it's <b>controllable</b>; ④ flag any <b>interdependence</b> with other variances; ⑤ say whether to <b>investigate</b> (size/controllability/trend) and whether the <b>standard</b> needs revising (planning vs operational); ⑥ conclude. One applied point = one mark — always link to the scenario.</div>
+
+<p class="sub" style="margin-top:8px">Compiled for private IAC exam preparation. Use the flexed budget; remember fixed-OH volume is absorption-only; and the marks in a discussion are in the <b>causes, responsibility, interdependence &amp; investigation</b> — not just the numbers.</p>
+
+</div></body></html>
