@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<title>Cold Press Nation — Week 2 Attempt &amp; Self-Review</title>
+<style>
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;color:#1a1a1a;font-family:Calibri,"Segoe UI",Arial,sans-serif;font-size:11px;line-height:1.42}
+  .wrap{max-width:830px;margin:0 auto;padding:20px 26px}
+  h1{font-size:17px;margin:0 0 2px}
+  h2{font-size:14px;margin:20px 0 5px;color:#fff;background:#1f3d6b;padding:5px 10px;border-radius:3px}
+  h2.rev{background:#6b4a1f}
+  h3{font-size:12.5px;margin:14px 0 3px;color:#1f3d6b;border-bottom:1.5px solid #cbd6e6;padding-bottom:2px}
+  h4{font-size:11.5px;margin:9px 0 2px;color:#222}
+  .meta{color:#555;font-size:10.5px;margin:2px 0 6px}
+  p{margin:4px 0}
+  ul{margin:3px 0 6px 18px;padding:0}ol{margin:3px 0 6px 20px;padding:0}
+  li{margin:2.5px 0}
+  .email{border:1px solid #c9c9c9;border-left:3px solid #1f3d6b;background:#fafbfc;padding:6px 11px;margin:6px 0;font-size:10.6px}
+  .email .hd{color:#555;font-size:9.6px;border-bottom:1px dashed #ccc;padding-bottom:3px;margin-bottom:4px}
+  table{width:100%;border-collapse:collapse;margin:6px 0;font-size:10.4px}
+  th,td{border:1px solid #999;padding:4px 6px;text-align:left;vertical-align:top}
+  th{background:#eef2f8;font-weight:700}
+  td.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .calc{background:#f4f6fa;border:1px solid #d5deea;border-radius:3px;padding:5px 9px;margin:5px 0;font-size:10.2px;font-family:Consolas,monospace}
+  .got{background:#eef6ee;border-left:3px solid #4a7a4a;padding:5px 10px;margin:5px 0;font-size:10.4px}
+  .miss{background:#fbecec;border-left:3px solid #a23b3b;padding:5px 10px;margin:5px 0;font-size:10.4px}
+  .verdict{display:inline-block;font-weight:800;border-radius:10px;padding:1px 9px;font-size:10px}
+  .c{background:#dbeedd;color:#2c6b45}.bc{background:#f6ddd8;color:#9a3b3b}.borderline{background:#faf0d6;color:#7a5300}
+  .note{background:#fff9e8;border:1px solid #e6cf86;border-radius:3px;padding:5px 9px;margin:6px 0;font-size:10.4px}
+  @page{size:A4;margin:14mm 13mm;@bottom-right{content:"Page " counter(page);font-size:8px;color:#999}}
+  h2,h3,h4{break-after:avoid}table,.email,.calc,.got,.miss,.note{break-inside:avoid}
+</style></head><body><div class="wrap">
+
+<h1>APC 2023 — Cold Press Nation: Week 2 Attempt &amp; Self-Review</h1>
+<div class="meta">By Yonwaba Lethulwe CA(SA) (Tasks 1–7) &amp; Caryn September CA(SA) (Task 8) · Attempted under exam conditions, then self-marked against UCT's Suggested Solution · 2 August 2023</div>
+
+<div class="note"><b>How I approached this:</b> I read the additional information first, checked each task against the triggers I'd found in Week 1, then wrote my answers. Below is <b>Part A — my attempt</b> (as I'd hand it in), and then <b>Part B — my self-review</b> after reading UCT's solution (what I got, what I missed, and a Competent / Below-Competent view per task).</div>
+
+<h2>PART A — MY ATTEMPT</h2>
+
+<!-- TASK 1 -->
+<h3>Task 1 — Feedback on the loan restructuring accounting (Doc 1)</h3>
+<div class="email">
+<div class="hd"><b>From:</b> Yonwaba &nbsp;<b>To:</b> Amien &nbsp;<b>Subject:</b> Loan from parent — my feedback</div>
+Hi Amien, thanks for sharing this. My feedback on each option is below (no journals, no tax, as you asked).
+
+<h4>Option A — loan becomes convertible into ordinary shares</h4>
+<ul>
+<li>Adding an equity-conversion feature changes the loan <b>substantially</b>, so I agree you should <b>derecognise the old R12m loan on 1 Aug 2023 and recognise a new instrument</b>.</li>
+<li>But the new instrument is a <b>convertible (compound) instrument</b>, so I don't think we can just recognise the whole R12m as one liability. Under <b>IAS 32</b> we may need to split it:
+  <ul>
+  <li><b>First question — is it convertible into a <u>fixed</u> or a <u>variable</u> number of shares?</b> You haven't told me, and it changes the answer.</li>
+  <li><b>If fixed number of shares</b> → it's a compound instrument: recognise the <b>liability component at the fair value of a similar loan <u>without</u> the conversion feature</b>, and the <b>residual (balancing figure) in equity</b>.</li>
+  <li><b>If variable number</b> → the conversion feature doesn't meet the equity definition; it's all a financial liability and the residual goes to <b>profit or loss</b> (day-1 gain/loss) where fair value is based on observable inputs.</li>
+  </ul>
+</li>
+<li>The interest journal (R12m × 9% = R1,080,000) only records the <b>cash coupon</b>. The <b>actual interest expense</b> for FY2024 should be the <b>carrying amount of the liability component × the market rate used to value that component</b> (a loan without the conversion feature), not 9%. So the interest expense needs correcting.</li>
+</ul>
+<b>Info I still need:</b> whether the shares are fixed or variable, the market rate / fair value of a similar non-convertible loan, and confirmation there are no transaction costs (they'd change the split and the interest).
+
+<h4>Option B — higher rate (11.75%), capital + compounded interest due 31 July 2026</h4>
+<ul>
+<li>First we have to decide if the terms are <b>substantially different</b>, because that decides <b>modification vs extinguishment</b>. IFRS 9 gives us the <b>"10% test"</b>: compare the PV of the new cash flows discounted at the <b>original effective rate (9%)</b> to the old carrying amount (R12m).</li>
+<li>My calculation:
+<div class="calc">FV of new loan at 31 Jul 2026 = 12 000 000 × 1.1175³ = <b>R16 746 492</b><br>
+PV at original 9% for 3 yrs = 16 746 492 ÷ 1.09³ = <b>R12 931 364</b><br>
+Difference = 12 931 364 − 12 000 000 = <b>R931 364</b> = <b>7.78%</b> of R12m → &lt; 10%</div></li>
+<li>So it's <b>not</b> substantially different → treat as a <b>modification</b> (not a new loan). That means:
+  <ul>
+  <li>Remeasure the loan to <b>R12 931 364</b> on 1 Aug 2023;</li>
+  <li>Recognise the R931 364 increase as a <b>modification loss in P/L</b> in FY2024;</li>
+  <li>Keep using the <b>original 9%</b> rate → interest FY2024 = 12 931 364 × 9% = <b>R1 163 828</b>.</li>
+  </ul>
+</li>
+<li>So your Option B treatment (11.75% × 12m = R1 410 000, no modification loss) needs to change to the above.</li>
+</ul>
+<b>Info I still need:</b> confirmation of no transaction costs. Let's work through the journals together.
+</div>
+
+<!-- TASK 2 -->
+<h3>Task 2 — Tax consequences of the interest &amp; the restructuring (Doc 2)</h3>
+<div class="email">
+<div class="hd"><b>From:</b> Yonwaba &nbsp;<b>To:</b> Amien &nbsp;<b>Subject:</b> Loan — tax consequences</div>
+<h4>Existing loan — FY2023</h4>
+<b>Cold Press Nation:</b>
+<ul>
+<li>Interest is <b>deductible under s24J</b> — incurred in the course of trade / production of income (the farm generates taxable income). Calculated on a <b>yield-to-maturity</b> basis; paid annually in arrears with no discount/premium, so interest incurred = interest paid on 31 July.</li>
+<li><b>s23M</b> could limit the deduction (interest to a creditor in a controlling relationship where the interest isn't taxed in their hands), but the amount doesn't appear to exceed the limit.</li>
+</ul>
+<b>MegaDrinks (non-resident):</b>
+<ul>
+<li>Taxed in SA only on <b>SA-source</b> income. The interest is <b>SA-source</b> (paid by a SA resident / funds used in SA — s9).</li>
+<li>As a non-resident, the interest is <b>exempt from normal tax under s10(1)(h)</b>, BUT subject to <b>15% interest withholding tax (s50A–H)</b> — a <b>final tax</b> — which <b>CPN must withhold</b> and pay to SARS on the 31 July payment.</li>
+<li>The 15% may be <b>reduced by a Double Tax Agreement</b> — I'd need to know which country MegaDrinks is tax-resident in and check the DTA.</li>
+</ul>
+<h4>Restructuring — 2024 year of assessment</h4>
+<b>Option A (convertible):</b>
+<ul>
+<li>Interest deducted at 9% (s24J), subject to WHT. On <b>s31 transfer pricing</b> — 9% is below the 11.75% market rate, but that's because of the conversion feature, so I don't think s31 applies; if it did, the deduction would be limited and the disallowed part a deemed <b>dividend in specie</b> (dividends tax).</li>
+<li><b>Bigger concern — s8F hybrid debt:</b> because the loan can convert to shares, there's a risk it's a <b>hybrid debt instrument</b>. If so, the interest becomes <b>non-deductible</b> and is treated as a <b>dividend in specie</b> (dividends tax on CPN). This depends on whether it converts to a <b>fixed</b> number of shares — need to confirm.</li>
+<li>If it later converts to shares of <b>lesser value</b>, the <b>debt-benefit rules (s19 &amp; para 12A)</b> could trigger recoupments/CGT. No group exclusion applies because MegaDrinks is <b>non-resident</b> (a s41 group must all be SA-resident).</li>
+<li><b>These are unfavourable — I'd recommend we get a tax specialist before pursuing Option A</b> so we don't accidentally trigger s8F or the debt-benefit rules.</li>
+</ul>
+<b>Option B:</b>
+<ul>
+<li>Interest at 11.75% (s24J, YTM, WHT as before). Capitalising/compounding the interest doesn't change deductibility (still YTM), it just increases the deduction over time.</li>
+<li>11.75% is market-related → <b>no s31</b>; the new loan replaces one of equal value → <b>no debt benefit</b>. <b>No concerns.</b></li>
+</ul>
+</div>
+
+<!-- TASK 3 -->
+<h3>Task 3 — Plain-language note for the bank (Doc 3)</h3>
+<div class="email">
+<div class="hd"><b>From:</b> Yonwaba &nbsp;<b>To:</b> Amien &nbsp;<b>Subject:</b> For the bank — how the trees affect the value of the business</div>
+<p>Here's a version without the accounting jargon you can send on:</p>
+<p>"Financial value" here means the business's ability to <b>generate future cash and profit</b>. The apple trees are grown to <b>produce fruit, not to be sold</b> — so their value lies in the apples they can produce. As the trees <b>mature, their yield grows</b> (they're only in their 3rd year of fruiting), which secures <b>more future harvests and more future profit</b> → this <b>increases</b> the financial value of the business.</p>
+<p>That has to be balanced against the fact that the trees have a <b>limited fruiting life</b> (about 20 more years). Every harvest brings the end of that life a little closer, which slowly <b>reduces</b> value — so we'll need to keep <b>reinvesting in new trees</b> to sustain the harvest.</p>
+<p>Within each season there's a cycle: as the apples grow on the trees, the trees become more valuable (they're "laden with apples"); at <b>harvest</b> that value is <b>extracted</b> — the trees drop in value but that value converts into <b>valuable picked apples</b>, and when those are sold it becomes <b>cash</b>. So value builds up as the fruit grows, is realised at harvest, and turns into cash on sale. As long as we control our costs and reinvest, this cycle should produce <b>sustainable future cash flow</b>."</p>
+</div>
+
+<!-- TASK 4 -->
+<h3>Task 4 — Input on the '100% organic' / pesticide question (Doc 4)</h3>
+<div class="email">
+<div class="hd"><b>From:</b> Yonwaba &nbsp;<b>To:</b> Amien &nbsp;<b>Subject:</b> The organic claim</div>
+<p>My view is focused only on the <b>'100% organic' claim</b> (not the safety of the pesticide). If we treat this crop with a <b>synthetic (non-organic) pesticide</b>, then we <b>cannot honestly call the juice '100% organic'</b>. If we use it, I believe we're ethically bound to <b>tell customers and change / pause the '100% organic' labelling and marketing</b> until we can source only organically-grown apples. Claiming otherwise would be <b>greenwashing</b>, and the reputational damage if customers find out would likely be far worse than the cost of handling it honestly.</p>
+<b>Of the 6 King IV Principle 1 attributes, these apply:</b>
+<ul>
+<li><b>Integrity</b> — it would be dishonest to claim 100% organic while using a synthetic pesticide. We need to manage the conflict (profit vs honesty) so we're beyond reproach.</li>
+<li><b>Responsibility</b> — the responsible action is not to deceive customers; the downside of being caught is worse than the cost of doing it right.</li>
+<li><b>Accountability</b> — we must take accountability for the claims we put on our packaging.</li>
+<li><b>Fairness</b> — a stakeholder-inclusive approach means being fair to customers, who rely on accurate product information.</li>
+<li><b>Transparency</b> — be open and honest; don't provide misleading product information.</li>
+</ul>
+<p>(Competence is less relevant to this particular issue.)</p>
+<b>Other King IV principles to consider:</b>
+<ul>
+<li><b>Corporate citizenship / responsibility</b> — CPN is a corporate citizen and should act ethically regardless of the cost.</li>
+<li><b>Integrated thinking</b> — this decision affects more than the financials; dishonest branding damages non-financial "stores of value" like our reputation, over the long term.</li>
+</ul>
+<b>Recommendation:</b> look for an alternative first — e.g. <b>sell the treated crop to buyers who don't need organic apples and source organic apples elsewhere</b>. If that's genuinely not possible, then use the crop but <b>be transparent and fix the labelling</b>.
+</div>
+
+<!-- TASK 5 -->
+<h3>Task 5 — Report on using excess capacity: Option 1 vs Option 2 (Doc 5)</h3>
+<p><b>Report to the Cold Press Nation management team</b></p>
+<b>Margins (my summary):</b>
+<table>
+<tr><th>Margin</th><th>Current</th><th>Option 1 (ginger shots)</th><th>Option 2 (orange-apple blend)</th></tr>
+<tr><td>Contribution margin %</td><td>34%</td><td>34%</td><td>33%</td></tr>
+<tr><td>Operating profit margin %</td><td>3.5%</td><td><b>~6%</b></td><td>~1%</td></tr>
+</table>
+<b>Key workings / assumptions:</b>
+<ul>
+<li>The only variable cost driven by litres (besides variable manufacturing) is <b>sales &amp; distribution</b> = R29 319k ÷ 3 765 824 litres = <b>~R7.79/litre</b>, constant across products.</li>
+<li><b>Option 1:</b> add ginger 120 000 litres at R300 SP / R200 variable manufacturing; drop 60 000 litres of mixed berries to free capacity; fixed costs increase by R2.8m (heating equipment). New total CM ≈ <b>R76.9m</b>; operating profit ≈ <b>R14.6m</b> on revenue ≈ R228.8m → 34% CM, ~6% OP.</li>
+<li><b>Option 2:</b> split orange into pure + blended (double the blend volume), give up 80 000 litres of pure apple, import apples/oranges in winter, <b>no</b> fixed-cost increase. CM ≈ <b>R60.7m</b>; operating profit ≈ <b>R1.2m</b> on revenue ≈ R184.6m → 33% CM, ~1% OP.</li>
+</ul>
+<b>Top 5 strategic considerations:</b>
+<ol>
+<li>Ginger shots ride the growing health-trend and match competitors (e.g. Sir Fruit's shot range) — good for brand relevance.</li>
+<li>Growing ginger at Onverwacht fits CPN's strategy of <b>investing in its own farming</b> and gives supply control/quality.</li>
+<li>Option 1 uses the <b>winter spare capacity</b> (demand rises in cold/flu season) — exactly the problem we're solving.</li>
+<li>Absolute Rands matter, not just %: Option 1's operating profit is roughly <b>double</b> Option 2's, even though its CM% is similar.</li>
+<li>Option 2 is <b>low-risk / no capital outlay</b> and easy to reverse — a reasonable "until we scale ginger" option.</li>
+</ol>
+<b>Top 5 risks:</b>
+<ol>
+<li>Importing apples/oranges (Option 2) — no guaranteed supply; logistics risk.</li>
+<li>Estimates could be wrong → wrong product mix / wrong decision.</li>
+<li>Blend legislation — get the mix wrong and products could be pulled / fined.</li>
+<li>Option 1's first-year fixed costs (set-up) may be overstated, or ginger could be a passing fad → possible future impairment.</li>
+<li>Ginger is hard to juice → more machine wear &amp; maintenance; and competitors already sell shots, capping the premium.</li>
+</ol>
+<b>Recommendation:</b> <b>Pursue Option 1 (ginger shots).</b> It gives the highest operating profit both in % and absolute Rands (~double Option 2), and it aligns with growing our own farming operations and using winter capacity. <i>(I'd double-check the exact figures before finalising.)</i>
+
+<!-- TASK 6 -->
+<h3>Task 6 — Influencer vs affiliate program: factors &amp; tax (Doc 6)</h3>
+<div class="email">
+<div class="hd"><b>From:</b> Yonwaba &nbsp;<b>To:</b> Nate &nbsp;<b>Subject:</b> Marketing options</div>
+<b>Social influencer — key factors:</b>
+<ul>
+<li>Relevance &amp; fit (health/wellness niche, aligns with our brand &amp; target market); reach &amp; engagement (real followers, likes/comments); authenticity &amp; trust; quality of content; and willingness to follow our <b>pre-/post-approval</b> process and create content from our premises.</li>
+</ul>
+<b>Influencer — tax:</b>
+<ul>
+<li>The R5 000/week payments are <b>deductible under s11(a)</b> (revenue, not capital).</li>
+<li>But because we require content <b>from our premises</b>, <b>pre/post-approval</b>, and pay a <b>fixed amount regardless of hours</b>, the influencer is <b>not an independent contractor</b> → the payments are <b>remuneration</b> → CPN must withhold <b>employees' tax (PAYE)</b>.</li>
+<li><b>No VAT</b> — the influencer isn't carrying on an enterprise in respect of these services (treated like employment).</li>
+</ul>
+<b>Affiliate program — key factors:</b>
+<ul>
+<li>Commission structure (rates, thresholds, payment timing — must still protect our margin); affiliate support/resources (who provides them — we have no marketing team); guidelines/control (autonomy vs brand consistency); tracking &amp; reporting (attribution, fraud prevention); and program promotion to sign up existing customers.</li>
+</ul>
+<b>Affiliate — tax:</b>
+<ul>
+<li>Additional sales are recognised at <b>gross</b> (100% is ours). Commissions are <b>deductible under s11(a)</b> once the obligation is unconditional (threshold met &amp; refund period lapsed).</li>
+<li>Affiliates have <b>minimal control</b> from us → <b>independent contractors</b> → commissions are <b>not remuneration</b> → <b>no PAYE</b>.</li>
+<li>Affiliates unlikely to exceed the <b>VAT registration threshold</b> → <b>no VAT</b> on commissions.</li>
+</ul>
+</div>
+
+<!-- TASK 7 -->
+<h3>Task 7 — Inventory GL review &amp; note disclosure (Doc 7)</h3>
+<div class="email">
+<div class="hd"><b>From:</b> Yonwaba &nbsp;<b>To:</b> Amien &nbsp;<b>Subject:</b> Inventory — my review &amp; the completed note</div>
+<b>General principle:</b> only capitalise costs incurred to bring inventory to its present <b>location and condition</b>; everything else is expensed (cost of sales if production-related, otherwise operating expenses). Variable production costs are capitalised as incurred; <b>fixed</b> production overheads are allocated based on <b>normal capacity</b>.
+<h4>Raw materials account — issues</h4>
+<ul>
+<li><b>Foreign exchange losses (R256 790)</b> should <b>not</b> be in inventory. Imported fruit is recorded at the <b>spot rate on the date ownership transfers</b>; later exchange gains/losses go to <b>P/L</b>. → remove.</li>
+<li><b>Import duties (R30 000)</b> — only capitalise if <b>non-refundable</b>. Need to check.</li>
+</ul>
+<h4>Finished goods account — issues</h4>
+<ul>
+<li><b>Cost accountant salary (R490 000)</b> and <b>head office costs (R1 324 670)</b> — not production costs → <b>expense</b> to P/L.</li>
+<li><b>Labelling machine depreciation</b> is shown as a <b>credit (R55 321)</b> — it should be <b>added</b>, not subtracted. → correct the sign.</li>
+<li><b>Transportation costs (R1 893 560)</b> in finished goods — if this is transport <b>to customers</b> it's a distribution cost and <b>cannot be capitalised</b> → check &amp; likely expense. (Raw-material inbound transport is fine to capitalise.)</li>
+<li>Production depreciation (ozone plant, shredding/pressing/filtering) is correctly capitalised, <b>but</b> the fixed portion must be allocated on <b>normal capacity</b> — check the allocation.</li>
+<li>Fruit that <b>fails quality checks</b>: abnormal losses → expense; normal losses may stay in production cost.</li>
+<li>These corrections may affect <b>opening inventory</b> → if material, disclose a <b>prior-period error (IAS 8)</b>.</li>
+<li>Obsolescence provision workings weren't given — inventory rose a lot but the provision barely moved. Please share the workings.</li>
+</ul>
+<b>Completed note (the parts you left):</b>
+<div class="email" style="border-left-color:#6b4a1f">
+<b>Accounting policy:</b> "…recognises inventory initially at cost… The cost of inventory is determined on a <b>first-in-first-out</b> basis. Cost includes expenditure incurred in <b>acquiring, manufacturing and transporting</b> inventory to its present location and condition. Finished goods include raw materials, direct labour and materials, and <b>production overheads allocated on the basis of normal operating capacity</b>. Inventory is subsequently measured at the <b>lower of cost and net realisable value</b>."<br>
+<b>Significant judgements &amp; estimates:</b> "Management exercises judgement in determining <b>net realisable value</b> and in estimating the <b>provision for obsolete inventory</b>."
+</div>
+</div>
+
+<!-- TASK 8 -->
+<h3>Task 8 — (Caryn) Audit procedures &amp; risks over agricultural produce (Doc 8)</h3>
+<div class="email">
+<div class="hd"><b>From:</b> Caryn &nbsp;<b>To:</b> Sanlie &nbsp;<b>Subject:</b> Agricultural produce — procedures &amp; risks</div>
+<b>3 key audit risks over initial recognition of harvested apples (FVLCS at harvest, IAS 41):</b>
+<ol>
+<li><b>Quantity</b> of apples harvested may be <b>overstated</b> (very high volumes; measurement error) → misstated valuation.</li>
+<li><b>Farming expenses</b> may be <b>incorrectly capitalised</b> into the cost of the apples instead of expensed — produce must be at <b>FVLCS</b>, not cost.</li>
+<li><b>Valuation is complex/judgemental</b> — significant estimates in determining fair value at initial recognition (risk of misstatement/bias).</li>
+</ol>
+<b>Substantive procedures over initial recognition:</b>
+<ol>
+<li>Obtain a <b>listing of apples harvested</b> per month of the season (volume).</li>
+<li>Enquire &amp; understand the <b>weighing/measuring process</b> at harvest; assess vs industry norms.</li>
+<li>Enquire on the <b>valuation methodology</b> for FV at each harvest; assess for reasonableness &amp; IAS 41 compliance.</li>
+<li>Obtain management's <b>FVLCS calculation</b>: (a) recompute for arithmetic accuracy; (b) obtain SA wholesale apple price per kg and assess the price used; (c) inspect the <b>costs to sell</b> deducted and check IAS 41 alignment.</li>
+<li>Enquire about any <b>abnormal weather/environmental events</b> in the year, and research whether any occurred, that could affect the harvest value.</li>
+<li>Obtain the <b>journals</b>; confirm the amount recognised agrees to the calculation and that an <b>immediate FV gain is recognised in P/L</b>.</li>
+</ol>
+</div>
+
+<!-- ==================== PART B ==================== -->
+<h2 class="rev">PART B — SELF-REVIEW AGAINST UCT'S SUGGESTED SOLUTION</h2>
+<p>After reading UCT's solution and the marker feedback, here's how I did on each task (honest view).</p>
+
+<h3>Task 1 — Loan restructuring accounting &nbsp;<span class="verdict c">Competent</span></h3>
+<div class="got"><b>Got right:</b> Option A substantially different → derecognise + new instrument; the IAS 32 fixed-vs-variable split and that interest must use the liability-component rate not 9%; Option B the 10% test with the exact figures (R16 746 492 → R12 931 364 → R931 364 = 7.78% → modification, loss to P/L, 9% interest = R1 163 828). Flagged the info needed (fixed/variable, transaction costs).</div>
+<div class="miss"><b>Could improve:</b> I could have been clearer that under Option A the coupon journal is "correct as far as the coupon goes" but the expense is wrong — UCT phrased that split cleanly. Otherwise well aligned. This was one of my stronger answers.</div>
+
+<h3>Task 2 — Tax of the loan &amp; restructuring &nbsp;<span class="verdict borderline">Borderline → Competent</span></h3>
+<div class="got"><b>Got right:</b> s24J deduction (YTM, trade/production of income); s23M limit consideration; MegaDrinks SA-source (s9), s10(1)(h) exemption, 15% WHT (s50A–H) as a final tax withheld by CPN, DTA reduction. Option A s31 (rate difference due to conversion) and the s19/para 12A debt-benefit risk with no group exclusion (non-resident). Option B: market rate → no s31, no debt benefit, no concerns.</div>
+<div class="miss"><b>Missed / weaker:</b> the <b>s8F hybrid-debt</b> point is the one I was least confident on — UCT made it central to Option A (interest non-deductible + deemed dividend in specie replacing the WHT). I mentioned it but should have developed the "fixed number of shares" link and the consequence more fully. That's the difference between a solid pass and a strong pass here.</div>
+
+<h3>Task 3 — Plain-language value note for the bank &nbsp;<span class="verdict c">Competent</span></h3>
+<div class="got"><b>Got right:</b> defined financial value as future cash-generating ability; trees grown for fruit not sale; maturing → higher yield → more value, balanced against finite fruiting life &amp; reinvestment; the season cycle of value building as apples grow, extracted at harvest, realised as cash. Kept the jargon out, as asked.</div>
+<div class="miss"><b>Could improve:</b> nothing major — UCT's answer is essentially the same story. Watch not to slip into IFRS terms (I nearly wrote "fair value" — the bank doesn't want it).</div>
+
+<h3>Task 4 — Ethics: the '100% organic' claim &nbsp;<span class="verdict c">Competent</span></h3>
+<div class="got"><b>Got right:</b> correctly kept it to the <b>organic claim</b> (not pesticide safety/environment — a common trap); greenwashing &amp; reputational risk; must relabel/disclose if used. Integrity, responsibility, fairness, transparency, accountability; plus corporate citizenship and integrated thinking; and the "find an alternative" recommendation.</div>
+<div class="miss"><b>Could improve:</b> I could have named the <b>conflict of interest (profit vs honesty)</b> even more explicitly under integrity. Otherwise complete.</div>
+
+<h3>Task 5 — Excess-capacity report &nbsp;<span class="verdict borderline">Borderline</span></h3>
+<div class="got"><b>Got right:</b> the method (only sales &amp; distribution is the extra variable cost at ~R7.79/litre); the margin table conclusion (Option 1 34% CM / ~6% OP vs Option 2 33% / ~1%); the key insight that <b>absolute operating profit</b> matters, not just %, and Option 1 is ~double; 5 strategic considerations, 5 risks, and the recommendation of <b>Option 1</b> — all match UCT.</div>
+<div class="miss"><b>Missed / risk:</b> this is where I'd most likely drop marks under time pressure — the full per-product CM-per-litre table (dropping 60 000 litres of berries for Option 1; the exact R76.9m / R14.6m and R60.7m / R1.2m). I showed the approach and the answer but not every line of the build-up. In the real exam I'd need to show the workings clearly enough for the team to follow, as Nate asked.</div>
+
+<h3>Task 6 — Influencer vs affiliate &nbsp;<span class="verdict c">Competent</span></h3>
+<div class="got"><b>Got right:</b> the qualitative factors for each (relevance/reach/authenticity/content/terms for the influencer; commission structure/support/control/tracking/promotion for affiliates). Tax: s11(a) deductibility for both; and the key distinction — <b>influencer = employee (control → PAYE)</b> vs <b>affiliate = independent contractor (no PAYE)</b>; and the VAT points.</div>
+<div class="miss"><b>Could improve:</b> the <b>employees'-tax</b> conclusion is the high-value technical mark and I'm glad I got it — many candidates miss that the control features make the influencer an employee. I could have expanded the affiliate VAT reasoning slightly.</div>
+
+<h3>Task 7 — Inventory review &amp; note &nbsp;<span class="verdict c">Competent</span></h3>
+<div class="got"><b>Got right:</b> FX losses out of inventory; import duties only if non-refundable; cost accountant salary &amp; head office costs out; the <b>labelling-machine depreciation sign error</b>; transport-to-customers not capitalisable; normal-capacity allocation of fixed overheads; the IAS 8 prior-period-error point; and the obsolescence-provision query. Completed the policy note (FIFO, normal capacity, lower of cost/NRV) and judgements (NRV, obsolescence).</div>
+<div class="miss"><b>Could improve:</b> UCT also flagged that some raw-material transfers (fruit failing checks) should go straight to cost of sales — I mentioned normal vs abnormal losses but could have been more concrete. Solid overall.</div>
+
+<h3>Task 8 — Audit of agricultural produce &nbsp;<span class="verdict c">Competent</span></h3>
+<div class="got"><b>Got right:</b> the 3 risks (quantity overstatement; expenses wrongly capitalised vs FVLCS; valuation complexity/judgement) match UCT almost exactly; and the procedures (harvest listing, weighing process, valuation methodology, recompute FVLCS, wholesale price benchmark, costs-to-sell, weather events, journals &amp; immediate FV gain in P/L).</div>
+<div class="miss"><b>Could improve:</b> nothing significant — this was a strong, well-aligned answer (agriculture was my best-prepared trigger from Week 1).</div>
+
+<!-- OVERALL -->
+<h3>Overall reflection</h3>
+<table>
+<tr><th>Task</th><th>Area</th><th>My view</th></tr>
+<tr><td>1</td><td>Loan restructuring (IFRS 9/IAS 32)</td><td class="r"><span class="verdict c">Competent</span></td></tr>
+<tr><td>2</td><td>Tax of loan &amp; restructuring</td><td class="r"><span class="verdict borderline">Borderline→C</span></td></tr>
+<tr><td>3</td><td>Plain-language value note</td><td class="r"><span class="verdict c">Competent</span></td></tr>
+<tr><td>4</td><td>Ethics / King IV</td><td class="r"><span class="verdict c">Competent</span></td></tr>
+<tr><td>5</td><td>Excess-capacity report (CVP)</td><td class="r"><span class="verdict borderline">Borderline</span></td></tr>
+<tr><td>6</td><td>Marketing options &amp; tax</td><td class="r"><span class="verdict c">Competent</span></td></tr>
+<tr><td>7</td><td>Inventory review &amp; note</td><td class="r"><span class="verdict c">Competent</span></td></tr>
+<tr><td>8</td><td>Audit of agricultural produce</td><td class="r"><span class="verdict c">Competent</span></td></tr>
+</table>
+<div class="note"><b>Honest takeaway:</b> I'd assess this as <b>competent overall</b> — 6 clearly competent, with Tasks 2 and 5 borderline. The two soft spots are exactly the technical-depth ones: the <b>s8F hybrid-debt</b> analysis (Task 2) and <b>showing full CVP workings</b> under time pressure (Task 5). My Week-1 preparation paid off most on agriculture (Tasks 3 &amp; 8), inventory (7) and the loan (1) — all triggers I'd researched. What I <b>under-prepared</b> was the depth of the <b>tax anti-avoidance provisions</b> (s8F, s19) and I hadn't anticipated the <b>ethics/greenwashing</b> task as sharply as I should have. That's my focus for next time: don't just identify a trigger — research it deep enough to handle the hardest sub-issue, and always <b>show the workings</b> on a numbers task.</div>
+
+<p class="meta" style="margin-top:8px">Prepared as a Week-2 exam attempt and self-review against the UCT APC 2023 Suggested Solution. All figures/quotes are from the case pack.</p>
+
+</div></body></html>
